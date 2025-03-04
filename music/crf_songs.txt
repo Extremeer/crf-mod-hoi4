@@ -1,0 +1,388 @@
+
+music_station = "crf"
+
+music = {
+	song = "the_amnesty_in_1959"
+
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 0.05
+			NOT = {
+				OR = {
+					original_tag = CHI
+					original_tag = PRC
+					original_tag = SHX				
+					original_tag = XSM
+					original_tag = YUN
+					original_tag = GXC
+				}
+			}
+		}	
+		modifier = {
+			factor = 3
+			OR = {
+				original_tag = CHI
+				original_tag = PRC
+				original_tag = SHX				
+				original_tag = XSM
+				original_tag = YUN
+				original_tag = GXC
+			}
+		}
+	}
+}
+
+music = {
+	song = "1_the_boatmen_on_huanghe_river"
+
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 0.05
+			NOT = {
+				OR = {
+					original_tag = CHI
+					original_tag = PRC
+					original_tag = SHX				
+					original_tag = XSM
+					original_tag = YUN
+					original_tag = GXC
+				}
+			}
+		}	
+		modifier = {
+			factor = 3
+			OR = {
+				original_tag = CHI
+				original_tag = PRC
+				original_tag = SHX				
+				original_tag = XSM
+				original_tag = YUN
+				original_tag = GXC
+			}
+		}
+	}
+}
+
+music = {
+	song = "2_ode_to_yellow_river"
+
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 0.05
+			NOT = {
+				OR = {
+					original_tag = CHI
+					original_tag = PRC
+					original_tag = SHX				
+					original_tag = XSM
+					original_tag = YUN
+					original_tag = GXC
+				}
+			}
+		}	
+		modifier = {
+			factor = 3
+			OR = {
+				original_tag = CHI
+				original_tag = PRC
+				original_tag = SHX				
+				original_tag = XSM
+				original_tag = YUN
+				original_tag = GXC
+			}
+		}
+	}
+}
+
+music = {
+	song = "3_yello_river_angry"
+
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 0.05
+			NOT = {
+				OR = {
+					original_tag = CHI
+					original_tag = PRC
+					original_tag = SHX				
+					original_tag = XSM
+					original_tag = YUN
+					original_tag = GXC
+				}
+			}
+		}	
+		modifier = {
+			factor = 3
+			OR = {
+				original_tag = CHI
+				original_tag = PRC
+				original_tag = SHX				
+				original_tag = XSM
+				original_tag = YUN
+				original_tag = GXC
+			}
+		}
+	}
+}
+
+music = {
+	song = "4_yellow_river_chorus"
+
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 0.05
+			NOT = {
+				OR = {
+					original_tag = CHI
+					original_tag = PRC
+					original_tag = SHX				
+					original_tag = XSM
+					original_tag = YUN
+					original_tag = GXC
+				}
+			}
+		}	
+		modifier = {
+			factor = 3
+			OR = {
+				original_tag = CHI
+				original_tag = PRC
+				original_tag = SHX				
+				original_tag = XSM
+				original_tag = YUN
+				original_tag = GXC
+			}
+		}
+	}
+}
+
+music = {
+	song = "1_ode_to_the_red_flag"
+
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 0.05
+			NOT = {
+				OR = {
+					original_tag = CHI
+					original_tag = PRC
+					original_tag = SHX				
+					original_tag = XSM
+					original_tag = YUN
+					original_tag = GXC
+				}
+			}
+		}	
+		modifier = {
+			factor = 3
+			OR = {
+				original_tag = CHI
+				original_tag = PRC
+				original_tag = SHX				
+				original_tag = XSM
+				original_tag = YUN
+				original_tag = GXC
+			}
+		}
+	}
+}
+
+music = {
+	song = "2_ode_to_the_red_flag"
+
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 0.05
+			NOT = {
+				OR = {
+					original_tag = CHI
+					original_tag = PRC
+					original_tag = SHX				
+					original_tag = XSM
+					original_tag = YUN
+					original_tag = GXC
+				}
+			}
+		}	
+		modifier = {
+			factor = 3
+			OR = {
+				original_tag = CHI
+				original_tag = PRC
+				original_tag = SHX				
+				original_tag = XSM
+				original_tag = YUN
+				original_tag = GXC
+			}
+		}
+	}
+}
+
+music = {
+	song = "ccpnc"
+
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = {
+				OR = {
+					original_tag = CHI
+					original_tag = PRC
+					original_tag = SHX				
+					original_tag = XSM
+					original_tag = YUN
+					original_tag = GXC
+					has_government = communism
+				}
+			}
+		}	
+		modifier = {
+			factor = 3
+			OR = {
+				original_tag = CHI
+				original_tag = PRC
+				original_tag = SHX				
+				original_tag = XSM
+				original_tag = YUN
+				original_tag = GXC
+			}
+			has_government = communism
+		}
+	}
+}
+
+music = {
+	song = "soul_of_chinese_army"
+
+	chance = {
+		factor = 0.05
+		modifier = {
+			factor = 0
+			NOT = {
+				OR = {
+					original_tag = CHI
+					original_tag = PRC
+					original_tag = SHX				
+					original_tag = XSM
+					original_tag = YUN
+					original_tag = GXC
+				}
+			}
+		}	
+		modifier = {
+			factor = 1
+			OR = {
+				original_tag = CHI
+				original_tag = PRC
+				original_tag = SHX				
+				original_tag = XSM
+				original_tag = YUN
+				original_tag = GXC
+			}
+		}
+	}
+}
+
+music = {
+	song = "the_sun_also_rises"
+
+	chance = {
+		factor = 0.05
+		modifier = {
+			factor = 0
+			NOT = {
+				OR = {
+					original_tag = CHI
+					original_tag = PRC
+					original_tag = SHX				
+					original_tag = XSM
+					original_tag = YUN
+					original_tag = GXC
+				}
+			}
+		}	
+		modifier = {
+			factor = 0.5
+			OR = {
+				original_tag = CHI
+				original_tag = PRC
+				original_tag = SHX				
+				original_tag = XSM
+				original_tag = YUN
+				original_tag = GXC
+			}
+		}
+	}
+}
+
+music = {
+	song = "national_flag_anthem"
+
+	chance = {
+		factor = 0
+		modifier = {
+			factor = 0
+			NOT = {
+				OR = {
+					original_tag = CHI
+					original_tag = PRC
+					original_tag = SHX				
+					original_tag = XSM
+					original_tag = YUN
+					original_tag = GXC
+				}
+			}
+		}	
+		modifier = {
+			factor = 0.05
+			OR = {
+				original_tag = CHI
+				original_tag = PRC
+				original_tag = SHX				
+				original_tag = XSM
+				original_tag = YUN
+				original_tag = GXC
+			}
+		}
+	}
+}
+
+music = {
+	song = "march_of_the_volunteers"
+
+	chance = {
+		factor = 0
+		modifier = {
+			factor = 0
+			NOT = {
+				OR = {
+					original_tag = CHI
+					original_tag = PRC
+					original_tag = SHX				
+					original_tag = XSM
+					original_tag = YUN
+					original_tag = GXC
+				}
+			}
+		}	
+		modifier = {
+			factor = 0.05
+			OR = {
+				original_tag = CHI
+				original_tag = PRC
+				original_tag = SHX				
+				original_tag = XSM
+				original_tag = YUN
+				original_tag = GXC
+			}
+		}
+	}
+}

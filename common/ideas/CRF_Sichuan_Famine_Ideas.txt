@@ -1,0 +1,251 @@
+ideas = {
+	country = {
+	
+		sicf_0 = { ###pre
+
+			picture = raj_risk_of_famine
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			
+		}
+	
+		sicf_1 = { ###start
+
+			picture = raj_risk_of_famine
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.12
+
+			}
+		}
+		
+		sicf_2 = { ###shupi
+
+			picture = raj_risk_of_famine
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.15
+
+			}
+		}
+		
+		sicf_3 = { ###jiushupi
+
+			picture = raj_risk_of_famine
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.13
+
+			}
+		}
+		
+		sicf_4 = { ###chitu
+
+			picture = raj_risk_of_famine
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.15
+
+			}
+		}
+		
+		sicf_5 = { ###jiutu
+
+			picture = raj_risk_of_famine
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.14
+
+			}
+		}
+		
+		sicf_6 = { ###chiren
+
+			picture = raj_risk_of_famine
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.15
+
+			}
+		}
+		
+		sicf_7 = { ###jiuren
+
+			picture = raj_risk_of_famine
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.12
+
+			}
+		}
+		
+		help_sichuan_china_1 = { 
+
+			picture = chi_chinese_support
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+		}
+		
+		help_sichuan_china_2 = { 
+
+			picture = chi_chinese_support
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+		}
+		
+		help_sichuan_china_3 = { 
+
+			picture = chi_chinese_support
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+		}
+		
+		help_sichuan_china_4 = { 
+
+			picture = chi_chinese_support
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+		}
+		
+		help_sichuan_china_5 = { 
+
+			picture = chi_chinese_support
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+		}
+		
+		help_sichuan_china_6 = { 
+
+			picture = chi_chinese_support
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+		}
+	}
+}

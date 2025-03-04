@@ -1,0 +1,4 @@
+ETR_IND = {
+    color = rgb { 57  143  97 }
+    color_ui = rgb { 57  143  97 }
+}

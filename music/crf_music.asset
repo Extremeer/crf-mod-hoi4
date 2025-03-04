@@ -1,0 +1,71 @@
+music = {
+	name = "1_the_boatmen_on_huanghe_river"
+	file = "1_the_boatmen_on_huanghe_river.ogg"
+	volume = 1
+}
+
+music = {
+	name = "2_ode_to_yellow_river"
+	file = "2_ode_to_yellow_river.ogg"
+	volume = 1
+}
+
+music = {
+	name = "3_yello_river_angry"
+	file = "3_yello_river_angry.ogg"
+	volume = 1
+}
+
+music = {
+	name = "4_yellow_river_chorus"
+	file = "4_yellow_river_chorus.ogg"
+	volume = 1
+}
+
+music = {
+	name = "1_ode_to_the_red_flag"
+	file = "1_ode_to_the_red_flag.ogg"
+	volume = 1
+}
+
+music = {
+	name = "2_ode_to_the_red_flag"
+	file = "2_ode_to_the_red_flag.ogg"
+	volume = 1
+}
+
+music = {
+	name = "the_amnesty_in_1959"
+	file = "amnesty_in_1959.ogg"
+	volume = 1
+}
+
+music = {
+	name = "ccpnc"
+	file = "ccp.ogg"
+	volume = 1
+}
+
+music = {
+	name = "soul_of_chinese_army"
+	file = "soul_of_chinese_army.ogg"
+	volume = 1
+}
+
+music = {
+	name = "the_sun_also_rises"
+	file = "the_sun_also_rises.ogg"
+	volume = 1
+}
+
+music = {
+	name = "national_flag_anthem"
+	file = "national_flag_anthem.ogg"
+	volume = 1
+}
+
+music = {
+	name = "march_of_the_volunteers"
+	file = "march_of_the_volunteers.ogg"
+	volume = 1
+}

@@ -1,0 +1,77 @@
+JAP_intervene_in_china = {
+	JAP_ichi_fail = {
+
+		icon = jap_conquer_china
+
+		available = {
+			always = no
+		}
+
+		visible = {
+			has_idea = JAP_ichi_go
+		}
+
+		activation = {
+			always = yes
+			has_idea = JAP_ichi_go
+		}
+
+		fire_only_once = yes
+
+		is_good = no
+
+		days_mission_timeout = 360
+		
+		timeout_effect = {
+			remove_ideas = JAP_ichi_go
+		}
+	}
+
+	Set_Mengjiang_Govenment = {
+		
+		icon = jap_conquer_china
+
+		available = {
+			611 = {
+				CONTROLLER = {
+					tag = MEN
+				}
+			}
+			612 = {
+				CONTROLLER = {
+					tag = MEN
+				}
+			}
+			621 = {
+				CONTROLLER = {
+					tag = MEN
+				}
+			}
+			MEN = {
+				is_subject_of = ROOT
+			}
+		}
+
+		visible = {
+			tag = JAP
+			NOT = {
+				has_country_flag = mengjiang_setted
+			}
+		}
+
+		ai_will_do = {
+			factor = 500
+		}
+
+		days_remove = 7
+
+		fire_only_once = yes
+
+		remove_effect = {
+			set_country_flag = mengjiang_setted
+			MEN = {
+				country_event = men.5
+			}
+		}
+	}
+}

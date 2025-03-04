@@ -1,0 +1,596 @@
+# 选取党派列表类型（GUI）
+defined_text = {
+	name = GetCHIGUIsEntryContainer
+	# # if array value is 1 - KMT
+	# text = {
+	# 	trigger = {
+	# 		check_variable = {
+	# 			v = 1
+	# 		}			
+	# 		var:v = {
+	# 			NOT = {
+	# 				has_state_flag = KMT_DISSOLVED
+	# 			}
+	# 		}
+	# 	}
+	# 	localization_key = "CHI_entry_type_1_container"
+	# }
+	# 不是CPC但被禁止
+	text = {
+		trigger = {
+			var:v = {
+				has_state_flag = CHI_BANNED_PARTY
+				NOT = {
+					has_state_flag = THIS_IS_CPC
+				}
+			}
+		}
+		localization_key = "CHI_party_entry_type_BANNED_container"
+	}
+	# 是CPC且被禁止
+	text = {
+		trigger = {
+			var:v = {
+				AND = {
+					has_state_flag = CHI_BANNED_PARTY
+					has_state_flag = THIS_IS_CPC
+				}
+			}
+		}
+		localization_key = "CHI_entry_type_CPC_container"
+	}
+	# 是无党籍
+	text = {
+		trigger = {
+			var:v = {
+				has_state_flag = CHI_NILL_PARTY
+			}
+		}
+		localization_key = "CHI_party_entry_type_NILL_container"
+	}
+	# 其他
+	text = {
+		trigger = {
+			NOT = {
+				var:v = {
+					has_state_flag = CHI_BANNED_PARTY
+				}
+				# AND = {
+				# 	check_variable = {
+				# 		v = 1
+				# 	}					# if array value is 1
+				# 	var:v = {
+				# 		NOT = {
+				# 			has_state_flag = KMT_DISSOLVED
+				# 		}
+				# 	}
+				# }
+				var:v = {
+					has_state_flag = CHI_NILL_PARTY
+				}
+			}
+		}
+		localization_key = "CHI_party_entry_type_NORMAL_container"		# default container to use
+	}
+}
+
+# 获取完整党派名称
+defined_text = {
+	name = GetCHIParliamentPartyName_Long
+	text = {
+		trigger = {
+			var:v = {
+				has_state_flag = CHI_KMT_PARTY
+			}
+		}
+		localization_key = CHI_parliament_party_name_1
+	}
+	text = {
+		trigger = {
+			var:v = {
+				has_state_flag = CHI_CPC_PARTY
+			}
+		}
+		localization_key = CHI_parliament_party_name_2
+	}
+	text = {
+		trigger = {
+			var:v = {
+				has_state_flag = CHI_CDL_PARTY
+			}
+		}
+		localization_key = CHI_parliament_party_name_3
+	}
+	text = {
+		trigger = {
+			var:v = {
+				has_state_flag = CHI_YCP_PARTY
+			}
+		}
+		localization_key = CHI_parliament_party_name_4
+	}
+	text = {
+		trigger = {
+			var:v = {
+				has_state_flag = CHI_CDSP_PARTY
+			}
+		}
+		localization_key = CHI_parliament_party_name_5
+	}
+	text = {
+		trigger = {
+			var:v = {
+				has_state_flag = CHI_NILL_PARTY
+			}
+		}
+		localization_key = CHI_parliament_party_name_6
+	}
+}
+
+# 获取党派Logo
+defined_text = {
+	name = GetCHIPartyLogos
+	text = {
+		trigger = {
+			var:v = {
+				has_state_flag = CHI_KMT_PARTY
+			}
+		}
+		localization_key = "GFX_CHI_KMT_logo"
+	}
+	text = {
+		trigger = {
+			var:v = {
+				has_state_flag = CHI_CPC_PARTY
+			}
+		}
+		localization_key = "GFX_CHI_CPC_logo"
+	}
+	text = {
+		trigger = {
+			var:v = {
+				has_state_flag = CHI_CDL_PARTY
+			}
+		}
+		localization_key = "GFX_CHI_CDL_logo"
+	}
+	text = {
+		trigger = {
+			var:v = {
+				has_state_flag = CHI_YCP_PARTY
+			}
+		}
+		localization_key = "GFX_CHI_YCP_logo"
+	}
+	text = {
+		trigger = {
+			var:v = {
+				has_state_flag = CHI_CDSP_PARTY
+			}
+		}
+		localization_key = "GFX_CHI_CDSP_logo"
+	}
+}
+
+# 获取党派领导名
+defined_text = {
+	name = GetCHIPartyLeaderName
+	# 蒋介石
+	text = {
+		trigger = {
+			var:v = {
+				has_state_flag = CHI_KMT_PARTY
+			}
+			var:v = {
+				check_variable = {
+					CHI_party_leader = 1
+				}
+			}
+		}
+		localization_key = CHI_political_leader_name_1_1
+	}
+	# 毛泽东
+	text = {
+		trigger = {
+			var:v = {
+				has_state_flag = CHI_CPC_PARTY
+			}
+			var:v = {
+				check_variable = {
+					CHI_party_leader = 1
+				}
+			}
+		}
+		localization_key = CHI_political_leader_name_2_1
+	}
+	# 张澜
+	text = {
+		trigger = {
+			var:v = {
+				has_state_flag = CHI_CDL_PARTY
+			}
+			var:v = {
+				check_variable = {
+					CHI_party_leader = 1
+				}
+			}
+		}
+		localization_key = CHI_political_leader_name_3_1
+	}
+	# 梁漱溟
+	text = {
+		trigger = {
+			var:v = {
+				has_state_flag = CHI_YCP_PARTY
+			}
+			var:v = {
+				check_variable = {
+					CHI_party_leader = 1
+				}
+			}
+		}
+		localization_key = CHI_political_leader_name_4_1
+	}
+	# 沈钧儒
+	text = {
+		trigger = {
+			var:v = {
+				has_state_flag = CHI_CDSP_PARTY
+			}
+			var:v = {
+				check_variable = {
+					CHI_party_leader = 1
+				}
+			}
+		}
+		localization_key = CHI_political_leader_name_5_1
+	}
+}
+
+# 获取党派领导人画像
+defined_text = {
+	name = GetCHIPartyLeaderPortrait
+	text = {
+		localization_key = "GFX_CHI_party_leader_[?v]_[?v:CHI_party_leader]"
+	}
+}
+
+# 获取党派联盟（GUI未实装）
+defined_text = {
+	name = GetCHIPartyCoalition
+	text = {
+		trigger = {
+			var:v = {
+				has_state_flag = left_coalition_member
+			}
+		}
+		localization_key = "GFX_left_coalition_member_30x30"
+	}
+	text = {
+		trigger = {
+			var:v = {
+				has_state_flag = national_coalition_member
+			}
+		}
+		localization_key = "GFX_blue_coalition_member_30x30"
+	}
+	text = {
+		trigger = {
+			var:v = {
+				has_state_flag = free_coalition_member
+			}
+		}
+		localization_key = "GFX_free_coalition_member_30x30"
+	}
+	text = {
+		trigger = {
+			var:v = {
+				has_state_flag = forward_coalition_member
+			}
+		}
+		localization_key = "GFX_forward_coalition_member_30x30"
+	}
+	text = {
+		trigger = {
+			var:v = {
+				has_state_flag = gong_yi_bloc_member
+			}
+		}
+		localization_key = "GFX_public_gong_yi_bloc_member_30x30"
+	}
+	text = {
+		trigger = {
+			var:v = {
+				NOT = {
+					has_state_flag = CDL_member_party
+					has_state_flag = left_coalition_member
+					has_state_flag = national_coalition_member
+					has_state_flag = free_coalition_member
+					has_state_flag = forward_coalition_member
+					has_state_flag = gong_yi_bloc_member
+				}
+			}
+		}
+		localization_key = "GFX_CHI_independetly_operating_30x30"
+	}
+}
+# 是否在政府中参政（获取GUI图标）
+defined_text = {
+	name = GetCHIPartyGovernmentLogo
+	text = {
+		trigger = {
+			var:v = {
+				has_state_flag = CHI_IN_GOVERNMENT
+			}
+		}
+		localization_key = "GFX_CHI_government_30x30"
+	}
+	text = {
+		trigger = {
+			NOT = {
+				var:v = {
+					has_state_flag = CHI_IN_GOVERNMENT
+				}
+			}
+		}
+		localization_key = "GFX_Transparent"
+	}
+}
+
+# 获取党派支持度指示GUI（未实装）
+defined_text = {
+	name = GetCHIPartySupportIndicator
+	text = {
+		trigger = {
+			var:v = {
+				has_state_flag = CHI_NO_NEED_FOR_PUBLIC_SUPPORT
+			}
+		}
+		localization_key = "GFX_CHI_whats_support_30x30"
+	}
+	text = {
+		trigger = {
+			var:v = {
+				NOT = {
+					has_state_flag = CHI_NO_NEED_FOR_PUBLIC_SUPPORT
+				}
+			}
+		}
+		localization_key = "GFX_CHI_two_support_30x30"
+	}
+}
+
+# 获取席位数
+defined_text = {
+	name = GetCHIParliamentSeatNum
+	text = {
+		trigger = {
+			set_temp_variable = { CHI_temp_seat = CHI_parliament_main_index }
+			add_to_temp_variable = { CHI_temp_seat = 1 }
+			check_variable = { CHI_temp_seat > 0 }
+		}
+		localization_key = CHI_parliament_seat_text
+	}
+}
+
+# 获取是否被禁止文本
+defined_text = {
+	name = GetCHI_PartyStatusGrid
+	text = {
+		trigger = {
+		NOT = {
+			var:v = { has_state_flag = CHI_BANNED_PARTY }
+			}
+		}
+		localization_key = CHI_NORMAL_GRID_TEXT
+	}
+	text = {
+		trigger = {
+		var:v = { has_state_flag = CHI_BANNED_PARTY }
+		}
+		localization_key = CHI_GRID_BANNED_TEXT
+	}
+}
+
+# # 也是获取名称（好像是为了传递临时变量）
+# defined_text = {
+# 	name = GetCHI_ParliamentPartyNameContext1
+# 	 text = {
+# 		trigger = {
+# 			if = {
+# 				limit = {
+# 					var:v = { has_state_flag = CHI_KMT_PARTY }
+# 				}
+# 				set_temp_variable = { CHI_temp_party_id = 1 }
+# 			}
+# 			else_if = {
+# 				limit = { var:v = { has_state_flag = CHI_CPC_PARTY } }
+# 				set_temp_variable = { CHI_temp_party_id = 2 }
+# 			}
+# 			else_if = {
+# 				limit = { var:v = { has_state_flag = CHI_CDL_PARTY } }
+# 				set_temp_variable = { CHI_temp_party_id = 3 }
+# 			}
+# 			else_if = {
+# 				limit = { var:v = { has_state_flag = CHI_YCP_PARTY } }
+# 				set_temp_variable = { CHI_temp_party_id = 4 }
+# 			}
+# 			else_if = {
+# 				limit = { var:v = { has_state_flag = CHI_CDSP_PARTY } }
+# 				set_temp_variable = { CHI_temp_party_id = 5 }
+# 			}
+# 			else = {
+# 				set_temp_variable = { CHI_temp_party_id = 6 }
+# 			}
+# 		}
+# 		localization_key = "[GetCHI_ParliamentPartyName]"
+# 	}
+# }
+
+# 获取党派简称
+defined_text = {
+	name = GetCHI_ParliamentPartyName
+	text = {
+		trigger = {
+			var:v = { has_state_flag = CHI_KMT_PARTY }
+		}
+		localization_key = CHI_parliament_party_name_short_1
+	}
+    text = {
+        trigger = {
+            var:v = { has_state_flag = CHI_CPC_PARTY }
+        }
+        localization_key = CHI_parliament_party_name_short_2
+    }
+	text = {
+        trigger = {
+            var:v = { has_state_flag = CHI_CDL_PARTY }
+        }
+        localization_key = CHI_parliament_party_name_short_3
+    }
+	text = {
+        trigger = {
+            var:v = { has_state_flag = CHI_YCP_PARTY }
+        }
+        localization_key = CHI_parliament_party_name_short_4
+    }
+	text = {
+		trigger = {
+			var:v = { has_state_flag = CHI_CDSP_PARTY }
+		}
+		localization_key = CHI_parliament_party_name_short_5
+	}
+	text = {
+		trigger = {
+			var:v = { has_state_flag = CHI_NILL_PARTY }
+		}
+		localization_key = CHI_parliament_party_name_short_6
+	}
+}
+
+# 获取党派简称
+defined_text = {
+	name = GetCHI_ParliamentPartyNameForSeatUnsorted
+	text = {
+		trigger = {
+			var:v = { state = 1 }
+		}
+		localization_key = CHI_parliament_party_name_short_1
+	}
+    text = {
+        trigger = {
+            var:v = { state = 2 }
+        }
+        localization_key = CHI_parliament_party_name_short_2
+    }
+	text = {
+        trigger = {
+            var:v = { state = 3 }
+        }
+        localization_key = CHI_parliament_party_name_short_3
+    }
+	text = {
+        trigger = {
+            var:v = { state = 4 }
+        }
+        localization_key = CHI_parliament_party_name_short_4
+    }
+	text = {
+		trigger = {
+			var:v = { state = 5 }
+		}
+		localization_key = CHI_parliament_party_name_short_5
+	}
+	text = {
+		trigger = {
+			var:v = { state = 6 }
+		}
+		localization_key = CHI_parliament_party_name_short_6
+	}
+}
+
+defined_text = {
+	name = GetCHIPartySeatCircle
+	text = {
+		trigger = {
+			var:v = {
+				has_state_flag = CHI_KMT_PARTY
+			}
+		}
+		localization_key = "GFX_CHI_parliament_party_icon"
+	}
+	text = {
+		trigger = {
+			var:v = {
+				has_state_flag = CHI_CPC_PARTY
+			}
+		}
+		localization_key = "GFX_CHI_parliament_party_icon"
+	}
+	text = {
+		trigger = {
+			var:v = {
+				has_state_flag = CHI_CDL_PARTY
+			}
+		}
+		localization_key = "GFX_CHI_parliament_party_icon"
+	}
+	text = {
+		trigger = {
+			var:v = {
+				has_state_flag = CHI_YCP_PARTY
+			}
+		}
+		localization_key = "GFX_CHI_parliament_party_icon"
+	}
+	text = {
+		trigger = {
+			var:v = {
+				has_state_flag = CHI_CDSP_PARTY
+			}
+		}
+		localization_key = "GFX_CHI_parliament_party_icon"
+	}
+	text = {
+		trigger = {
+			var:v = {
+				has_state_flag = CHI_NILL_PARTY
+			}
+		}
+		localization_key = "GFX_CHI_parliament_party_icon"
+	}
+}
+
+# 席位点大小切换
+defined_text = {
+	name = GetCHIPartyParliamentIcon
+	text = {
+		trigger = {
+			has_country_flag = CHI_selected_national_convention
+		}
+		localization_key = "GFX_CHI_parliament_party_small_icon"
+	}
+	text = {
+		trigger = {
+			NOT = { has_country_flag = CHI_selected_national_convention }
+		}
+		localization_key = "GFX_CHI_parliament_party_icon"
+	}
+}
+
+# 国会名称切换
+defined_text = {
+	name = GetCHIParliamentName
+	text = {
+		trigger = {
+			has_country_flag = CHI_selected_national_convention
+		}
+		localization_key = CHI_parliament_national_convention
+	}
+	text = {
+		trigger = {
+			NOT = { has_country_flag = CHI_selected_national_convention }
+		}
+		localization_key = CHI_parliament_legislative_yuan
+	}
+}

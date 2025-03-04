@@ -1,0 +1,638 @@
+guiTypes = {
+#Juicy part
+	containerWindowType = {
+		name = "CHI_INFO_SCREEN_open_button_window"
+		position = { x = 350 y = 485 }
+
+		# buttonType = {
+		# 	name = "politicsview_CHI_button"
+		# 	spriteType = "GFX_Debug_Icon"
+		# 	position = { x = 0 y = 0 }
+		# 	shortcut = "ctrl+1"
+		# 	clicksound = click_scroll
+		# 	pdx_tooltip = "OPEN_SPECIAL_SCREEN_CHI"
+		# }
+		buttonType = {
+			name = "politicsview_CHI_legyuan_button"
+			spriteType = "GFX_Debug_Icon"
+			position = { x = 60 y = 0 }
+			shortcut = "ctrl+2"
+			clicksound = click_scroll
+			pdx_tooltip = "OPEN_SPECIAL_SCREEN_CHI_LEGYUAN"
+		}
+	}
+
+	# 立法院框架
+	containerWindowType = {
+		name = "CHI_ps_legyuan_seats_main_screen"
+        position = { x = -573 y = -258 }
+        size = { width = 1145 height=700 }
+		fade_time = 300
+		fade_type = linear
+		moveable = yes
+		show_sound = menu_open_window
+		moveable = yes
+		orientation = center
+		margin = { top = 20 bottom = 0}
+
+        background = {
+            name = "Background"
+            quadTextureSprite ="GFX_tiled_bg"
+        }
+
+		buttonType = {
+			name = "CHI_close_legyuan_button"
+			position = { x = 1093 y = -2 }
+			quadTextureSprite = "GFX_closebutton"
+			pdx_tooltip = "CLOSE"
+			clicksound = click_close
+			shortcut = "ESCAPE"
+		}
+
+		instantTextboxType = {
+			name = "CHI_legyuan_political_title"
+			position = { x = 420 y = -3 }
+			font = "hoi_36header"
+			text = "[GetCHIParliamentName]"
+			format = center
+			vertical_alignment = center
+			maxWidth = 300
+			maxHeight = 36
+		}
+
+		# 立法院党派概览面板 
+		
+		containerWindowType = {
+			name = "CHI_party_grid_container"
+			position = {x = 20 y = 30}
+			size = {width = 460 height = 630 } 
+			margin = { top = 10 bottom = 10 }
+			Orientation = upper_left
+			verticalScrollbar = "right_vertical_slider"
+			smooth_scrolling = yes
+			# background is necesarry for scrollbars to work
+			background = {
+				name = "Background"
+				quadTextureSprite = "GFX_tiled_window_1b_thin_border"
+			}
+			# this grid will be dynamically populated
+			gridboxtype = {
+				name = "CHI_party_grid"
+				position = { x = 0 y = 0 }
+				size = { width = 442 height = 100%% }
+				slotsize = { width = 442 height = 1 } #if width or height is 1, it will use slot element's dimension
+				max_slots_horizontal = 1
+				add_horizontal = no
+			}
+		}
+
+		# 立法院席位面板
+
+		containerWindowType = {
+			name = "CHI_parliament_main_container"
+			position = { x = 478 y = 30 }
+			size = { width = 650 height = 400 }
+
+			background = {
+				name = "Background"
+				quadTextureSprite = "GFX_tiled_window_thin_border2"
+			}
+
+			# 立法院总席位数量文本
+			instantTextboxType = {
+				name = "SEAT_LEGYUAN_STUFF"
+				position = { x = -45 y = 40 }
+				font = "hoi_16mbs"
+				text = "LEGYUAN_SEAT_INFOS"
+				maxWidth = 155
+				maxHeight = 20
+				orientation = CENTER
+			}
+			
+			# 立法院席位图
+			gridboxtype = {
+				name = "CHI_parliament_main_grid"
+				position = { x = 55 y = 50 }
+				size = { width = 100%% height = 100%% }
+				slotsize = { width = 100%% height = 0 }
+				max_slots_horizontal = 1
+				add_horizontal = no
+			}
+
+			# 立法院党派席位数量文本
+			gridboxtype = {
+				name = "CHI_parliament_member_grid"
+				position = { x = -365 y = 315 }
+				size = { width = 100%% height = 100%% }
+				slotsize = { width = 130 height = 25 }
+				max_slots_vertical = 2
+				max_slots_horizontal = 3
+				add_horizontal = no
+			}
+			
+		}
+	}
+
+	containerWindowType = {
+        name = "CHI_parliament_main_entry"
+        position = { x = 0 y = 0 }
+
+		# 立法院单个座位
+		iconType = {
+			name = "CHI_parliament_main_icon"
+			#quadTextureSprite = "GFX_CHI_parliament_party_icon"
+			scale = 0.35 # 0.35 # 0.4
+			position = { x = 0 y = 0 }
+			pdx_tooltip = "CHI_parliament_main_icon_tt"
+		}
+    }
+	
+    containerWindowType = {
+        name = "CHI_parliament_member_entry"
+        position = { x = 0 y = 0 }
+		size = { width = 200 height = 18 }
+
+		# 立法院单个党派席位数量
+		instantTextboxType = {
+			name = "CHI_parliament_member_text"
+			position = { x = 0 y = 0 }
+			font = "hoi_16mbs"
+			maxWidth = 200
+			maxHeight = 16
+			format = left
+			text = "CHI_parliament_member_text"
+		}
+    }
+
+	# # KMT
+    # containerWindowType = {
+	# 	name = "CHI_entry_type_1_container"
+	# 	position = { x = 6 y = 0}
+	# 	size = { width = 430 height = 225 }
+		
+		
+	# 	background = {
+	# 		name = "Background"		
+	# 		quadTextureSprite = "GFX_tiled_plain_bg"
+	# 	}
+		
+	# 	instantTextBoxType = {
+	# 		name = "CHI_name"
+	# 		position = { x = 135 y = 10 }
+	# 		font = "hoi_20bs"
+	# 		text = "[GetCHIParliamentPartyName_Long]" # each gui entry is scoped to the current element in array so this will print current entry's name
+	# 		format = left
+	# 		maxWidth = 300
+	# 		maxHeight = 24
+	# 		multiline = yes
+	# 		fixedsize = no
+	# 		tooltip = "SCOPE_TEXT"
+	# 	}
+
+	# 	instantTextBoxType = {
+	# 		name = "CHI_party_info"
+	# 		position = { x = 135 y = 170 }
+	# 		font = "hoi_18mbs"
+	# 		text = "CHI_party_information" # each gui entry is scoped to the current element in array so this will print current entry's name
+	# 		format = left
+	# 		maxWidth = 300
+	# 		maxHeight = 24
+	# 		fixedsize = yes
+	# 		tooltip = "SCOPE_TEXT"
+	# 	}
+	# 	instantTextBoxType = {
+	# 		name = "CHI_centrist_seats"
+	# 		position = { x = 10 y = 196 }
+	# 		font = "hoi_18mbs"
+	# 		text = "CHI_CENTRIST_total_numer_seats" # each gui entry is scoped to the current element in array so this will print current entry's name
+	# 		format = left
+	# 		maxWidth = 400
+	# 		maxHeight = 24
+	# 		fixedsize = yes
+	# 		tooltip = "SCOPE_TEXT"
+	# 	}
+
+	# 	containerWindowType = {
+	# 		name = "CHI_party_leader_container"
+	# 		position = { x = 5 y = 5 }
+
+	# 		iconType = {
+	# 			name = "CHI_party_leader_portrait"
+	# 			position = { x = 5 y = 10 }
+	# 			spriteType = GFX_leader_unknown
+	# 			scale = 0.735
+	# 		}
+	# 		iconType = {
+	# 			name = "CHI_party_leader_portrait_frame"
+	# 			position = { x = 0 y = 0 }
+	# 			spriteType = GFX_pol_leader_frame
+	# 			scale = 0.735
+	# 			pdx_tooltip = CHI_party_leader_tt
+	# 			pdx_tooltip_delayed = CHI_party_leader_tt_delayed
+	# 		}
+	# 		instantTextboxType = {
+	# 			name = "CHI_party_leader_name"
+	# 			position = { x = 11 y = 166 }
+	# 			text = "[GetCHIPartyLeaderName]"
+	# 			font = hoi_16mbs
+	# 			format = center
+	# 			maxWidth = 105
+	# 			multiline = yes
+	# 			alwaystransparent = yes
+	# 		}
+	# 	}
+
+	# 	iconType = {
+	# 		name = "CHI_party_logo"
+	# 		position = { x = 135 y = 29 }
+	# 		pdx_tooltip = CHI_party_logo_icon_tt
+	# 	}
+	# 	iconType = {
+	# 		name = "CHI_party_in_coalition_logo"
+	# 		position = { x = 395 y = 186 }
+	# 		pdx_tooltip = CHI_party_in_coalition_tt
+	# 	}
+	# 	iconType = {
+	# 		name = "CHI_party_in_government_logo"
+	# 		position = { x = 395 y = 156 }
+	# 		pdx_tooltip = CHI_party_in_government_tt
+	# 	}
+	# 	iconType = {
+	# 		name = "CHI_party_support_indicator"
+	# 		position = { x = 368 y = 186 }
+	# 		pdx_tooltip = CHI_party_support_tt
+	# 	}
+	# }
+	
+	# # CDL
+    # containerWindowType = {
+	# 	name = "CHI_entry_type_2_container"
+	# 	position = { x = 10 y = 0}
+	# 	size = { width = 423 height = 220 }
+		
+		
+	# 	background = {
+	# 		name = "Background"		
+	# 		quadTextureSprite = "GFX_tiled_plain_bg"
+	# 	}
+		
+	# 	instantTextBoxType = {
+	# 		name = "CHI_name"
+	# 		position = { x = 130 y = 10 }
+	# 		font = "hoi_20bs"
+	# 		text = "[GetCHIParliamentPartyName_Long]" # each gui entry is scoped to the current element in array so this will print current entry's name
+	# 		format = left
+	# 		maxWidth = 300
+	# 		maxHeight = 24
+	# 		multiline = yes
+	# 		fixedsize = no
+	# 		tooltip = "SCOPE_TEXT"
+	# 	}
+
+	# 	instantTextBoxType = {
+	# 		name = "CHI_party_info"
+	# 		position = { x = 130 y = 170 }
+	# 		font = "hoi_18mbs"
+	# 		text = "CHI_party_information" # each gui entry is scoped to the current element in array so this will print current entry's name
+	# 		format = left
+	# 		maxWidth = 300
+	# 		maxHeight = 24
+	# 		fixedsize = yes
+	# 		tooltip = "SCOPE_TEXT"
+	# 	}
+	# 	instantTextBoxType = {
+	# 		name = "CHI_total_seats"
+	# 		position = { x = 10 y = 190 }
+	# 		font = "hoi_18mbs"
+	# 		text = "CHI_CDL_total_numer_seats" # each gui entry is scoped to the current element in array so this will print current entry's name
+	# 		format = left
+	# 		maxWidth = 300
+	# 		maxHeight = 24
+	# 		fixedsize = yes
+	# 		tooltip = "SCOPE_TEXT"
+	# 	}
+
+	# 	containerWindowType = {
+	# 		name = "CHI_party_leader_container"
+	# 		position = { x = 0 y = 0 }
+
+	# 		iconType = {
+	# 			name = "CHI_party_leader_portrait"
+	# 			position = { x = 5 y = 10 }
+	# 			spriteType = GFX_leader_unknown
+	# 			scale = 0.735
+	# 		}
+	# 		iconType = {
+	# 			name = "CHI_party_leader_portrait_frame"
+	# 			position = { x = 0 y = 0 }
+	# 			spriteType = GFX_pol_leader_frame
+	# 			scale = 0.735
+	# 			pdx_tooltip = CHI_party_leader_tt
+	# 			pdx_tooltip_delayed = CHI_party_leader_tt_delayed
+	# 		}
+	# 		instantTextboxType = {
+	# 			name = "CHI_party_leader_name"
+	# 			position = { x = 11 y = 166 }
+	# 			text = "[GetCHIPartyLeaderName]"
+	# 			font = hoi_16mbs
+	# 			format = center
+	# 			maxWidth = 105
+	# 			multiline = yes
+	# 			alwaystransparent = yes
+	# 		}
+	# 	}
+
+	# 	iconType = {
+	# 		name = "CHI_party_logo"
+	# 		position = { x = 131 y = 29 }
+	# 		pdx_tooltip = CHI_party_logo_icon_tt
+	# 	}
+	# 	iconType = {
+	# 		name = "CHI_party_in_coalition_logo"
+	# 		position = { x = 390 y = 186 }
+	# 		pdx_tooltip = CHI_party_in_coalition_tt
+	# 	}
+	# 	iconType = {
+	# 		name = "CHI_party_in_government_logo"
+	# 		position = { x = 390 y = 156 }
+	# 		pdx_tooltip = CHI_party_in_government_tt
+	# 	}
+	# 	iconType = {
+	# 		name = "CHI_party_support_indicator"
+	# 		position = { x = 363 y = 186 }
+	# 		pdx_tooltip = CHI_party_support_tt
+	# 	}
+	# }
+
+	# 党派概览 - 左
+	# BANNED NOT CPC
+	containerWindowType = {
+		name = "CHI_party_entry_type_BANNED_container"
+		position = { x = 6 y = 0}
+		size = { width = 430 height = 200 }		
+		
+		background = {
+			name = "Background"		
+			quadTextureSprite = "GFX_tiled_plain_bg_red"
+		}
+		
+		instantTextBoxType = {
+			name = "CHI_name"
+			position = { x = 135 y = 10 }
+			font = "hoi_20bs"
+			text = "[GetCHIParliamentPartyName_Long]" # each gui entry is scoped to the current element in array so this will print current entry's name
+			format = left
+			maxWidth = 300
+			maxHeight = 24
+			multiline = yes
+			fixedsize = no
+			tooltip = "SCOPE_TEXT"
+		}
+
+		instantTextBoxType = {
+			name = "CHI_party_info_BANNED_PARTY"
+			position = { x = 135 y = 170 }
+			font = "hoi_18mbs"
+			text = "CHI_party_information_BANNED" # each gui entry is scoped to the current element in array so this will print current entry's name
+			format = left
+			maxWidth = 300
+			maxHeight = 24
+			fixedsize = yes
+			tooltip = "SCOPE_TEXT"
+		}
+
+		containerWindowType = {
+			name = "CHI_party_leader_container"
+			position = { x = 5 y = 5 }
+
+			iconType = {
+				name = "CHI_party_leader_portrait"
+				position = { x = 5 y = 10 }
+				spriteType = GFX_leader_unknown
+				scale = 0.735
+			}
+			iconType = {
+				name = "CHI_party_leader_portrait_frame"
+				position = { x = 0 y = 0 }
+				spriteType = GFX_pol_leader_frame
+				scale = 0.735
+				pdx_tooltip = CHI_party_leader_tt
+				pdx_tooltip_delayed = CHI_party_leader_tt_delayed
+			}
+			instantTextboxType = {
+				name = "CHI_party_leader_name"
+				position = { x = 11 y = 166 }
+				text = "[GetCHIPartyLeaderName]"
+				font = hoi_16mbs
+				format = center
+				maxWidth = 105
+				multiline = yes
+				alwaystransparent = yes
+			}
+		}
+
+		iconType = {
+			name = "CHI_party_logo"
+			position = { x = 136 y = 29 }
+			pdx_tooltip = CHI_party_logo_icon_tt
+		}
+	}
+	
+	# CPC
+	containerWindowType = {
+		name = "CHI_entry_type_CPC_container"
+		position = { x = 6 y = 0}
+		size = { width = 430 height = 200 }		
+		
+		background = {
+			name = "Background"		
+			quadTextureSprite = "GFX_tiled_plain_bg_red"
+		}
+		
+		instantTextBoxType = {
+			name = "CHI_name"
+			position = { x = 135 y = 10 }
+			font = "hoi_20bs"
+			text = "[GetCHIParliamentPartyName_Long]" # each gui entry is scoped to the current element in array so this will print current entry's name
+			format = left
+			maxWidth = 300
+			maxHeight = 24
+			multiline = yes
+			fixedsize = no
+			tooltip = "SCOPE_TEXT"
+		}
+
+		instantTextBoxType = {
+			name = "CHI_party_info_BANNED_PARTY"
+			position = { x = 135 y = 170 }
+			font = "hoi_18mbs"
+			text = "CHI_party_information_BANNED" # each gui entry is scoped to the current element in array so this will print current entry's name
+			format = left
+			maxWidth = 300
+			maxHeight = 24
+			fixedsize = yes
+			tooltip = "SCOPE_TEXT"
+		}
+
+		containerWindowType = {
+			name = "CHI_party_leader_container"
+			position = { x = 5 y = 5 }
+
+			iconType = {
+				name = "CHI_party_leader_portrait"
+				position = { x = 5 y = 10 }
+				spriteType = GFX_leader_unknown
+				scale = 0.735
+			}
+			iconType = {
+				name = "CHI_party_leader_portrait_frame"
+				position = { x = 0 y = 0 }
+				spriteType = GFX_pol_leader_frame
+				scale = 0.735
+				pdx_tooltip = CHI_party_leader_tt
+				pdx_tooltip_delayed = CHI_party_leader_tt_delayed
+			}
+			instantTextboxType = {
+				name = "CHI_party_leader_name"
+				position = { x = 11 y = 166 }
+				text = "[GetCHIPartyLeaderName]"
+				font = hoi_16mbs
+				format = center
+				maxWidth = 105
+				multiline = yes
+				alwaystransparent = yes
+			}
+		}
+
+		iconType = {
+			name = "CHI_party_logo"
+			position = { x = 136 y = 29 }
+			pdx_tooltip = CHI_party_logo_icon_tt
+		}
+		# iconType = {
+		# 	name = "CPC_support_indicator"
+		# 	position = { x = 390 y = 166 }
+		# 	pdx_tooltip = CHI_CPC_support_tt
+		# 	spriteType = GFX_CPC_support_30x30
+		# }
+	}
+
+	# NORMAL
+	containerWindowType = {
+		name = "CHI_party_entry_type_NORMAL_container"
+		position = { x = 6 y = 0}	
+		size = { width = 430 height = 200 }
+		
+		
+		background = {
+			name = "Background"		
+			quadTextureSprite = "GFX_tiled_plain_bg"
+		}
+		
+		instantTextBoxType = {
+			name = "CHI_name"
+			position = { x = 135 y = 10 }
+			font = "hoi_20bs"
+			text = "[GetCHIParliamentPartyName_Long]" # each gui entry is scoped to the current element in array so this will print current entry's name
+			format = left
+			maxWidth = 300
+			maxHeight = 24
+			multiline = yes
+			fixedsize = no
+			tooltip = "SCOPE_TEXT"
+		}
+
+		instantTextBoxType = {
+			name = "CHI_party_info"
+			position = { x = 135 y = 170 }
+			font = "hoi_18mbs"
+			text = "CHI_party_information" # each gui entry is scoped to the current element in array so this will print current entry's name
+			format = left
+			maxWidth = 300
+			maxHeight = 24
+			fixedsize = yes
+			tooltip = "SCOPE_TEXT"
+		}
+
+		containerWindowType = {
+			name = "CHI_party_leader_container"
+			position = { x = 5 y = 5 }
+
+			iconType = {
+				name = "CHI_party_leader_portrait"
+				position = { x = 5 y = 10 }
+				spriteType = GFX_leader_unknown
+				scale = 0.735
+			}
+			iconType = {
+				name = "CHI_party_leader_portrait_frame"
+				position = { x = 0 y = 0 }
+				spriteType = GFX_pol_leader_frame
+				scale = 0.735
+				pdx_tooltip = CHI_party_leader_tt
+				pdx_tooltip_delayed = CHI_party_leader_tt_delayed
+			}
+			instantTextboxType = {
+				name = "CHI_party_leader_name"
+				position = { x = 11 y = 166 }
+				text = "[GetCHIPartyLeaderName]"
+				font = hoi_16mbs
+				format = center
+				maxWidth = 105
+				multiline = yes
+				alwaystransparent = yes
+			}
+		}
+
+		iconType = {
+			name = "CHI_party_logo"
+			position = { x = 136 y = 29 }
+			pdx_tooltip = CHI_party_logo_icon_tt
+		}
+		iconType = {
+			name = "CHI_party_in_coalition_logo"
+			position = { x = 395 y = 166 }
+			pdx_tooltip = CHI_party_in_coalition_tt
+		}
+		iconType = {
+			name = "CHI_party_in_government_logo"
+			position = { x = 395 y = 136 }
+			pdx_tooltip = CHI_party_in_government_tt
+		}
+		iconType = {
+			name = "CHI_party_support_indicator"
+			position = { x = 368 y = 166 }
+			pdx_tooltip = CHI_party_support_tt
+		}
+	}
+
+	# NILL
+	containerWindowType = {
+		name = "CHI_party_entry_type_NILL_container"
+		position = { x = 6 y = 0}
+		size = { width = 430 height = 90 }		
+		
+		background = {
+			name = "Background"		
+			quadTextureSprite = "GFX_tiled_plain_bg"
+		}
+		iconType = {
+			name = "CHI_NILL_LOGO_THING"
+			position = { x = 7 y = 7 }
+			spriteType = GFX_NIL_emblem
+			pdx_tooltip = CHI_NILL_LOGO_THING_TT
+		}
+		instantTextBoxType = {
+			name = "CHI_nill_information"
+			position = { x = 90 y = 5 }
+			font = "hoi_20bs"
+			text = "CHI_nill_information_text"
+			format = left
+			maxWidth = 300
+			maxHeight = 24
+			multiline = yes
+			fixedsize = no
+			tooltip = "SCOPE_TEXT"
+		}
+	}
+}

@@ -1,0 +1,184 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_portrait_CRF_CHI_chen_cheng"
+		texturefile = "gfx/leaders/CHI/Portrait_CRF_CHI_chen_cheng.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_CRF_CHI_chiang_kaishek_civilian"
+		texturefile = "gfx/leaders/CHI/Portrait_CRF_CHI_chiang_kaishek_civilian.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_CRF_CHI_Chiang_Kai_Shek_politic"
+		texturefile = "gfx/leaders/CHI/Portrait_CRF_CHI_Chiang_Kai_Shek_politic.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_CRF_CHI_dai_anlan"
+		texturefile = "gfx/leaders/CHI/Portrait_CRF_CHI_dai_anlan.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_CRF_CHI_du_yuming"
+		texturefile = "gfx/leaders/CHI/Portrait_CRF_CHI_du_yuming.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_CRF_CHI_guan_linzheng"
+		texturefile = "gfx/leaders/CHI/Portrait_CRF_CHI_guan_linzheng.dds"
+	}
+    spriteType = {
+		name = "GFX_portrait_CRF_CHI_he_yingqin"
+		texturefile = "gfx/leaders/CHI/Portrait_CRF_CHI_he_yingqin.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_CRF_CHI_gu_zhutong"
+		texturefile = "gfx/leaders/CHI/Portrait_CRF_CHI_gu_zhutong.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_CRF_CHI_huang_wei"
+		texturefile = "gfx/leaders/CHI/Portrait_CRF_CHI_huang_wei.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_CRF_CHI_hu_lian"
+		texturefile = "gfx/leaders/CHI/Portrait_CRF_CHI_hu_lian.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_CRF_CHI_hu_zongnan"
+		texturefile = "gfx/leaders/CHI/Portrait_CRF_CHI_hu_zongnan.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_CRF_CHI_liao_yaoxiang"
+		texturefile = "gfx/leaders/CHI/Portrait_CRF_CHI_liao_yaoxiang.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_CRF_CHI_liu_zhi"
+		texturefile = "gfx/leaders/CHI/Portrait_CRF_CHI_liu_zhi.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_CRF_CHI_luo_zhuoying"
+		texturefile = "gfx/leaders/CHI/Portrait_CRF_CHI_luo_zhuoying.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_CRF_CHI_ma_zhanshan"
+		texturefile = "gfx/leaders/CHI/Portrait_CRF_CHI_ma_zhanshan.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_CRF_CHI_qiu_qingquan"
+		texturefile = "gfx/leaders/CHI/Portrait_CRF_CHI_qiu_qingquan.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_CRF_CHI_song_xilian"
+		texturefile = "gfx/leaders/CHI/Portrait_CRF_CHI_song_xilian.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_CRF_CHI_sun_lianzhong"
+		texturefile = "gfx/leaders/CHI/Portrait_CRF_CHI_sun_lianzhong.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_CRF_CHI_sun_liren"
+		texturefile = "gfx/leaders/CHI/Portrait_CRF_CHI_sun_liren.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_CRF_CHI_sun_yuanliang"
+		texturefile = "gfx/leaders/CHI/Portrait_CRF_CHI_sun_yuanliang.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_CRF_CHI_tang_enbo"
+		texturefile = "gfx/leaders/CHI/Portrait_CRF_CHI_tang_enbo.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_CRF_CHI_wang_jingwei"
+		texturefile = "gfx/leaders/CHI/Portrait_CRF_CHI_wang_jingwei.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_CRF_CHI_wang_yaowu"
+		texturefile = "gfx/leaders/CHI/Portrait_CRF_CHI_wang_yaowu.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_CRF_CHI_wei_lihuang"
+		texturefile = "gfx/leaders/CHI/Portrait_CRF_CHI_wei_lihuang.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_CRF_CHI_weng_wenhao"
+		texturefile = "gfx/leaders/CHI/Portrait_CRF_CHI_weng_wenhao.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_CRF_CHI_xue_yue"
+		texturefile = "gfx/leaders/CHI/Portrait_CRF_CHI_xue_yue.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_CRF_CHI_zhang_fakui"
+		texturefile = "gfx/leaders/CHI/Portrait_CRF_CHI_zhang_fakui.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_CRF_CHI_zhang_guotao"
+		texturefile = "gfx/leaders/CHI/Portrait_CRF_CHI_zhang_guotao.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_CRF_CHI_zhang_lingfu"
+		texturefile = "gfx/leaders/CHI/Portrait_CRF_CHI_zhang_lingfu.dds"
+	}
+    spriteType = {
+		name = "GFX_portrait_CRF_CHI_zhang_lingfu"
+		texturefile = "gfx/leaders/CHI/Portrait_CRF_CHI_zhang_lingfu.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_CRF_CHI_zhang_xueliang"
+		texturefile = "gfx/leaders/CHI/Portrait_CRF_CHI_zhang_xueliang.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_CRF_CHI_zhang_zizhong"
+		texturefile = "gfx/leaders/CHI/Portrait_CRF_CHI_zhang_zizhong.dds"
+	}
+    spriteType = {
+		name = "GFX_portrait_CRF_CHI_zhang_zhizhong"
+		texturefile = "gfx/leaders/CHI/Portrait_CRF_CHI_zhang_zhizhong.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_CRF_CHI_zheng_dongguo"
+		texturefile = "gfx/leaders/CHI/Portrait_CRF_CHI_zheng_dongguo.dds"
+	}
+
+    
+	spriteType = {
+		name = "GFX_idea_CRF_CHI_chen_cheng"
+		texturefile = "gfx/interface/ideas/Advisors/CHI/idea_CRF_CHI_chen_cheng.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_CRF_CHI_dai_anlan"
+		texturefile = "gfx/interface/ideas/Advisors/CHI/idea_CRF_CHI_dai_anlan.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_CRF_CHI_du_yuming"
+		texturefile = "gfx/interface/ideas/Advisors/CHI/idea_CRF_CHI_du_yuming.dds"
+	}
+    spriteType = {
+		name = "GFX_idea_CRF_CHI_he_yingqin"
+		texturefile = "gfx/interface/ideas/Advisors/CHI/idea_CRF_CHI_he_yingqin.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_CRF_CHI_gu_zhutong"
+		texturefile = "gfx/interface/ideas/Advisors/CHI/idea_CRF_CHI_gu_zhutong.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_CRF_CHI_hu_zongnan"
+		texturefile = "gfx/interface/ideas/Advisors/CHI/idea_CRF_CHI_hu_zongnan.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_CRF_CHI_sun_liren"
+		texturefile = "gfx/interface/ideas/Advisors/CHI/idea_CRF_CHI_sun_liren.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_CRF_CHI_wang_yaowu"
+		texturefile = "gfx/interface/ideas/Advisors/CHI/idea_CRF_CHI_wang_yaowu.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_CRF_CHI_wei_lihuang"
+		texturefile = "gfx/interface/ideas/Advisors/CHI/idea_CRF_CHI_wei_lihuang.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_CRF_CHI_xue_yue"
+		texturefile = "gfx/interface/ideas/Advisors/CHI/idea_CRF_CHI_xue_yue.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_CRF_CHI_zhang_xueliang"
+		texturefile = "gfx/interface/ideas/Advisors/CHI/idea_CRF_CHI_zhang_xueliang.dds"
+	}
+}

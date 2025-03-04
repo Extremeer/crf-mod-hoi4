@@ -1,0 +1,75 @@
+﻿focus_tree = {
+	id = disabled_focus
+	
+	country = {
+		factor = 0
+	}
+	
+
+	default = no
+
+	continuous_focus_position = { x = 20 y = 2000 }
+
+	focus = {
+		id = CHI_subjugate_the_warlords
+		icon = GFX_CHI_subjugate_the_warlords
+		x = 1
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = CHI_inter_party_coordination_council
+		icon = GFX_goal_generic_major_alliance
+		x = 3
+		y = 1
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = CHI_inter_party_coordination_council
+		}
+	}
+}

@@ -1,0 +1,7 @@
+demand_non_chi_jap_faction_give_back_land_categories = {
+	allowed = {
+		WTT_is_ROOT_current_leader_of_china = yes
+		is_subject = no
+	}
+	priority = 99
+}

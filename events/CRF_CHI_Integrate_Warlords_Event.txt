@@ -1,0 +1,935 @@
+﻿add_namespace = chi_int
+
+# China demands warlord be puppeted
+country_event = {
+	id = chi_int.1
+	title = chi_int.1.t
+	desc = chi_int.1.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+	
+	#Accept puppet
+	option = {
+		name = chi_int.1.a
+		ai_chance = { 
+			base = 10 
+			modifier = {
+				has_global_flag = CHI_xian_refused
+				factor = 0
+			}
+			modifier = {
+				tag = GXC
+				has_game_rule = {
+					rule = integrate_gxc_warlords_ai_behavior
+					option = WARLORD_GXC_ACCEPT_INTEGRATE
+				}
+				factor = 100
+			}
+			modifier = {
+				tag = YUN
+				has_game_rule = {
+					rule = integrate_yun_warlords_ai_behavior
+					option = WARLORD_YUN_ACCEPT_INTEGRATE
+				}
+				factor = 100
+			}
+			modifier = {
+				tag = SHX
+				has_game_rule = {
+					rule = integrate_shx_warlords_ai_behavior
+					option = WARLORD_SHX_ACCEPT_INTEGRATE
+				}
+				factor = 100
+			}
+			modifier = {
+				tag = XSM
+				has_game_rule = {
+					rule = integrate_xsm_warlords_ai_behavior
+					option = WARLORD_XSM_ACCEPT_INTEGRATE
+				}
+				factor = 100
+			}
+			modifier = {
+				tag = SIK
+				has_game_rule = {
+					rule = integrate_sik_warlords_ai_behavior
+					option = WARLORD_SIK_ACCEPT_INTEGRATE
+				}
+				factor = 100
+			}
+			modifier = {
+				tag = GXC
+				has_game_rule = {
+					rule = integrate_gxc_warlords_ai_behavior
+					option = WARLORD_GXC_REFUSE_INTEGRATE
+				}
+				factor = 0
+			}
+			modifier = {
+				tag = YUN
+				has_game_rule = {
+					rule = integrate_yun_warlords_ai_behavior
+					option = WARLORD_YUN_REFUSE_INTEGRATE
+				}
+				factor = 0
+			}
+			modifier = {
+				tag = SHX
+				has_game_rule = {
+					rule = integrate_shx_warlords_ai_behavior
+					option = WARLORD_SHX_REFUSE_INTEGRATE
+				}
+				factor = 0
+			}
+			modifier = {
+				tag = XSM
+				has_game_rule = {
+					rule = integrate_xsm_warlords_ai_behavior
+					option = WARLORD_XSM_REFUSE_INTEGRATE
+				}
+				factor = 0
+			}
+			modifier = {
+				tag = SIK
+				has_game_rule = {
+					rule = integrate_sik_warlords_ai_behavior
+					option = WARLORD_SIK_REFUSE_INTEGRATE
+				}
+				factor = 0
+			}
+		}
+		FROM = {
+			puppet = ROOT
+			country_event = { id = wtt_china.2 }
+		}
+	}
+
+	#Never
+	option = {
+		name = chi_int.1.b
+		ai_chance = { 
+			base = 10 
+		}
+		FROM = {
+			country_event = { id = wtt_china.3 }
+		}
+	}
+}
+
+#China demand TIBET - Get demand
+country_event = {
+	id = chi_int.2
+	title = chi_int.2.t
+	desc = chi_int.2.desc
+	picture = GFX_report_event_chinese_japanese_handshake
+
+	is_triggered_only = yes
+	
+	option = { # agree
+		name = chi_int.2.a
+		FROM = { country_event = chi_int.3 }
+		effect_tooltip = {
+			if = {
+				limit = {
+					ROOT = {
+						all_owned_state = {
+							OR = {
+								state = 322
+								state = 601
+								state = 757
+								state = 758
+							}
+						}
+					}
+				}
+				FROM = { 
+					annex_country = { target = ROOT transfer_troops = yes }		
+				}
+				else = {
+					ROOT = {
+						every_owned_state = {
+							limit = {
+								OR = {
+									state = 322
+									state = 601
+									state = 757
+									state = 758
+								}
+							}
+							FROM = {
+								transfer_state = PREV
+							}
+						}
+					}
+				}
+			}
+			every_other_country = {
+				limit = {
+					is_subject_of = ROOT
+					any_owned_state = {
+						OR = {
+							state = 322
+							state = 601
+							state = 757
+							state = 758
+						}
+					}
+				}
+				if = {
+					limit = {
+						all_owned_state = {
+							OR = {
+								state = 322
+								state = 601
+								state = 757
+								state = 758
+							}
+						}
+					}
+					FROM = { 
+						annex_country = { target = PREV transfer_troops = yes }		
+					}
+					else = {
+						every_owned_state = {
+							limit = {
+								OR = {
+									state = 322
+									state = 601
+									state = 757
+									state = 758
+								}
+							}
+							FROM = {
+								transfer_state = PREV
+							}
+						}	
+					}
+				}
+			}
+		}
+		custom_effect_tooltip = GAME_OVER_TT
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+			modifier = {
+				factor = 0.5
+				strength_ratio = { tag = FROM ratio > 1.5 }
+			}
+			modifier = {
+				factor = 0.2
+				strength_ratio = { tag = FROM ratio > 3 }
+			}
+			modifier = {
+				factor = 0
+				strength_ratio = { tag = FROM ratio > 5 }
+			}
+		}
+	}
+
+	option = { #refuse
+		name = chi_int.2.b
+		FROM = { country_event = chi_int.4 }
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+			modifier = {
+				factor = 0.5
+				strength_ratio = { tag = FROM ratio < 1 }
+			}
+			modifier = {
+				factor = 0.2
+				strength_ratio = { tag = FROM ratio < 0.5 }
+			}
+			modifier = {
+				factor = 0
+				strength_ratio = { tag = FROM ratio < 0.2 }
+			}
+		}
+	}
+}
+
+#China demand TIBET - Get AGREE reply
+country_event = {
+	id = chi_int.3
+	title = chi_int.3.t
+	desc = chi_int.3.desc
+	picture = GFX_report_event_chinese_soldiers_01
+
+	is_triggered_only = yes
+	
+	option = {
+		name = chi_int.3.a
+		if = {
+			limit = {
+				FROM = {
+					all_owned_state = {
+						OR = {
+							state = 322
+							state = 601
+							state = 757
+							state = 758
+						}
+					}
+				}
+			}
+			ROOT = { 
+				annex_country = { target = FROM transfer_troops = yes }		
+			}
+			else = {
+				FROM = {
+					every_owned_state = {
+						limit = {
+							OR = {
+								state = 322
+								state = 601
+								state = 757
+								state = 758
+							}
+						}
+						ROOT = {
+							transfer_state = PREV
+						}
+					}
+				}
+			}
+		}
+		every_other_country = {
+			limit = {
+				is_subject_of = FROM
+				any_owned_state = {
+					OR = {
+						state = 322
+						state = 601
+						state = 757
+						state = 758
+					}
+				}
+			}
+			if = {
+				limit = {
+					all_owned_state = {
+						OR = {
+							state = 322
+							state = 601
+							state = 757
+							state = 758
+						}
+					}
+				}
+				ROOT = { 
+					annex_country = { target = PREV transfer_troops = yes }		
+				}
+				else = {
+					every_owned_state = {
+						limit = {
+							OR = {
+								state = 322
+								state = 601
+								state = 757
+								state = 758
+							}
+						}
+						ROOT = {
+							transfer_state = PREV
+						}
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					ROOT = {
+						owns_state = 322
+						owns_state = 601
+						owns_state = 757
+						owns_state = 758
+					}
+				}
+				ROOT = { news_event = { id = chi_int.5 days = 1 } }
+			}
+		}
+	}
+}
+
+#China demand TIBET - Get REFUSE reply
+country_event = {
+	id = chi_int.4
+	title = chi_int.4.t
+	desc = chi_int.4.desc
+	picture = GFX_report_event_chinese_soldiers_01
+
+	is_triggered_only = yes
+	
+	option = {
+		name = chi_int.4.a
+		create_wargoal = {
+			type = annex_everything
+			target = FROM				
+			expire = 0
+		}		
+	}
+}
+
+#China demand TIBET - Success News
+news_event = {
+	id = chi_int.5
+	title = chi_int.5.t
+	desc = chi_int.5.desc
+	picture = GFX_manchukuo_palace
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = chi_int.5.a
+		trigger = {
+			is_all_chinese_tag = yes
+			NOT = { has_war_with = FROM }
+		}
+	}
+	option = {
+		name = chi_int.5.b
+		trigger = { 
+			is_all_chinese_tag = no
+			NOT = { has_war_with = FROM }
+		}
+	}
+	option = {
+		name = chi_int.5.c
+		trigger = { has_war_with = FROM }
+	}
+}
+
+#China demand TUVA - Get demand
+country_event = {
+	id = chi_int.6
+	title = chi_int.6.t
+	desc = chi_int.6.desc
+	picture = GFX_report_event_chinese_japanese_handshake
+
+	is_triggered_only = yes
+	
+	option = { # agree
+		name = chi_int.6.a
+		FROM = { country_event = chi_int.7 }
+		effect_tooltip = {
+			if = {
+				limit = {
+					ROOT = {
+						all_owned_state = {
+							state = 329
+						}
+					}
+				}
+				FROM = { 
+					annex_country = { target = ROOT transfer_troops = yes }		
+				}
+				else = {
+					FROM = {
+						every_owned_state = {
+							limit = {
+								state = 329
+							}
+							ROOT = {
+								transfer_state = PREV
+							}
+						}
+					}
+				}
+			}
+			every_other_country = {
+				limit = {
+					is_subject_of = ROOT
+					any_owned_state = {
+						state = 329
+					}
+				}
+				if = {
+					limit = {
+						all_owned_state = {
+							state = 329
+						}
+					}
+					FROM = { 
+						annex_country = { target = PREV transfer_troops = yes }		
+					}
+					else = {
+						FROM = {
+							transfer_state = 329
+						}
+					}
+				}
+			}
+		}
+		custom_effect_tooltip = GAME_OVER_TT
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+			modifier = {
+				factor = 0.5
+				strength_ratio = { tag = FROM ratio > 1.5 }
+			}
+			modifier = {
+				factor = 0.2
+				strength_ratio = { tag = FROM ratio > 3 }
+			}
+			modifier = {
+				factor = 0
+				strength_ratio = { tag = FROM ratio > 5 }
+			}
+		}
+	}
+
+	option = { #refuse
+		name = chi_int.6.b
+		FROM = { country_event = chi_int.8 }
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+			modifier = {
+				factor = 0.5
+				strength_ratio = { tag = FROM ratio < 1 }
+			}
+			modifier = {
+				factor = 0.2
+				strength_ratio = { tag = FROM ratio < 0.5 }
+			}
+			modifier = {
+				factor = 0
+				strength_ratio = { tag = FROM ratio < 0.2 }
+			}
+		}
+	}
+}
+
+#China demand TUVA - Get AGREE reply
+country_event = {
+	id = chi_int.7
+	title = chi_int.7.t
+	desc = chi_int.7.desc
+	picture = GFX_report_event_chinese_soldiers_01
+
+	is_triggered_only = yes
+	
+	option = {
+		name = chi_int.7.a
+		if = {
+			limit = {
+				FROM = {
+					all_owned_state = {
+						state = 329
+					}
+				}
+			}
+			ROOT = { 
+				annex_country = { target = FROM transfer_troops = yes }		
+			}
+			else = {
+				FROM = {
+					every_owned_state = {
+						limit = {
+							state = 329
+						}
+						ROOT = {
+							transfer_state = PREV
+						}
+					}
+				}
+			}
+		}
+		every_other_country = {
+			limit = {
+				is_subject_of = FROM
+				any_owned_state = {
+					state = 329
+				}
+			}
+			if = {
+				limit = {
+					all_owned_state = {
+						state = 329
+					}
+				}
+				ROOT = { 
+					annex_country = { target = PREV transfer_troops = yes }		
+				}
+				else = {
+					ROOT = {
+						transfer_state = 329
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			ROOT = { news_event = { id = chi_int.9 days = 1 } }
+		}
+	}
+}
+
+#China demand TUVA - Get REFUSE reply
+country_event = {
+	id = chi_int.8
+	title = chi_int.8.t
+	desc = chi_int.8.desc
+	picture = GFX_report_event_chinese_soldiers_01
+
+	is_triggered_only = yes
+	
+	option = {
+		name = chi_int.8.a
+		create_wargoal = {
+			type = annex_everything
+			target = FROM				
+			expire = 0
+		}		
+	}
+}
+
+#China demand TUVA - Success News
+news_event = {
+	id = chi_int.9
+	title = chi_int.9.t
+	desc = chi_int.9.desc
+	picture = GFX_manchukuo_palace
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = chi_int.9.a
+		trigger = {
+			is_all_chinese_tag = yes
+			NOT = { has_war_with = FROM }
+		}
+	}
+	option = {
+		name = chi_int.9.b
+		trigger = { 
+			is_all_chinese_tag = no
+			NOT = { has_war_with = FROM }
+		}
+	}
+	option = {
+		name = chi_int.9.c
+		trigger = { has_war_with = FROM }
+	}
+}
+
+#China demand OUTER-MONGOLIA - Get demand
+country_event = {
+	id = chi_int.10
+	title = chi_int.10.t
+	desc = chi_int.10.desc
+	picture = GFX_report_event_chinese_japanese_handshake
+
+	is_triggered_only = yes
+	
+	option = { # agree
+		name = chi_int.10.a
+		FROM = { country_event = chi_int.11 }
+		effect_tooltip = {
+			if = {
+				limit = {
+					ROOT = {
+						all_owned_state = {
+							OR = {
+								state = 817
+								state = 818
+								state = 819
+								state = 820
+								state = 330
+							}
+						}
+					}
+				}
+				FROM = { 
+					annex_country = { target = ROOT transfer_troops = yes }		
+				}
+				else = {
+					ROOT = {
+						every_owned_state = {
+							limit = {
+								OR = {
+									state = 817
+									state = 818
+									state = 819
+									state = 820
+									state = 330
+								}
+							}
+							FROM = {
+								transfer_state = PREV
+							}
+						}
+					}
+				}
+			}
+			every_other_country = {
+				limit = {
+					is_subject_of = ROOT
+					any_owned_state = {
+						OR = {
+							state = 817
+							state = 818
+							state = 819
+							state = 820
+							state = 330
+						}
+					}
+				}
+				if = {
+					limit = {
+						all_owned_state = {
+							OR = {
+								state = 817
+								state = 818
+								state = 819
+								state = 820
+								state = 330
+							}
+						}
+					}
+					FROM = { 
+						annex_country = { target = PREV transfer_troops = yes }		
+					}
+					else = {
+						every_owned_state = {
+							limit = {
+								OR = {
+									state = 817
+									state = 818
+									state = 819
+									state = 820
+									state = 330
+								}
+							}
+							FROM = {
+								transfer_state = PREV
+							}
+						}	
+					}
+				}
+			}
+		}
+		custom_effect_tooltip = GAME_OVER_TT
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+			modifier = {
+				factor = 0.5
+				strength_ratio = { tag = FROM ratio > 1.5 }
+			}
+			modifier = {
+				factor = 0.2
+				strength_ratio = { tag = FROM ratio > 3 }
+			}
+			modifier = {
+				factor = 0
+				strength_ratio = { tag = FROM ratio > 5 }
+			}
+		}
+	}
+
+	option = { #refuse
+		name = chi_int.10.b
+		FROM = { country_event = chi_int.12 }
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+			modifier = {
+				factor = 0.5
+				strength_ratio = { tag = FROM ratio < 1 }
+			}
+			modifier = {
+				factor = 0.2
+				strength_ratio = { tag = FROM ratio < 0.5 }
+			}
+			modifier = {
+				factor = 0
+				strength_ratio = { tag = FROM ratio < 0.2 }
+			}
+		}
+	}
+}
+
+#China demand OUTER-MONGOLIA - Get AGREE reply
+country_event = {
+	id = chi_int.11
+	title = chi_int.11.t
+	desc = chi_int.11.desc
+	picture = GFX_report_event_chinese_soldiers_01
+
+	is_triggered_only = yes
+	
+	option = {
+		name = chi_int.11.a
+		if = {
+			limit = {
+				FROM = {
+					all_owned_state = {
+						OR = {
+							state = 817
+							state = 818
+							state = 819
+							state = 820
+							state = 330
+						}
+					}
+				}
+			}
+			ROOT = { 
+				annex_country = { target = FROM transfer_troops = yes }		
+			}
+			else = {
+				FROM = {
+					every_owned_state = {
+						limit = {
+							OR = {
+								state = 817
+								state = 818
+								state = 819
+								state = 820
+								state = 330
+							}
+						}
+						ROOT = {
+							transfer_state = PREV
+						}
+					}
+				}
+			}
+		}
+		every_other_country = {
+			limit = {
+				is_subject_of = FROM
+				any_owned_state = {
+					OR = {
+						state = 817
+						state = 818
+						state = 819
+						state = 820
+						state = 330
+					}
+				}
+			}
+			if = {
+				limit = {
+					all_owned_state = {
+						OR = {
+							state = 817
+							state = 818
+							state = 819
+							state = 820
+							state = 330
+						}
+					}
+				}
+				ROOT = { 
+					annex_country = { target = PREV transfer_troops = yes }		
+				}
+				else = {
+					every_owned_state = {
+						limit = {
+							OR = {
+								state = 817
+								state = 818
+								state = 819
+								state = 820
+								state = 330
+							}
+						}
+						ROOT = {
+							transfer_state = PREV
+						}
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					ROOT = {
+						owns_state = 817
+						owns_state = 818
+						owns_state = 819
+						owns_state = 820
+						owns_state = 330
+					}
+				}
+				ROOT = { news_event = { id = chi_int.13 days = 1 } }
+			}
+		}
+	}
+}
+
+#China demand OUTER-MONGOLIA - Get REFUSE reply
+country_event = {
+	id = chi_int.12
+	title = chi_int.12.t
+	desc = chi_int.12.desc
+	picture = GFX_report_event_chinese_soldiers_01
+
+	is_triggered_only = yes
+	
+	option = {
+		name = chi_int.12.a
+		create_wargoal = {
+			type = annex_everything
+			target = FROM				
+			expire = 0
+		}		
+	}
+}
+
+#China demand OUTER-MONGOLIA - Success News
+news_event = {
+	id = chi_int.13
+	title = chi_int.13.t
+	desc = chi_int.13.desc
+	picture = GFX_manchukuo_palace
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = chi_int.13.a
+		trigger = {
+			is_all_chinese_tag = yes
+			NOT = { has_war_with = FROM }
+		}
+	}
+	option = {
+		name = chi_int.13.b
+		trigger = { 
+			is_all_chinese_tag = no
+			NOT = { has_war_with = FROM }
+		}
+	}
+	option = {
+		name = chi_int.13.c
+		trigger = { has_war_with = FROM }
+	}
+}

@@ -1,0 +1,6 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_Debug_Icon"
+		texturefile = "gfx/interface/ideologies/tp_tutelage.dds"
+	}
+}

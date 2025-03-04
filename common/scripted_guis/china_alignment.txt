@@ -1,0 +1,473 @@
+scripted_gui = {
+
+	china_alignment_nationalist_gui = {
+		context_type = selected_country_context
+		parent_window_token = selected_country_view_diplomacy
+		window_name = "china_alignment_nationalist_button_container"
+
+		ai_enabled = {
+			always = no
+		}
+
+		visible = {
+			OR = {
+				tag = CHI
+				tag = PRC
+				tag = GXC
+				tag = SIK
+				tag = TIB
+				tag = YUN
+				tag = XSM
+				tag = SHX
+				tag = XSM
+				tag = MON
+				tag = TAN
+				tag = MAN
+				tag = MEN
+				tag = KCW
+				tag = HKG
+				tag = MAU
+				tag = ETR
+			}
+			OR = {
+				CHI = {
+					WTT_is_ROOT_current_leader_of_china = yes
+				}
+				AND = {
+					CHI = {
+						WTT_is_ROOT_current_leader_of_china = no
+					}
+					PRC = {
+						WTT_is_ROOT_current_leader_of_china = no
+					}
+					event_target:WTT_current_china_leader = {
+						NOT = {
+							has_government = communism
+						}
+					}
+				}
+			}
+		}
+
+		triggers = {
+			china_alignment_nationalist_button_click_enabled = {
+				ROOT = { 
+					NOT = { has_country_flag = china_alignment_window_open_international }
+				}
+			}
+			china_alignment_nationalist_button_visible = {
+				OR = {
+					event_target:WTT_current_china_leader = {
+						tag = CHI
+					}
+					NOT = {
+						event_target:WTT_current_china_leader = {
+							tag = PRC
+						}
+						event_target:WTT_current_china_leader = {
+							tag = CHI
+						}
+						event_target:WTT_current_china_leader = {
+							has_government = communism
+						}
+					}
+				}
+			}
+		}
+
+		effects = {
+			china_alignment_nationalist_button_click = {
+				# CHI
+				CHI = {
+					if = {
+						limit = {
+							exists = yes
+						}
+						ROOT = { add_to_array = { china_alignment = CHI } }
+					}
+				}
+				PRC = {
+					if = {
+						limit = {
+							exists = yes
+						}
+						ROOT = { add_to_array = { china_alignment = PRC } }
+					}
+				}
+				XSM = {
+					if = {
+						limit = {
+							exists = yes
+						}
+						ROOT = { add_to_array = { china_alignment = XSM } }
+					}
+				}
+				SIK = {
+					if = {
+						limit = {
+							exists = yes
+						}
+						ROOT = { add_to_array = { china_alignment = SIK } }
+					}
+				}
+				ETR = {
+					if = {
+						limit = {
+							exists = yes
+						}
+						ROOT = { add_to_array = { china_alignment = ETR } }
+					}
+				}
+				TIB = {
+					if = {
+						limit = {
+							exists = yes
+						}
+						ROOT = { add_to_array = { china_alignment = TIB } }
+					}
+				}
+				MON = {
+					if = {
+						limit = {
+							exists = yes
+						}
+						ROOT = { add_to_array = { china_alignment = MON } }
+					}
+				}
+				TAN = {
+					if = {
+						limit = {
+							exists = yes
+						}
+						ROOT = { add_to_array = { china_alignment = TAN } }
+					}
+				}
+				YUN = {
+					if = {
+						limit = {
+							exists = yes
+						}
+						ROOT = { add_to_array = { china_alignment = YUN } }
+					}
+				}
+				GXC = {
+					if = {
+						limit = {
+							exists = yes
+						}
+						ROOT = { add_to_array = { china_alignment = GXC } }
+					}
+				}
+				SHX = {
+					if = {
+						limit = {
+							exists = yes
+						}
+						ROOT = { add_to_array = { china_alignment = SHX } }
+					}
+				}
+				MEN = {
+					if = {
+						limit = {
+							exists = yes
+						}
+						ROOT = { add_to_array = { china_alignment = MEN } }
+					}
+				}
+				MAN = {
+					if = {
+						limit = {
+							exists = yes
+						}
+						ROOT = { add_to_array = { china_alignment = MAN } }
+					}
+				}
+				KCW = {
+					if = {
+						limit = {
+							exists = yes
+						}
+						ROOT = { add_to_array = { china_alignment = KCW } }
+					}
+				}
+				HKG = {
+					if = {
+						limit = {
+							exists = yes
+						}
+						ROOT = { add_to_array = { china_alignment = HKG } }
+					}
+				}
+				MAU = {
+					if = {
+						limit = {
+							exists = yes
+						}
+						ROOT = { add_to_array = { china_alignment = MAU } }
+					}
+				}
+
+				event_target:WTT_current_china_leader = {
+					if = {
+						limit = {
+							exists = yes
+						}
+						ROOT = { add_to_array = { china_alignment_center = event_target:WTT_current_china_leader } }
+					}
+				}
+				ROOT = { set_country_flag = china_alignment_window_open_international }
+			}
+		}
+	}
+
+	#############################################################################################3
+	#############################################################################################3
+	#############################################################################################3
+	
+	china_alignment_communist_gui = {
+		context_type = selected_country_context
+		parent_window_token = selected_country_view_diplomacy
+		window_name = "china_alignment_communist_button_container"
+
+		ai_enabled = {
+			always = no
+		}
+
+		visible = {
+			OR = {
+				tag = CHI
+				tag = PRC
+				tag = GXC
+				tag = SIK
+				tag = TIB
+				tag = YUN
+				tag = XSM
+				tag = SHX
+				tag = XSM
+				tag = MON
+				tag = TAN
+				tag = MAN
+				tag = MEN
+				tag = KCW
+				tag = HKG
+				tag = MAU
+				tag = ETR
+			}
+		}
+
+		triggers = {
+			china_alignment_communist_button_click_enabled = {
+				ROOT = { 
+					NOT = { has_country_flag = china_alignment_window_open_international }
+				}
+			}
+			china_alignment_communist_button_visible = {
+				OR = {
+					event_target:WTT_current_china_leader = {
+						tag = PRC
+					}
+					AND = {
+						NOT = {
+							event_target:WTT_current_china_leader = {
+								tag = PRC
+							}
+							event_target:WTT_current_china_leader = {
+								tag = CHI
+							}
+						}
+						event_target:WTT_current_china_leader = {
+							has_government = communism
+						}
+					}
+				}
+			}
+		}
+
+		effects = {
+			china_alignment_communist_button_click = {
+				# CHI
+				CHI = {
+					if = {
+						limit = {
+							exists = yes
+						}
+						ROOT = { add_to_array = { china_alignment = CHI } }
+					}
+				}
+				PRC = {
+					if = {
+						limit = {
+							exists = yes
+						}
+						ROOT = { add_to_array = { china_alignment = PRC } }
+					}
+				}
+				XSM = {
+					if = {
+						limit = {
+							exists = yes
+						}
+						ROOT = { add_to_array = { china_alignment = XSM } }
+					}
+				}
+				SIK = {
+					if = {
+						limit = {
+							exists = yes
+						}
+						ROOT = { add_to_array = { china_alignment = SIK } }
+					}
+				}
+				ETR = {
+					if = {
+						limit = {
+							exists = yes
+						}
+						ROOT = { add_to_array = { china_alignment = ETR } }
+					}
+				}
+				TIB = {
+					if = {
+						limit = {
+							exists = yes
+						}
+						ROOT = { add_to_array = { china_alignment = TIB } }
+					}
+				}
+				MON = {
+					if = {
+						limit = {
+							exists = yes
+						}
+						ROOT = { add_to_array = { china_alignment = MON } }
+					}
+				}
+				TAN = {
+					if = {
+						limit = {
+							exists = yes
+						}
+						ROOT = { add_to_array = { china_alignment = TAN } }
+					}
+				}
+				YUN = {
+					if = {
+						limit = {
+							exists = yes
+						}
+						ROOT = { add_to_array = { china_alignment = YUN } }
+					}
+				}
+				GXC = {
+					if = {
+						limit = {
+							exists = yes
+						}
+						ROOT = { add_to_array = { china_alignment = GXC } }
+					}
+				}
+				SHX = {
+					if = {
+						limit = {
+							exists = yes
+						}
+						ROOT = { add_to_array = { china_alignment = SHX } }
+					}
+				}
+				MEN = {
+					if = {
+						limit = {
+							exists = yes
+						}
+						ROOT = { add_to_array = { china_alignment = MEN } }
+					}
+				}
+				MAN = {
+					if = {
+						limit = {
+							exists = yes
+						}
+						ROOT = { add_to_array = { china_alignment = MAN } }
+					}
+				}
+				KCW = {
+					if = {
+						limit = {
+							exists = yes
+						}
+						ROOT = { add_to_array = { china_alignment = KCW } }
+					}
+				}
+				HKG = {
+					if = {
+						limit = {
+							exists = yes
+						}
+						ROOT = { add_to_array = { china_alignment = HKG } }
+					}
+				}
+				MAU = {
+					if = {
+						limit = {
+							exists = yes
+						}
+						ROOT = { add_to_array = { china_alignment = MAU } }
+					}
+				}
+
+				event_target:WTT_current_china_leader = {
+					if = {
+						limit = {
+							exists = yes
+						}
+						ROOT = { add_to_array = { china_alignment_center = event_target:WTT_current_china_leader } }
+					}
+				}
+				ROOT = { set_country_flag = china_alignment_window_open_international }
+			}
+		}
+	}
+
+	china_faction_alignment = {
+		context_type = player_context
+		window_name = "faction_alignment_international_window"
+
+		ai_enabled = {
+			always = no
+		}
+
+		visible = {
+			ROOT = { has_country_flag = china_alignment_window_open_international }
+		}
+
+		dynamic_lists = {
+			china_tags_grid = {
+				array = china_alignment
+				change_scope = yes
+				entry_container = china_tag_entry
+			}
+		}
+
+		triggers = {
+			major_country_overlay_visible = {
+				#tag = event_target:WTT_current_china_leader
+				is_in_array = { ROOT.china_alignment_center = THIS }
+			}
+		}
+
+		effects = {
+			button_close_international_click = {
+				clear_array = china_alignment
+				clear_array = china_alignment_center
+				clr_country_flag = china_alignment_window_open_international
+			}
+		}
+
+		properties = {
+			flag = {
+				image = "[This.GetFlag]"
+			}
+		}
+	}	
+	
+}

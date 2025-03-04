@@ -1,0 +1,37 @@
+﻿l_simp_chinese:
+ ##########################################################
+ ###################GAME RULE##############################
+ ##########################################################
+ RULE_GROUP_CR_INTEGRATE_CUSTOMISE_BEHAVIOR: "£CRF_game_rule_flag_CHI  £CRF_game_rule_flag_PRC_Proclaim  中国中央政府-整合军阀"
+ WARLORD_ACCEPT_INTEGRATE_DESC: "军阀将会同意中央政府的整合请求，你可以通过国策和决议整合军阀。"
+ WARLORD_REFUSE_INTEGRATE_DESC: "军阀将会拒绝中央政府的整合请求，你只能通过内战来解决军阀问题。"
+ integrate_gxc_warlords_ai_behavior: "£CRF_game_rule_flag_GXC   整合桂系军阀"
+ WARLORD_GXC_ACCEPT_INTEGRATE: "军阀始终同意"
+ WARLORD_GXC_REFUSE_INTEGRATE: "军阀始终拒绝"
+ integrate_yun_warlords_ai_behavior: "£CRF_game_rule_flag_YUN   整合滇系军阀"
+ WARLORD_YUN_ACCEPT_INTEGRATE: "军阀始终同意"
+ WARLORD_YUN_REFUSE_INTEGRATE: "军阀始终拒绝"
+ integrate_shx_warlords_ai_behavior: "£CRF_game_rule_flag_SHX   整合晋系军阀"
+ WARLORD_SHX_ACCEPT_INTEGRATE: "军阀始终同意"
+ WARLORD_SHX_REFUSE_INTEGRATE: "军阀始终拒绝"
+ integrate_xsm_warlords_ai_behavior: "£CRF_game_rule_flag_XSM   整合马家军阀"
+ WARLORD_XSM_ACCEPT_INTEGRATE: "军阀始终同意"
+ WARLORD_XSM_REFUSE_INTEGRATE: "军阀始终拒绝"
+ integrate_sik_warlords_ai_behavior: "£CRF_game_rule_flag_SIK   整合新疆军阀"
+ WARLORD_SIK_ACCEPT_INTEGRATE: "军阀始终同意"
+ WARLORD_SIK_REFUSE_INTEGRATE: "军阀始终拒绝"
+ 
+ RULE_GROUP_CR_KMT_DIPLOMACY_CUSTOMISE_BEHAVIOR: "£CRF_game_rule_flag_CHI  中国国民党-外交政策"
+ JAP_ACCEPT_KMTS_DOMINATE_DESC: "日本将会同意中国在东征前的最后通牒。"
+ JAP_REFUSE_KMTS_DOMINATE_DESC: "日本将会拒绝中国在东征前的最后通牒。"
+ KMT_dominate_japan_ai_behavior: "£GFX_flag_JAP   东征日本"
+ JAP_ACCEPT_KMTS_DOMINATE: "日本始终同意"
+ JAP_REFUSE_KMTS_DOMINATE: "日本始终拒绝"
+ 
+ chi_int.1.t: "中央政府要求实现全国统一"
+ chi_int.1.d: "看来[From.GetLeader]最终已经决定要在这广袤的中华大地号令群雄。一位代表中央政府的特使现已抵达，要求我方服从[From.GetLeader]的领导。如若不从，他们就要用更为顺从的地方政府班子来将我们取代。"
+ chi_int.1.a: "让我们共就大业！"
+ chi_int.1.b: "那就让他试试看。"
+ 
+ custom_diff_strong_roc: "加强中国国府"
+ custom_diff_strong_prc: "加强中国苏区"

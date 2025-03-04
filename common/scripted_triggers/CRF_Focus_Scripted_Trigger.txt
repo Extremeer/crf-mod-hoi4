@@ -1,0 +1,23 @@
+# jap_select_non_fascism_route = {
+# 	JAP = {
+# 		OR = {
+# 			AND = {
+# 				has_completed_focus = JAP_cast_the_die
+# 				has_government = communism
+# 			}
+# 			AND = {
+# 				has_completed_focus = JAP_pre_emptive_coup
+# 				has_government = democratic
+# 			}
+# 		}
+# 	}
+# }
+
+owns_manchuria = {
+	761 = { is_owned_and_controlled_by = ROOT }
+	714 = { is_owned_and_controlled_by = ROOT }
+	717 = { is_owned_and_controlled_by = ROOT }
+	328 = { is_owned_and_controlled_by = ROOT }
+	715 = { is_owned_and_controlled_by = ROOT }
+	610 = { is_owned_and_controlled_by = ROOT }
+}

@@ -1,0 +1,96 @@
+CRF_debug_decision_category = {
+	CRF_annex_the_whole_china = {
+		icon = oppression
+		ai_will_do = {
+			factor = 0
+		}
+		visible = {
+			any_other_country = {
+				is_all_chinese_tag = yes
+				exists = yes
+			}
+			is_ai = no
+		}
+		complete_effect = {
+			every_other_country = {
+				limit = {
+					is_all_chinese_tag = yes
+				}
+				ROOT = {
+					annex_country = {
+						target = PREV
+					}
+				}
+			}
+		}
+	}
+	CRF_initial_legistive_yuan = {
+		icon = oppression
+		visible = {
+			is_ai = no
+			tag = CHI
+		}
+		complete_effect = {
+			CHI_legislative_yuan_initial = yes
+		}
+	}
+	CRF_initial_national_convention = {
+		icon = oppression
+		visible = {
+			is_ai = no
+			tag = CHI
+		}
+		complete_effect = {
+			CHI_national_convention_initial = yes
+		}
+	}
+	CRF_change_kmt_to_cpc_seats_in_legistive_yuan = {
+		icon = oppression
+		visible = {
+			is_ai = no
+			tag = CHI
+		}
+		complete_effect = {
+			set_temp_variable = {
+				TEMP_CHI_PARTY_ID = KMT_party_id
+			}
+			set_temp_variable = {
+				MODIFY_CHI_PARTY_SEAT = -337
+			}
+			CHI_SEAT_CHANGE_EFFECT = yes
+			set_temp_variable = {
+				TEMP_CHI_PARTY_ID = CPC_party_id
+			}
+			set_temp_variable = {
+				MODIFY_CHI_PARTY_SEAT = 337
+			}
+			CHI_SEAT_CHANGE_EFFECT = yes
+			CHI_handy_do_it_all = yes
+		}
+	}
+	CRF_CHI_undissolve_cpc_in_legislative_yuan = {
+		icon = oppression
+		visible = {
+			is_ai = no
+			tag = CHI
+		}
+		complete_effect = {
+			set_temp_variable = {
+				TEMP_CHI_PARTY_ID = CPC_party_id
+			}
+			CHI_undissolve_party_in_legislative_yuan = yes
+		}
+	}
+	CRF_focus_debug = {
+		icon = oppression
+		ai_will_do = {
+			factor = 0
+		}
+		visible = {
+			is_ai = no
+		}
+		complete_effect = {
+			complete_national_focus = CHI_hire_soviet_designer
+		}
+	}
+}

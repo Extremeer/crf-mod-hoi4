@@ -1,0 +1,134 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_sik_turn_to_kmt_News"
+		texturefile = "gfx/event_pictures/sik_turn_to_kmt_news.tga"
+	}
+	spriteType = {
+		name = "GFX_sik_turn_to_kmt"
+		texturefile = "gfx/event_pictures/sik_turn_to_kmt.tga"
+	}
+	spriteType = {
+		name = "GFX_call_back_ssc"
+		texturefile = "gfx/event_pictures/call_back_ssc.tga"
+	}
+	spriteType = {
+		name = "GFX_chi_successful_get_place"
+		texturefile = "gfx/event_pictures/chi_successful_get_place.dds"
+	}
+	spriteType = {
+		name = "GFX_puyi_caught"
+		texturefile = "gfx/event_pictures/puyi_caught.tga"
+	}
+	spriteType = {
+		name = "GFX_manchukuo_palace"
+		texturefile = "gfx/event_pictures/manchukuo_palace.tga"
+	}
+	spriteType = {
+		name = "GFX_china_army"
+		texturefile = "gfx/event_pictures/china_army.tga"
+	}
+	spriteType = {
+		name = "GFX_ahemaitijiang"
+		texturefile = "gfx/event_pictures/ahemaitijiang.tga"
+	}
+	spriteType = {
+		name = "GFX_hope_of_sinkiang"
+		texturefile = "gfx/event_pictures/hope_of_sinkiang.tga"
+	}
+	spriteType = {
+		name = "GFX_china_killing"
+		texturefile = "gfx/event_pictures/killing.tga"
+	}
+	spriteType = {
+		name = "GFX_china_yining_incident"
+		texturefile = "gfx/event_pictures/yining_incident.tga"
+	}
+	spriteType = {
+		name = "GFX_china_east_again_news"
+		texturefile = "gfx/event_pictures/east_again_news.tga"
+	}
+	spriteType = {
+		name = "GFX_china_sinkiang_peace_news"
+		texturefile = "gfx/event_pictures/sinkiang_peace_news.tga"
+	}
+	spriteType = {
+		name = "GFX_china_break_again_news"
+		texturefile = "gfx/event_pictures/break_again_news.tga"
+	}
+	spriteType = {
+		name = "GFX_china_union_govenment_established_news"
+		texturefile = "gfx/event_pictures/union_govenment_established_news.tga"
+	}
+	spriteType = {
+		name = "GFX_china_east_turkestan_established_news"
+		texturefile = "gfx/event_pictures/east_turkestan_established_news.tga"
+	}
+	spriteType = {
+		name = "GFX_china_army_to_paris_news"
+		texturefile = "gfx/event_pictures/china_army_to_paris_news.tga"
+	}
+	spriteType = {
+		name = "GFX_china_army_to_london_news"
+		texturefile = "gfx/event_pictures/china_army_to_london_news.tga"
+	}
+	spriteType = {
+		name = "GFX_china_army_to_moscow_news"
+		texturefile = "gfx/event_pictures/china_army_to_moscow_news.tga"
+	}
+	spriteType = {
+		name = "GFX_china_army_to_cairo_news"
+		texturefile = "gfx/event_pictures/china_army_to_cairo_news.tga"
+	}
+	spriteType = {
+		name = "GFX_china_army_to_wdc_news"
+		texturefile = "gfx/event_pictures/china_army_to_wdc_news.tga"
+	}
+	spriteType = {
+		name = "GFX_china_army_to_newyork_news"
+		texturefile = "gfx/event_pictures/china_army_to_newyork_news.tga"
+	}
+	spriteType = {
+		name = "GFX_china_army_to_sinapore_news"
+		texturefile = "gfx/event_pictures/china_army_to_sinapore_news.tga"
+	}
+	spriteType = {
+		name = "GFX_china_army_to_vladivostok_news"
+		texturefile = "gfx/event_pictures/china_army_to_vladivostok_news.tga"
+	}
+	spriteType = {
+		name = "GFX_china_china_army_to_kiev_news"
+		texturefile = "gfx/event_pictures/china_army_to_kiev_news.tga"
+	}
+	spriteType = {
+		name = "GFX_china_china_army_to_berlin_news"
+		texturefile = "gfx/event_pictures/china_army_to_berlin_news.tga"
+	}
+	spriteType = {
+		name = "GFX_china_china_army_to_rome_news"
+		texturefile = "gfx/event_pictures/china_army_to_rome_news.tga"
+	}
+	spriteType = {
+		name = "GFX_mengjiang_established_news"
+		texturefile = "gfx/event_pictures/mengjiang_established.tga"
+	}
+	spriteType = {
+		name = "GFX_nanjing_massacre_event"
+		texturefile = "gfx/event_pictures/nanjing_massacre_event.tga"
+	}
+	spriteType = {
+		name = "GFX_return_of_nanjing"
+		texturefile = "gfx/event_pictures/return_of_nanjing.tga"
+	}
+	spriteType = {
+		name = "GFX_return_of_peking"
+		texturefile = "gfx/event_pictures/return_of_peking.tga"
+	}
+	spriteType = {
+		name = "GFX_lost_of_peking"
+		texturefile = "gfx/event_pictures/lost_of_peking.tga"
+	}
+	spriteType = {
+		name = "GFX_nanjing_massacre"
+		texturefile = "gfx/event_pictures/nanjing_massacre.tga"
+	}
+}

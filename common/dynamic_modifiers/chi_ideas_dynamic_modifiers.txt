@@ -1,0 +1,67 @@
+CHI_the_roc_land_army_dynamic_modifier = { #NATIONAL SPIRIT 中华民国陆军
+	enable = { always = yes }
+
+	icon = GFX_idea_CHI_the_roc_land_army
+
+	#INITIAL
+	land_doctrine_cost_factor = -0.1
+
+	#FUTURE
+	mobilization_laws_cost_factor = CHI_the_roc_land_army_mobilization_laws_cost_factor #-0.1 -> CHI_forced_conscription 强制征兵
+	army_org_factor = CHI_the_roc_land_army_army_org_factor #-0.03 -> CHI_forced_conscription 强制征兵
+	training_time_factor = CHI_the_roc_land_army_training_time_factor #0.05 -> CHI_infantry_army 步兵优化
+	mobilization_speed = CHI_the_roc_land_army_mobilization_speed #0.05 -> KMT_experimental_mechanised_unit 实验型机械化部队
+	heat_attrition_factor = CHI_the_roc_land_army_heat_attrition_factor #-0.1 -> KMT_adaptable_army 适应性军队
+	winter_attrition_factor = CHI_the_roc_land_army_winter_attrition_factor #-0.1 -> KMT_adaptable_army 适应性军队
+	acclimatization_cold_climate_gain_factor = CHI_the_roc_land_army_acclimatization_cold_climate_gain_factor #0.15 -> KMT_adaptable_army 适应性军队
+	acclimatization_hot_climate_gain_factor = CHI_the_roc_land_army_acclimatization_hot_climate_gain_factor #0.15 -> KMT_adaptable_army 适应性军队
+	terrain_penalty_reduction = CHI_the_roc_land_army_terrain_penalty_reduction #0.05 -> KMT_elite_mountaineers 精英山地部队
+	unit_infantry_design_cost_factor = CHI_the_roc_land_army_unit_infantry_design_cost_factor #-0.1 -> KMT_small_arms_expertise 小型武器
+	unit_artillery_brigade_design_cost_factor = CHI_the_roc_land_army_unit_artillery_brigade_design_cost_factor #-0.1 KMT_heavy_weapons 重型武器
+	army_org_regain = CHI_the_roc_land_army_army_org_regain #0.05 -> CHI_infantry_army 步兵优化  0.1 -> KMT_modern_logistics 现代后勤
+	land_reinforce_rate = CHI_the_roc_land_army_army_land_reinforce_rate #0.02 -> KMT_modern_logistics 现代后勤
+	special_forces_cap = CHI_the_roc_land_army_special_forces_cap # 0.1 -> KMT_adaptable_army 适应性军队
+	cas_damage_reduction = CHI_the_roc_land_army_cas_damage_reduction #0.05 -> KMT_construction_battalions 工兵部队
+	max_dig_in = CHI_the_roc_land_army_max_dig_in #5 -> KMT_construction_battalions 工兵部队
+	dig_in_speed_factor = CHI_the_roc_land_army_dig_in_speed_factor #0.05 -> KMT_construction_battalions 工兵部队
+}
+
+CHI_the_roc_navy_dynamic_modifier = { #NATIONAL SPIRIT 中华民国海军
+	enable = { always = yes }
+
+	icon = GFX_idea_CHI_the_roc_navy_army
+
+	#INITIAL
+	naval_doctrine_cost_factor = -0.1
+
+	#FUTURE
+	naval_coordination = CHI_the_roc_navy_naval_coordination #0.1 -> KMT_carrier_air_wing 海军航空作战
+	navy_visibility = CHI_the_roc_navy_navy_visibility #0.05 -> KMT_modern_submarines 日式现代潜艇
+	positioning = CHI_the_roc_navy_positioning #0.1 -> KMT_coastal_patrol_planes 海岸巡航战机
+	screening_efficiency = CHI_the_roc_navy_screening_efficiency #0.1 -> KMT_light_cruiser_project 美式轻巡洋舰
+	naval_invasion_capacity = CHI_the_roc_navy_naval_invasion_capacity #10 -> KMT_train_marines 训练海军陆战队
+	invasion_preparation = CHI_the_roc_navy_invasion_preparation #-0.1 -> KMT_train_marines 训练海军陆战队
+	special_forces_cap = CHI_the_roc_navy_special_forces_cap #0.1 -> KMT_train_marines 训练海军陆战队
+	refit_ic_cost = CHI_the_roc_navy_navy_refit_ic_cost #-0.05 -> KMT_investment_into_shipbuilding 投资造船业
+	repair_speed_factor = CHI_the_roc_navy_repair_speed_factor #0.05 -> KMT_investment_into_shipbuilding 投资造船业
+}
+
+CHI_the_roc_convention_modifier = { #NATIONAL SPIRIT 国民大会
+	enable = { always = yes }
+
+	#icon = GFX_idea_generic_navy_bonus
+
+	#INITIAL
+	economy_cost_factor = -0.2
+	trade_laws_cost_factor = -0.2
+	mobilization_laws_cost_factor = -0.2
+}
+
+CHI_the_roc_plane_factory_modifier = { #NATIONAL SPIRIT 飞行器设计商花费
+	enable = { always = yes }
+
+	#icon = GFX_idea_generic_navy_bonus
+
+	#INITIAL
+	aircraft_manufacturer_cost_factor = -0.25
+}

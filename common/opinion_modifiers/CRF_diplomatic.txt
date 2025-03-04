@@ -1,0 +1,6 @@
+opinion_modifiers = {
+	
+	non_humanitarianism = {
+		value = -20
+	}
+}

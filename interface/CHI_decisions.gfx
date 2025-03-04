@@ -1,0 +1,12 @@
+spriteTypes = {
+
+		spriteType = {
+                name = "GFX_kmt_flag"
+                texturefile = "gfx/interface/decisions/kmt_flag.png"
+        }
+		
+		spriteType = {
+                name = "GFX_kmt_logo"
+                texturefile = "gfx/interface/decisions/kmt_logo.dds"
+        }
+}

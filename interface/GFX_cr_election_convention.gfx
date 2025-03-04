@@ -1,0 +1,18 @@
+spriteTypes = {
+
+        spriteType = {
+                name = "GFX_chi_convention_1"
+                texturefile = "gfx/event_pictures/chi_convention_1.tga"
+        }
+		
+		spriteType = {
+                name = "GFX_chi_convention_2"
+                texturefile = "gfx/event_pictures/chi_convention_2.tga"
+        }
+		
+		spriteType = {
+                name = "GFX_chi_election"
+                texturefile = "gfx/event_pictures/chi_election.tga"
+        }
+		
+}

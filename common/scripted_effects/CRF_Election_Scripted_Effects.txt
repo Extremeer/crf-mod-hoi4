@@ -1,0 +1,41 @@
+CRF_CHI_Relax_Democratic_Effect = {
+	# This is a scripted effect that is used to release the democratic effect on China
+	set_rule = {
+		can_create_collaboration_government = yes
+		can_declare_war_on_same_ideology = yes
+		can_force_government = yes
+		can_send_volunteers = yes
+		can_puppet = yes
+		can_lower_tension = yes
+		can_only_justify_war_on_threat_country = no
+		can_guarantee_other_ideologies = yes
+	}
+	if = {
+		limit = { # This is to prevent the idea from being added multiple times
+			NOT = {
+				has_idea = chi_relax_democratic_modifier_idea
+			}
+		}
+		add_ideas = chi_relax_democratic_modifier_idea
+	}
+}
+
+CRF_CHI_Bound_Democratic_Effect = {
+	# This is a scripted effect that is used to release the democratic effect on China
+	set_rule = {
+		can_create_collaboration_government = no
+		can_declare_war_on_same_ideology = no
+		can_force_government = yes
+		can_send_volunteers = no
+		can_puppet = no
+		can_lower_tension = yes
+		can_only_justify_war_on_threat_country = yes
+		can_guarantee_other_ideologies = yes
+	}
+	if = {
+		limit = {
+			has_idea = chi_relax_democratic_modifier_idea
+		}
+		remove_ideas = chi_relax_democratic_modifier_idea
+	}
+}

@@ -1,0 +1,330 @@
+﻿
+
+add_namespace = cco
+
+country_event = { #MACAU-IN-POR
+	id = cco.7
+	title = cco.7.t
+	desc = cco.7.d
+	picture = GFX_report_event_chinese_officers
+	
+
+	mean_time_to_happen = {
+		days = 0
+	}
+
+	trigger = {
+		NOT = {
+			has_cosmetic_tag = MAU_POR
+		}
+		tag = MAU
+		is_subject_of = POR
+	}
+	
+	option = {
+		name = cco.7.a
+		set_cosmetic_tag = MAU_POR
+		#kill_country_leader = yes
+		create_country_leader = {
+			name = "Governor of Macau"
+			desc = ""
+			picture = "Governor of Macau.dds"
+			expire = "1953.3.1"
+			ideology = conservatism
+			traits = {
+		
+			}
+		}
+		create_country_leader = {
+			name = "Governor of Macau"
+			desc = ""
+			picture = "Governor of Macau.dds"
+			expire = "1953.3.1"
+			ideology = marxism
+			traits = {
+				
+			}
+		}
+		create_country_leader = {
+			name = "Governor of Macau"
+			desc = ""
+			picture = "Governor of Macau.dds"
+			expire = "1953.3.1"
+			ideology = rexism
+			traits = {
+				
+			}
+		}
+		create_country_leader = {
+			name = "Governor of Macau"
+			desc = ""
+			picture = "Governor of Macau.dds"
+			expire = "1953.3.1"
+			ideology = despotism
+			traits = {
+				
+			}
+		}
+	}
+}
+
+country_event = { #MAU-BACK
+	id = cco.8
+	title = cco.8.t
+	desc = cco.8.d
+	picture = GFX_report_event_chinese_officers
+
+	mean_time_to_happen = {
+		days = 0
+	}
+
+	trigger = {
+		NOT = {
+			has_cosmetic_tag = MAU_SAR
+		}
+		tag = MAU
+		OR = {
+			is_subject_of = CHI
+			is_subject_of = PRC
+			is_subject_of = MAN
+			is_subject_of = SHX
+			is_subject_of = SIK
+			is_subject_of = GXC
+			is_subject_of = YUN
+			is_subject_of = XSM
+		}
+	}
+	
+	option = {
+		name = cco.8.a
+		set_cosmetic_tag = MAU_SAR
+	}
+}
+
+country_event = { #MAU-RECIEVED
+	id = cco.9
+	title = cco.9.t
+	desc = cco.9.d
+	picture = GFX_report_event_chinese_officers
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = cco.9.a
+		ai_chance = {
+			factor = 90
+			modifier = {
+				factor = 0.5
+				strength_ratio = { tag = FROM ratio < 1 }
+			}
+			modifier = {
+				factor = 0.2
+				strength_ratio = { tag = FROM ratio < 0.5 }
+			}
+			modifier = {
+				factor = 0
+				strength_ratio = { tag = FROM ratio < 0.2 }
+			}
+		}
+		set_cosmetic_tag = MAU_SAR
+		FROM = {
+				set_autonomy = { target = ROOT autonomy_state = sar_mc }
+				country_event = { days = 1 id = cco.10 }
+		}
+		hidden_effect = {
+			country_event = { days = 9 id = news.12138 }
+		}
+	}
+
+	option = {
+		name = cco.9.b
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}			
+		FROM = {
+			country_event = { days = 1 id = cco.11 }
+		}
+	}
+}
+
+country_event = { #MAU-YES-ROOT
+	id = cco.10
+	title = cco.10.t
+	desc = cco.10.d
+	picture = GFX_report_event_chinese_officers
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = cco.10.a
+		ai_chance = {
+			factor = 50
+		}
+			FROM = {
+				#kill_country_leader = yes
+				create_country_leader = {
+					name = "张澜"
+					desc = "POLITICS_ZHANG_LAN_DESC"
+					picture = "GFX_portrait_prc_zhang_lan"
+					expire = "1965.1.1"
+					ideology = tp_constitutional
+					traits = {
+						
+					}
+				}
+				create_country_leader = {
+					name = "张澜"
+					desc = "POLITICS_ZHANG_LAN_DESC"
+					picture = "GFX_portrait_prc_zhang_lan"
+					expire = "1965.1.1"
+					ideology = maoist
+					traits = {
+								
+					}
+				}
+				create_country_leader = {
+					name = "张澜"
+					desc = "POLITICS_ZHANG_LAN_DESC"
+					picture = "GFX_portrait_prc_zhang_lan"
+					expire = "1965.1.1"
+					ideology = rexism
+					traits = {
+						
+					}
+				}
+				create_country_leader = {
+					name = "张澜"
+					desc = "POLITICS_ZHANG_LAN_DESC"
+					picture = "GFX_portrait_prc_zhang_lan"
+					expire = "1965.1.1"
+					ideology = tp_tutelage
+					traits = {
+						
+					}
+				}
+			}	
+	}
+
+	option = {
+		name = cco.10.b
+		ai_chance = {
+			factor = 50
+		}
+			if = {
+				limit = { tag = CHI }
+				FROM = {
+					#kill_country_leader = yes
+					create_country_leader = {
+						name = "薛岳"
+						desc = "POLITICS_ZHANG_LAN_DESC"
+						picture = "GFX_portrait_chi_xue_yue"
+						expire = "1965.1.1"
+						ideology = tp_constitutional
+						traits = {
+							
+						}
+					}
+					create_country_leader = {
+						name = "薛岳"
+						desc = "POLITICS_ZHANG_LAN_DESC"
+						picture = "GFX_portrait_chi_xue_yue"
+						expire = "1965.1.1"
+						ideology = maoist
+						traits = {
+									
+						}
+					}
+					create_country_leader = {
+						name = "薛岳"
+						desc = "POLITICS_ZHANG_LAN_DESC"
+						picture = "GFX_portrait_chi_xue_yue"
+						expire = "1965.1.1"
+						ideology = rexism
+						traits = {
+							
+						}
+					}
+					create_country_leader = {
+						name = "薛岳"
+						desc = "POLITICS_ZHANG_LAN_DESC"
+						picture = "GFX_portrait_chi_xue_yue"
+						expire = "1965.1.1"
+						ideology = tp_tutelage
+						traits = {
+							
+						}
+					}
+				}
+			}
+			if = {
+				limit = { tag = PRC }
+				FROM = {
+					#kill_country_leader = yes
+					create_country_leader = {
+						name = "王明"
+						desc = "POLITICS_ZHANG_LAN_DESC"
+						picture = "GFX_portrait_prc_wang_ming"
+						expire = "1965.1.1"
+						ideology = tp_constitutional
+						traits = {
+							
+						}
+					}
+					create_country_leader = {
+						name = "王明"
+						desc = "POLITICS_ZHANG_LAN_DESC"
+						picture = "GFX_portrait_prc_wang_ming"
+						expire = "1965.1.1"
+						ideology = maoist
+						traits = {
+									
+						}
+					}
+					create_country_leader = {
+						name = "王明"
+						desc = "POLITICS_ZHANG_LAN_DESC"
+						picture = "GFX_portrait_prc_wang_ming"
+						expire = "1965.1.1"
+						ideology = rexism
+						traits = {
+							
+						}
+					}
+					create_country_leader = {
+						name = "王明"
+						desc = "POLITICS_ZHANG_LAN_DESC"
+						picture = "GFX_portrait_prc_wang_ming"
+						expire = "1965.1.1"
+						ideology = tp_tutelage
+						traits = {
+							
+						}
+					}
+				}
+			}
+	}
+}
+
+country_event = { #MAU-NO
+	id = cco.11
+	title = cco.11.t
+	desc = cco.11.d
+	picture = GFX_report_event_chinese_officers
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = cco.11.a
+		ROOT = {
+			create_wargoal = {
+			type = annex_everything
+			target = FROM				
+			expire = 0
+			}
+		}
+	}
+}

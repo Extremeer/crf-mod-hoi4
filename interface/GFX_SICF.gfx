@@ -1,0 +1,52 @@
+spriteTypes = {
+
+        spriteType = {
+                name = "GFX_SICF_1"
+                texturefile = "gfx/event_pictures/sicf_1.tga"
+        }
+		
+		spriteType = {
+                name = "GFX_SICF_2"
+                texturefile = "gfx/event_pictures/sicf_2.tga"
+        }
+		
+		spriteType = {
+                name = "GFX_SICF_3"
+                texturefile = "gfx/event_pictures/sicf_3.tga"
+        }
+		
+		spriteType = {
+                name = "GFX_SICF_4"
+                texturefile = "gfx/event_pictures/sicf_4.tga"
+        }
+		
+		spriteType = {
+                name = "GFX_SICF_5"
+                texturefile = "gfx/event_pictures/sicf_5.tga"
+        }
+		
+		spriteType = {
+                name = "GFX_SICF_6"
+                texturefile = "gfx/event_pictures/sicf_6.tga"
+        }
+		
+		spriteType = {
+                name = "GFX_SICF_8"
+                texturefile = "gfx/event_pictures/sicf_8.tga"
+        }
+		
+		spriteType = {
+                name = "GFX_SICF_9"
+                texturefile = "gfx/event_pictures/sicf_9.tga"
+        }
+		
+		spriteType = {
+                name = "GFX_SICF_11"
+                texturefile = "gfx/event_pictures/sicf_11.tga"
+        }
+		
+		spriteType = {
+                name = "GFX_SICF_WORLD_NEWS"
+                texturefile = "gfx/event_pictures/sicf_world_news.tga"
+        }
+}

@@ -1,0 +1,192 @@
+CHI_nationalist_historical_plan = {
+	name = "Nationalist China historical plan"
+	desc = "Essentially historical behavior for Nationalist China"
+
+	allowed = {
+		original_tag = CHI
+	}
+	enable = {
+		OR = {
+			AND = {
+				is_historical_focus_on = yes
+				has_game_rule = {
+					rule = CHI_ai_behavior
+					option = DEFAULT
+				}	
+			}
+			has_country_flag = CHI_AI_RANDOM_HISTORICAL
+			has_game_rule = {
+				rule = CHI_ai_behavior
+				option = HISTORICAL
+			}
+		}
+	}
+	abort = {
+		OR = {
+			AND = {
+				JAP = {
+					OR = {
+						has_completed_focus = JAP_strengthen_civilian_government
+						has_completed_focus = JAP_the_unthinkable_option
+						has_completed_focus = JAP_support_the_kodoha_faction
+						is_in_faction_with = ENG 
+						is_in_faction_with = USA 
+					}
+				}
+				has_game_rule = {
+					rule = CHI_ai_behavior
+					option = ALTERNATE
+				}
+				MAN = {
+					is_subject = no
+				}
+			}
+			JAP = { is_in_faction_with = CHI }
+			JAP = { exists = no }
+			JAP = { has_country_flag = end_of_second_sino_japanese_war }
+		}
+	}
+
+	ai_national_focuses = {
+		KMT_invite_foreign_investors
+		CHI_military_affairs_commission
+		CHI_army_reform
+		CHI_bureau_of_investigation_and_statistics
+		CHI_three_principles_of_the_people
+		CHI_unified_industrial_planning
+		CHI_rural_reconstruction_movement
+		CHI_financial_policy
+		CHI_expand_the_academica_sinica
+		KMT_mission_to_germany
+		KMT_give_falkenhausen_citizenship
+		KMT_closer_ties_with_germany
+		KMT_mission_to_the_us
+		KMT_hire_chennault
+		CHI_fortify_shanghai
+		KMT_mission_to_the_soviet_union
+		KMT_the_soviet_volunteer_group
+		CHI_whampoa_military_academy
+		CHI_mining_commission
+		CHI_nationalism
+		CHI_foreign_threats
+		CHI_united_front
+		CHI_war_of_resistance
+		CHI_develop_the_hanyan_arsenal
+		CHI_the_chinese_hindenburg_line
+		CHI_price_controls
+		KMT_british_cooperation
+		KMT_burma_road
+		KMT_purchase_tanks
+		KMT_fighter_purchases
+		CHI_NRA_land
+		CHI_war_of_national_liberation
+		CHI_scorched_earth_tactics
+		CHI_60_divisions_plan
+		CHI_industrial_evacuations
+		CHI_grain_tax
+		CHI_taiyuan_arsenal
+		CHI_reform_the_national_bank
+		CHI_national_defense
+		CHI_welfare
+		CHI_land_tax_reform
+		CHI_forced_conscription
+		CHI_dare_to_die_corps
+		CHI_infantry_army
+		KMT_small_arms_expertise
+		CHI_refugee_relief_agency
+		CHI_forced_loans
+		CHI_new_life_movement
+		CHI_unemployment_assistance
+		CHI_NRA_airforce
+		KMT_camco
+		KMT_invite_soviet_advisers
+		CHI_war_of_anti_imperialism
+		KMT_local_fighter_production
+		KMT_the_chu_x_po
+		KMT_elite_mountaineers
+		CHI_motorized_army
+		KMT_invite_the_flying_tigers
+		KMT_the_hump
+		KMT_sino_american_cooperative_organization
+		KMT_ledo_road
+		KMT_chinese_expeditionary_force
+		KMT_heavy_weapons
+		KMT_local_bomber_production
+		KMT_tactical_air_effort
+		KMT_construction_battalions
+		KMT_modern_logistics
+		KMT_adaptable_army
+		KMT_chinese_panzers
+		KMT_hire_soviet_designer
+		KMT_tank_plant
+		KMT_joint_tank_development
+		KMT_experimental_mechanised_unit
+		KMT_combined_arms_warfare
+
+
+
+		# KMT_invite_foreign_investors
+		# CHI_unified_industrial_planning #March 10 1936
+		# CHI_military_affairs_commission #May 20 1936
+		# CHI_rural_reconstruction_movement #July 30 1936
+		# KMT_british_cooperation #October 10 1936################
+		# KMT_burma_road #February 30 1937#################
+		# CHI_army_reform #May 10 1937
+		# KMT_mission_to_the_soviet_union #  #July 20 1937################
+		# KMT_rapprochement_with_soviet_union #September 30 1937###############
+		# KMT_the_soviet_volunteer_group
+		# CHI_three_principles_of_the_people #December 10 1937
+		# CHI_nationalism #April 30 1938
+		# # CHI_foreign_threats #July 10 1938
+		# CHI_war_of_resistance #September 20 1938##################
+		# KMT_mission_to_the_us #November 30 1938
+		# KMT_hire_chennault # #February 10 1938###############
+		# CHI_war_of_national_liberation #April 20 1939
+		# KMT_invite_the_flying_tigers #June 30 1939#################
+		# KMT_the_hump #September 10 1939##################
+		# CHI_financial_policy #November 20 1939
+		# CHI_expand_the_academica_sinica #January 30 1940###################
+		# KMT_fighter_purchases #April 10 1940##################
+		# CHI_war_of_anti_imperialism #June 20 1940
+		# CHI_mining_commission #August 30 1940
+		# CHI_national_defense #January 20 1941
+		# CHI_NRA_land # 1941-2-10
+		# CHI_infantry_army #1941-3-10
+		# KMT_small_arms_expertise #1941-4-14
+		# KMT_elite_mountaineers #1941-6-23
+		# CHI_welfare #November 10 1940
+		# CHI_price_controls #1941-9-1######################
+		# CHI_motorized_army #1942-1-19
+		# KMT_chinese_panzers #1942-3-30
+		# KMT_tank_plant #1942-6-8
+		# CHI_reform_the_national_bank #1941-11-10######################
+		# CHI_grain_tax #1942-10-26
+		# KMT_heavy_weapons #1943-1-4
+		# KMT_construction_battalions #1943-5-27
+		# KMT_adaptable_army #1943-8-5
+		# CHI_refugee_relief_agency #1943-3-18
+		# CHI_land_tax_reform
+		# CHI_forced_loans
+		# KMT_experimental_mechanised_unit
+		# KMT_combined_arms_warfare
+		# KMT_modern_logistics
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+		CHI_soong_mei_ling = 10
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}

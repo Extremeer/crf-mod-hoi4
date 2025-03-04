@@ -1,0 +1,56 @@
+﻿
+
+add_namespace = kmt_diplo
+
+country_event = { #For japan
+	id = kmt_diplo.1
+	title = wtt_china.10.t
+	desc = wtt_china.10.desc
+	picture = GFX_report_event_chinese_soldiers
+
+	is_triggered_only = yes
+	
+	#Accept puppet
+	option = {
+		name = wtt_china.10.a
+		ai_chance = { 
+			base = 10 
+			modifier = {
+				has_game_rule = {
+					rule = KMT_dominate_japan_ai_behavior
+					option = JAP_ACCEPT_KMTS_DOMINATE
+				}
+				factor = 100
+			}
+		}
+		FROM = {
+			puppet = ROOT
+			country_event = { id = wtt_china.11 }
+		}
+	}
+	option = {
+
+		name = wtt_china.10.b
+		ai_chance = {
+			base = 10
+			modifier = {
+				tag = JAP
+				add = 80 #TODO_WTT_AI script modifiers for how likely people are to accept puppeting
+			}
+			modifier = {
+				has_game_rule = {
+					rule = KMT_dominate_japan_ai_behavior
+					option = JAP_REFUSE_KMTS_DOMINATE
+				}
+				factor = 100
+			}
+		}
+		FROM = {
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = ROOT
+			}
+			country_event = { id = wtt_china.12 }
+		}
+	}
+}

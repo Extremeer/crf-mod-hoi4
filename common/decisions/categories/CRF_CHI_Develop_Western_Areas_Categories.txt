@@ -1,0 +1,11 @@
+develop_western_areas = {
+	icon = generic_prospect_for_resources
+	priority = 93
+	allowed = { 
+		OR = {
+			tag = PRC
+			tag = CHI
+		}
+		is_subject = no
+	}
+}

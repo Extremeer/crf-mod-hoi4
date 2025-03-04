@@ -1,0 +1,812 @@
+characters = {
+	CRF_PRC_mao_zedong = {
+		name = CRF_PRC_mao_zedong
+		portraits = {
+			army = {
+				large = "GFX_portrait_prc_mao_zedong"
+				small = GFX_portrait_PRC_mao_zedong_small
+			}
+			civilian = {
+				large = "GFX_portrait_prc_mao_zedong"
+				small = GFX_portrait_PRC_mao_zedong_small
+			}
+		}
+		field_marshal = {
+			traits = {
+				brilliant_strategist
+				politically_connected
+				trait_cautious
+				defensive_doctrine
+			}
+			skill = 4
+			attack_skill = 3
+			defense_skill = 4
+			planning_skill = 4
+			logistics_skill = 3
+			legacy_id = -1
+		}
+		country_leader = {
+			ideology = maoist
+			desc = "POLITICS_MAO_ZEDONG_DESC"
+			traits = {
+				cornered_fox
+			}
+			expire = "1965.1.1.1"
+			id = -1
+		}
+	}
+	CRF_PRC_zhu_de = {
+		name = CRF_PRC_zhu_de
+		portraits = {
+			army = {
+				large = "GFX_portrait_prc_zhu_de"
+				small = "GFX_idea_PRC_zhu_de"
+			}
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = PRC_zhu_de
+			allowed = {
+				original_tag = PRC
+			}
+			traits = {
+				army_chief_morale_3
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		field_marshal = {
+			traits = {
+				infantry_officer
+				career_officer
+				harsh_leader
+				organizer
+			}
+			skill = 4
+			attack_skill = 4
+			defense_skill = 4
+			planning_skill = 3
+			logistics_skill = 4
+			legacy_id = -1
+		}
+	}
+	CRF_PRC_peng_dehuai = {
+		name = CRF_PRC_peng_dehuai
+		portraits = {
+			army = {
+				large = "GFX_portrait_prc_peng_dehuai"
+				small = GFX_portrait_PRC_peng_dehuai_small
+			}
+		}
+		corps_commander = {
+			traits = {
+				infantry_officer
+				inflexible_strategist
+				trait_mountaineer
+			}
+			skill = 4
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 4
+			logistics_skill = 2
+			legacy_id = -1
+		}
+	}
+	CRF_PRC_lin_biao = {
+		name = CRF_PRC_lin_biao
+		portraits = {
+			army = {
+				large = GFX_portrait_PRC_lin_biao
+				small = GFX_portrait_PRC_lin_biao_small
+			}
+		}
+		corps_commander = {
+			traits = {
+				infantry_officer
+				career_officer
+				trait_mountaineer
+			}
+			skill = 4
+			attack_skill = 5
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 3
+			legacy_id = -1
+		}
+	}
+	CRF_PRC_chen_yi = {
+		name = CRF_PRC_chen_yi
+		portraits = {
+			army = {
+				large = "GFX_portrait_prc_chen_yi"
+				small = GFX_portrait_PRC_chen_yi_small
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = PRC_chen_yi
+			ledger = army
+			allowed = {
+				original_tag = PRC
+			}
+			traits = {
+				army_armored_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		corps_commander = {
+			traits = {
+				infantry_officer
+				career_officer
+				panzer_leader
+			}
+			skill = 4
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 4
+			logistics_skill = 4
+			legacy_id = -1
+		}
+	}
+	CRF_PRC_liu_bocheng = {
+		name = CRF_PRC_liu_bocheng
+		portraits = {
+			army = {
+				large = "gfx/leaders/PRC/Portrait_PRC_liu_bocheng.dds"
+				small = "GFX_idea_generic_army_asia_1"
+			}
+		}
+		corps_commander = {
+			traits = {
+				infantry_officer
+				trait_cautious
+				organizer
+			}
+			skill = 4
+			attack_skill = 5
+			defense_skill = 3
+			planning_skill = 4
+			logistics_skill = 2
+			legacy_id = -1
+		}
+		advisor = {
+			cost = 100
+			slot = theorist
+			idea_token = PRC_liu_bocheng
+			ledger = army
+			allowed = {
+				original_tag = PRC
+			}
+			traits = {
+				military_theorist
+			}
+		}
+	}
+	CRF_PRC_ye_ting = {
+		name = CRF_PRC_ye_ting
+		portraits = {
+			army = {
+				large = "gfx/leaders/PRC/Portrait_PRC_ye_ting.dds"
+				small = "GFX_idea_generic_army_asia_1"
+			}
+		}
+		corps_commander = {
+			traits = {
+				war_hero
+				career_officer
+				infantry_leader
+			}
+			skill = 4
+			attack_skill = 5
+			defense_skill = 4
+			planning_skill = 2
+			logistics_skill = 3
+			legacy_id = -1
+		}
+	}
+	CRF_PRC_deng_xiaoping = {
+		name = CRF_PRC_deng_xiaoping
+		portraits = {
+			army = {
+				large = "gfx/leaders/PRC/Portrait_PRC_deng_xiaoping.dds"
+				small = "GFX_idea_generic_army_asia_3"
+			}
+		}
+		corps_commander = {
+			traits = {
+				infantry_officer
+				politically_connected
+				hill_fighter
+			}
+			skill = 4
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 4
+			legacy_id = -1
+		}
+	}
+	CRF_PRC_xu_xiangqian = {
+		name = CRF_PRC_xu_xiangqian
+		portraits = {
+			army = {
+				large = "gfx/leaders/PRC/Portrait_PRC_xu_xiangqian.dds"
+				small = "GFX_idea_generic_army_asia_3"
+			}
+		}
+		corps_commander = {
+			traits = {
+				career_officer
+				trait_cautious
+				organizer
+			}
+			skill = 3
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 4
+			logistics_skill = 3
+			legacy_id = -1
+		}
+		advisor = {
+			slot = high_command
+			idea_token = PRC_xu_xiangqian
+			ledger = army
+			allowed = {
+				original_tag = PRC
+			}
+			traits = {
+				army_infantry_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	CRF_PRC_luo_ronghuan = {
+		name = CRF_PRC_luo_ronghuan
+		portraits = {
+			army = {
+				large = "gfx/leaders/PRC/Portrait_PRC_luo_ronghuan.dds"
+				small = "GFX_idea_generic_army_asia_3"
+			}
+		}
+		corps_commander = {
+			traits = {
+				infantry_officer
+				politically_connected
+				trait_mountaineer
+			}
+			skill = 3
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 4
+			logistics_skill = 3
+			legacy_id = -1
+		}
+	}
+	CRF_PRC_he_long = {
+		name = CRF_PRC_he_long
+		portraits = {
+			army = {
+				large = "gfx/leaders/PRC/Portrait_PRC_he_long.dds"
+				small = "GFX_idea_generic_army_asia_3"
+			}
+		}
+		corps_commander = {
+			traits = {
+				infantry_officer
+				career_officer
+				hill_fighter
+			}
+			skill = 3
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 2
+			legacy_id = -1
+		}
+	}
+	CRF_PRC_nie_rongzhen = {
+		name = CRF_PRC_nie_rongzhen
+		portraits = {
+			army = {
+				large = "gfx/leaders/PRC/Portrait_PRC_nie_rongzhen.dds"
+				small = "GFX_idea_generic_army_asia_1"
+			}
+		}
+		corps_commander = {
+			traits = {
+				infantry_officer
+				career_officer
+				infantry_leader
+			}
+			skill = 3
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 2
+			legacy_id = -1
+		}
+		advisor = {
+			slot = high_command
+			idea_token = PRC_nie_rongzhen
+			ledger = army
+			allowed = {
+				original_tag = PRC
+			}
+			traits = {
+				army_regrouping_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	CRF_PRC_ye_jianying = {
+		name = CRF_PRC_ye_jianying
+		portraits = {
+			army = {
+				large = "gfx/leaders/PRC/Portrait_PRC_ye_jianying.dds"
+				small = "GFX_idea_generic_army_asia_3"
+			}
+		}
+		corps_commander = {
+			traits = {
+				infantry_officer
+				career_officer
+				organizer
+			}
+			skill = 3
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 1
+			legacy_id = -1
+		}
+		advisor = {
+			slot = high_command
+			idea_token = PRC_ye_jianying
+			ledger = army
+			allowed = {
+				original_tag = PRC
+			}
+			traits = {
+				army_logistics_2
+			}
+			cost = 100
+		}
+	}
+	CRF_PRC_su_yu = {
+		name = CRF_PRC_su_yu
+		portraits = {
+			army = {
+				large = "gfx/leaders/PRC/Portrait_PRC_su_yu.dds"
+				small = "GFX_idea_PRC_su_yu"
+			}
+		}
+		corps_commander = {
+			traits = {
+				career_officer
+			}
+			skill = 3
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 3
+			legacy_id = -1
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = PRC_su_yu
+			allowed = {
+				original_tag = PRC
+			}
+			traits = {
+				army_chief_reform_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	CRF_PRC_chen_geng = {
+		name = CRF_PRC_chen_geng
+		portraits = {
+			army = {
+				large = "gfx/leaders/PRC/Portrait_PRC_chen_geng.dds"
+				small = "GFX_idea_PRC_chen_geng"
+			}
+		}
+		corps_commander = {
+			traits = {
+				career_officer
+			}
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 3
+			legacy_id = -1
+		}
+		advisor = {
+			slot = high_command
+			idea_token = PRC_chen_geng
+			ledger = army
+			allowed = {
+				original_tag = PRC
+			}
+			traits = {
+				army_entrenchment_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	# Self Portrait Nice
+	CRF_PRC_xu_haidong = {
+		name = CRF_PRC_xu_haidong
+		portraits = {
+			army = {
+				large = "gfx/leaders/PRC/Portrait_PRC_xu_haidong.dds"
+				small = "GFX_idea_generic_army_asia_3"
+			}
+		}
+		corps_commander = {
+			traits = {
+				infantry_officer
+			}
+			skill = 3
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 1
+			legacy_id = -1
+		}
+	}
+	# Self Portrait Well
+	CRF_PRC_wang_shusheng = {
+		name = CRF_PRC_wang_shusheng
+		portraits = {
+			army = {
+				large = "gfx/leaders/PRC/Portrait_PRC_wang_shusheng.dds"
+				small = "GFX_idea_generic_army_asia_3"
+			}
+		}
+		corps_commander = {
+			traits = {
+				infantry_officer
+			}
+			skill = 3
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 3
+			logistics_skill = 3
+			legacy_id = -1
+		}
+	}
+	# Self Portrait Normal
+	CRF_PRC_huang_kecheng = {
+		name = CRF_PRC_huang_kecheng
+		portraits = {
+			army = {
+				large = "gfx/leaders/PRC/Portrait_PRC_huang_kecheng.dds"
+				small = "GFX_idea_generic_army_asia_3"
+			}
+		}
+		corps_commander = {
+			traits = {
+				trait_cautious
+			}
+			skill = 3
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 4
+			legacy_id = -1
+		}
+	}
+	# Self Portrait Well
+	CRF_PRC_zhang_yunyi = {
+		name = CRF_PRC_zhang_yunyi
+		portraits = {
+			army = {
+				large = "gfx/leaders/PRC/Portrait_PRC_zhang_yunyi.dds"
+				small = "GFX_idea_generic_army_asia_3"
+			}
+		}
+		corps_commander = {
+			traits = {
+				career_officer
+			}
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+			legacy_id = -1
+		}
+	}
+
+	# Self Portrait Normal
+	CRF_PRC_tan_zheng = {
+		name = CRF_PRC_tan_zheng
+		portraits = {
+			army = {
+				large = "gfx/leaders/PRC/Portrait_PRC_tan_zheng.dds"
+				small = "GFX_idea_generic_army_asia_3"
+			}
+		}
+		corps_commander = {
+			traits = {
+				politically_connected
+			}
+			skill = 3
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 3
+			legacy_id = -1
+		}
+	}
+	# Self Portrait Normal
+	CRF_PRC_luo_ruiqing = {
+		name = CRF_PRC_luo_ruiqing
+		portraits = {
+			army = {
+				large = "gfx/leaders/PRC/Portrait_PRC_luo_ruiqing.dds"
+				small = "GFX_idea_generic_army_asia_3"
+			}
+		}
+		corps_commander = {
+			traits = {
+				career_officer
+			}
+			skill = 3
+			attack_skill = 3
+			defense_skill = 4
+			planning_skill = 2
+			logistics_skill = 1
+			legacy_id = -1
+		}
+	}
+
+	CRF_PRC_xu_guangda = {
+		name = CRF_PRC_xu_guangda
+		portraits = {
+			army = {
+				large = "gfx/leaders/PRC/Portrait_PRC_xu_guangda.dds"
+				small = "GFX_idea_generic_army_asia_3"
+			}
+		}
+		corps_commander = {
+			traits = {
+				career_officer
+			}
+			skill = 3
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 1
+			logistics_skill = 2
+			legacy_id = -1
+		}
+	}
+	CRF_PRC_zuo_quan = {
+		name = CRF_PRC_zuo_quan
+		portraits = {
+			army = {
+				large = "gfx/leaders/PRC/Portrait_PRC_zuo_quan.dds"
+				small = "GFX_idea_generic_army_asia_3"
+			}
+		}
+		corps_commander = {
+			traits = {
+				career_officer
+			}
+			skill = 2
+			attack_skill = 3
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 1
+			legacy_id = -1
+		}
+	}
+	CRF_PRC_zhu_rui = {
+		name = CRF_PRC_zhu_rui
+		portraits = {
+			army = {
+				large = "gfx/leaders/PRC/Portrait_PRC_zhu_rui.dds"
+				small = "GFX_idea_generic_army_asia_3"
+			}
+		}
+		corps_commander = {
+			traits = {
+				war_hero trait_engineer
+			}
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 1
+			legacy_id = -1
+		}
+	}
+	CRF_PRC_chen_guang = {
+		name = CRF_PRC_chen_guang
+		portraits = {
+			army = {
+				large = "gfx/leaders/PRC/Portrait_PRC_chen_guang.dds"
+				small = "GFX_idea_generic_army_asia_3"
+			}
+		}
+		corps_commander = {
+			traits = {
+				infantry_officer
+			}
+			skill = 2
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+			legacy_id = -1
+		}
+	}
+	CRF_PRC_peng_xuefeng = {
+		name = CRF_PRC_peng_xuefeng
+		portraits = {
+			army = {
+				large = "gfx/leaders/PRC/Portrait_PRC_peng_xuefeng.dds"
+				small = "GFX_idea_generic_army_asia_3"
+			}
+		}
+		corps_commander = {
+			traits = {
+				war_hero
+			}
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 3
+			logistics_skill = 1
+			legacy_id = -1
+		}
+	}
+
+	# Self Portrait AI
+	CRF_PRC_xun_huaizhou = {
+		name = CRF_PRC_xun_huaizhou
+		portraits = {
+			army = {
+				large = "gfx/leaders/PRC/Portrait_PRC_xun_huaizhou.dds"
+				small = "GFX_idea_generic_army_asia_3"
+			}
+		}
+		corps_commander = {
+			traits = {
+				war_hero
+			}
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 2
+			legacy_id = -1
+		}
+	}
+	# Self Portrait Down
+	CRF_PRC_zhao_shangzhi = {
+		name = CRF_PRC_zhao_shangzhi
+		portraits = {
+			army = {
+				large = "gfx/leaders/PRC/Portrait_PRC_zhao_shangzhi.dds"
+				small = "GFX_idea_generic_army_asia_3"
+			}
+		}
+		corps_commander = {
+			traits = {
+				war_hero
+			}
+			skill = 2
+			attack_skill = 1
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 1
+			legacy_id = -1
+		}
+	}
+
+	# Self Portrait Normal
+	CRF_PRC_deng_zihui = {
+		name = CRF_PRC_deng_zihui
+		portraits = {
+			army = {
+				large = "gfx/leaders/PRC/Portrait_PRC_deng_zihui.dds"
+				small = "GFX_idea_generic_army_asia_3"
+			}
+		}
+		corps_commander = {
+			traits = {
+				politically_connected
+			}
+			skill = 2
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 3
+			legacy_id = -1
+		}
+	}
+	# Self Portrait Normal
+	CRF_PRC_luo_binghui = {
+		name = CRF_PRC_luo_binghui
+		portraits = {
+			army = {
+				large = "gfx/leaders/PRC/Portrait_PRC_luo_binghui.dds"
+				small = "GFX_idea_generic_army_asia_3"
+			}
+		}
+		corps_commander = {
+			traits = {
+				infantry_officer
+			}
+			skill = 2
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 1
+			logistics_skill = 1
+			legacy_id = -1
+		}
+	}
+	# Self Portrait Down
+	CRF_PRC_cheng_zihua = {
+		name = CRF_PRC_cheng_zihua
+		portraits = {
+			army = {
+				large = "gfx/leaders/PRC/Portrait_PRC_cheng_zihua.dds"
+				small = "GFX_idea_generic_army_asia_3"
+			}
+		}
+		corps_commander = {
+			traits = {
+				infantry_officer trickster
+			}
+			skill = 2
+			attack_skill = 1
+			defense_skill = 4
+			planning_skill = 1
+			logistics_skill = 1
+			legacy_id = -1
+		}
+	}
+
+	# CRF_PRC_ren_bishi = {
+	# 	name = CRF_PRC_ren_bishi
+	# 	portraits = {
+	# 		army = {
+	# 			large = "gfx/leaders/PRC/Portrait_PRC_Zhang_Yunyi.tga"
+	# 			small = "GFX_idea_generic_army_asia_3"
+	# 		}
+	# 	}
+	# 	corps_commander = {
+	# 		traits = {
+	# 			politically_connected
+	# 		}
+	# 		skill = 2
+	# 		attack_skill = 1
+	# 		defense_skill = 1
+	# 		planning_skill = 3
+	# 		logistics_skill = 2
+	# 		legacy_id = -1
+	# 	}
+	# }
+}

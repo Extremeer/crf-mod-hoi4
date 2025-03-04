@@ -1,0 +1,6 @@
+CHI_state_capitalism_plan = {
+	icon = "GFX_idea_HABSBURG_economy"
+
+	local_building_slots = 2
+	state_production_speed_buildings_factor = 0.15
+}

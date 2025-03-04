@@ -1,0 +1,286 @@
+add_namespace = crf_xian
+
+#Xian incident - Chiang arrested, execute? (PRC)
+country_event = {
+	id = crf_xian.1
+	title = crf_xian.1.t
+	desc = { text = crf_xian.1.desc_a trigger = { NOT = { has_country_flag = SOV_xian_refuse } } }
+	desc = { text = crf_xian.1.desc_b trigger = { has_country_flag = SOV_xian_refuse } }
+	picture = GFX_report_event_china_politicians_captured
+
+	is_triggered_only = yes
+	
+	option = {
+		trigger = {
+			NOT = {
+				has_war_with = SOV
+			}
+			NOT = {
+				has_country_flag = SOV_xian_refuse
+			}
+			SOV = { has_government = communism } # No point in asking a non-communist SOV
+		}
+		name = crf_xian.1.a #ask Soviets
+		ai_chance = {
+			base = 70
+		}
+
+		SOV = { country_event = { id = crf_xian.3 days = 1 } }
+	}
+
+	option = {
+		name = crf_xian.1.b #just do it
+		ai_chance = {
+			base = 30
+			modifier = {
+				CHI_is_on_historical_plan_trigger = yes
+				factor = 0
+			}
+		}
+		CHI = {
+			kill_country_leader = yes
+			if = {
+				limit = {
+					NOT = {
+						has_global_flag = CHI_wang_defects
+					}
+				}
+				create_country_leader = {
+					name = "Wang Jingwei"
+					desc = "POLITICS_WANG_JINGWEI_DESC"
+					picture = "GFX_portrait_chi_wang_jingwei"
+					expire = "1965.1.1"
+					ideology = despotism
+					traits = {
+						#
+					}
+				}
+			}
+			create_wargoal = {
+				target = PREV
+				type = annex_everything
+			}
+		}
+		hidden_effect = {
+			news_event = { id = wtt_news.30 days = 1 }
+		}
+	}
+	option = {
+		name = crf_xian.1.c #don't do it, offer to ally instead
+		ai_chance = {
+			base = 30
+		}
+		CHI = {
+			country_event = crf_xian.4
+		}
+		
+	}
+	option = {
+		name = crf_xian.1.d #no deals with anyone
+		ai_chance = {
+			base = 0
+		}
+		hidden_effect = {
+			news_event = { id = wtt_news.33 days = 1 random_hours = 36 }
+		}
+		
+	}
+
+}
+
+#Xian incident - Chiang arrested (CHI)
+country_event = {
+	id = crf_xian.2
+	title = crf_xian.2.t
+	desc = crf_xian.2.desc
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+	
+	option = {
+		name = crf_xian.2.a # negotiate
+		ai_chance = {
+			base = 70
+		}
+		PRC = { country_event = crf_xian.1 }
+	}
+}
+
+#Xian incident - Chiang arrested, commies want to execute, allow? (SOV)
+country_event = {
+	id = crf_xian.3
+	title = crf_xian.3.t
+	desc = crf_xian.3.desc
+	picture = GFX_report_event_stalin_meeting
+
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = {
+			base = 50
+			modifier = {
+				CHI_is_on_historical_plan_trigger = yes
+				factor = 0
+			}
+		}
+		name = crf_xian.3.a #approve
+		CHI = {
+			kill_country_leader = yes
+			if = {
+				limit = {
+					NOT = {
+						has_global_flag = CHI_wang_defects
+					}
+				}
+				create_country_leader = {
+					name = "Wang Jingwei"
+					desc = "POLITICS_WANG_JINGWEI_DESC"
+					picture = "GFX_portrait_chi_wang_jingwei"
+					expire = "1965.1.1"
+					ideology = despotism
+					traits = {
+						#
+					}
+				}
+			}
+			create_wargoal = {
+				target = PRC
+				type = annex_everything
+			}
+		}
+		hidden_effect = {
+			news_event = { id = wtt_news.31 days = 1 }
+		}
+	}
+
+	option = {
+		name = crf_xian.3.b #disapprove
+		ai_chance = {
+			base = 50
+			modifier = {
+				has_war_with = JAP
+				factor = 3
+			}
+		}
+		FROM = {
+			set_country_flag = SOV_xian_refuse
+			country_event = crf_xian.1
+		}
+	}
+}
+
+#Xian incident - PRC opts for the United Front, event for CHI
+country_event = {
+	id = crf_xian.4
+	title = crf_xian.4.t
+	desc = crf_xian.4.desc
+	picture = GFX_report_event_china_chiang_mao
+
+	is_triggered_only = yes
+	
+	option = {
+		
+		name = crf_xian.4.a #approve
+		ai_chance = {
+			base = 50
+		}
+		hidden_effect = {
+			news_event = { id = news.288 days = 1 } # United Front forms
+		}
+		if = {
+			limit = {
+				NOT = { is_in_faction_with = CHI }
+				CHI = { is_in_faction = no }
+			}
+			CHI = {
+				set_rule = { can_create_factions = yes }
+				create_faction = chinese_united_front
+			}
+		}
+		if = {
+			limit = {
+				CHI = { is_faction_leader = yes }
+			}
+			CHI = { add_to_faction = PRC }
+			PRC = { 
+				add_ai_strategy = {
+					type = alliance
+					id = "CHI"
+					value = 200
+				}
+			}
+			every_country = {
+				limit = {
+					is_subject_of = CHI
+				}
+				CHI = { add_to_faction = PREV }
+			}
+		}
+	}
+
+	option = {
+		name = crf_xian.4.b #disapprove
+		ai_chance = {
+			base = 10
+			modifier = {
+				CHI_is_on_historical_plan_trigger = yes
+				factor = 0
+			}
+		}
+		reverse_add_opinion_modifier = { target = FROM modifier = CHI_xian_refused }
+		hidden_effect = {
+			news_event = { id = wtt_news.32 days = 1 }
+		}
+	}
+}
+
+#Xian incident - News
+news_event = {
+	id = crf_xian.5
+	title = crf_xian.5.t
+	desc = crf_xian.5.desc
+	picture = GFX_news_event_chinese_soldiers_march
+
+	is_triggered_only = yes
+	major = yes
+	
+	option = {
+		name = crf_xian.5.a
+		trigger = {
+			original_tag = PRC
+		}
+	}
+	option = {
+		name = crf_xian.5.b
+		trigger = {
+			original_tag = CHI
+		}
+	}
+	option = {
+		name = crf_xian.5.c
+		trigger = {
+			OR = {
+				original_tag = JAP
+				original_tag = MAN
+			}
+		}
+	}
+	option = {
+		name = crf_xian.5.d
+		trigger = {
+			original_tag = SOV
+		}
+	}
+	option = {
+		name = crf_xian.5.e
+		trigger = {
+			NOT = {
+				original_tag = PRC
+				original_tag = CHI
+				original_tag = SOV
+				original_tag = JAP
+				original_tag = MAN
+			}
+		}
+	}
+}

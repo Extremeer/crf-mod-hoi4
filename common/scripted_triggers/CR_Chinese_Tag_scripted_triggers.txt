@@ -1,0 +1,52 @@
+is_all_chinese_tag = {
+	OR = {
+		original_tag = CHI
+		original_tag = PRC
+		original_tag = GXC
+		original_tag = YUN
+		original_tag = SHX
+		original_tag = XSM
+		original_tag = SIK
+		original_tag = TIB
+		original_tag = MON
+		original_tag = TAN
+		original_tag = MEN
+		original_tag = MAN
+	}
+}
+
+is_chinese_tag_with_MAN_MEN_but_without_TIB_MON = {
+	OR = {
+		original_tag = CHI
+		original_tag = PRC
+		original_tag = GXC
+		original_tag = YUN
+		original_tag = SHX
+		original_tag = XSM
+		original_tag = SIK
+		original_tag = MAN
+		original_tag = MEN
+	}
+}
+
+is_chinese_tag_without_MAN_MEN_TIB_MON = {
+	OR = {
+		original_tag = CHI
+		original_tag = PRC
+		original_tag = GXC
+		original_tag = YUN
+		original_tag = SHX
+		original_tag = XSM
+		original_tag = SIK
+	}
+}
+
+is_chinese_tag_without_CHI_PRC = {
+	OR = {		
+		original_tag = GXC
+		original_tag = YUN
+		original_tag = SHX
+		original_tag = XSM
+		original_tag = SIK
+	}
+}

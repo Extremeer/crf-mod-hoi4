@@ -1,0 +1,49 @@
+add_namespace = chiconst
+
+country_event = {#制宪国民大会
+	id = chiconst.1
+	title = chiconst.1.t
+	desc = chiconst.1.d
+	picture = GFX_chi_convention_1
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			
+		}
+	}
+
+	option = {#
+		name = chiconst.1.a
+		ai_chance = {
+			base = 100
+		}
+		
+	}
+}
+
+news_event = {#行宪国民大会
+	id = chiconst.2
+	title = chiconst.2.t
+	desc = chiconst.2.d
+	picture = GFX_chi_convention_2
+	
+	major = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			
+		}
+	}
+
+	option = {#
+		name = chiconst.2.a
+		ai_chance = {
+			base = 100
+		}
+		
+	}
+}

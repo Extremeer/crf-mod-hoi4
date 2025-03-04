@@ -1,0 +1,20 @@
+political_actions = {
+
+	CHI_go_back_uk = {
+		icon = oppression
+		ai_will_do = {
+				factor = 1
+		}
+		available = {
+			has_idea = democratic_influence
+		}
+		visible = {
+			has_idea = democratic_influence
+			tag = event_target:WTT_current_china_leader
+		}
+		cost = 25
+		complete_effect = {
+			remove_ideas = democratic_influence
+		}
+	}
+}

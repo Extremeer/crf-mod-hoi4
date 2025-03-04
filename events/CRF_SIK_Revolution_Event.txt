@@ -1,0 +1,836 @@
+﻿
+
+add_namespace = etr
+
+country_event = { 
+	id = etr.1 # The start
+	title = etr.1.t
+	desc = etr.1.d
+	picture = GFX_china_yining_incident
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+				ETR = {
+					add_state_core = 618
+					transfer_state = 618
+					set_capital = { state = 618 }
+					drop_cosmetic_tag = yes
+				}
+				SIK = {
+				add_state_core = 618
+				add_state_core = 617
+				transfer_state = 617
+				add_state_core = 760
+				transfer_state = 760
+				add_state_core = 759
+				transfer_state = 759
+				add_state_core = 287
+				transfer_state = 287
+				add_state_core = 619
+				transfer_state = 619
+				set_capital = { state = 617 }
+				set_cosmetic_tag = SINKIANG_PROVINCE
+				}
+				618 = { set_demilitarized_zone = yes }
+		}
+	}
+	
+	option = {
+		name = etr.1.a
+		custom_effect_tooltip = XINJIANG_START_CRACKS
+		hidden_effect = {
+			country_event = { days = 5 id = etr.2 }
+		}
+	}
+}
+
+country_event = {
+	id = etr.2 # They wanna be independent
+	title = etr.2.t
+	desc = etr.2.d
+	picture = GFX_china_yining_incident
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+				ETR = {
+					set_cosmetic_tag = ETR_IND
+					#kill_country_leader = yes
+					create_country_leader = {
+						name = "艾力汗·吐烈"
+						desc = ""
+						picture = "ALT.dds"
+						expire = "1953.3.1"
+						ideology = despotism
+						traits = {
+							
+						}
+					}
+					set_party_name = { ideology = neutrality long_name = ETR_GOV_party name = ETR_GOV }
+				}
+		}
+	}
+
+	option = { 
+		name = etr.2.a
+		custom_effect_tooltip = EAST_TURKEYSTAN_ESTABLISHED
+		add_stability = -0.05
+		hidden_effect = {
+				country_event = { days = 5 id = etr.3 }
+				country_event = { days = 1 id = etr.21 }
+		}
+	}
+}
+
+country_event = { 
+	id = etr.3 #They are killing the han people
+	title = etr.3.t
+	desc = etr.3.d
+	picture = GFX_china_killing
+	
+	is_triggered_only = yes
+
+	option = {
+		name = etr.3.a 
+		add_manpower = -5000
+		add_stability = -0.1
+		hidden_effect = {
+			country_event = { days = 5 id = etr.4 }
+		}
+	}
+}
+
+country_event = { 
+	id = etr.4 # Abasoph protect the hans
+	title = etr.4.t
+	desc = etr.4.d
+	picture = GFX_hope_of_sinkiang
+	
+	is_triggered_only = yes
+
+	option = {
+		name = etr.4.a 
+		add_stability = 0.02
+		ETR = {
+			set_party_name = { ideology = communism long_name = ETR_REV_party name = ETR_REV }
+			create_country_leader = {
+				name = "阿不都克里木·阿巴索夫"
+				desc = ""
+				picture = "ABS.dds"
+				expire = "1953.3.1"
+				ideology = stalinism
+				traits = {
+					
+				}
+			}
+		}
+		hidden_effect = {
+			country_event = { days = 5 id = etr.5 }
+		}
+	}
+}
+
+country_event = { 
+	id = etr.5 # bigger ang bigger
+	title = etr.5.t
+	desc = etr.5.d
+	picture = GFX_china_yining_incident
+	
+	is_triggered_only = yes
+
+	option = {
+		name = etr.5.a 
+		617 = { set_demilitarized_zone = yes }
+		add_stability = -0.02
+		hidden_effect = {
+			country_event = { days = 5 id = etr.6 }
+		}
+	}
+}
+
+country_event = { 
+	id = etr.6 # Sino_Soviet Pact
+	title = etr.6.t
+	desc = etr.6.d
+	picture = GFX_call_back_ssc
+	
+	is_triggered_only = yes
+
+	option = {
+		name = etr.6.a 
+		custom_effect_tooltip = SINO_SOVIET_PACT
+		add_stability = 0.03
+		ETR = {
+			add_stability = -0.1
+		}
+		hidden_effect = {
+			country_event = { days = 5 id = etr.7 }
+		}
+	}
+}
+
+country_event = { 
+	id = etr.7 # Begin negotiating
+	title = etr.7.t
+	desc = etr.7.d
+	picture = GFX_call_back_ssc
+	
+	is_triggered_only = yes
+
+	option = {
+		name = etr.7.a 
+		add_stability = 0.01
+		hidden_effect = {
+			country_event = { days = 5 id = etr.8 }
+		}
+	}
+}
+
+country_event = { 
+	id = etr.8 # ATL be kicked out
+	title = etr.8.t
+	desc = etr.8.d
+	picture = GFX_chi_successful_get_place
+	
+	is_triggered_only = yes
+
+	option = {
+		name = etr.8.a 
+		custom_effect_tooltip = KICK_ATL
+		add_stability = 0.02
+		hidden_effect = {
+			ETR = {
+				#kill_country_leader = yes
+				create_country_leader = {
+					name = "阿合买提江·哈斯木"
+					desc = ""
+					picture = "Ehmetjan_Qasim.dds"
+					expire = "1953.3.1"
+					ideology = centrism
+					traits = {
+						
+					}
+				}
+			}
+			country_event = { days = 8 id = etr.9 }
+		}
+	}
+}
+
+country_event = { 
+	id = etr.9 # Union Govenment
+	title = etr.9.t
+	desc = etr.9.d
+	picture = GFX_chi_successful_get_place
+	
+	is_triggered_only = yes
+
+	option = {
+		name = etr.9.a 
+		custom_effect_tooltip = UNION_GOVENMENT
+		add_stability = 0.08
+		hidden_effect = {
+			ETR = {
+				set_cosmetic_tag = ETR_UNI
+				#kill_country_leader = yes
+				create_country_leader = {
+					name = "张治中"
+					desc = ""
+					picture = "ZZZ.dds"
+					expire = "1953.3.1"
+					ideology = centrism
+					traits = {
+						
+					}
+				}
+				set_party_name = { ideology = neutrality long_name = ETR_UNI_party name = ETR_UNI }
+				set_capital = { state = 617 }
+				add_state_core = 617
+				transfer_state = 617
+				add_state_core = 760
+				transfer_state = 760
+				add_state_core = 759
+				transfer_state = 759
+				add_state_core = 287
+				transfer_state = 287
+				add_state_core = 619
+				transfer_state = 619
+				annex_country = { target = SIK transfer_troops = no }
+			}
+			SIK = {
+					every_state = {
+						limit = { is_core_of = SIK }
+						SIK = { remove_state_core = PREV }					
+					}	
+			}
+			618 = { set_demilitarized_zone = no }
+			617 = { set_demilitarized_zone = no }
+			country_event = { days = 12 id = etr.10 }
+			country_event = { days = 1 id = etr.22 }
+		}
+	}
+}
+
+
+country_event = { 
+	id = etr.10 # Be CRACKED Prepared by Fan tonpai
+	title = etr.10.t
+	desc = etr.10.d
+	picture = GFX_china_yining_incident
+	
+	is_triggered_only = yes
+
+	option = {
+		name = etr.10.a 
+		custom_effect_tooltip = UNION_CRACK
+		add_stability = -0.02
+		hidden_effect = {
+			ETR = { 
+				#kill_country_leader = yes
+				create_country_leader = {
+					name = "麦斯武德·沙比尔"
+					desc = ""
+					picture = "MSWD.dds"
+					expire = "1953.3.1"
+					ideology = despotism
+					traits = {
+						
+					}
+				}
+				create_country_leader = {
+					name = "麦斯武德·沙比尔"
+					desc = ""
+					picture = "MSWD.dds"
+					expire = "1953.3.1"
+					ideology = stalinism
+					traits = {
+						
+					}
+				}
+				create_country_leader = {
+					name = "麦斯武德·沙比尔"
+					desc = ""
+					picture = "MSWD.dds"
+					expire = "1953.3.1"
+					ideology = rexism
+					traits = {
+						
+					}
+				}
+				create_country_leader = {
+					name = "麦斯武德·沙比尔"
+					desc = ""
+					picture = "MSWD.dds"
+					expire = "1953.3.1"
+					ideology = socialism
+					traits = {
+						
+					}
+				}
+			}
+			country_event = { days = 7 id = etr.11 }
+		}
+	}
+}
+
+country_event = { 
+	id = etr.11 # The union break down
+	title = etr.11.t
+	desc = etr.11.d
+	picture = GFX_china_yining_incident
+	
+	is_triggered_only = yes
+
+	option = {
+		name = etr.11.a 
+		custom_effect_tooltip = UNION_BREAK
+		hidden_effect = {
+			618 = { set_demilitarized_zone = yes }
+			SIK = {
+					add_state_core = 618
+					add_state_core = 617
+					transfer_state = 617
+					add_state_core = 760
+					transfer_state = 760
+					add_state_core = 759
+					transfer_state = 759
+					add_state_core = 287
+					transfer_state = 287
+					add_state_core = 619
+					transfer_state = 619
+					set_capital = { state = 617 }
+					set_cosmetic_tag = XIN_SEV
+					#kill_country_leader = yes
+					create_country_leader = {
+						name = "麦斯武德·沙比尔"
+						desc = ""
+						picture = "MSWD.dds"
+						expire = "1953.3.1"
+						ideology = despotism
+						traits = {
+							
+						}
+					}
+					create_country_leader = {
+						name = "麦斯武德·沙比尔"
+						desc = ""
+						picture = "MSWD.dds"
+						expire = "1953.3.1"
+						ideology = stalinism
+						traits = {
+							
+						}
+					}
+					create_country_leader = {
+						name = "麦斯武德·沙比尔"
+						desc = ""
+						picture = "MSWD.dds"
+						expire = "1953.3.1"
+						ideology = rexism
+						traits = {
+							
+						}
+					}
+					create_country_leader = {
+						name = "麦斯武德·沙比尔"
+						desc = ""
+						picture = "MSWD.dds"
+						expire = "1953.3.1"
+						ideology = socialism
+						traits = {
+							
+						}
+					}
+					set_politics = {
+							ruling_party = neutrality
+							elections_allowed = no
+					}
+					add_popularity = {
+						ideology = neutrality
+						popularity = 0.80
+					}
+			}		
+			ETR = {
+					set_capital = { state = 617 }
+					drop_cosmetic_tag = yes				
+					#kill_country_leader = yes
+					create_country_leader = {
+						name = "阿合买提江·哈斯木"
+						desc = ""
+						picture = "Ehmetjan_Qasim.dds"
+						expire = "1953.3.1"
+						ideology = centrism
+						traits = {
+							
+						}
+					}
+					create_country_leader = {
+						name = "阿合买提江·哈斯木"
+						desc = ""
+						picture = "Ehmetjan_Qasim.dds"
+						expire = "1953.3.1"
+						ideology = stalinism
+						traits = {
+							
+						}
+					}
+					create_country_leader = {
+						name = "阿合买提江·哈斯木"
+						desc = ""
+						picture = "Ehmetjan_Qasim.dds"
+						expire = "1953.3.1"
+						ideology = rexism
+						traits = {
+							
+						}
+					}
+					create_country_leader = {
+						name = "阿合买提江·哈斯木"
+						desc = ""
+						picture = "Ehmetjan_Qasim.dds"
+						expire = "1953.3.1"
+						ideology = socialism
+						traits = {
+							
+						}
+					}
+					set_politics = {
+							ruling_party = neutrality
+							elections_allowed = no
+					}
+			}
+			country_event = { days = 5 id = etr.12 }
+			country_event = { days = 1 id = etr.23 }
+		}	
+	}
+}
+
+country_event = { #OPTION FOR 37
+	id = etr.12 # negotiate with Three
+	title = etr.12.t
+	desc = etr.12.d
+	picture = GFX_call_back_ssc
+	
+	is_triggered_only = yes
+
+	option = {# Break Seven
+		name = etr.12.a 
+		ai_chance = {
+			factor = 70
+		}
+		add_stability = 0.01
+		custom_effect_tooltip = BEAT_MASWOOD
+		hidden_effect = {
+			country_event = { days = 7 id = etr.16 }
+		}
+	}
+	
+	option = {#NO Break down seven, let them do
+		name = etr.12.b 
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		add_stability = 0.01
+		custom_effect_tooltip = FREE_TO_DEAL
+		hidden_effect = {
+			country_event = { days = 7 id = etr.14 }
+		}
+	}
+}
+
+#######KMT-CHI########
+
+country_event = { ########Disabled###################################################
+	id = etr.13 # Succeed
+	title = etr.13.t
+	desc = etr.13.d
+	picture = GFX_report_event_chinese_officers
+	
+	is_triggered_only = yes
+
+	option = {
+		name = etr.13.a 
+		add_stability = 0.01
+		custom_effect_tooltip = SUCCEED_KMT
+		hidden_effect = {
+			ETR = {
+				set_cosmetic_tag = ETR_DEMO
+				set_party_name = { ideology = neutrality long_name = ETR_CHI_party name = ETR_CHI }
+				set_capital = { state = 617 }
+				add_state_core = 617
+				transfer_state = 617
+				add_state_core = 760
+				transfer_state = 760
+				add_state_core = 759
+				transfer_state = 759
+				add_state_core = 287
+				transfer_state = 287
+				add_state_core = 619
+				transfer_state = 619
+				annex_country = { target = SIK transfer_troops = no }
+			}
+			SIK = {
+					every_state = {
+						limit = { is_core_of = SIK }
+						SIK = { remove_state_core = PREV }					
+					}	
+			}
+			618 = { set_demilitarized_zone = no }
+			ROOT = {
+					set_autonomy = { target = ETR autonomy_state = autonomy_dominion }
+					add_political_power = 20		
+			}
+			country_event = { days = 1 id = etr.24 }
+		}
+	}
+}
+
+country_event = { 
+	id = etr.14 # Another One-Fail
+	title = etr.14.t
+	desc = etr.14.d
+	picture = GFX_report_event_chinese_officers
+	
+	is_triggered_only = yes
+
+	option = {
+		name = etr.14.a 
+		add_stability = 0.01
+		custom_effect_tooltip = One_Fail_1
+		hidden_effect = {
+			SIK = {
+				annex_country = { target = ETR transfer_troops = no }
+			}
+			ETR = {
+					every_state = {
+						limit = { is_core_of = ETR }
+						ETR = { remove_state_core = PREV }					
+					}	
+			}
+			618 = { set_demilitarized_zone = no }
+			ROOT = {
+					set_autonomy = { target = SIK autonomy_state = autonomy_dominion }
+					add_political_power = 20		
+			}
+			country_event = { days = 12 id = etr.15 }
+		}
+	}
+}
+
+country_event = { 
+	id = etr.15 # Another One-Fail_2
+	title = etr.15.t
+	desc = etr.15.d
+	picture = GFX_china_yining_incident
+	
+	is_triggered_only = yes
+
+	option = {
+		name = etr.15.a 
+		add_stability = -0.02
+		custom_effect_tooltip = One_Fail_2
+		hidden_effect = {
+			set_autonomy = {
+				target = SIK
+				autonomy_state = autonomy_free
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = SIK			
+				expire = 0
+			}
+			SIK = {
+				set_cosmetic_tag = ETR_IND
+			}
+			ROOT = {				
+				set_country_flag = TRAPPED_BY_EAST_TURKEYSTAN_INDEPENDENT
+			}
+			country_event = { days = 1 id = etr.25 }
+		}
+	}
+}
+
+country_event = { 
+	id = etr.19 # AFTER_DECLARE_WAR
+	title = etr.19.t
+	desc = etr.19.d
+	picture = GFX_chi_successful_get_place
+	
+	mean_time_to_happen = {
+		days = 2
+	}
+	
+	trigger = {
+			SIK = {
+				has_cosmetic_tag = ETR_IND
+				OR = {
+					exists = no
+					is_puppet_of = ROOT
+				}
+			}
+			has_country_flag = TRAPPED_BY_EAST_TURKEYSTAN_INDEPENDENT
+	}
+
+	option = {
+		name = etr.19.a 
+		add_stability = 0.01
+		custom_effect_tooltip = One_Fail_3
+		hidden_effect = {
+			SIK = {
+				drop_cosmetic_tag = yes
+				every_state = {
+					limit = { is_core_of = SIK }
+					SIK = { remove_state_core = PREV }					
+				}
+			}
+			clr_country_flag = TRAPPED_BY_EAST_TURKEYSTAN_INDEPENDENT
+		}
+	}
+}
+
+#######CPC/PRC Or Union_govenment########
+country_event = { 
+	id = etr.16 # three win more
+	title = etr.16.t
+	desc = etr.16.d
+	picture = GFX_ahemaitijiang
+	
+	is_triggered_only = yes
+
+	option = {# gogogogo
+		name = etr.16.a 
+		custom_effect_tooltip = THREE_WIN_MORE
+		hidden_effect = {
+			ETR = {
+				transfer_state = 617
+				transfer_state = 760
+			}
+			617 = { set_demilitarized_zone = yes }
+			760 = { set_demilitarized_zone = yes }
+			country_event = { days = 7 id = etr.17 }
+		}
+	}
+}
+
+country_event = { 
+	id = etr.17 # three comes to negotiate to cooperate with them
+	title = etr.17.t
+	desc = etr.17.d
+	picture = GFX_ahemaitijiang
+	
+	is_triggered_only = yes
+
+	option = {#GOOD
+		name = etr.17.a 
+		add_stability = 0.01
+		ROOT = {
+				set_autonomy = { target = ETR autonomy_state = autonomy_dominion }
+				add_political_power = 20		
+				hidden_effect = {
+					country_event = { days = 7 id = etr.18 }
+				}
+		}
+	}
+}
+
+country_event = { 
+	id = etr.18 # Succeed
+	title = etr.18.t
+	desc = etr.18.d
+	picture = GFX_call_back_ssc
+	
+	is_triggered_only = yes
+
+	option = {
+		name = etr.18.a 
+		add_stability = 0.01
+		custom_effect_tooltip = THREE_SUCCEED
+		hidden_effect = {
+			ETR = {
+				set_cosmetic_tag = ETR_DEMO
+				set_party_name = { ideology = neutrality long_name = ETR_CHI_party name = ETR_CHI }
+				set_capital = { state = 617 }
+				add_state_core = 617
+				transfer_state = 617
+				add_state_core = 760
+				transfer_state = 760
+				add_state_core = 759
+				transfer_state = 759
+				add_state_core = 287
+				transfer_state = 287
+				add_state_core = 619
+				transfer_state = 619
+				annex_country = { target = SIK transfer_troops = no }
+			}
+			SIK = {
+					every_state = {
+						limit = { is_core_of = SIK }
+						SIK = { remove_state_core = PREV }					
+					}	
+			}
+			618 = { set_demilitarized_zone = no }
+			617 = { set_demilitarized_zone = no }
+			760 = { set_demilitarized_zone = no }
+			country_event = { days = 1 id = etr.24 }
+			set_country_flag = WIN_IN_SIK
+		}
+	}
+}
+
+########SSCFIX#############
+country_event = { 
+	id = etr.20 # three comes to negotiate to cooperate with them
+	title = etr.20.t
+	desc = etr.20.d
+	picture = GFX_call_back_ssc
+	
+	is_triggered_only = yes
+
+	option = {#
+		name = etr.20.a 
+		custom_effect_tooltip = PULL_SHENGSHICAI
+	}
+}
+
+####### News - Event
+news_event = {#ESTABLISH_EAST_TURKEY
+	id = etr.21
+	title = etr.21.t
+	desc = etr.21.d
+	picture = GFX_china_east_turkestan_established_news
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = etr.21.a
+	}
+}
+
+news_event = {#UNION
+	id = etr.22
+	title = etr.22.t
+	desc = etr.22.d
+	picture = GFX_china_union_govenment_established_news
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = etr.22.a
+	}
+}
+
+news_event = {#BREAK AGAIN 
+	id = etr.23
+	title = etr.23.t
+	desc = etr.23.d
+	picture = GFX_china_break_again_news
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = etr.23.a
+	}
+}
+
+news_event = {#WIN
+	id = etr.24
+	title = etr.24.t
+	desc = etr.24.d
+	picture = GFX_china_sinkiang_peace_news
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = etr.24.a
+	}
+}
+
+news_event = {#FAIL
+	id = etr.25
+	title = etr.25.t
+	desc = etr.25.d
+	picture = GFX_china_east_again_news
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = etr.25.a
+	}
+}

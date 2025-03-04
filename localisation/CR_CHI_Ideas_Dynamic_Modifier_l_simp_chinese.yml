@@ -1,0 +1,28 @@
+﻿l_simp_chinese:
+ CHI_the_roc_land_army_dynamic_modifier: "中华民国陆军" #民族精神名
+ CHI_modify_the_roc_land_army_dynamic_modifier: "§Y$CHI_the_roc_land_army_dynamic_modifier$§!追加效果：" #民族精神追加效果提示
+ CHI_forced_conscription_ideas_effects: "\n当我们拥有民族精神§Y$CHI_the_roc_land_army_dynamic_modifier$§!时：\n$CHI_modify_the_roc_land_army_dynamic_modifier$\n征兵法案花费：§G-10.0%§!\n陆军组织度：§R-3.0%§!\n若尚未完成国策§Y中华民国陆军§!，则修正将在完成后自动获得。"
+ CHI_infantry_army_ideas_effects: "$CHI_modify_the_roc_land_army_dynamic_modifier$\n陆军组织度恢复：§G+3.0%§!\n训练时间：§R+5.0%§!\n\n"
+ KMT_experimental_mechanised_unit_ideas_effects: "$CHI_modify_the_roc_land_army_dynamic_modifier$\n动员速度：§G+5.0%§!\n\n"
+ KMT_elite_mountaineers_ideas_effects: "$CHI_modify_the_roc_land_army_dynamic_modifier$\n地形惩罚降低：§G+5.0%§!\n\n"
+ KMT_small_arms_expertise_ideas_effects: "$CHI_modify_the_roc_land_army_dynamic_modifier$\n步兵单位编成花费：§G-10.0%§!\n\n"
+ KMT_heavy_weapons_ideas_effects: "$CHI_modify_the_roc_land_army_dynamic_modifier$\n炮兵单位编成花费：§G-10.0%§!\n\n"
+ KMT_modern_logistics_ideas_effects: "$CHI_modify_the_roc_land_army_dynamic_modifier$\n陆军组织度恢复：§G+5.0%§!\n增援率：§G+2.0%§!\n\n"
+ KMT_construction_battalions_ideas_effects: "$CHI_modify_the_roc_land_army_dynamic_modifier$\n堑壕上限：§G+5.0§!\n堑壕速度：§G+5.0%§!\n近空支援造成伤害降低：§G+5.0%§!\n\n"
+ KMT_adaptable_army_ideas_effects: "$CHI_modify_the_roc_land_army_dynamic_modifier$\n冬季损耗：§G-10.0%§!\n炎热损耗：§G-10.0%§!\n寒冷适应度增长率：§G+15.0%§!\n炎热适应度增长率：§G+15.0%§!\n特种部队容量上限：§G+5.0%§!\n\n"
+ CHI_convention_election_ideas_effects: "§Y国民大会§!追加效果：\n每日获得的政治点数：§G+0.25§!\n贸易法案花费：§G-20.0%§!\n经济法案花费：§G-20.0%§!\n征兵法案花费：§G-20.0%§!\n\n"
+ CHI_motorized_army_ideas_effects: "$CHI_modify_the_roc_land_army_dynamic_modifier$\n陆军组织度恢复：§G+2.0%§!\n\n"
+ KMT_combined_arms_warfare_ideas_effects: "$CHI_modify_the_roc_land_army_dynamic_modifier$\n陆军组织度恢复：§G+5.0%§!\n组织度：§G+5.0%§!\n\n"
+ CHI_the_roc_navy_dynamic_modifier: "中华民国海军" #民族精神名
+ CHI_modify_the_roc_navy_dynamic_modifier: "§Y$CHI_the_roc_navy_dynamic_modifier$§!追加效果：" #民族精神追加效果提示
+ KMT_train_marines_ideas_effects: "$CHI_modify_the_roc_navy_dynamic_modifier$\n登陆准备时间：§G-10.0%§!\n登陆作战上限：§G+10§!\n特种部队容量上限乘数：§G+10.0%§!\n\n"
+ KMT_investment_into_shipbuilding_ideas_effects: "$CHI_modify_the_roc_navy_dynamic_modifier$\n海军装备改装成本：§G-5%§!\n船只修理速度：§G+5%§!\n\n"
+ chi_submarine_bonus: "日式现代潜艇"
+ KMT_modern_submarines_ideas_effects: "$CHI_modify_the_roc_navy_dynamic_modifier$\n可见度：§G-5%§!\n\n"
+ KMT_coastal_patrol_planes_ideas_effects: "$CHI_modify_the_roc_navy_dynamic_modifier$\n阵位：§G+10%§!\n\n"
+ chi_cruiser_bonus_1: "美式战舰"
+ chi_cruiser_bonus_2: "美式战舰"
+ KMT_light_cruiser_project_ideas_effects: "$CHI_modify_the_roc_navy_dynamic_modifier$\n屏卫效率：§G+10%§!\n\n"
+ KMT_naval_aviation_ideas_effects: "$CHI_modify_the_roc_navy_dynamic_modifier$\n舰队协同性：§G+10%§!\n\n"
+
+ CHI_state_capitalism_plan: "经济特区"

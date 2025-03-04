@@ -1,0 +1,84 @@
+scripted_gui = {
+	CHI_INFO_SCREEN_open_button = {
+		context_type = player_context
+		parent_window_token = politics_tab
+		window_name = "CHI_INFO_SCREEN_open_button_window"
+		visible = {
+			tag = CHI
+			# always = no
+			has_country_flag = china_parliament_activated
+		}
+		effects = {
+			politicsview_CHI_legyuan_button_click = {
+				if = {
+					limit = {
+						has_country_flag = CHI_legyuan_click
+					}
+					clr_country_flag = CHI_legyuan_click
+				}
+				else = {
+					set_country_flag = CHI_legyuan_click
+				}
+			}
+		}
+	}
+	
+	CHI_legyuan_seats_screen = {
+		context_type = player_context
+		# parent_window_token = politics_tab
+		window_name = "CHI_ps_legyuan_seats_main_screen"
+		dirty = show_CHI_parliament
+		visible = {
+			has_country_flag = CHI_legyuan_click
+		}
+		effects = {
+			CHI_close_legyuan_button_click = {
+				clr_country_flag = CHI_legyuan_click
+			}
+		}
+		dynamic_lists = {
+			CHI_parliament_main_grid = {
+				array = CHI_parliament_main_array
+				index = CHI_parliament_main_index
+				change_scope = no
+				entry_container = CHI_parliament_main_entry
+			}
+			CHI_party_grid = {
+				array = CHI_parliament_party_array				#the array that will be used for populating the grid
+				index = CHI_parliament_party_index
+				change_scope = no
+				entry_container = [GetCHIGUIsEntryContainer]
+			}
+			CHI_parliament_member_grid = {
+				array = CHI_parliament_party_array
+				index = CHI_parliament_party_index
+				change_scope = no
+				entry_container = CHI_parliament_member_entry
+			}
+		}
+		properties = {
+			CHI_parliament_main_icon = {
+				frame = v
+				x = CHI.house_x_array^CHI_parliament_main_index
+				y = CHI.house_y_array^CHI_parliament_main_index
+				image = "[GetCHIPartyParliamentIcon]"
+			}
+			CHI_party_logo = {
+				image = "[GetCHIPartyLogos]"
+			}
+			CHI_party_leader_portrait = {
+				image = "[GetCHIPartyLeaderPortrait]"
+			}
+			# CHI_party_in_coalition_logo = {
+			# 	image = "[GetCHIPartyCoalition]"
+			# }
+			CHI_party_in_government_logo = {
+				image = "[GetCHIPartyGovernmentLogo]"
+			}
+			# CHI_party_support_indicator = {
+			# 	image = "[GetCHIPartySupportIndicator]"
+			# }
+		}
+	}
+}
+

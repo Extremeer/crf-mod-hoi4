@@ -1,0 +1,11 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_icon_china_alignment_nationalist"
+		texturefile = "gfx/interface/china_alignment_nationalist.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_icon_china_alignment_communist"
+		texturefile = "gfx/interface/china_alignment_communist.dds"
+	}
+}

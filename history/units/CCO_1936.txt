@@ -1,0 +1,13 @@
+﻿### British Malaya OOB ###
+
+division_template = {
+	name = "Colony Police"		
+	division_names_group = BRENGL_INFB_01		# Uses generic English templates
+	# Note: originally formed in 1939
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+	}
+}
+

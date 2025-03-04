@@ -1,0 +1,1755 @@
+CRF_CHI_national_construction_plan = {
+	# TODO: When PRC is in Legistive Yuan, this decision should be available for PRC
+
+	# Jiangsu - Nanjing
+	CHI_nationalise_nanjing_electrical_works = {
+		visible = {
+			has_completed_focus = CHI_national_construction_commission
+			613 = { is_owned_and_controlled_by = ROOT }
+		}
+		highlight_states = {
+			highlight_state_targets = { state = 613 }
+		}
+		allowed = { tag = CHI }
+		available = {
+			num_of_civilian_factories_available_for_projects > 3
+		}
+		fire_only_once = yes
+		icon = GFX_decision_electrify
+		priority = 30
+		cancel_if_not_visible = no
+		ai_will_do = { factor = 25 }
+		cost = 50
+		days_remove = 80
+		modifier = {
+			civilian_factory_use = 3
+		}
+		remove_effect = {
+			613 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	CHI_establish_the_yongli_chemical_plant = {
+		visible = {
+			has_completed_focus = CHI_national_construction_commission
+			613 = { is_owned_and_controlled_by = ROOT }
+		}
+		highlight_states = {
+			highlight_state_targets = { state = 613 }
+		}
+		allowed = { tag = CHI }
+		available = {
+			num_of_civilian_factories_available_for_projects > 3
+		}
+		fire_only_once = yes
+		icon = GFX_decision_generic_research
+		priority = 30
+		cancel_if_not_visible = no
+		ai_will_do = { factor = 25 }
+		cost = 40
+		days_remove = 70
+		modifier = {
+			civilian_factory_use = 3
+		}
+		remove_effect = {
+			613 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = synthetic_refinery
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	# Jiangsu - Shanghai
+	CHI_renovate_shanghai_arsenal = {
+		visible = {
+			has_completed_focus = CHI_develop_heavy_industry
+			613 = { is_owned_and_controlled_by = ROOT }
+		}
+		highlight_states = {
+			highlight_state_targets = { state = 613 } #shanghai
+		}
+		allowed = { tag = CHI }
+		available = {
+			num_of_civilian_factories_available_for_projects > 3
+		}
+		fire_only_once = yes
+		icon = GFX_decision_generic_industry
+		priority = 30
+		cancel_if_not_visible = no
+		ai_will_do = { factor = 25 }
+		cost = 70
+		days_remove = 100
+		modifier = {
+			civilian_factory_use = 4
+		}
+		remove_effect = {
+			613 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			if = {
+				limit = {
+					NOT = { has_tech = motorised_infantry }
+				}
+				set_technology = { motorised_infantry = 1 }
+			}
+			else = {
+				add_equipment_to_stockpile = {
+					type = motorized_equipment_1
+					amount = 100
+					producer = CHI
+				}
+			}
+			add_tech_bonus = {
+				name = CHI_renovate_shanghai_arsenal
+				bonus = 0.5
+				uses = 1
+				category = armor
+			}
+		}
+	}
+	CHI_create_nez_in_shanghai = {
+		visible = {
+			has_completed_focus = CHI_embrace_autarky
+			613 = { is_owned_and_controlled_by = ROOT }
+		}
+		highlight_states = {
+			highlight_state_targets = { state = 613 } #shanghai
+		}
+		allowed = { tag = CHI }
+		fire_only_once = yes
+		icon = GFX_decision_gre_investment_decisions
+		priority = 30
+		cancel_if_not_visible = no
+		ai_will_do = { factor = 25 }
+		days_remove = 45
+		remove_effect = {
+			if = {
+				limit = { controls_state = 613 } #Shanghai
+				613 = {
+					add_dynamic_modifier = {
+						modifier = CHI_state_capitalism_plan
+					}
+				}
+			}
+		}
+	}
+	# Anhui
+	CHI_anhui_industrial_plan = {
+		visible = {
+			has_completed_focus = CHI_create_the_nec
+			749 = { is_owned_and_controlled_by = ROOT }
+		}
+		highlight_states = {
+			highlight_state_targets = { state = 749 } #Wannan
+		}
+		allowed = { tag = CHI }
+		available = {
+			num_of_civilian_factories_available_for_projects > 3
+		}
+		fire_only_once = yes
+		icon = GFX_decision_steel
+		priority = 30
+		cancel_if_not_visible = no
+		ai_will_do = { factor = 25 }
+		cost = 60
+		days_remove = 90
+		modifier = {
+			civilian_factory_use = 4
+		}
+		remove_effect = {
+			749 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+				add_resource = {
+					type = steel
+					amount = 8
+				}
+				build_railway = {
+					level = 2
+					path = { 11937 1171 1099 11913 }
+				}
+			}
+		}
+	}
+	# Jiangxi
+	CHI_mining_operations_in_five_provinces = {
+		visible = {
+			has_completed_focus = CHI_create_the_nec
+			600 = { is_owned_and_controlled_by = ROOT }
+		}
+		highlight_states = {
+			highlight_state_targets = { state = 600 } #Jiangxi
+		}
+		allowed = { tag = CHI }
+		available = {
+			num_of_civilian_factories_available_for_projects > 2
+			has_tech = excavation1
+		}
+		fire_only_once = yes
+		icon = GFX_decision_tungsten
+		priority = 30
+		cancel_if_not_visible = no
+		ai_will_do = { factor = 25 }
+		cost = 30
+		days_remove = 60
+		modifier = {
+			civilian_factory_use = 2
+		}
+
+		remove_effect = {
+			600 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_resource = {
+					type = steel
+					amount = 2
+				}
+				add_resource = {
+					type = tungsten
+					amount = 2
+				}
+			}
+		}
+	}
+	# Hunan
+	CHI_mine_yaogangxian_mining_area = {
+		visible = {
+			has_completed_focus = CHI_create_the_nec
+			602 = { is_owned_and_controlled_by = ROOT }
+		}
+		highlight_states = {
+			highlight_state_targets = { state = 602 } #xiangjiang
+		}
+		allowed = { tag = CHI }
+		available = {
+			num_of_civilian_factories_available_for_projects > 2
+			has_tech = excavation1
+		}
+		fire_only_once = yes
+		icon = GFX_decision_tungsten
+		priority = 30
+		cancel_if_not_visible = no
+		ai_will_do = { factor = 25 }
+		cost = 30
+		days_remove = 60
+		modifier = {
+			civilian_factory_use = 2
+		}
+
+		remove_effect = {
+			602 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_resource = {
+					type = tungsten
+					amount = 4
+				}
+			}
+		}
+	}
+	CHI_central_machinery_factory = {
+		visible = {
+			has_completed_focus = CHI_national_construction_commission
+			750 = { is_owned_and_controlled_by = ROOT }
+		}
+		highlight_states = {
+			highlight_state_targets = { state = 750 } #changde
+		}
+		allowed = { tag = CHI }
+		available = {
+			num_of_civilian_factories_available_for_projects > 3
+		}
+		fire_only_once = yes
+		icon = GFX_decision_eng_trade_unions_support
+		priority = 30
+		cancel_if_not_visible = no
+		ai_will_do = { factor = 25 }
+		cost = 40
+		days_remove = 70
+		modifier = {
+			civilian_factory_use = 3
+		}
+		remove_effect = {
+			750 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	CHI_xiangtan_steel_work = {
+		visible = {
+			has_completed_focus = CHI_develop_heavy_industry
+			602 = { is_owned_and_controlled_by = ROOT }
+		}
+		highlight_states = {
+			highlight_state_targets = { state = 602 } #xiangjiang
+		}
+		allowed = { tag = CHI }
+		available = {
+			num_of_civilian_factories_available_for_projects > 3
+		}
+		fire_only_once = yes
+		icon = GFX_decision_steel
+		priority = 30
+		cancel_if_not_visible = no
+		ai_will_do = { factor = 25 }
+		cost = 40
+		days_remove = 70
+		modifier = {
+			civilian_factory_use = 3
+		}
+		remove_effect = {
+			602 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_resource = {
+					type = steel
+					amount = 4
+				}
+			}
+		}
+	}
+	CHI_developing_hunans_industrial_capacity = {
+		visible = {
+			has_completed_focus = CHI_develop_heavy_industry
+			750 = { is_owned_and_controlled_by = ROOT }#changde
+			602 = { is_owned_and_controlled_by = ROOT }#xiangjiang
+		}
+		highlight_states = {
+			highlight_state_targets = { state = 602 } #chenyuan
+		}
+		allowed = { tag = CHI }
+		available = {
+			num_of_civilian_factories_available_for_projects > 4
+		}
+		fire_only_once = yes
+		icon = GFX_decision_generic_industry
+		priority = 30
+		cancel_if_not_visible = no
+		ai_will_do = { factor = 25 }
+		cost = 60
+		days_remove = 90
+		modifier = {
+			civilian_factory_use = 4
+		}
+		remove_effect = {
+			750 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			602 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	# Guangdong
+	CHI_create_nez_in_guangzhou = {
+		visible = {
+			has_completed_focus = CHI_embrace_autarky
+			592 = { is_owned_and_controlled_by = ROOT }
+		}
+		highlight_states = {
+			highlight_state_targets = { state = 592 } #shanghai
+		}
+		allowed = { tag = CHI }
+		fire_only_once = yes
+		icon = GFX_decision_gre_investment_decisions
+		priority = 30
+		cancel_if_not_visible = no
+		ai_will_do = { factor = 25 }
+		days_remove = 45
+		remove_effect = {
+			if = {
+				limit = { controls_state = 592 } #Guangzhou
+				592 = {
+					add_dynamic_modifier = {
+						modifier = CHI_state_capitalism_plan
+					}
+				}
+			}
+		}
+	}
+	CHI_construct_yuehan_railway = { #railway
+		visible = {
+			has_completed_focus = CHI_national_construction_commission
+			592 = { is_owned_and_controlled_by = ROOT }
+			593 = { is_owned_and_controlled_by = ROOT }
+			620 = { is_owned_and_controlled_by = ROOT }
+			602 = { is_owned_and_controlled_by = ROOT }
+			# 1048 = { is_owned_and_controlled_by = ROOT }
+		}
+		allowed = { tag = CHI }
+		available = {
+			num_of_civilian_factories_available_for_projects > 2
+		}
+		icon = train
+		highlight_states = {
+			highlight_state_targets = { state = 592 }
+		}
+		cost = 30
+		days_remove = 60
+		fire_only_once = yes
+		modifier = {
+			civilian_factory_use = 2
+		}
+		ai_will_do = { factor = 25 }
+
+		remove_effect = {
+			build_railway = {
+				level = 3
+				path = { 1047 12095 1120 9970 9982 12350 13143 7097 9999 4631 4619 }
+			}
+			592 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	CHI_improve_han_river_infrastructure = {
+		visible = {
+			has_completed_focus = CHI_national_construction_commission
+			593 = { is_owned_and_controlled_by = ROOT } #guangdong
+			600 = { is_owned_and_controlled_by = ROOT } #gannan
+		}
+		highlight_states = {
+			highlight_state_targets = { state = 600 }
+		}
+		allowed = { tag = CHI }
+		available = {
+			num_of_civilian_factories_available_for_projects > 4
+		}
+		fire_only_once = yes
+		icon = GFX_decision_hol_drain_water_lines
+		priority = 30
+		cancel_if_not_visible = no
+		ai_will_do = { factor = 25 }
+		cost = 60
+		days_remove = 90
+		modifier = {
+			civilian_factory_use = 4
+		}
+		remove_effect = {
+			every_owned_state = {
+				limit = {
+					OR = {
+						state = 593
+						state = 600
+					}
+					is_controlled_by = CHI
+					# free_building_slots = { building = infrastructure size > 0 include_locked = yes }
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			593 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	# Guangxi
+	CHI_wuzhou_vegetable_oil_company = { #factory + bonus example
+		visible = {
+			has_completed_focus = CHI_create_the_nec
+			599 = { is_owned_and_controlled_by = ROOT }
+		}
+		highlight_states = {
+			highlight_state_targets = { state = 599 } #Guilin
+		}
+		allowed = { tag = CHI }
+		available = {
+			num_of_civilian_factories_available_for_projects > 3
+		}
+		fire_only_once = yes
+		icon = GFX_decision_generic_construction
+		priority = 30
+		cancel_if_not_visible = no
+		ai_will_do = { factor = 25 }
+		cost = 50
+		days_remove = 80
+		modifier = {
+			civilian_factory_use = 3
+		}
+		remove_effect = {
+			599 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	CHI_nanning_grain_storage = {
+		visible = {
+			has_completed_focus = CHI_national_construction_commission
+			594 = { is_owned_and_controlled_by = ROOT }
+		}
+		highlight_states = {
+			highlight_state_targets = { state = 594 } #Nanning
+		}
+		allowed = { tag = CHI }
+		available = {
+			num_of_civilian_factories_available_for_projects > 3
+		}
+		fire_only_once = yes
+		icon = GFX_decision_generic_construction
+		priority = 30
+		cancel_if_not_visible = no
+		ai_will_do = { factor = 25 }
+		cost = 40
+		days_remove = 70
+		modifier = {
+			civilian_factory_use = 3
+		}
+		remove_effect = {
+			594 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	# Hainan
+	CHI_green_gold_in_hainan = {
+		visible = {
+			has_completed_focus = CHI_create_the_nec
+			591 = { is_owned_and_controlled_by = ROOT }
+		}
+		highlight_states = {
+			highlight_state_targets = { state = 591 } #Hainan
+		}
+		allowed = { tag = CHI }
+		available = {
+			num_of_civilian_factories_available_for_projects > 2
+			has_tech = excavation1
+		}
+		fire_only_once = yes
+		icon = GFX_decision_rubber
+		priority = 30
+		cancel_if_not_visible = no
+		ai_will_do = { factor = 25 }
+		cost = 30
+		days_remove = 60
+		modifier = {
+			civilian_factory_use = 2
+		}
+
+		remove_effect = {
+			591 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_resource = {
+					type = rubber
+					amount = 4
+				}
+			}
+		}
+	}
+	# Sichuan
+	CHI_chongqing_electric_steel_mill = {
+		visible = {
+			has_completed_focus = CHI_national_construction_commission
+			605 = { is_owned_and_controlled_by = ROOT }
+		}
+		highlight_states = {
+			highlight_state_targets = { state = 605 } #chongqing
+		}
+		allowed = { tag = CHI }
+		available = {
+			num_of_civilian_factories_available_for_projects > 3
+		}
+		fire_only_once = yes
+		icon = GFX_decision_generic_factory
+		priority = 30
+		cancel_if_not_visible = no
+		ai_will_do = { factor = 25 }
+		cost = 50
+		days_remove = 80
+		modifier = {
+			civilian_factory_use = 3
+		}
+		remove_effect = {
+			605 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	CHI_chongqing_weapon_plant = { #factory example
+		visible = {
+			has_completed_focus = CHI_develop_heavy_industry
+			605 = { is_owned_and_controlled_by = ROOT }
+		}
+		highlight_states = {
+			highlight_state_targets = { state = 605 } #chongqing
+		}
+		allowed = { tag = CHI }
+		available = {
+			num_of_civilian_factories_available_for_projects > 3
+		}
+		fire_only_once = yes
+		icon = GFX_decision_generic_industry
+		priority = 30
+		cancel_if_not_visible = no
+		ai_will_do = { factor = 25 }
+		cost = 40
+		days_remove = 70
+		modifier = {
+			civilian_factory_use = 3
+		}
+		remove_effect = {
+			605 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	CHI_tap_into_sichuans_natural_reserves = {
+		visible = {
+			has_completed_focus = CHI_create_the_nec
+			605 = { is_owned_and_controlled_by = ROOT }
+		}
+		highlight_states = {
+			highlight_state_targets = { state = 605 } #sichuan
+		}
+		allowed = { tag = CHI }
+		available = {
+			num_of_civilian_factories_available_for_projects > 2
+			has_tech = excavation1
+		}
+		fire_only_once = yes
+		icon = GFX_decision_oil
+		priority = 30
+		cancel_if_not_visible = no
+		ai_will_do = { factor = 25 }
+		cost = 30
+		days_remove = 60
+		modifier = {
+			civilian_factory_use = 2
+		}
+		remove_effect = {
+			605 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_resource = {
+					type = oil
+					amount = 4
+				}
+			}
+		}
+	}
+	# Guizhou
+	CHI_bauxite_extraction_in_guizhou = { #resource example
+		visible = {
+			has_completed_focus = CHI_create_the_nec
+			603 = { is_owned_and_controlled_by = ROOT }
+		}
+		highlight_states = {
+			highlight_state_targets = { state = 603 } #qianzhong
+		}
+		allowed = { tag = CHI }
+		available = {
+			num_of_civilian_factories_available_for_projects > 2
+			has_tech = excavation1
+		}
+		fire_only_once = yes
+		icon = GFX_decision_aluminium
+		priority = 30
+		cancel_if_not_visible = no
+		ai_will_do = { factor = 25 }
+		cost = 30
+		days_remove = 60
+		modifier = {
+			civilian_factory_use = 2
+		}
+		remove_effect = {
+			603 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_resource = {
+					type = aluminium
+					amount = 4
+				}
+			}
+		}
+	}
+	# Yunnan
+	CHI_expand_tin_production_in_gejiu = {
+		visible = {
+			has_completed_focus = CHI_create_the_nec
+			325 = { is_owned_and_controlled_by = ROOT }
+		}
+		highlight_states = {
+			highlight_state_targets = { state = 325 } # East Yunnan
+		}
+		allowed = { tag = CHI }
+		available = {
+			num_of_civilian_factories_available_for_projects > 2
+			has_tech = excavation1
+		}
+		fire_only_once = yes
+		icon = GFX_decision_aluminium
+		priority = 30
+		cancel_if_not_visible = no
+		ai_will_do = { factor = 25 }
+		cost = 30
+		days_remove = 60
+		modifier = {
+			civilian_factory_use = 2
+		}
+		remove_effect = {
+			325 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_resource = {
+					type = aluminium
+					amount = 4
+				}
+			}
+		}
+	}
+
+	CHI_invest_yuxi_cigarette_factory = {
+		visible = {
+			has_completed_focus = CHI_create_the_nec
+			325 = { is_owned_and_controlled_by = ROOT }
+		}
+		highlight_states = {
+			highlight_state_targets = { state = 325 } # East Yunnan
+		}
+		allowed = { tag = CHI }
+		available = {
+			num_of_civilian_factories_available_for_projects > 2
+		}
+		fire_only_once = yes
+		icon = GFX_decision_aluminium
+		priority = 30
+		cancel_if_not_visible = no
+		ai_will_do = { factor = 25 }
+		cost = 30
+		days_remove = 60
+		modifier = {
+			civilian_factory_use = 2
+		}
+		remove_effect = {
+			325 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	# Henan
+	CHI_refurbish_gongxian_arsenal = {
+		visible = {
+			has_completed_focus = CHI_develop_heavy_industry
+			607 = { is_owned_and_controlled_by = ROOT }
+		}
+		highlight_states = {
+			highlight_state_targets = { state = 607 } #Henan
+		}
+		allowed = { tag = CHI }
+		available = {
+			num_of_civilian_factories_available_for_projects > 3
+		}
+		fire_only_once = yes
+		icon = GFX_decision_generic_industry
+		priority = 30
+		cancel_if_not_visible = no
+		ai_will_do = { factor = 25 }
+		cost = 40
+		days_remove = 70
+		modifier = {
+			civilian_factory_use = 3
+		}
+		remove_effect = {
+			607 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	CHI_kaifeng_mines = {
+		visible = {
+			has_completed_focus = CHI_create_the_nec
+			607 = { is_owned_and_controlled_by = ROOT }
+		}
+		highlight_states = {
+			highlight_state_targets = { state = 607 } #Henan - Kaifeng
+		}
+		allowed = { tag = CHI }
+		available = {
+			num_of_civilian_factories_available_for_projects > 3
+			has_tech = excavation1
+		}
+		fire_only_once = yes
+		icon = GFX_decision_steel
+		priority = 30
+		cancel_if_not_visible = no
+		ai_will_do = { factor = 25 }
+		cost = 40
+		days_remove = 70
+		modifier = {
+			civilian_factory_use = 3
+		}
+		remove_effect = {
+			607 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_resource = {
+					type = steel
+					amount = 4
+				}
+			}
+		}
+	}
+	
+	CHI_modernise_yellow_river_levees = { #multiple infrastructure example
+		visible = {
+			has_completed_focus = CHI_national_construction_commission
+			597 = { is_owned_and_controlled_by = ROOT } # Shandong
+			616 = { is_owned_and_controlled_by = ROOT } # Ningxia
+			746 = { is_owned_and_controlled_by = ROOT } # Erdos
+			622 = { is_owned_and_controlled_by = ROOT } # Shaanxi
+			615 = { is_owned_and_controlled_by = ROOT } # Shanxi
+			607 = { is_owned_and_controlled_by = ROOT } # Henan
+		}
+		highlight_states = {
+			highlight_state_targets = { state = 607 }
+		}
+		allowed = { tag = CHI }
+		available = {
+			num_of_civilian_factories_available_for_projects > 3
+		}
+		fire_only_once = yes
+		icon = GFX_decision_hol_drain_water_lines
+		priority = 30
+		cancel_if_not_visible = no
+		ai_will_do = { factor = 25 }
+		cost = 40
+		days_remove = 90
+		modifier = {
+			civilian_factory_use = 3
+		}
+		remove_effect = {
+			every_owned_state = {
+				limit = {
+					OR = {
+						state = 616
+						state = 597
+						state = 746
+						state = 622
+						state = 615
+						state = 607
+					}
+					is_controlled_by = CHI
+					# free_building_slots = { building = infrastructure size > 0 include_locked = yes }
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	# Hubei
+	CHI_revitalise_hanyang_industry = { #2 factory example
+		visible = {
+			has_completed_focus = CHI_develop_heavy_industry
+			620 = { is_owned_and_controlled_by = ROOT }
+		}
+		highlight_states = {
+			highlight_state_targets = { state = 620 } #Hubei Wuhan Hanyang
+		}
+		allowed = { tag = CHI }
+		available = {
+			num_of_civilian_factories_available_for_projects > 4
+		}
+		fire_only_once = yes
+		icon = GFX_decision_generic_industry
+		priority = 30
+		cancel_if_not_visible = no
+		ai_will_do = { factor = 25 }
+		cost = 60
+		days_remove = 90
+		modifier = {
+			civilian_factory_use = 4
+		}
+		remove_effect = {
+			620 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#northern china
+	# Beiping
+	CHI_nationalise_beijing_steel = {
+		visible = {
+			has_completed_focus = CHI_create_the_nec
+			608 = { is_owned_and_controlled_by = ROOT } # Jingzhao
+		}
+		highlight_states = {
+			highlight_state_targets = { state = 608 }
+		}
+		allowed = { tag = CHI }
+		available = {
+			num_of_civilian_factories_available_for_projects > 3
+			has_tech = excavation1
+		}
+		fire_only_once = yes
+		icon = GFX_decision_steel
+		priority = 30
+		cancel_if_not_visible = no
+		ai_will_do = { factor = 25 }
+		cost = 40
+		days_remove = 70
+		modifier = {
+			civilian_factory_use = 3
+		}
+		remove_effect = {
+			608 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_resource = {
+					type = steel
+					amount = 4
+				}
+			}
+		}
+	}
+	# CHI_complete_the_tongpu_railway = { #makes rails a little better past shanxi for gameplay purposes/connecting supply hubs
+	# 	visible = {
+	# 		# has_completed_focus = CHI_national_reconstruction_commission
+	# 		608 = { is_owned_and_controlled_by = ROOT } #jingzhao
+	# 		611 = { is_owned_and_controlled_by = ROOT } #southern chahar
+	# 		615 = { is_owned_and_controlled_by = ROOT } #shanxi
+	# 		607 = { is_owned_and_controlled_by = ROOT } #henan
+	# 	}
+	# 	allowed = { tag = CHI }
+	# 	available = {
+	# 		num_of_civilian_factories_available_for_projects > 3
+	# 	}
+	# 	icon = train
+	# 	highlight_states = {
+	# 		highlight_state_targets = { state = 615 }
+	# 	}
+	# 	cost = 30
+	# 	days_remove = 60
+	# 	fire_only_once = yes
+	# 	modifier = {
+	# 		civilian_factory_use = 3
+	# 	}
+	# 	ai_will_do = { factor = 25 }
+	# 	remove_effect = {
+	# 		if = {
+	# 			limit = {
+	# 				# CHI_song_ziwen = { is_political_advisor = yes }
+	# 			}
+	# 			custom_effect_tooltip = CHI_song_ziwen_is_helpful_tt
+	# 			build_railway = { #from beijing to chahar to kaifeng
+	# 				level = 3
+	# 				path = { 9843 6904 10397 828 12432 7041 10507 12300 10838 4174 1115 4634 7571 1575 6932 11931 1004 9958 }
+	# 			}
+	# 			build_railway = { #from baoding
+	# 				level = 3
+	# 				path = { 4190 4093 12078 12344 1962 }
+	# 			}
+	# 			615 = {
+	# 				add_building_construction = {
+	# 					type = infrastructure
+	# 					level = 2
+	# 					instant_build = yes
+	# 				}
+	# 				add_resource = {
+	# 					type = steel
+	# 					amount = 6
+	# 				}
+	# 			}
+	# 			607 = {
+	# 				add_building_construction = {
+	# 					type = infrastructure
+	# 					level = 1
+	# 					instant_build = yes
+	# 				}
+	# 			}
+	# 		}
+	# 		else = {
+	# 			build_railway = { #from beijing to chahar to kaifeng
+	# 				level = 2
+	# 				path = { 9843 6904 10397 828 12432 7041 10507 12300 10838 4174 1115 4634 7571 1575 6932 11931 1004 9958 }
+	# 			}
+	# 			build_railway = { #from baoding
+	# 				level = 2
+	# 				path = { 4190 4093 12078 12344 1962 }
+	# 			}
+	# 			615 = {
+	# 				add_building_construction = {
+	# 					type = infrastructure
+	# 					level = 1
+	# 					instant_build = yes
+	# 				}
+	# 				add_resource = {
+	# 					type = steel
+	# 					amount = 4
+	# 				}
+	# 			}
+	# 			607 = {
+	# 				add_building_construction = {
+	# 					type = infrastructure
+	# 					level = 1
+	# 					instant_build = yes
+	# 				}
+	# 			}
+	# 			custom_effect_tooltip = CHI_song_ziwen_helpful_tt
+	# 		}
+	# 	}
+	# }
+
+	# Shandong
+	CHI_nationalise_mines_zibo = {
+		visible = {
+			has_completed_focus = CHI_create_the_nec
+			597 = { is_owned_and_controlled_by = ROOT } # jiaodong
+		}
+		highlight_states = {
+			highlight_state_targets = { state = 597 }
+		}
+		allowed = { tag = CHI }
+		available = {
+			num_of_civilian_factories_available_for_projects > 3
+			has_tech = excavation1
+		}
+		fire_only_once = yes
+		icon = GFX_decision_steel
+		priority = 30
+		cancel_if_not_visible = no
+		ai_will_do = { factor = 25 }
+		cost = 40
+		days_remove = 70
+		modifier = {
+			civilian_factory_use = 3
+		}
+		remove_effect = {
+			597 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_resource = {
+					type = steel
+					amount = 4
+				}
+			}
+		}
+	}
+	
+	CHI_revive_jinan_arsenal = {
+		visible = {
+			has_completed_focus = CHI_develop_heavy_industry
+			597 = { is_owned_and_controlled_by = ROOT }
+		}
+		highlight_states = {
+			highlight_state_targets = { state = 597 } #jinan
+		}
+		allowed = { tag = CHI }
+		available = {
+			num_of_civilian_factories_available_for_projects > 3
+		}
+		fire_only_once = yes
+		icon = GFX_decision_generic_industry
+		priority = 30
+		cancel_if_not_visible = no
+		ai_will_do = { factor = 25 }
+		cost = 40
+		days_remove = 70
+		modifier = {
+			civilian_factory_use = 3
+		}
+		remove_effect = {
+			597 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	# Shanxi
+	CHI_refurbish_taiyuan_arsenal = {
+		visible = {
+			has_completed_focus = CHI_develop_heavy_industry
+			615 = { is_owned_and_controlled_by = ROOT }
+		}
+		highlight_states = {
+			highlight_state_targets = { state = 615 } #western shanxi
+		}
+		allowed = { tag = CHI }
+		available = {
+			num_of_civilian_factories_available_for_projects > 3
+		}
+		fire_only_once = yes
+		icon = GFX_decision_generic_industry
+		priority = 30
+		cancel_if_not_visible = no
+		ai_will_do = { factor = 25 }
+		cost = 40
+		days_remove = 70
+		modifier = {
+			civilian_factory_use = 3
+		}
+		remove_effect = {
+			615 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	# Shaanxi
+	CHI_encourage_oil_extraction_in_yanchang = {
+		visible = {
+			has_completed_focus = CHI_create_the_nec
+			622 = { is_owned_and_controlled_by = ROOT }
+		}
+		highlight_states = {
+			highlight_state_targets = { state = 622 } #yulin
+		}
+		allowed = { tag = CHI }
+		available = {
+			num_of_civilian_factories_available_for_projects > 3
+			has_tech = excavation1
+		}
+		fire_only_once = yes
+		icon = GFX_decision_oil
+		priority = 30
+		cancel_if_not_visible = no
+		ai_will_do = { factor = 25 }
+		cost = 40
+		days_remove = 70
+		modifier = {
+			civilian_factory_use = 3
+		}
+		remove_effect = {
+			622 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = synthetic_refinery
+					level = 1
+					instant_build = yes
+				}
+				add_resource = {
+					type = oil
+					amount = 4
+				}
+			}
+		}
+	}
+	CHI_jinghui_irrigation_canal = {
+		visible = {
+			has_completed_focus = CHI_national_construction_commission
+			622 = { is_owned_and_controlled_by = ROOT }
+		}
+		highlight_states = {
+			highlight_state_targets = { state = 622 } #yulin
+		}
+		allowed = { tag = CHI }
+		available = {
+			num_of_civilian_factories_available_for_projects > 3
+		}
+		fire_only_once = yes
+		icon = GFX_decision_generic_construction
+		priority = 30
+		cancel_if_not_visible = no
+		ai_will_do = { factor = 25 }
+		cost = 50
+		days_remove = 80
+		modifier = {
+			civilian_factory_use = 3
+		}
+		remove_effect = {
+			622 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	#northwestern china
+	# Qinghai
+	CHI_qinghai_cultivation_programme = {
+		visible = {
+			has_completed_focus = CHI_national_construction_commission
+			604 = { is_owned_and_controlled_by = ROOT }
+			754 = { is_owned_and_controlled_by = ROOT }
+		}
+		highlight_states = {
+			highlight_state_targets = { state = 604 } #xining
+		}
+		allowed = { tag = CHI }
+		available = {
+			num_of_civilian_factories_available_for_projects > 3
+		}
+		fire_only_once = yes
+		icon = GFX_decision_generic_construction
+		priority = 30
+		cancel_if_not_visible = no
+		ai_will_do = { factor = 25 }
+		cost = 50
+		days_remove = 90
+		modifier = {
+			civilian_factory_use = 3
+		}
+		remove_effect = {
+			604 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			754 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	# Gansu
+	CHI_revive_gansu_machine_works = {
+		visible = {
+			has_completed_focus = CHI_national_construction_commission
+			283 = { is_owned_and_controlled_by = ROOT }
+		}
+		highlight_states = {
+			highlight_state_targets = { state = 283 } #lanzhou
+		}
+		allowed = { tag = CHI }
+		available = {
+			num_of_civilian_factories_available_for_projects > 3
+		}
+		fire_only_once = yes
+		icon = GFX_decision_generic_factory
+		priority = 30
+		cancel_if_not_visible = no
+		ai_will_do = { factor = 25 }
+		cost = 40
+		days_remove = 70
+		modifier = {
+			civilian_factory_use = 3
+		}
+		remove_effect = {
+			283 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	CHI_minsheng_irrigation_canal = {
+		visible = {
+			has_completed_focus = CHI_national_construction_commission
+			283 = { is_owned_and_controlled_by = ROOT }
+			616 = { is_owned_and_controlled_by = ROOT }
+			756 = { is_owned_and_controlled_by = ROOT }
+		}
+		highlight_states = {
+			highlight_state_targets = { state = 283 } #hexi corridor
+		}
+		allowed = { tag = CHI }
+		available = {
+			num_of_civilian_factories_available_for_projects > 3
+		}
+		fire_only_once = yes
+		icon = GFX_decision_generic_construction
+		priority = 30
+		cancel_if_not_visible = no
+		ai_will_do = { factor = 25 }
+		cost = 50
+		days_remove = 80
+		modifier = {
+			civilian_factory_use = 3
+		}
+		remove_effect = {
+			283 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			616 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			756 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	# CHI_complete_the_longhai_railway = { #adds a lvl 1 railway to Yulin too, since otherwise it never gets connected
+	# 	visible = {
+	# 		has_completed_focus = CHI_national_construction_commission
+	# 		607 = { is_owned_and_controlled_by = ROOT } #heluo
+	# 		799 = { is_owned_and_controlled_by = ROOT } #guanzhong
+	# 		622 = { is_owned_and_controlled_by = ROOT } #yulin
+	# 		283 = { is_owned_and_controlled_by = ROOT } #lanzhou
+	# 	}
+	# 	allowed = { tag = CHI }
+	# 	available = {
+	# 		num_of_civilian_factories_available_for_projects > 2
+	# 	}
+	# 	icon = train
+	# 	highlight_states = {
+	# 		highlight_state_targets = { state = 283 }
+	# 	}
+	# 	cost = 30
+	# 	complete_effect = {
+	# 		log = "[GetDateText]: [Root.GetName]: Decision complete CHI_complete_the_longhai_railway"
+	# 	}
+	# 	days_remove = 60
+	# 	fire_only_once = yes
+	# 	modifier = {
+	# 		civilian_factory_use = 2
+	# 	}
+	# 	ai_will_do = { factor = 25 }
+	# 	remove_effect = {
+	# 		log = "[GetDateText]: [Root.GetName]: Decision remove CHI_complete_the_longhai_railway"
+	# 		if = {
+	# 			limit = { CHI_song_ziwen = { is_political_advisor = yes } }
+	# 			custom_effect_tooltip = CHI_song_ziwen_is_helpful_tt
+	# 			build_railway = { #from heluo to yulin
+	# 				level = 2
+	# 				path = { 6932 12713 7301 1976 12156 }
+	# 			}
+	# 			build_railway = { #from guanzhong to lanzhou
+	# 				level = 3
+	# 				path = { 1976 2006 1933 556 6638 1630 }
+	# 			}
+	# 			283 = {
+	# 				add_extra_state_shared_building_slots = 1
+	# 				add_building_construction = {
+	# 					type = industrial_complex
+	# 					level = 1
+	# 					instant_build = yes
+	# 				}
+	# 				add_building_construction = {
+	# 					type = infrastructure
+	# 					level = 2
+	# 					instant_build = yes
+	# 				}
+	# 			}
+	# 		}
+	# 		else = {
+	# 			custom_effect_tooltip = CHI_song_ziwen_helpful_tt
+	# 			build_railway = { #from heluo to yulin
+	# 				level = 1
+	# 				path = { 6932 12713 7301 1976 12156 }
+	# 			}
+	# 			build_railway = { #from guanzhong to lanzhou
+	# 				level = 2
+	# 				path = { 1976 2006 1933 556 6638 1630 }
+	# 			}
+	# 			283 = {
+	# 				add_building_construction = {
+	# 					type = infrastructure
+	# 					level = 1
+	# 					instant_build = yes
+	# 				}
+	# 			}
+	# 		}
+	# 	}
+	# }
+	# CHI_create_the_lanxin_railway = { #Will connect all Xinjiang supply hubs
+	# 	visible = {
+	# 		has_completed_focus = CHI_national_construction_commission
+	# 		283 = { is_owned_and_controlled_by = ROOT } #lanzhou
+	# 		774 = { is_owned_and_controlled_by = ROOT } #hexi corridor
+	# 		1083 = { is_owned_and_controlled_by = ROOT } #kumul
+	# 		617 = { is_owned_and_controlled_by = ROOT } #dihua
+	# 		287 = { is_owned_and_controlled_by = ROOT } #hotan
+	# 	}
+	# 	allowed = { tag = CHI }
+	# 	available = {
+	# 		num_of_civilian_factories_available_for_projects > 2
+	# 	}
+	# 	icon = train
+	# 	highlight_states = {
+	# 		highlight_state_targets = { state = 617 }
+	# 	}
+	# 	cost = 30
+	# 	complete_effect = {
+	# 		log = "[GetDateText]: [Root.GetName]: Decision complete CHI_create_the_lanxin_railway"
+	# 	}
+	# 	days_remove = 60
+	# 	fire_only_once = yes
+	# 	modifier = {
+	# 		civilian_factory_use = 2
+	# 	}
+	# 	ai_will_do = { factor = 25 }
+	# 	remove_effect = {
+	# 		log = "[GetDateText]: [Root.GetName]: Decision remove CHI_create_the_lanxin_railway"
+	# 		if = {
+	# 			limit = { CHI_song_ziwen = { is_political_advisor = yes } }
+	# 			custom_effect_tooltip = CHI_song_ziwen_is_helpful_tt
+	# 			build_railway = { #from lanzhou to dihua
+	# 				level = 3
+	# 				path = { 1630 5057 12327 5100 2028 7971 12820 1838 13728 7732 12656 7148 4709 }
+	# 			}
+	# 			build_railway = { #small rail to kumul supply hub
+	# 				level = 2
+	# 				path = { 13728 4704 }
+	# 			}
+	# 			build_railway = { #small rail to hotan supply hub
+	# 				level = 2
+	# 				path = { 13728 12524 5736 10900 2074 1943 13390 13386 5083 13531 4973 }
+	# 			}
+	# 			617 = {
+	# 				add_extra_state_shared_building_slots = 1
+	# 				add_building_construction = {
+	# 					type = industrial_complex
+	# 					level = 1
+	# 					instant_build = yes
+	# 				}
+	# 				add_building_construction = {
+	# 					type = infrastructure
+	# 					level = 2
+	# 					instant_build = yes
+	# 				}
+	# 			}
+	# 		}
+	# 		else = {
+	# 			custom_effect_tooltip = CHI_song_ziwen_helpful_tt
+	# 			build_railway = { #from lanzhou to dihua
+	# 				level = 2
+	# 				path = { 1630 5057 12327 5100 2028 7971 12820 1838 13728 7732 12656 7148 4709 }
+	# 			}
+	# 			build_railway = { #small rail to kumul supply hub
+	# 				level = 1
+	# 				path = { 13728 4704 }
+	# 			}
+	# 			build_railway = { #small rail to hotan supply hub
+	# 				level = 1
+	# 				path = { 13728 12524 5736 10900 2074 1943 13390 13386 5083 13531 4973 }
+	# 			}
+	# 			617 = {
+	# 				add_building_construction = {
+	# 					type = infrastructure
+	# 					level = 1
+	# 					instant_build = yes
+	# 				}
+	# 			}
+	# 		}
+	# 	}
+	# }
+
+	# Dongbei
+	# Shenyang
+	CHI_appropriate_shenyang_arsenal = {
+		visible = {
+			has_completed_focus = CHI_develop_heavy_industry
+			716 = { is_owned_and_controlled_by = ROOT }
+		}
+		highlight_states = {
+			highlight_state_targets = { state = 716 } #liaoning
+		}
+		allowed = { tag = CHI }
+		available = {
+			num_of_civilian_factories_available_for_projects > 3
+		}
+		fire_only_once = yes
+		icon = GFX_decision_generic_industry
+		priority = 30
+		cancel_if_not_visible = no
+		ai_will_do = { factor = 25 }
+		cost = 40
+		days_remove = 70
+		modifier = {
+			civilian_factory_use = 3
+		}
+		remove_effect = {
+			716 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	CHI_finish_fengman_hydroelectric_dam = {
+		visible = {
+			has_completed_focus = CHI_national_construction_commission
+			328 = { is_owned_and_controlled_by = ROOT }
+		}
+		highlight_states = {
+			highlight_state_targets = { state = 328 } #jilin
+		}
+		allowed = { tag = CHI }
+		available = {
+			num_of_civilian_factories_available_for_projects > 3
+		}
+		fire_only_once = yes
+		icon = GFX_decision_generic_construction
+		priority = 30
+		cancel_if_not_visible = no
+		ai_will_do = { factor = 25 }
+		cost = 50
+		days_remove = 80
+		modifier = {
+			civilian_factory_use = 3
+		}
+		remove_effect = {
+			328 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	CHI_nationalising_manchurian_iron_industry = {
+		visible = {
+			has_completed_focus = CHI_create_the_nec
+			716 = { is_owned_and_controlled_by = ROOT } #liaoning
+		}
+		highlight_states = {
+			highlight_state_targets = { state = 716 }
+		}
+		allowed = { tag = CHI }
+		available = {
+			num_of_civilian_factories_available_for_projects > 3
+			has_tech = excavation1
+		}
+		fire_only_once = yes
+		icon = GFX_decision_steel
+		priority = 30
+		cancel_if_not_visible = no
+		ai_will_do = { factor = 25 }
+		cost = 40
+		days_remove = 70
+		modifier = {
+			civilian_factory_use = 3
+		}
+		remove_effect = {
+			716 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_resource = {
+					type = steel
+					amount = 4
+				}
+			}
+		}
+	}
+	CHI_add_research_slot_decision = {
+		visible = {
+			amount_research_slots < 5
+		}
+		allowed = { tag = CHI }
+		available = {
+			OR = {
+				has_completed_focus = KMT_anti_imperialism
+				has_completed_focus = KMT_imperial_legacy
+			}
+		}
+		fire_only_once = yes
+		icon = GFX_decision_generic_research
+		cost = 150
+		priority = 100
+		ai_will_do = { factor = 100 }
+		complete_effect = {
+			add_research_slot = 1
+		}
+	}
+}

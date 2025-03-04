@@ -1,0 +1,59 @@
+﻿l_simp_chinese:
+ ###########抵消英国国策——影响中国##########
+ CHI_go_back_uk: "消除英国在华影响"
+ 
+ 
+ ##################开罗宣言#################
+ demand_non_chi_jap_faction_give_back_land_categories:1 "开罗宣言"
+ demand_non_chi_jap_faction_give_back_land_categories_desc:1 "《开罗宣言》中明确规定，日本所窃取的中国领土，如东北、台湾等岛屿应归还中国。如今战争结束，我们应该要求同盟撤出被日本窃取的中国领土。"
+ demand_non_chi_jap_faction_give_back_land:1 "请[From.GetAdjective]兑现开罗宣言"
+ crdof.1.t: "中国要求各国遵守《开罗宣言》"
+ crdof.1.d: " 《开罗宣言》中明确规定，日本所窃取的中国领土，如东北、台湾等岛屿应归还中国。如今战争结束，同盟军队驻扎在中国领土当地维持秩序。\n\n经讨论，中国政府宣布已有能力接管归还的领土，其于今天早上已经电请各国军队撤离中国占领区，并于不久后将对被日本窃取的中国领土恢复治权。"
+ crdof.1.a: "伟大的胜利"
+ crdof.2.t: "中国要求我方遵守《开罗宣言》"
+ crdof.2.d: " 在战时签署的《开罗宣言》中我方曾承诺，日本所窃取的中国领土，如东北、台湾等岛屿应归还中国。如今战争结束，我们的军队正驻扎在中国领土当地维持秩序。中国政府于今天早上已经电请我国军队撤离中国占领区，我方是否应该遵守此前的承诺。"
+ crdof.2.a: "是，为我们的中国朋友喝彩!"
+ crdof.2.b: "否，你在教我做事?"
+ 
+ ##################整合军阀#################
+ CR_CHI_integrate_the_warlords: "整合军阀"
+ CR_CHI_integrate_the_army:1 "整合[From.GetAdjective]军队"
+ CR_CHI_integrate_the_administration:1 "整合[From.GetAdjective]政府"
+ CR_CHI_full_integration:1 "全面整合[From.GetNameDef]"
+ 
+ 
+ ###############打破一号作战################
+ kick_japan_ichi_go_categories:1 "对华作战"
+ JAP_ichi_fail_desc:1 "我们发动了一号作战，势在打通中国大陆交通线，然而我们国内却不允许长时间进行破釜沉舟的战争，时间长了无论是天皇还是民众都无法继续支持我们。"
+ JAP_ichi_fail:1 "终止一号作战"
+ 
+
+ ##################开发满洲#################
+ Manchuria_development:1 "开发满洲"
+
+###################成立蒙疆#################
+Set_Mengjiang_Govenment:1 "成立蒙疆联合自治政府"
+ 
+ 
+ ################中共起义修改###############
+ PRC_RISEUP_AI_FACTION: "人民阵线"
+ 
+ 
+ ########共享国策：一个中国原则修改#########
+ CHI_reclaim_tibet: "武统西藏"
+ CHI_reclaim_tibet_desc: "自辛亥革命以来，西藏就一直缺乏中央政府管理，我们必须强制进行干预以保证中国完整。"
+ CHI_negotiate_about_mongolia: "与外蒙古谈判"
+ CHI_negotiate_about_mongolia_desc: "1911年12月28日，外蒙古宣布“独立”，沙俄以蒙古保护者自居。清帝退位后，北洋政府继续与沙俄谈判，于1915年6月7日签订《中俄蒙协约》，勉强保住了在法律意义上对外蒙古的主权。在这之后蒙古一直都维持半独立状态。是时候让他们回归了。"
+ CHI_integrate_the_tibet: "与西藏噶厦政府谈判"
+ CHI_integrate_the_tibet_desc: "西藏自辛亥革命以来就一直由噶厦政府“自治”。虽然武统是一个可行的选项，但我们应该尝试以和平谈判手段让他们回归到我们的大家庭中。"
+ CHI_reclaim_mongolia: "武统蒙古"
+ CHI_reclaim_mongolia_desc: "蒙古独立的尝试已经失败了。他们依靠苏联的独立行动将会被我们彻底打击。"
+ CHI_reclaim_southern_tibet: "藏南问题"
+ CHI_reclaim_southern_tibet_desc: "印度人非法占领我国西藏土地几十载，过去数十年我们实力太弱，无法来重划这条边界线，但现在情况不一样了，我们站起来了！"
+ 
+ china.12138.t: "一个中国原则"
+ china.12138.desc: "近日我们宣称了中国的领导权，这意味着我们可以着手收回部分被列强侵略的领地以及部分自治的省份。（完成这个国策意味着你可以通过完成后续国策，通过决策来与地方政府谈判收回主权）"
+ china.12138.a: "世界上只有一个中国！"
+
+#####################
+ non_humanitarianism: "非人道政策"

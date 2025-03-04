@@ -1,0 +1,8 @@
+﻿l_simp_chinese:
+ ############西部国防建设#################
+ develop_western_areas: "西部国防建设"
+ develop_western_areas_desc: "由于战争，我们的西部国防建设计划被打乱，但是如果我们精心计划，依旧能为抗日提供战略的后方和依托。"
+ develop_sichuan_province: "开发四川" 
+ develop_yunnan_province: "开发云南"
+ develop_gansu_province: "开发甘肃"
+ develop_changde: "开发常德"

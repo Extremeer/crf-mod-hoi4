@@ -1,0 +1,26 @@
+solve_the_warlord = {
+	icon = generic_political_actions
+	priority = 99
+	allowed = {
+				OR = {
+					tag = YUN
+					tag = CHI
+					tag = PRC
+					tag = GXC
+					tag = MAN
+					tag = SHX
+					tag = XSM
+				}
+	}
+	visible = {
+				OR = {
+					tag = YUN
+					tag = CHI
+					tag = PRC
+					tag = GXC
+					tag = MAN
+					tag = SHX
+					tag = XSM
+				}
+	}
+}

@@ -1,0 +1,181 @@
+demand_non_chi_jap_faction_give_back_land_categories = {
+	demand_non_chi_jap_faction_give_back_land = {
+		icon = generic_nationalism
+		visible = {
+			WTT_is_ROOT_current_leader_of_china = yes
+			is_subject = no
+			any_country = {
+				OR = {
+					AND = {
+						NOT = {
+							original_tag = CHI
+							original_tag = PRC
+							original_tag = SIK
+							original_tag = SHX
+							original_tag = XSM
+							original_tag = GXC
+							original_tag = YUN
+							original_tag = MAN
+							original_tag = MEN
+							original_tag = JAP
+						}
+						OR = {
+							owns_state = 609
+							owns_state = 610
+							owns_state = 611
+							owns_state = 612
+							owns_state = 714
+							owns_state = 715
+							owns_state = 716
+							owns_state = 717
+							owns_state = 745
+							owns_state = 761
+							owns_state = 328
+							owns_state = 524
+						}
+					}
+					AND = {
+						OR = {
+							AND = {
+								original_tag = MAN
+								NOT = { is_subject_of = JAP }
+							}
+							AND = {
+								original_tag = MEN
+								NOT = { is_subject_of = JAP }
+							}
+							AND = {
+								original_tag = JAP
+								is_subject = yes
+							}
+						}
+						OR = {
+							owns_state = 609
+							owns_state = 610
+							owns_state = 611
+							owns_state = 612
+							owns_state = 714
+							owns_state = 715
+							owns_state = 716
+							owns_state = 717
+							owns_state = 745
+							owns_state = 761
+							owns_state = 328
+							owns_state = 524
+						}
+					}
+				}
+			}
+		}
+		available = {
+			WTT_is_ROOT_current_leader_of_china = yes
+			is_subject = no
+		}
+
+		target_trigger = {
+			FROM = {
+				exists = yes
+				OR = {
+					AND = {
+						NOT = {
+							original_tag = CHI
+							original_tag = PRC
+							original_tag = SIK
+							original_tag = SHX
+							original_tag = XSM
+							original_tag = GXC
+							original_tag = YUN
+							original_tag = MAN
+							original_tag = MEN
+							original_tag = JAP
+						}
+						OR = {
+							owns_state = 609
+							owns_state = 610
+							owns_state = 611
+							owns_state = 612
+							owns_state = 714
+							owns_state = 715
+							owns_state = 716
+							owns_state = 717
+							owns_state = 745
+							owns_state = 761
+							owns_state = 328
+							owns_state = 524
+						}
+					}
+					AND = {
+						NOT = { original_tag = JAP }
+						MAN = {
+							is_subject_of = PREV
+							OR = {
+								owns_state = 609
+								owns_state = 610
+								owns_state = 611
+								owns_state = 612
+								owns_state = 714
+								owns_state = 715
+								owns_state = 716
+								owns_state = 717
+								owns_state = 745
+								owns_state = 761
+								owns_state = 328
+								owns_state = 524
+							}
+						}
+					}
+					AND = {
+						NOT = { original_tag = JAP }
+						MEN = {
+							is_subject_of = PREV
+							OR = {
+								owns_state = 609
+								owns_state = 610
+								owns_state = 611
+								owns_state = 612
+								owns_state = 714
+								owns_state = 715
+								owns_state = 716
+								owns_state = 717
+								owns_state = 745
+								owns_state = 761
+								owns_state = 328
+								owns_state = 524
+							}
+						}
+					}
+					AND = {
+						JAP = {
+							is_subject_of = PREV
+							OR = {
+								owns_state = 609
+								owns_state = 610
+								owns_state = 611
+								owns_state = 612
+								owns_state = 714
+								owns_state = 715
+								owns_state = 716
+								owns_state = 717
+								owns_state = 745
+								owns_state = 761
+								owns_state = 328
+								owns_state = 524
+							}
+						}
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+		complete_effect = {
+			#custom_effect_tooltip = DEMAND_NON_CHI_JAP_FACTION_BACK_LAND_DECISION
+			FROM = {
+				country_event = crdof.2
+			}
+			add_political_power = 150	
+		}
+		ai_will_do = {
+				factor = 100
+		}
+	}
+}

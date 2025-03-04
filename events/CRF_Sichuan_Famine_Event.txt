@@ -1,0 +1,450 @@
+###########################
+# China Events
+###########################
+
+add_namespace = sicf
+
+# Sichuan Famine
+country_event = {
+    id = sicf.1
+	title = sicf.1.t
+	desc = sicf.1.d
+	
+	picture = GFX_SICF_1
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		days = 0
+	}
+	
+	trigger = {
+		has_idea = sicf_0
+	}
+	
+	option = { # 四川饥荒调查
+	    name = sicf.1.a
+		ai_chance = { factor = 100 }
+		custom_effect_tooltip = SICHUAN_FAMINE_START
+		add_manpower = -5000
+		add_stability = -0.10
+		hidden_effect = {
+			set_global_flag = sichuan_famine_start
+			country_event = { days = 20 id = sicf.2 }
+		}
+		swap_ideas = {
+			remove_idea = sicf_0
+			add_idea = sicf_1		
+		}
+	}
+}
+
+country_event = { # 吃树皮
+	id = sicf.2
+	title = sicf.2.t
+	desc = sicf.2.d
+	
+	picture = GFX_SICF_2
+	
+	is_triggered_only = yes
+	
+	option = { # 
+	    name = sicf.2.a
+		ai_chance = { factor = 100 }
+		custom_effect_tooltip = THEY_STAVED
+		add_manpower = -10000
+		add_stability = -0.03
+		hidden_effect = {
+			country_event = { days = 20 id = sicf.3 }
+			country_event = { days = 5 id = sicf.13 }
+		}
+		swap_ideas = {
+			remove_idea = sicf_1
+			add_idea = sicf_2			
+		}
+	}
+}
+
+country_event = { # 处理1
+	id = sicf.3
+	title = sicf.3.t
+	desc = sicf.3.d
+	
+	picture = GFX_SICF_3
+	
+	is_triggered_only = yes
+	
+	option = { # 开始商议-处理
+	    name = sicf.3.a
+		ai_chance = { factor = 100 }
+		custom_effect_tooltip = WE_START
+		add_stability = 0.01
+		hidden_effect = {
+			country_event = { days = 20 id = sicf.4 }
+		}
+		swap_ideas = {
+			remove_idea = sicf_2
+			add_idea = sicf_3		
+		}
+	}
+	
+	option = { # 开始商议—搁置
+	    name = sicf.3.b
+		ai_chance = { factor = 0 }
+		custom_effect_tooltip = WE_PUT_OFF
+		add_stability = -0.01
+		hidden_effect = {
+			country_event = { days = 20 id = sicf.4 }
+		}
+	}
+}
+
+country_event = { # 吃土
+	id = sicf.4
+	title = sicf.4.t
+	desc = sicf.4.d
+	
+	picture = GFX_SICF_4
+	
+	is_triggered_only = yes
+	
+	option = { # 
+	    name = sicf.4.a
+		ai_chance = { factor = 100 }
+		custom_effect_tooltip = THEY_STAVED_AGAIN
+		add_manpower = -20000
+		add_stability = -0.01
+		hidden_effect = {
+			country_event = { days = 20 id = sicf.5 }
+		}
+		swap_ideas = {
+			remove_idea = sicf_3
+			add_idea = sicf_4			
+		}
+	}
+}
+
+country_event = { # 处理2
+	id = sicf.5
+	title = sicf.5.t
+	desc = sicf.5.d
+	
+	picture = GFX_SICF_5
+	
+	is_triggered_only = yes
+	
+	option = { # 开始商议-处理
+	    name = sicf.5.a
+		ai_chance = { factor = 100 }
+		custom_effect_tooltip = WE_START_AGAIN
+		add_stability = 0.01
+		hidden_effect = {
+			country_event = { days = 20 id = sicf.6 }
+		}
+		swap_ideas = {
+			remove_idea = sicf_4
+			add_idea = sicf_5		
+		}
+	}
+	
+	option = { # 开始商议—搁置
+	    name = sicf.5.b
+		ai_chance = { factor = 0 }
+		custom_effect_tooltip = WE_PUT_OFF_AGAIN
+		add_stability = -0.01
+		hidden_effect = {
+			country_event = { days = 20 id = sicf.6 }
+		}
+	}
+}
+
+country_event = { # 吃肉
+	id = sicf.6
+	title = sicf.6.t
+	desc = sicf.6.d
+	
+	picture = GFX_SICF_6
+	
+	is_triggered_only = yes
+	
+	option = { # 
+	    name = sicf.6.a
+		ai_chance = { factor = 50 }
+		custom_effect_tooltip = THEY_STAVED_AGAIN_AGAIN
+		add_manpower = -40000
+		add_stability = -0.01
+		hidden_effect = {
+			country_event = { days = 20 id = sicf.7 }
+		}
+		swap_ideas = {
+			remove_idea = sicf_5
+			add_idea = sicf_6		
+		}
+	}
+}
+
+country_event = { # 处理3
+	id = sicf.7
+	title = sicf.7.t
+	desc = sicf.7.d
+	
+	picture = GFX_SICF_6
+	
+	is_triggered_only = yes
+	
+	option = { # 开始商议-处理
+	    name = sicf.7.a
+		ai_chance = { factor = 100 }
+		custom_effect_tooltip = WE_START_AGAIN_AGAIN
+		add_stability = 0.01
+		hidden_effect = {
+			country_event = { days = 20 id = sicf.8 }
+		}
+		swap_ideas = {
+			remove_idea = sicf_6
+			add_idea = sicf_7			
+		}
+	}
+	
+	option = { # 开始商议—搁置
+	    name = sicf.7.b
+		ai_chance = { factor = 0 }
+		custom_effect_tooltip = WE_PUT_OFF_AGAIN_AGAIN
+		add_stability = -0.01
+		hidden_effect = {
+			country_event = { days = 20 id = sicf.8 }
+		}
+	}
+}
+
+country_event = { # 乡绅救助
+	id = sicf.8
+	title = sicf.8.t
+	desc = sicf.8.d
+	
+	picture = GFX_SICF_8
+	
+	is_triggered_only = yes
+	
+	option = { # 乡镇
+	    name = sicf.8.a
+		ai_chance = { factor = 50 }
+		custom_effect_tooltip = WE_GIVE_IN_URBAN
+		add_manpower = -10000
+		add_stability = 0.02
+		hidden_effect = {
+			country_event = { days = 20 id = sicf.9 }
+		}	
+	}
+	
+	option = { # 乡村
+	    name = sicf.8.b
+		ai_chance = { factor = 50 }
+		custom_effect_tooltip = WE_GIVE_IN_RURAL
+		add_manpower = -2000
+		add_stability = 0.01
+		hidden_effect = {
+			country_event = { days = 20 id = sicf.9 }
+		}
+	}
+}
+
+country_event = { # 天降甘
+	id = sicf.9
+	title = sicf.9.t
+	desc = sicf.9.d
+	
+	picture = GFX_SICF_9
+	
+	is_triggered_only = yes
+	
+	option = { # 终于下雨了
+	    name = sicf.9.a
+		ai_chance = { factor = 100 }
+		custom_effect_tooltip = RAIN
+		add_stability = 0.05
+		remove_ideas = sicf_7
+		if = {
+			limit = {
+				has_idea = help_sichuan_china_6
+			}
+			add_offsite_building = { type = industrial_complex level = -6 }
+		}
+		if = {
+			limit = {
+				has_idea = help_sichuan_china_5
+			}
+			add_offsite_building = { type = industrial_complex level = -5 }
+		}
+		if = {
+			limit = {
+				has_idea = help_sichuan_china_4
+			}
+			add_offsite_building = { type = industrial_complex level = -4 }
+		}
+		if = {
+			limit = {
+				has_idea = help_sichuan_china_3
+			}
+			add_offsite_building = { type = industrial_complex level = -3 }
+		}
+		if = {
+			limit = {
+				has_idea = help_sichuan_china_2
+			}
+			add_offsite_building = { type = industrial_complex level = -2 }
+		}
+		if = {
+			limit = {
+				has_idea = help_sichuan_china_1
+			}
+			add_offsite_building = { type = industrial_complex level = -1 }
+		}
+		hidden_effect = {
+			set_global_flag = we_rain_win
+			remove_ideas = help_sichuan_china_1
+			remove_ideas = help_sichuan_china_2
+			remove_ideas = help_sichuan_china_3
+			remove_ideas = help_sichuan_china_4
+			remove_ideas = help_sichuan_china_5
+			remove_ideas = help_sichuan_china_6
+		}
+	}
+}
+
+country_event = { # 收
+	id = sicf.10
+	title = sicf.10.t
+	desc = sicf.10.d
+	
+	picture = GFX_SICF_11
+	
+	is_triggered_only = yes
+	
+	option = { # ye
+	    name = sicf.10.a
+		ai_chance = { factor = 70 }
+		hidden_effect = {
+			CHI = {
+				country_event = { days = 2 id = sicf.11 }
+				if = {
+					limit = {
+						has_idea = help_sichuan_china_5
+					}
+					swap_ideas = {
+						remove_idea = help_sichuan_china_5
+						add_idea = help_sichuan_china_6		
+					}
+				}
+				else_if = {
+					limit = {
+						has_idea = help_sichuan_china_4
+					}
+					swap_ideas = {
+						remove_idea = help_sichuan_china_4
+						add_idea = help_sichuan_china_5		
+					}
+				}
+				else_if = {
+					limit = {
+						has_idea = help_sichuan_china_3
+					}
+					swap_ideas = {
+						remove_idea = help_sichuan_china_3
+						add_idea = help_sichuan_china_4		
+					}
+				}
+				else_if = {
+					limit = {
+						has_idea = help_sichuan_china_2
+					}
+					swap_ideas = {
+						remove_idea = help_sichuan_china_2
+						add_idea = help_sichuan_china_3		
+					}
+				}
+				else_if = {
+					limit = {
+						has_idea = help_sichuan_china_1
+					}
+					swap_ideas = {
+						remove_idea = help_sichuan_china_1
+						add_idea = help_sichuan_china_2			
+					}
+				}
+				else_if = {
+					limit = {
+						NOT = {
+							has_idea = help_sichuan_china_1
+						}
+					}
+					add_ideas = help_sichuan_china_1
+				}
+			}
+		}
+		CHI = {
+			add_offsite_building = { type = industrial_complex level = 1 }
+		}
+	}
+	
+	option = { # no
+	    name = sicf.10.b
+		ai_chance = { factor = 30 }
+		hidden_effect = {
+			CHI = {
+				country_event = { days = 2 id = sicf.12 }
+			}
+		}
+	}
+}
+
+country_event = { # 接受
+	id = sicf.11
+	title = sicf.11.t
+	desc = sicf.11.d
+	
+	picture = GFX_SICF_11
+	
+	is_triggered_only = yes
+	
+	option = { # 干得漂亮
+	    name = sicf.11.a
+		ai_chance = { factor = 100 }
+		custom_effect_tooltip = GOOD_GOOD_GOOD
+	}
+}
+
+country_event = { # 拒绝
+	id = sicf.12
+	title = sicf.12.t
+	desc = sicf.12.d
+	
+	picture = GFX_SICF_11
+	
+	is_triggered_only = yes
+	
+	option = { # 他们居然
+	    name = sicf.12.a
+		ai_chance = { factor = 100 }
+		custom_effect_tooltip = FUCK_U
+	}
+}
+
+country_event = { # 发出
+	id = sicf.13
+	title = sicf.13.t
+	desc = sicf.13.d
+	
+	picture = GFX_SICF_11
+	
+	is_triggered_only = yes
+	
+	option = { # 
+	    name = sicf.13.a
+		ai_chance = { factor = 100 }
+		custom_effect_tooltip = foreign_help_me_SICF_HELP
+		hidden_effect = {
+			set_global_flag = foreign_help_me_sichuan
+		}
+	}
+}

@@ -1,0 +1,1329 @@
+
+#Integrate Chinese Provinces & Negotiate with Foreign Powers
+
+integrate_china = {
+
+	integrate_outer_mongolia_province = {
+		icon = infiltrate_state
+		highlight_states = { state = 330 }
+		visible = {
+				OR = {
+					tag = CHI
+				}
+				is_subject = no
+				has_full_control_of_state = 330
+				has_full_control_of_state = 817
+				has_full_control_of_state = 818
+				has_full_control_of_state = 819
+				has_full_control_of_state = 820
+				NOT = {
+					has_global_flag = INTEGRATED_OUTER_MONGOLIA
+				}
+		}
+		available = {
+				has_full_control_of_state = 330
+				has_full_control_of_state = 817
+				has_full_control_of_state = 818
+				has_full_control_of_state = 819
+				has_full_control_of_state = 820
+				MON = {
+					exists = no
+				}
+		}
+		cost = 5
+		fire_only_once = yes
+		modifier = {
+			political_power_gain = -0.10
+		}
+		days_remove = 10
+		remove_effect = {
+			custom_effect_tooltip = INTEGRATE_OUTER_MONGOLIA_DECISION
+			hidden_effect = {
+				MON = {
+					remove_state_core = 330	
+					remove_state_core = 817
+					remove_state_core = 818
+					remove_state_core = 819
+					remove_state_core = 820			
+				}
+				set_global_flag = INTEGRATED_OUTER_MONGOLIA
+			}
+		}
+		ai_will_do = {
+				factor = 100
+		}
+	}
+
+	integrate_tuva_province = {
+		icon = infiltrate_state
+		highlight_states = { state = 329 }
+		visible = {
+				OR = {
+					tag = CHI
+				}
+				is_subject = no
+				has_full_control_of_state = 329
+				NOT = {
+					has_global_flag = INTEGRATED_TUVA
+				}
+		 }
+		available = {
+				has_full_control_of_state = 329
+				TAN = {
+					exists = no
+				}
+		}
+		cost = 5
+		fire_only_once = yes
+		modifier = {
+			political_power_gain = -0.10
+		}
+		days_remove = 10
+		remove_effect = {
+			custom_effect_tooltip = INTEGRATE_TUVA_DECISION
+			hidden_effect = {
+				TAN = {
+					remove_state_core = 329			
+				}
+
+				set_global_flag = INTEGRATED_TUVA	
+			}
+		}
+			ai_will_do = {
+				factor = 100
+			}
+	}
+
+	integrate_xinjiang_province = {
+		icon = infiltrate_state
+		highlight_states = { state = 759 }
+		visible = {
+				has_full_control_of_state = 759
+				has_full_control_of_state = 618
+				has_full_control_of_state = 617
+				has_full_control_of_state = 619
+				has_full_control_of_state = 760
+				has_full_control_of_state = 287
+				OR = {
+					tag = CHI
+					tag = PRC
+				}
+				is_subject = no
+				NOT = {
+					has_global_flag = INTEGRATED_XINJIANG
+				}
+		 }
+		available = {
+				has_full_control_of_state = 759
+				has_full_control_of_state = 618
+				has_full_control_of_state = 617
+				has_full_control_of_state = 619
+				has_full_control_of_state = 760
+				has_full_control_of_state = 287
+				SIK = {
+					exists = no
+				}
+				ETR = {
+					exists = no
+				}
+		}
+		cost = 5
+		fire_only_once = yes
+		days_remove = 10
+		remove_effect = {
+				custom_effect_tooltip = INTEGRATE_XINJIANG_DECISION
+				hidden_effect = {
+					ETR = {
+						every_state = {
+							limit = { is_core_of = ETR }
+							ETR = { remove_state_core = PREV }					
+						}
+					}
+					SIK = {
+						every_state = {
+							limit = { is_core_of = SIK }
+							SIK = { remove_state_core = PREV }					
+						}
+					}
+				}
+				set_global_flag = INTEGRATED_XINJIANG
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	full_integrate_xinjiang_province = {
+		icon = infiltrate_state
+		highlight_states = { state = 759 }
+		visible = {
+			ROOT = {
+				has_country_flag = WIN_IN_SIK
+			}
+			ETR = {
+				has_cosmetic_tag = ETR_DEMO
+			}
+		 }
+		available = {
+		}
+		cost = 5
+		fire_only_once = yes
+		modifier = {
+			political_power_gain = -0.10
+		}
+		days_remove = 10
+		remove_effect = {
+				ROOT = { 
+						annex_country = { target = ETR transfer_troops = no }	
+						clr_country_flag = WIN_IN_SIK	
+					}
+				ETR = {
+					every_state = {
+						limit = { is_core_of = ETR }
+						ETR = { remove_state_core = PREV }					
+					}
+				}
+				set_global_flag = INTEGRATED_XINJIANG
+		}
+		ai_will_do = {
+			factor = 400
+		}
+	}
+
+	integrate_tibet_province = {
+		icon = infiltrate_state
+		highlight_states = { state = 322 }
+		visible = {
+				has_full_control_of_state = 322
+				has_full_control_of_state = 758
+				has_full_control_of_state = 757
+				OR = {
+					tag = CHI
+					tag = PRC
+				}
+				is_subject = no
+				NOT = {
+					has_global_flag = INTEGRATED_TIBET
+				}
+
+		}
+		available = {
+				has_full_control_of_state = 322
+				has_full_control_of_state = 758
+				has_full_control_of_state = 757
+				TIB = {
+					exists = no
+				}
+		}
+		cost = 5
+		fire_only_once = yes
+		modifier = {
+			political_power_gain = -0.10
+		}
+		days_remove = 10
+		remove_effect = {
+			custom_effect_tooltip = INTEGRATE_TIBET_DECISION
+			hidden_effect = {
+				TIB = {
+					every_state = {
+						limit = { is_core_of = TIB }
+						TIB = { remove_state_core = PREV }					
+					}
+				}
+				set_global_flag = INTEGRATED_TIBET
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	integrate_xibei = {
+		icon = infiltrate_state
+		highlight_states = { state = 604 }
+		visible = {
+				has_full_control_of_state = 604
+				has_full_control_of_state = 754
+				has_full_control_of_state = 755
+				has_full_control_of_state = 756
+				has_full_control_of_state = 616
+				has_full_control_of_state = 283
+				has_full_control_of_state = 753
+				OR = {
+					tag = CHI
+					tag = PRC
+				}
+				is_subject = no
+				NOT = {
+					has_global_flag = INTEGRATED_XIBEI
+				}
+		}
+		available = {
+				has_full_control_of_state = 604
+				has_full_control_of_state = 754
+				has_full_control_of_state = 755
+				has_full_control_of_state = 756
+				has_full_control_of_state = 616
+				has_full_control_of_state = 283
+				has_full_control_of_state = 753
+				XSM = {
+					exists = no
+				}
+		}
+		cost = 5
+		fire_only_once = yes
+		modifier = {
+			political_power_gain = -0.10
+		}
+		days_remove = 10
+		remove_effect = {
+			custom_effect_tooltip = INTEGRATE_XIBEI_DECISION
+			hidden_effect = {
+				XSM = {
+					every_state = {
+						limit = { is_core_of = XSM }
+						XSM = { remove_state_core = PREV }					
+					}
+				}
+				set_global_flag = INTEGRATED_XIBEI
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	integrate_shanxi_province = {
+		icon = infiltrate_state
+		highlight_states = { state = 615 }
+		visible = {
+				has_full_control_of_state = 621
+				has_full_control_of_state = 746
+				has_full_control_of_state = 615
+				OR = {
+					tag = CHI
+					tag = PRC
+				}
+				is_subject = no
+				NOT = {
+					has_global_flag = INTEGRATED_SHANXI
+				}
+		}
+		available = {
+				has_full_control_of_state = 621
+				has_full_control_of_state = 746
+				has_full_control_of_state = 615
+				SHX = {
+					exists = no
+				}
+		}
+		cost = 5
+		fire_only_once = yes
+		modifier = {
+			political_power_gain = -0.10
+		}
+		days_remove = 10
+		remove_effect = {
+			custom_effect_tooltip = INTEGRATE_SHANXI_DECISION
+			hidden_effect = {
+				SHX = {
+					every_state = {
+						limit = { is_core_of = SHX }
+						SHX = { remove_state_core = PREV }					
+					}
+				}
+				set_global_flag = INTEGRATED_SHANXI
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	integrate_liangguang_province = {
+		icon = infiltrate_state
+		highlight_states = { state = 615 }
+		visible = {
+				has_full_control_of_state = 593
+				has_full_control_of_state = 592
+				has_full_control_of_state = 594
+				has_full_control_of_state = 599
+				has_full_control_of_state = 592
+				OR = {
+					tag = CHI
+					tag = PRC
+				}
+				is_subject = no
+				NOT = {
+					has_global_flag = INTEGRATED_LIANGGUANG
+				}
+		}
+		available = {
+				has_full_control_of_state = 593
+				has_full_control_of_state = 592
+				has_full_control_of_state = 594
+				has_full_control_of_state = 599
+				has_full_control_of_state = 592
+				GXC = {
+					exists = no
+				}
+		}
+		cost = 5
+		fire_only_once = yes
+		modifier = {
+			political_power_gain = -0.10
+		}
+		days_remove = 10
+		remove_effect = {
+			custom_effect_tooltip = INTEGRATE_LIANGGUANG_DECISION
+			hidden_effect = {
+				GXC = {
+					every_state = {
+						limit = { is_core_of = GXC }
+						GXC = { remove_state_core = PREV }					
+					}
+				}
+				set_global_flag = INTEGRATED_LIANGGUANG
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	integrate_yunnan_province = {
+		icon = infiltrate_state
+		highlight_states = { state = 325 }
+		visible = {
+				has_full_control_of_state = 325
+				has_full_control_of_state = 747
+				OR = {
+					tag = CHI
+					tag = PRC
+				}
+				is_subject = no
+				NOT = {
+					has_global_flag = INTEGRATED_YUNNAN
+				}
+		}
+		available = {
+				has_full_control_of_state = 325
+				has_full_control_of_state = 747
+				YUN = {
+					exists = no
+				}
+		}
+		cost = 5
+		fire_only_once = yes
+		modifier = {
+			political_power_gain = -0.10
+		}
+		days_remove = 10
+		remove_effect = {
+			custom_effect_tooltip = INTEGRATE_YUNNAN_DECISION
+			hidden_effect = {
+				YUN = {
+					every_state = {
+						limit = { is_core_of = YUN }
+						YUN = { remove_state_core = PREV }					
+					}
+				}
+				set_global_flag = INTEGRATED_YUNNAN
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	integrate_inner_mongolia_province = {
+		icon = infiltrate_state
+		highlight_states = { state = 611 }
+		visible = {
+				has_full_control_of_state = 611
+				has_full_control_of_state = 612
+				OR = {
+					tag = CHI
+					tag = PRC
+				}
+				is_subject = no
+				NOT = {
+					has_global_flag = INTEGRATED_INNER_MONGOLIA
+				}
+		}
+		available = {
+				has_full_control_of_state = 611
+				has_full_control_of_state = 612
+				MEN = {
+					exists = no
+				}
+		}
+		cost = 5
+		fire_only_once = yes
+		modifier = {
+			political_power_gain = -0.10
+		}
+		days_remove = 10
+		remove_effect = {
+			custom_effect_tooltip = INTEGRATE_INNER_MONGOLIA_DECISION
+			hidden_effect = {
+				MEN = {
+					every_state = {
+						limit = { is_core_of = MEN }
+						MEN = { remove_state_core = PREV }					
+					}
+				}
+				set_global_flag = INTEGRATED_INNER_MONGOLIA
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	integrate_eastnorth_province = {
+		icon = infiltrate_state
+		highlight_states = { state = 610 }
+		visible = {
+				has_full_control_of_state = 610
+				has_full_control_of_state = 716
+				has_full_control_of_state = 328
+				has_full_control_of_state = 715
+				has_full_control_of_state = 714
+				has_full_control_of_state = 761
+				has_full_control_of_state = 717
+				OR = {
+					tag = CHI
+					tag = PRC
+				}
+				is_subject = no
+				NOT = {
+					has_global_flag = INTEGRATED_EASTNORTH
+				}
+		}
+		available = {
+				has_full_control_of_state = 610
+				has_full_control_of_state = 716
+				has_full_control_of_state = 328
+				has_full_control_of_state = 715
+				has_full_control_of_state = 714
+				has_full_control_of_state = 761
+				has_full_control_of_state = 717
+				MAN = {
+					exists = no
+				}
+		}
+		cost = 5
+		fire_only_once = yes
+		modifier = {
+			political_power_gain = -0.10
+		}
+		days_remove = 10
+		remove_effect = {
+			custom_effect_tooltip = INTEGRATE_EASTNORTH_DECISION
+			hidden_effect = {
+				MAN = {
+					every_state = {
+						limit = { is_core_of = MAN }
+						MAN = { remove_state_core = PREV }					
+					}
+				}
+			set_global_flag = INTEGRATED_EASTNORTH
+			}
+			set_province_name = { id = 4572 name = "长春" }
+			set_province_name = { id = 11771 name = "沈阳" }
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	spread_three_principle_idea = {
+		icon = GFX_kmt_flag
+		visible = {
+				OR = {
+					tag = CHI
+				}
+				is_subject = no
+		}
+		available = {
+				PRC = {
+					exists = no
+				}
+		}
+		cost = 10
+		fire_only_once = yes
+		modifier = {
+			political_power_gain = -0.10
+		}
+		days_remove = 10
+		remove_effect = {
+			custom_effect_tooltip = SPREAD_KMT_IDEA_DECISION
+			hidden_effect = {
+				PRC = {
+					every_state = {
+						limit = { is_core_of = PRC }
+						PRC = { remove_state_core = PREV }					
+					}
+				}
+			}
+		}
+		ai_will_do = {
+				factor = 100
+		}
+	}
+
+	spread_maoism_idea = {
+		icon = generic_nationalism
+		visible = {
+				OR = {
+					tag = PRC
+				}
+				is_subject = no
+		}
+		available = {
+				CHI = {
+					exists = no
+				}
+		}
+		cost = 10
+		fire_only_once = yes
+		modifier = {
+			political_power_gain = -0.10
+		}
+		days_remove = 10
+		remove_effect = {
+			custom_effect_tooltip = SPREAD_CPC_IDEA_DECISION
+			hidden_effect = {
+				CHI = {
+					every_state = {
+						limit = { is_core_of = CHI }
+						CHI = { 
+							remove_state_core = PREV
+						 }				
+					}
+				}
+				ROOT = {
+					WTT_political_struggle_recalculate_support = yes
+				}
+				#CHI = {
+				#	add_state_core = 330
+				#	add_state_core = 329
+				#}
+			}
+		}
+		ai_will_do = {
+				factor = 100
+		}
+	}
+
+	negotiate_macau = {
+		icon = generic_political_discourse
+		highlight_states = { state = 729 }
+		visible = {
+				OR = {
+					tag = CHI
+					tag = PRC
+				}
+				is_subject = no
+				if = {
+					limit = {
+						original_tag = CHI
+					}
+					has_completed_focus = KMT_renegotiate_the_unequal_treaties
+					else = {
+						has_completed_focus = CHI_renegotiate_the_unequal_treaties
+					}
+				}
+				NOT = {
+						729 = { is_owned_by = CHI }
+					} 
+				NOT = {
+						729 = { is_owned_by = PRC }
+					} 
+				NOT = {
+						MAU = { is_subject_of = CHI }
+					} 
+				NOT = {
+						MAU = { is_subject_of = PRC }
+				}
+		}
+		available = {
+				is_subject = no
+				NOT = {
+					has_country_flag = decision_is_negotiating
+				}
+				has_full_control_of_state = 592
+		}
+		cost = 20
+		fire_only_once = yes
+		modifier = {
+			political_power_gain = -0.10
+		}
+		days_remove = 7
+		complete_effect = {
+			set_country_flag = decision_is_negotiating
+		}
+		remove_effect = {
+				custom_effect_tooltip = NEGOTIATE_MACAU_DECISION
+				hidden_effect = {
+					clr_country_flag = decision_is_negotiating
+					if = {
+						limit = {
+							729 = { is_owned_by = MAU }
+						}
+						MAU = {
+						country_event = cco.9
+						}
+					}
+					else = {
+						MAU = { 
+							transfer_state = 729
+						}
+						MAU = {
+							country_event = cco.9
+						}
+					}
+				}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	annex_macau = {
+		icon = infiltrate_state
+		highlight_states = { state = 729 }
+		visible = {
+				OR = {
+					tag = CHI
+					tag = PRC
+				}
+				is_subject = no
+				OR = {
+					729 = { is_owned_by = ROOT } 
+					MAU = { is_subject_of = ROOT }
+				}
+		}
+		available = {
+				is_subject = no
+				OR = {
+					729 = { is_owned_by = ROOT } 
+					MAU = { is_subject_of = ROOT }
+				}
+				received_expeditionary_forces = { sender = FROM value < 1 }
+		}
+		cost = 50
+		fire_only_once = yes
+		modifier = {
+			political_power_gain = -0.10
+		}
+		days_remove = 20
+		remove_effect = {
+					ROOT = { 
+						annex_country = { target = MAU transfer_troops = no }		
+					}
+					MAU = {
+						every_state = {
+							limit = { is_core_of = MAU }
+							MAU = { remove_state_core = PREV }					
+						}
+					}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+	
+
+	negotiate_zhanjiang = {
+		icon = generic_political_discourse
+		highlight_states = { state = 728 }
+		visible = {
+				OR = {
+					tag = CHI
+					tag = PRC
+				}
+				is_subject = no
+				if = {
+					limit = {
+						original_tag = CHI
+					}
+					has_completed_focus = KMT_renegotiate_the_unequal_treaties
+					else = {
+						has_completed_focus = CHI_renegotiate_the_unequal_treaties
+					}
+				}
+				NOT = {
+						728 = { is_owned_by = CHI }
+					} 
+				NOT = {
+						728 = { is_owned_by = PRC }
+					} 
+				NOT = {
+						KCW = { is_subject_of = CHI }
+					} 
+				NOT = {
+						KCW = { is_subject_of = PRC }
+				}
+		}
+		available = {
+				is_subject = no
+				NOT = {
+					has_country_flag = decision_is_negotiating
+				}
+				has_full_control_of_state = 593
+		}
+		cost = 20
+		fire_only_once = yes
+		modifier = {
+			political_power_gain = -0.10
+		}
+		days_remove = 7
+		complete_effect = {
+			set_country_flag = decision_is_negotiating
+		}
+		remove_effect = {
+			custom_effect_tooltip = NEGOTIATE_ZHANJIANG_DECISION
+			hidden_effect = {
+					clr_country_flag = decision_is_negotiating
+					if = {
+						limit = {
+							728 = { is_owned_by = KCW }
+						}
+						KCW = {
+						country_event = cco.14
+						}
+					}
+					else = {
+						KCW = { 
+							transfer_state = 728
+						}
+						KCW = {
+							country_event = cco.14
+						}
+					}
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	annex_zhanjiang = {
+		icon = infiltrate_state
+		highlight_states = { state = 728 }
+		visible = {
+				OR = {
+					tag = CHI
+					tag = PRC
+				}
+				is_subject = no
+				OR = {
+					728 = { is_owned_by = ROOT } 
+					KCW = { is_subject_of = ROOT }
+				}
+		}
+		available = {
+				is_subject = no
+				OR = {
+					728 = { is_owned_by = ROOT } 
+					KCW = { is_subject_of = ROOT }
+				}
+				received_expeditionary_forces = { sender = FROM value < 1 }
+		}
+		cost = 50
+		fire_only_once = yes
+		modifier = {
+			political_power_gain = -0.10
+		}
+		days_remove = 20
+		remove_effect = {
+					ROOT = { 
+						annex_country = { target = KCW transfer_troops = no }		
+					}
+					KCW = {
+						every_state = {
+							limit = { is_core_of = KCW }
+							KCW = { remove_state_core = PREV }					
+						}
+					}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	negotiate_hongkong = {
+		icon = generic_political_discourse
+		highlight_states = { state = 326 }
+		visible = {
+				OR = {
+					tag = CHI
+					tag = PRC
+				}
+				is_subject = no
+				if = {
+					limit = {
+						original_tag = CHI
+					}
+					has_completed_focus = KMT_renegotiate_the_unequal_treaties
+					else = {
+						has_completed_focus = CHI_renegotiate_the_unequal_treaties
+					}
+				}
+				NOT = {
+						326 = { is_owned_by = CHI }
+					} 
+				NOT = {
+						326 = { is_owned_by = PRC }
+					} 
+				NOT = {
+						HKG = { is_subject_of = CHI }
+					} 
+				NOT = {
+						HKG = { is_subject_of = PRC }
+				}
+		}
+		available = {
+				is_subject = no
+				NOT = {
+					has_country_flag = decision_is_negotiating
+				}
+				has_full_control_of_state = 593
+		}
+		cost = 20
+		fire_only_once = yes
+		modifier = {
+			political_power_gain = -0.10
+		}
+		days_remove = 7
+		complete_effect = {
+			set_country_flag = decision_is_negotiating
+		}
+		remove_effect = {
+			custom_effect_tooltip = NEGOTIATE_HONGKONG_DECISION
+			hidden_effect = {
+					clr_country_flag = decision_is_negotiating
+					if = {
+						limit = {
+							326 = { is_owned_by = HKG }
+						}
+						HKG = {
+						country_event = cco.4
+						}
+					}
+					else = {
+						HKG = { 
+							transfer_state = 326
+						}
+						HKG = {
+							country_event = cco.4
+						}
+					}
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	annex_hongkong = {
+		icon = infiltrate_state
+		highlight_states = { state = 326 }
+		visible = {
+				OR = {
+					tag = CHI
+					tag = PRC
+				}
+				is_subject = no
+				OR = {
+					326 = { is_owned_by = ROOT } 
+					HKG = { is_subject_of = ROOT }
+				}
+		}
+		available = {
+				is_subject = no
+				OR = {
+					326 = { is_owned_by = ROOT } 
+					HKG = { is_subject_of = ROOT }
+				}
+				received_expeditionary_forces = { sender = FROM value < 1 }
+		}
+		cost = 50
+		fire_only_once = yes
+		modifier = {
+			political_power_gain = -0.10
+		}
+		days_remove = 20
+		remove_effect = {
+					ROOT = { 
+						annex_country = { target = HKG transfer_troops = no }		
+					}
+					HKG = {
+						every_state = {
+							limit = { is_core_of = HKG }
+							HKG = { remove_state_core = PREV }					
+						}
+					}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	negotiate_with_outer_mongolia = {
+		icon = generic_political_discourse
+		visible = {
+			OR = {
+				tag = CHI
+			}
+			is_subject = no
+			if = {
+				limit = {
+					original_tag = CHI
+				}
+				has_completed_focus = KMT_one_china_policy
+				NOT = { has_completed_focus = KMT_reclaim_mongolia }
+				else = {
+					has_completed_focus = CHI_one_china_policy
+					NOT = { has_completed_focus = CHI_reclaim_mongolia }
+				}
+			}
+		}
+		available = {
+			is_subject = no
+			if = {
+				limit = {
+					original_tag = CHI
+				}
+				has_completed_focus = KMT_integrate_the_mongolia
+				else = {
+					has_completed_focus = CHI_negotiate_about_mongolia
+				}
+			}
+			FROM = { NOT = { has_war_with = ROOT } }	
+			NOT = {
+				has_country_flag = decision_is_negotiating
+			}
+		}
+
+		target_trigger = {
+			FROM = {
+				NOT = { has_war_with = ROOT }
+				is_chinese_tag_with_MAN_MEN_but_without_TIB_MON = no
+				OR = {
+					AND = {
+						is_subject = no
+						OR = {
+							owns_state = 817
+							owns_state = 818
+							owns_state = 819
+							owns_state = 820
+							owns_state = 330
+						}
+					}
+					any_other_country = {
+						is_subject_of = PREV
+						OR = {
+							owns_state = 817
+							owns_state = 818
+							owns_state = 819
+							owns_state = 820
+							owns_state = 330
+						}
+					}
+				}
+			}
+		}
+
+		cost = 20
+		fire_only_once = yes
+		modifier = {
+			political_power_gain = -0.10
+		}
+		days_remove = 7
+		complete_effect = {
+			set_country_flag = decision_is_negotiating
+		}
+		remove_effect = {
+			custom_effect_tooltip = NEGOTIATE_OUTER_MONGOLIA_DECISION
+			hidden_effect = {
+				clr_country_flag = decision_is_negotiating
+				FROM = {
+					country_event = chi_int.10
+				}
+			}
+		}
+		ai_will_do = {
+				factor = 100
+		}
+	}
+
+	negotiate_with_tibet = {
+		icon = generic_political_discourse
+		visible = {
+				OR = {
+					tag = CHI
+					tag = PRC
+				}
+				if = {
+					limit = {
+						original_tag = CHI
+					}
+					has_completed_focus = KMT_one_china_policy
+					NOT = { has_completed_focus = KMT_reclaim_tibet }		
+					else = {
+						has_completed_focus = CHI_one_china_policy
+						NOT = { has_completed_focus = CHI_reclaim_tibet }		
+					}
+				}
+		}
+		available = {
+			is_subject = no
+			if = {
+				limit = {
+					original_tag = CHI
+				}
+				has_completed_focus = KMT_integrate_the_tibet
+				else = {
+					has_completed_focus = CHI_integrate_the_tibet
+				}
+			}
+			FROM = { NOT = { has_war_with = ROOT } }	
+			NOT = {
+				has_country_flag = decision_is_negotiating
+			}
+		}
+
+		target_trigger = {
+			FROM = {
+				NOT = { has_war_with = ROOT }
+				is_chinese_tag_with_MAN_MEN_but_without_TIB_MON = no
+				OR = {
+					AND = {
+						is_subject = no
+						OR = {
+							owns_state = 322
+							owns_state = 601
+							owns_state = 757
+							owns_state = 758
+						}
+					}
+					any_other_country = {
+						is_subject_of = PREV
+						OR = {
+							owns_state = 322
+							owns_state = 601
+							owns_state = 757
+							owns_state = 758
+						}
+					}
+				}
+			}
+		}
+
+		cost = 20
+		fire_only_once = yes
+		modifier = {
+			political_power_gain = -0.10
+		}
+		days_remove = 7
+		complete_effect = {
+			set_country_flag = decision_is_negotiating
+		}
+		remove_effect = {
+			custom_effect_tooltip = NEGOTIATE_TIBET_DECISION
+			hidden_effect = {
+				clr_country_flag = decision_is_negotiating
+				FROM = {
+					country_event = chi_int.2
+				}
+			}
+		}
+		ai_will_do = {
+				factor = 100
+		}
+	}
+
+	negotiate_with_tuva = {
+		icon = generic_political_discourse
+		visible = {
+				OR = {
+					tag = CHI
+				}
+				is_subject = no
+				if = {
+					limit = {
+						original_tag = CHI
+					}
+					has_completed_focus = KMT_one_china_policy
+					NOT = { has_completed_focus = KMT_reclaim_mongolia }
+					else = {
+						has_completed_focus = CHI_one_china_policy
+						NOT = { has_completed_focus = CHI_reclaim_mongolia }
+					}
+				}
+		}
+		available = {
+			is_subject = no
+			if = {
+				limit = {
+					original_tag = CHI
+				}
+				has_completed_focus = KMT_integrate_the_mongolia
+				else = {
+					has_completed_focus = CHI_negotiate_about_mongolia
+				}
+			}
+			FROM = { NOT = { has_war_with = ROOT } }	
+			NOT = {
+				has_country_flag = decision_is_negotiating
+			}
+		}
+
+		target_trigger = {
+			FROM = {
+				NOT = { has_war_with = ROOT }
+				is_chinese_tag_with_MAN_MEN_but_without_TIB_MON = no
+				OR = {
+					AND = {
+						is_subject = no
+						owns_state = 329
+					}
+					any_other_country = {
+						is_subject_of = PREV
+						owns_state = 329
+					}
+				}
+				
+				
+			}
+		}
+
+		cost = 20
+		fire_only_once = yes
+		modifier = {
+			political_power_gain = -0.10
+		}
+		days_remove = 7
+		complete_effect = {
+			set_country_flag = decision_is_negotiating
+		}
+		remove_effect = {
+			custom_effect_tooltip = NEGOTIATE_TUVA_DECISION
+			hidden_effect = {
+				clr_country_flag = decision_is_negotiating
+				FROM = {
+					country_event = chi_int.6
+				}
+			}
+		}
+		ai_will_do = {
+				factor = 100
+		}
+	}
+	
+	negotiate_with_raj = {
+		icon = generic_political_discourse
+		visible = {
+				OR = {
+					tag = CHI
+					tag = PRC
+				}
+				is_subject = no
+				if = {
+					limit = {
+						original_tag = CHI
+					}
+					has_completed_focus = KMT_one_china_policy
+					else = {
+						has_completed_focus = CHI_one_china_policy
+					}
+				}
+				NOT = {
+						434 = { is_owned_by = CHI }
+					} 
+				NOT = {
+						434 = { is_owned_by = PRC }
+					} 
+		}
+		available = {
+			NOT = {
+				has_country_flag = decision_is_negotiating
+			}
+			if = {
+				limit = {
+					original_tag = CHI
+				}
+				has_completed_focus = KMT_reclaim_southern_tibet
+				else = {
+					has_completed_focus = CHI_reclaim_southern_tibet
+				}
+			}
+			NOT = {
+				434 = { is_owned_by = CHI }
+			} 
+			NOT = {
+				434 = { is_owned_by = PRC }
+			}
+		}
+		cost = 20
+		fire_only_once = yes
+		modifier = {
+			political_power_gain = -0.10
+		}
+		days_remove = 7
+		complete_effect = {
+			set_country_flag = decision_is_negotiating
+		}
+		remove_effect = {
+			custom_effect_tooltip = NEGOTIATE_RAJ_DECISION
+			hidden_effect = {
+				clr_country_flag = decision_is_negotiating
+				every_other_country = {
+					limit = {
+							owns_state = 434
+					}
+						country_event = china.12145
+				}
+			}
+		}
+		ai_will_do = {
+				factor = 100
+		}
+	}	
+
+	setup_ministry_of_foreign_affairs = {
+		icon = generic_nationalism
+		visible = {
+				WTT_ROOT_is_not_current_leader_of_china = yes
+		}
+		available = {
+				WTT_ROOT_is_not_current_leader_of_china = yes
+			OR = {
+				event_target:WTT_current_china_leader = {
+								exists = no
+				}
+				event_target:WTT_current_china_leader = {
+								is_puppet_of = ROOT
+				}
+			}
+			is_subject = no
+
+		}
+		cost = 10
+		fire_only_once = yes
+		complete_effect = {
+			custom_effect_tooltip = SETUP_NEW_FOREIGN_AFFAIRS_DECISION
+			hidden_effect = {
+				clear_global_event_target = WTT_current_china_leader
+				save_global_event_target_as = WTT_current_china_leader
+			}
+			add_political_power = 150	
+		}
+		ai_will_do = {
+				factor = 100
+		}
+	}
+}

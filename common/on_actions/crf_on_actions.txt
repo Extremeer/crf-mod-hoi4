@@ -1,0 +1,128 @@
+on_actions = {
+	# country 
+	on_new_term_election = {
+		random_events = {
+			100 = chielection.2
+			100 = chielection.4
+			100 = chielection.5
+			100 = chielection.6
+			100 = chielection.7
+			100 = chielection.8
+		}
+	}
+
+	# #ROOT is winner #FROM is loser
+	# on_peaceconference_started = {
+	# 	effect = {
+	# 		#Did FNG have a wargoal on the owner of Beijing?
+	# 		if = {
+	# 			limit = {
+	# 				var:608.owner = { is_chinese_tag = yes }
+	# 				FNG = {
+	# 					exists = yes
+	# 					is_subject = no
+	# 					has_capitulated = no
+	# 					OR = {
+	# 						has_war_with_wargoal_against = {
+	# 							target = 608.owner
+	# 							type = annex_everything
+	# 						}
+	# 						var:608.owner = {
+	# 							has_war_with_wargoal_against = {
+	# 								target = PREV
+	# 								type = annex_everything
+	# 							}
+	# 						}
+	# 						AND = {
+	# 							has_completed_focus = FNG_Begin_the_War_of_National_Reclamation
+	# 							has_wargoal_against = {
+	# 								target = 608.owner
+	# 								type = annex_everything
+	# 							}
+	# 						}
+	# 					}
+	# 				}
+	# 			}
+	# 			var:608.owner = { save_global_event_target_as = FNG_had_wargoal_on_beijing }
+	# 		}
+	# 	}
+	# }
+
+	#ROOT is winner #FROM is loser
+	on_peaceconference_ended = {
+		effect = {
+			### Sets a flag for JAP beating CHI
+			if = {
+				limit = {
+					tag = JAP
+					FROM = {
+						tag = CHI
+					}
+					NOT = { has_global_flag = end_of_second_sino_japanese_war }
+				}
+				set_global_flag = japan_win_second_sino_japanese_war
+				set_global_flag = end_of_second_sino_japanese_war
+			}
+			if = {
+				limit = {
+					tag = CHI
+					FROM = {
+						tag = JAP
+					}
+					NOT = { has_global_flag = end_of_second_sino_japanese_war }
+				}
+				set_global_flag = china_win_second_sino_japanese_war
+				set_global_flag = end_of_second_sino_japanese_war
+			}
+		}
+	}
+
+	on_state_control_changed = {
+		effect = {
+			if = {
+				limit = {
+					OR = {
+						TAG = CHI
+						TAG = PRC
+						TAG = GXC
+						TAG = YUN
+						TAG = XSM
+						TAG = SIK
+						TAG = SHX
+					}
+					FROM = {
+						OR = {
+							original_tag = JAP
+							is_subject_of = JAP
+						}
+					}
+					FROM = { has_war_with = ROOT }
+					FROM.FROM = { state = 613 }
+				}
+				news_event = chinaocc.22
+			}
+			if = {
+				limit = {
+					OR = {
+						TAG = CHI
+						TAG = PRC
+						TAG = GXC
+						TAG = YUN
+						TAG = XSM
+						TAG = SIK
+						TAG = SHX
+					}
+					FROM = {
+						OR = {
+							original_tag = JAP
+							is_subject_of = JAP
+						}
+					}
+					FROM = { has_war_with = ROOT }
+					FROM.FROM = { state = 608 }
+				}
+				news_event = chinaocc.26
+			}
+		}
+	}
+}

@@ -1,0 +1,543 @@
+spriteTypes = {
+
+		spriteType = {
+                name = "GFX_three_principle_focus"
+                texturefile = "gfx/interface/goals/three_principle_focus.dds"
+        }
+		
+		spriteType = {
+                name = "GFX_CHI_walfare"
+                texturefile = "gfx/interface/goals/CHI_walfare.dds"
+        }
+		
+		spriteType = {
+                name = "GFX_refugee_relief_agency"
+                texturefile = "gfx/interface/goals/refugee_relief_agency.dds"
+        }
+		
+		spriteType = {
+                name = "GFX_CHI_new_life_movement"
+                texturefile = "gfx/interface/goals/CHI_new_life_movement.dds"
+        }
+		
+		spriteType = {
+                name = "GFX_CHI_unemployment_assistance"
+                texturefile = "gfx/interface/goals/CHI_unemployment_assistance.dds"
+        }
+		
+		spriteType = {
+                name = "GFX_CHI_free_hospitals"
+                texturefile = "gfx/interface/goals/CHI_free_hospitals.dds"
+        }
+		
+		spriteType = {
+                name = "GFX_CHI_rural_schooling"
+                texturefile = "gfx/interface/goals/CHI_rural_schooling.dds"
+        }
+		
+		spriteType = {
+                name = "GFX_CHI_constitutional_reform"
+                texturefile = "gfx/interface/goals/CHI_constitutional_reform.dds"
+        }
+		
+		spriteType = {
+                name = "GFX_CHI_executive_yuan"
+                texturefile = "gfx/interface/goals/CHI_executive_yuan.dds"
+        }
+		
+		spriteType = {
+                name = "GFX_CHI_democracy"
+                texturefile = "gfx/interface/goals/CHI_democracy.dds"
+        }
+		
+		spriteType = {
+                name = "GFX_CHI_party_coordination_council"
+                texturefile = "gfx/interface/goals/CHI_party_coordination_council.dds"
+        }
+		
+		spriteType = {
+                name = "GFX_CHI_judicial_yuan"
+                texturefile = "gfx/interface/goals/CHI_judicial_yuan.dds"
+        }
+		
+		spriteType = {
+                name = "GFX_CHI_control_yuan"
+                texturefile = "gfx/interface/goals/CHI_control_yuan.dds"
+        }
+		
+		spriteType = {
+                name = "GFX_CHI_nationalism"
+                texturefile = "gfx/interface/goals/CHI_nationalism.dds"
+        }
+		
+		spriteType = {
+                name = "GFX_CHI_foreign_threats"
+                texturefile = "gfx/interface/goals/CHI_foreign_threats.dds"
+        }
+		
+		spriteType = {
+                name = "GFX_CHI_prioritize_the_interior"
+                texturefile = "gfx/interface/goals/CHI_prioritize_the_interior.dds"
+        }
+		
+		spriteType = {
+                name = "GFX_CHI_anti_communism"
+                texturefile = "gfx/interface/goals/CHI_anti_communism.dds"
+        }
+		
+		spriteType = {
+                name = "GFX_CHI_industrial"
+                texturefile = "gfx/interface/goals/CHI_industrial.dds"
+        }
+		
+		spriteType = {
+                name = "GFX_CHI_liberation"
+                texturefile = "gfx/interface/goals/CHI_liberation.tga"
+        }
+		
+		spriteType = {
+                name = "GFX_CHI_war_of_anti_imperialism"
+                texturefile = "gfx/interface/goals/CHI_war_of_anti_imperialism.dds"
+        }
+		
+		spriteType = {
+                name = "GFX_CHI_scorched_earth_tactics"
+                texturefile = "gfx/interface/goals/CHI_scorched_earth_tactics.dds"
+        }
+		
+		spriteType = {
+                name = "GFX_CHI_forced_conscription"
+                texturefile = "gfx/interface/goals/CHI_forced_conscription.dds"
+        }
+		
+		spriteType = {
+                name = "GFX_CHI_military_affairs_commission"
+                texturefile = "gfx/interface/goals/CHI_military_affairs_commission.dds"
+        }
+		
+		spriteType = {
+                name = "GFX_CHI_fortify_shanghai"
+                texturefile = "gfx/interface/goals/CHI_fortify_shanghai.dds"
+        }
+		
+		spriteType = {
+                name = "GFX_CHI_army_reform"
+                texturefile = "gfx/interface/goals/CHI_army_reform.dds"
+        }
+		
+		spriteType = {
+                name = "GFX_CHI_60_divisions_plan"
+                texturefile = "gfx/interface/goals/CHI_60_divisions_plan.dds"
+        }
+		
+		spriteType = {
+                name = "GFX_CHI_juntong"
+                texturefile = "gfx/interface/goals/CHI_juntong.tga"
+        }
+		
+		spriteType = {
+                name = "GFX_CHI_unified_industrial_planning"
+                texturefile = "gfx/interface/goals/CHI_unified_industrial_planning.tga"
+        }
+		
+		spriteType = {
+                name = "GFX_CHI_rural_reconstruction"
+                texturefile = "gfx/interface/goals/CHI_rural_reconstruction.tga"
+        }
+		
+		spriteType = {
+                name = "GFX_CHI_money"
+                texturefile = "gfx/interface/goals/CHI_money.dds"
+        }
+		
+		spriteType = {
+                name = "GFX_CHI_dare_to_die_corp"
+                texturefile = "gfx/interface/goals/CHI_dare_to_die_corp.dds"
+        }
+		
+		spriteType = {
+                name = "GFX_CHI_develop_the_hanyan_arsenal"
+                texturefile = "gfx/interface/goals/CHI_develop_the_hanyan_arsenal.dds"
+        }
+		
+		spriteType = {
+                name = "GFX_CHI_taiyuan_arsenal"
+                texturefile = "gfx/interface/goals/CHI_taiyuan_arsenal.dds"
+        }
+		
+		spriteType = {
+                name = "GFX_CHI_the_chinese_hindenburg_line"
+                texturefile = "gfx/interface/goals/CHI_the_chinese_hindenburg_line.dds"
+        }
+		
+		spriteType = {
+                name = "GFX_CHI_grain_tax"
+                texturefile = "gfx/interface/goals/CHI_grain_tax.dds"
+        }
+		
+		spriteType = {
+                name = "GFX_CHI_subjugate_the_warlords"
+                texturefile = "gfx/interface/goals/CHI_subjugate_the_warlords.dds"
+        }
+		
+		spriteType = {
+                name = "GFX_CHI_land_tax_reform"
+                texturefile = "gfx/interface/goals/CHI_land_tax_reform.dds"
+        }
+		
+		spriteType = {
+                name = "GFX_CHI_price_controls"
+                texturefile = "gfx/interface/goals/CHI_price_controls.dds"
+        }
+		
+		spriteType = {
+                name = "GFX_CHI_financial_policy"
+                texturefile = "gfx/interface/goals/CHI_financial_policy.dds"
+        }
+		
+		spriteType = {
+                name = "GFX_CHI_republican"
+                texturefile = "gfx/interface/goals/CHI_republican.png"
+        }
+		
+		spriteType = {
+                name = "GFX_CHI_mining_commission"
+                texturefile = "gfx/interface/goals/CHI_mining_commission.dds"
+        }
+		
+		spriteType = {
+                name = "GFX_CHI_forced_loans"
+                texturefile = "gfx/interface/goals/CHI_forced_loans.dds"
+        }
+		
+		spriteType = {
+                name = "GFX_CHI_war_of_resistance"
+                texturefile = "gfx/interface/goals/GFX_CHI_war_of_resistance.dds"
+        }
+		
+		spriteType = {
+                name = "GFX_CHI_research_1"
+                texturefile = "gfx/interface/goals/CHI_research_1.dds"
+        }
+		
+		spriteType = {
+                name = "GFX_CHI_research_2"
+                texturefile = "gfx/interface/goals/CHI_research_2.dds"
+        }
+		
+		spriteType = {
+                name = "GFX_CHI_national_convention"
+                texturefile = "gfx/interface/goals/CHI_national_convention.tga"
+        }
+		
+		
+		spriteType = {
+                name = "GFX_CHI_make_sure_five_yuan"
+                texturefile = "gfx/interface/goals/CHI_make_sure_five_yuan.dds"
+        }
+		
+		spriteType = {
+                name = "GFX_CHI_foreign_affair_reform"
+                texturefile = "gfx/interface/goals/CHI_foreign_affair_reform.dds"
+        }
+		
+		spriteType = {
+                name = "GFX_CHI_affair_in_europe"
+                texturefile = "gfx/interface/goals/CHI_affair_in_europe.dds"
+        }
+		
+		spriteType = {
+                name = "GFX_CHI_affair_in_asia_pacific"
+                texturefile = "gfx/interface/goals/CHI_affair_in_asia_pacific.dds"
+        }
+		
+		spriteType = {
+                name = "GFX_CHI_affair_in_america"
+                texturefile = "gfx/interface/goals/CHI_affair_in_america.dds"
+        }
+		
+		spriteType = {
+                name = "GFX_CHI_nation_independence"
+                texturefile = "gfx/interface/goals/CHI_nation_independence.dds"
+        }
+		
+		spriteType = {
+                name = "GFX_KMT_renegotiate_the_unequal_treaties"
+                texturefile = "gfx/interface/goals/KMT_renegotiate_the_unequal_treaties.dds"
+        }
+		
+		spriteType = {
+                name = "GFX_KMT_expand_to_foreign"
+                texturefile = "gfx/interface/goals/KMT_expand_to_foreign.dds"
+        }
+		
+		spriteType = {
+                name = "GFX_CHI_national_security_bureau"
+                texturefile = "gfx/interface/goals/CHI_national_security_bureau.dds"
+        }
+		
+		spriteType = {
+                name = "GFX_CHI_operation_in_back"
+                texturefile = "gfx/interface/goals/CHI_operation_in_back.dds"
+        }
+		
+		spriteType = {
+                name = "GFX_KMT_one_china_policy"
+                texturefile = "gfx/interface/goals/KMT_one_china_policy.dds"
+        }
+		
+		spriteType = {
+                name = "GFX_KMT_commit_to_korean_independence"
+                texturefile = "gfx/interface/goals/KMT_commit_to_korean_independence.dds"
+        }
+		
+		spriteType = {
+                name = "GFX_CHI_NRA_land"
+                texturefile = "gfx/interface/goals/CHI_NRA_land.png"
+        }
+		
+		spriteType = {
+                name = "GFX_CHI_motorized_army"
+                texturefile = "gfx/interface/goals/CHI_motorized_army.dds"
+        }
+		
+		spriteType = {
+                name = "GFX_KMT_combined_arms_warfare"
+                texturefile = "gfx/interface/goals/KMT_combined_arms_warfare.dds"
+        }
+		
+		spriteType = {
+                name = "GFX_CHI_infantry_army"
+                texturefile = "gfx/interface/goals/CHI_infantry_army.tga"
+        }
+		
+		spriteType = {
+                name = "GFX_CHI_NRA_navy"
+                texturefile = "gfx/interface/goals/CHI_NRA_navy.png"
+        }
+		
+		spriteType = {
+                name = "GFX_CHI_NRA_airforce"
+                texturefile = "gfx/interface/goals/CHI_NRA_airforce.png"
+        }
+		
+		SpriteType = {
+				name = "GFX_KMT_anti_imperialism"
+				texturefile = "gfx/interface/goals/KMT_anti_imperialism.dds"
+		}
+
+		SpriteType = {
+				name = "GFX_KMT_chinese_panzers"
+				texturefile = "gfx/interface/goals/KMT_chinese_panzers.dds"
+		}
+
+		SpriteType = {
+				name = "GFX_KMT_elite_mountaineers"
+				texturefile = "gfx/interface/goals/KMT_elite_mountaineers.dds"
+		}
+
+		SpriteType = {
+				name = "GFX_KMT_experimental_mechanised_unit"
+				texturefile = "gfx/interface/goals/KMT_experimental_mechanised_unit.dds"
+		}
+
+		SpriteType = {
+				name = "GFX_KMT_imperial_legacy"
+				texturefile = "gfx/interface/goals/KMT_imperial_legacy.dds"
+		}
+
+		SpriteType = {
+				name = "GFX_KMT_integrate_the_mongolia"
+				texturefile = "gfx/interface/goals/KMT_integrate_the_mongolia.dds"
+		}
+
+		SpriteType = {
+				name = "GFX_KMT_integrate_the_tibet"
+				texturefile = "gfx/interface/goals/KMT_integrate_the_tibet.dds"
+		}
+
+		SpriteType = {
+				name = "GFX_KMT_joint_tank_development"
+				texturefile = "gfx/interface/goals/KMT_joint_tank_development.dds"
+		}
+
+		SpriteType = {
+				name = "GFX_KMT_local_bomber_production"
+				texturefile = "gfx/interface/goals/KMT_local_bomber_production.dds"
+		}
+
+		SpriteType = {
+				name = "GFX_KMT_local_fighter_production"
+				texturefile = "gfx/interface/goals/KMT_local_fighter_production.dds"
+		}
+
+		SpriteType = {
+				name = "GFX_KMT_nuclear_institute"
+				texturefile = "gfx/interface/goals/KMT_nuclear_institute.dds"
+		}
+
+		SpriteType = {
+				name = "GFX_KMT_overlordship_over_indochina"
+				texturefile = "gfx/interface/goals/KMT_overlordship_over_indochina.dds"
+		}
+		
+		SpriteType = {
+				name = "GFX_KMT_guidance_and_support"
+				texturefile = "gfx/interface/goals/KMT_guidance_and_support.tga"
+		}
+		
+		SpriteType = {
+				name = "GFX_KMT_dominate_japan"
+				texturefile = "gfx/interface/goals/KMT_dominate_japan.dds"
+		}
+		
+		SpriteType = {
+				name = "GFX_KMT_the_chu_x_po"
+				texturefile = "gfx/interface/goals/KMT_the_chu_x_po.dds"
+		}
+		
+		SpriteType = {
+				name = "GFX_KMT_cruiser_project"
+				texturefile = "gfx/interface/goals/KMT_cruiser_project.dds"
+		}
+
+		SpriteType = {
+				name = "GFX_KMT_air_modernisations_programme"
+				texturefile = "gfx/interface/goals/KMT_air_modernisations_programme.dds"
+		}
+
+		SpriteType = {
+				name = "GFX_KMT_coastal_patrol_planes"
+				texturefile = "gfx/interface/goals/KMT_coastal_patrol_planes.dds"
+		}
+
+		SpriteType = {
+				name = "GFX_KMT_construction_battalions"
+				texturefile = "gfx/interface/goals/KMT_construction_battalions.dds"
+		}
+
+		SpriteType = {
+				name = "GFX_KMT_investment_into_shipbuilding"
+				texturefile = "gfx/interface/goals/KMT_investment_into_shipbuilding.dds"
+		}
+
+		SpriteType = {
+				name = "GFX_KMT_modern_submarines"
+				texturefile = "gfx/interface/goals/KMT_modern_submarines.dds"
+		}
+
+		SpriteType = {
+				name = "GFX_KMT_order_destroyers"
+				texturefile = "gfx/interface/goals/KMT_order_destroyers.dds"
+		}
+
+		SpriteType = {
+				name = "GFX_KMT_small_arms_expertise"
+				texturefile = "gfx/interface/goals/KMT_small_arms_expertise.dds"
+		}
+		
+		SpriteType = {
+				name = "GFX_KMT_chinese_expeditionary_force"
+				texturefile = "gfx/interface/goals/KMT_chinese_expeditionary_force.dds"
+		}
+
+		SpriteType = {
+				name = "GFX_KMT_give_falkenhausen_citizenship"
+				texturefile = "gfx/interface/goals/KMT_give_falkenhausen_citizenship.dds"
+		}
+
+		SpriteType = {
+				name = "GFX_KMT_guarantee_the_hanoi_route"
+				texturefile = "gfx/interface/goals/KMT_guarantee_the_hanoi_route.dds"
+		}
+
+		SpriteType = {
+				name = "GFX_KMT_ledo_road"
+				texturefile = "gfx/interface/goals/KMT_ledo_road.dds"
+		}
+
+		SpriteType = {
+				name = "GFX_KMT_sino_american_cooperative_organization"
+				texturefile = "gfx/interface/goals/KMT_sino_american_cooperative_organization.dds"
+		}
+
+		SpriteType = {
+				name = "GFX_KMT_the_soviet_volunteer_group"
+				texturefile = "gfx/interface/goals/KMT_the_soviet_volunteer_group.dds"
+		}
+
+		SpriteType = {
+				name = "GFX_KMT_wargaming_division"
+				texturefile = "gfx/interface/goals/KMT_wargaming_division.dds"
+		}
+		
+		SpriteType = {
+				name = "GFX_KMT_indian_cooperation"
+				texturefile = "gfx/interface/goals/KMT_indian_cooperation.dds"
+		}
+		
+		SpriteType = {
+				name = "GFX_KMT_burma_road"
+				texturefile = "gfx/interface/goals/KMT_burma_road.dds"
+		}
+
+		SpriteType = {
+				name = "GFX_KMT_french_drill"
+				texturefile = "gfx/interface/goals/KMT_french_drill.dds"
+		}
+
+		SpriteType = {
+				name = "GFX_KMT_hire_chennault"
+				texturefile = "gfx/interface/goals/KMT_hire_chennault.dds"
+		}
+
+		SpriteType = {
+				name = "GFX_KMT_invite_soviet_advisers"
+				texturefile = "gfx/interface/goals/KMT_invite_soviet_advisers.dds"
+		}
+
+		SpriteType = {
+				name = "GFX_KMT_invite_the_flying_tigers"
+				texturefile = "gfx/interface/goals/KMT_invite_the_flying_tigers.dds"
+		}
+
+		SpriteType = {
+				name = "GFX_KMT_rapprochement_with_soviet_union"
+				texturefile = "gfx/interface/goals/KMT_rapprochement_with_soviet_union.dds"
+		}
+
+		SpriteType = {
+				name = "GFX_KMT_the_hump"
+				texturefile = "gfx/interface/goals/KMT_the_hump.dds"
+		}
+		
+		SpriteType = {
+				name = "GFX_KMT_french_military_mission"
+				texturefile = "gfx/interface/goals/KMT_french_military_mission.tga"
+		}
+		
+		SpriteType = {
+				name = "GFX_CHI_pick_a_fight_with_japan"
+				texturefile = "gfx/interface/goals/CHI_pick_a_fight_with_japan.dds"
+		}
+
+		SpriteType = {
+				name = "GFX_KMT_chinese_general_staff"
+				texturefile = "gfx/interface/goals/KMT_chinese_general_staff.dds"
+		}
+
+		SpriteType = {
+				name = "GFX_KMT_closer_ties_with_germany"
+				texturefile = "gfx/interface/goals/KMT_closer_ties_with_germany.dds"
+		}
+
+		SpriteType = {
+				name = "GFX_KMT_economic_affairs"
+				texturefile = "gfx/interface/goals/KMT_economic_affairs.dds"
+		}
+
+		SpriteType = {
+				name = "GFX_KMT_econimic_zone"
+				texturefile = "gfx/interface/goals/KMT_econimic_zone.dds"
+		}
+}

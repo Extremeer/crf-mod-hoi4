@@ -1,0 +1,389 @@
+﻿
+
+add_namespace = cco
+
+country_event = { #HK-OUT
+	id = cco.1
+	title = cco.1.t
+	desc = cco.1.d
+	picture = GFX_report_event_chinese_officers
+	
+	mean_time_to_happen = {
+		days = 0
+	}
+
+	trigger = {
+		OR = {
+			tag = HKG
+			tag = MAU
+		}
+		OR = {
+			has_cosmetic_tag = HKG_UK
+			has_cosmetic_tag = HKG_SAR
+			has_cosmetic_tag = MAU_POR
+			has_cosmetic_tag = MAU_SAR
+		}
+			not = {
+				is_subject_of = ENG
+			}
+			not = {
+				is_subject_of = CHI
+			}	
+			not = {
+				is_subject_of = PRC
+			}	
+			not = {
+				is_subject_of = SHX
+			}	
+			not = {
+				is_subject_of = YUN
+			}	
+			not = {
+				is_subject_of = GXC
+			}	
+			not = {
+				is_subject_of = SIK
+			}	
+			not = {
+				is_subject_of = MAN
+			}			
+			not = {
+				is_subject_of = XSM
+			}
+			not = {
+				is_subject_of = POR
+			}	
+	}
+	
+	option = {
+		name = cco.1.a
+		drop_cosmetic_tag = yes
+	}
+}
+
+country_event = { #HK-IN-ENG
+	id = cco.2
+	title = cco.2.t
+	desc = cco.2.d
+	picture = GFX_report_event_chinese_officers
+	
+
+	mean_time_to_happen = {
+		days = 0
+	}
+
+	trigger = {
+		NOT = {
+			has_cosmetic_tag = HKG_UK
+		}
+		tag = HKG
+		is_subject_of = ENG
+	}
+	
+	option = {
+		name = cco.2.a
+		set_cosmetic_tag = HKG_UK
+		#kill_country_leader = yes
+		create_country_leader = {
+			name = "Sir Andrew Caldecott"
+			desc = ""
+			picture = "Andrew_Caldecott.dds"
+			expire = "1953.3.1"
+			ideology = conservatism
+			traits = {
+				
+			}
+		}
+		create_country_leader = {
+			name = "Sir Andrew Caldecott"
+			desc = ""
+			picture = "Andrew_Caldecott.dds"
+			expire = "1953.3.1"
+			ideology = marxism
+			traits = {
+				
+			}
+		}
+		create_country_leader = {
+			name = "Sir Andrew Caldecott"
+			desc = ""
+			picture = "Andrew_Caldecott.dds"
+			expire = "1953.3.1"
+			ideology = rexism
+			traits = {
+				
+			}
+		}
+		create_country_leader = {
+			name = "Sir Andrew Caldecott"
+			desc = ""
+			picture = "Andrew_Caldecott.dds"
+			expire = "1953.3.1"
+			ideology = despotism
+			traits = {
+				
+			}
+		}
+	}
+}
+
+country_event = { #HK-BACK
+	id = cco.3
+	title = cco.3.t
+	desc = cco.3.d
+	picture = GFX_report_event_chinese_officers
+
+	mean_time_to_happen = {
+		days = 0
+	}
+
+	trigger = {
+		NOT = {
+			has_cosmetic_tag = HKG_SAR
+		}
+		tag = HKG
+		OR = {
+			is_subject_of = CHI
+			is_subject_of = PRC
+			is_subject_of = MAN
+			is_subject_of = SHX
+			is_subject_of = SIK
+			is_subject_of = GXC
+			is_subject_of = YUN
+			is_subject_of = XSM
+		}
+	}
+	
+	option = {
+		name = cco.3.a
+		set_cosmetic_tag = HKG_SAR
+	}
+}
+
+country_event = { #HK-RECIEVED
+	id = cco.4
+	title = cco.4.t
+	desc = cco.4.d
+	picture = GFX_report_event_chinese_officers
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = cco.4.a
+		ai_chance = {
+			factor = 90
+			modifier = {
+				factor = 0.5
+				strength_ratio = { tag = FROM ratio < 1 }
+			}
+			modifier = {
+				factor = 0.2
+				strength_ratio = { tag = FROM ratio < 0.5 }
+			}
+			modifier = {
+				factor = 0
+				strength_ratio = { tag = FROM ratio < 0.2 }
+			}
+		}
+		set_cosmetic_tag = HKG_SAR
+		FROM = {
+				set_autonomy = { target = ROOT autonomy_state = sar_hk }
+				country_event = { days = 1 id = cco.5 }
+		}
+		hidden_effect = {
+			country_event = { days = 5 id = news.12140 }
+		}
+	}
+
+	option = {
+		name = cco.4.b
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}			
+		FROM = {
+			country_event = { days = 1 id = cco.6 }
+		}
+	}
+}
+
+country_event = { #HK-YES-ROOT
+	id = cco.5
+	title = cco.5.t
+	desc = cco.5.d
+	picture = GFX_report_event_chinese_officers
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = cco.5.a
+		ai_chance = {
+			factor = 50
+		}
+			FROM = {
+				#kill_country_leader = yes
+				create_country_leader = {
+					name = "张澜"
+					desc = "POLITICS_ZHANG_LAN_DESC"
+					picture = "GFX_portrait_prc_zhang_lan"
+					expire = "1965.1.1"
+					ideology = tp_constitutional
+					traits = {
+						
+					}
+				}
+				create_country_leader = {
+					name = "张澜"
+					desc = "POLITICS_ZHANG_LAN_DESC"
+					picture = "GFX_portrait_prc_zhang_lan"
+					expire = "1965.1.1"
+					ideology = maoist
+					traits = {
+								
+					}
+				}
+				create_country_leader = {
+					name = "张澜"
+					desc = "POLITICS_ZHANG_LAN_DESC"
+					picture = "GFX_portrait_prc_zhang_lan"
+					expire = "1965.1.1"
+					ideology = rexism
+					traits = {
+						
+					}
+				}
+				create_country_leader = {
+					name = "张澜"
+					desc = "POLITICS_ZHANG_LAN_DESC"
+					picture = "GFX_portrait_prc_zhang_lan"
+					expire = "1965.1.1"
+					ideology = tp_tutelage
+					traits = {
+						
+					}
+				}
+			}	
+	}
+
+	option = {
+		name = cco.5.b
+		ai_chance = {
+			factor = 50
+		}
+			if = {
+				limit = { tag = CHI }
+				FROM = {
+					#kill_country_leader = yes
+					create_country_leader = {
+						name = "薛岳"
+						desc = "POLITICS_ZHANG_LAN_DESC"
+						picture = "GFX_portrait_chi_xue_yue"
+						expire = "1965.1.1"
+						ideology = tp_constitutional
+						traits = {
+							
+						}
+					}
+					create_country_leader = {
+						name = "薛岳"
+						desc = "POLITICS_ZHANG_LAN_DESC"
+						picture = "GFX_portrait_chi_xue_yue"
+						expire = "1965.1.1"
+						ideology = maoist
+						traits = {
+									
+						}
+					}
+					create_country_leader = {
+						name = "薛岳"
+						desc = "POLITICS_ZHANG_LAN_DESC"
+						picture = "GFX_portrait_chi_xue_yue"
+						expire = "1965.1.1"
+						ideology = rexism
+						traits = {
+							
+						}
+					}
+					create_country_leader = {
+						name = "薛岳"
+						desc = "POLITICS_ZHANG_LAN_DESC"
+						picture = "GFX_portrait_chi_xue_yue"
+						expire = "1965.1.1"
+						ideology = tp_tutelage
+						traits = {
+							
+						}
+					}
+				}
+			}
+			if = {
+				limit = { tag = PRC }
+				FROM = {
+					#kill_country_leader = yes
+					create_country_leader = {
+						name = "王明"
+						desc = "POLITICS_ZHANG_LAN_DESC"
+						picture = "GFX_portrait_prc_wang_ming"
+						expire = "1965.1.1"
+						ideology = tp_constitutional
+						traits = {
+							
+						}
+					}
+					create_country_leader = {
+						name = "王明"
+						desc = "POLITICS_ZHANG_LAN_DESC"
+						picture = "GFX_portrait_prc_wang_ming"
+						expire = "1965.1.1"
+						ideology = maoist
+						traits = {
+									
+						}
+					}
+					create_country_leader = {
+						name = "王明"
+						desc = "POLITICS_ZHANG_LAN_DESC"
+						picture = "GFX_portrait_prc_wang_ming"
+						expire = "1965.1.1"
+						ideology = rexism
+						traits = {
+							
+						}
+					}
+					create_country_leader = {
+						name = "王明"
+						desc = "POLITICS_ZHANG_LAN_DESC"
+						picture = "GFX_portrait_prc_wang_ming"
+						expire = "1965.1.1"
+						ideology = tp_tutelage
+						traits = {
+							
+						}
+					}
+				}
+			}
+	}
+}
+
+country_event = { #HK-NO
+	id = cco.6
+	title = cco.6.t
+	desc = cco.6.d
+	picture = GFX_report_event_chinese_officers
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = cco.6.a
+		ROOT = {
+			create_wargoal = {
+			type = annex_everything
+			target = FROM				
+			expire = 0
+			}
+		}
+	}
+}

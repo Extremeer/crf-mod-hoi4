@@ -1,0 +1,6 @@
+kick_japan_ichi_go_categories = {
+	allowed = {
+		WTT_is_ROOT_current_leader_of_china = yes
+	}
+	priority = 102
+}

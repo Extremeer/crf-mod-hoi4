@@ -1,0 +1,97 @@
+CR_GER_will_support = {
+	GER = {
+		exists = yes
+		has_capitulated = no
+		NOT = {
+			has_war_with = ROOT
+		}
+		# OR = {
+		# 	has_opinion = { target = ROOT value > 49 }
+		# 	is_in_faction_with = ROOT
+		# 	ROOT = {
+		# 		is_subject_of = GER
+		# 	}
+		# }
+	}
+}
+
+CR_SOV_will_support = {
+	SOV = {
+		exists = yes
+		has_capitulated = no
+		NOT = {
+			has_war_with = ROOT
+		}
+		# OR = {
+		# 	has_opinion = { target = ROOT value > 49 }
+		# 	is_in_faction_with = ROOT
+		# 	ROOT = {
+		# 		is_subject_of = SOV
+		# 	}
+		# }
+	}
+}
+CR_ENG_will_support = {
+	ENG = {
+		exists = yes
+		has_capitulated = no
+		NOT = {
+			has_war_with = ROOT
+		}
+		# OR = {
+		# 	has_opinion = { target = ROOT value > 49 }
+		# 	is_in_faction_with = ROOT
+		# 	ROOT = {
+		# 		is_subject_of = ENG
+		# 	}
+		# }
+	}
+}
+CR_FRA_will_support = {
+	FRA = {
+		exists = yes
+		has_capitulated = no
+		NOT = {
+			has_war_with = ROOT
+		}
+		# OR = {
+		# 	has_opinion = { target = ROOT value > 49 }
+		# 	is_in_faction_with = ROOT
+		# 	ROOT = {
+		# 		is_subject_of = FRA
+		# 	}
+		# }
+	}
+}
+CR_USA_will_support = {
+	USA = {
+		exists = yes
+		has_capitulated = no
+		NOT = {
+			has_war_with = ROOT
+		}
+		# OR = {
+		# 	has_opinion = { target = ROOT value > 49 }
+		# 	is_in_faction_with = ROOT
+		# 	ROOT = {
+		# 		is_subject_of = USA
+		# 	}
+		# }
+	}
+}
+CR_JAP_will_support = {
+	JAP = {
+		exists = yes
+		has_capitulated = no
+		NOT = {
+			has_war_with = ROOT
+		}
+		# OR = {
+		# 	has_opinion = { target = ROOT value > 49 }
+		# 	is_in_faction_with = ROOT
+		# 	ROOT = {
+		# 		is_subject_of = JAP
+		# 	}
+		# }
+	}
+}

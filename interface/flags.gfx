@@ -1,0 +1,122 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_flag_PRC_Proclaimed"
+		texturefile = "gfx/flags/small/PRC_proclaimed_communism.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_flag_CHI"
+		texturefile = "gfx/flags/small/CHI.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_flag_PRC"
+		texturefile = "gfx/flags/small/PRC_communism.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_flag_SOV"
+		texturefile = "gfx/flags/small/SOV.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_flag_SIK"
+		texturefile = "gfx/flags/small/SIK.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_flag_ETR"
+		texturefile = "gfx/flags/small/ETR.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_flag_ETR_IND"
+		texturefile = "gfx/flags/small/ETR_IND.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_flag_TIB"
+		texturefile = "gfx/flags/small/TIB.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_flag_YUN"
+		texturefile = "gfx/flags/small/YUN.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_flag_SHX"
+		texturefile = "gfx/flags/small/SHX.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_flag_GXC"
+		texturefile = "gfx/flags/small/GXC.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_flag_XSM"
+		texturefile = "gfx/flags/small/XSM.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_flag_HKG"
+		texturefile = "gfx/flags/small/HKG_SAR.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_flag_MAU"
+		texturefile = "gfx/flags/small/MAU_SAR.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_flag_KCW"
+		texturefile = "gfx/flags/small/KCW.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_flag_ENG"
+		texturefile = "gfx/flags/small/ENG.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_flag_FRA"
+		texturefile = "gfx/flags/small/FRA.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_flag_POR"
+		texturefile = "gfx/flags/small/POR.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_flag_JAP"
+		texturefile = "gfx/flags/small/JAP.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_flag_MON"
+		texturefile = "gfx/flags/small/MON.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_flag_TAN"
+		texturefile = "gfx/flags/small/TAN.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_flag_RAJ"
+		texturefile = "gfx/flags/small/RAJ.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_flag_MEN"
+		texturefile = "gfx/flags/small/MEN.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_flag_MAN"
+		texturefile = "gfx/flags/small/MAN.tga"
+		legacy_lazy_load = no
+	}
+}

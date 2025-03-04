@@ -1,0 +1,108 @@
+﻿l_simp_chinese:
+ ##########################################################
+ ################PRC联合政府###############################
+ ##########################################################
+ china.12149.t: "提议联合政府"
+ china.12149.d: "如果我们要提早对抗外敌，便要进行国内真正联合，早日促成国共第三次合作，现在是选举政府机构人员的时候了。"
+ china.12149.a: "保留以张澜为首的民主党派执政"
+ china.12149.b: "采纳以共产党为基础的政治协商制度"
+ unionism_desc: "国共合作是实现中国富强的捷径，在国民党贯彻孙中山先生的联俄联共扶助农工的三大政策以及共产党以人民为本的方针下，中国将走向复兴的道路，在毛泽东思想和新三民主义的领导下，联合政府会迈向新台阶。"
+ 
+ ##########################################################
+ ###################ideology意识形态#######################
+ ##########################################################
+ tp_tutelage: "三民主义——训政"
+ tp_tutelage_desc: "中国国民党信仰三民主义。\n\n三民主义是孙中山的民主革命纲领，是其民主思想的精髓和高度概括，总理在《国民政府建国大纲》中指出“建立民国”需要§g军政§!、§O训政§!、§G宪政§!三个时期。\n\n§O训政：§!中国国民党组建国民政府代为行使政府职权，以党治国，并派出训练有素之官员协助各省县筹备自治、兴办实业，对国民素质进行训练、教导。\n"
+ tp_constitutional: "三民主义——宪政"
+ tp_constitutional_desc: "中华民国的指导方针为三民主义。\n\n三民主义是孙中山的民主革命纲领，是其民主思想的精髓和高度概括，总理在《国民政府建国大纲》中指出“建立民国”需要§g军政§!、§O训政§!、§G宪政§!三个时期。\n\n§G宪政：§!召开国民大会，制定宪法，实行宪政，国民政府还政于民，经过全国大选，产生民选政府，从而建立独立的资产阶级共和国。\n"
+ maoist: "毛泽东思想"
+ maoist_desc: "中国共产党信仰马克思列宁主义与毛泽东思想。\n\n§R中国共产党是中国工人阶级的先锋队，同时是中国人民和中华民族的先锋队，代表中国最广大人民的根本利益。§!\n\n中国共产党许诺推翻一切帝国主义与官僚主义对中华人民的压迫，带领中华民族走向独立与富强并最终实现共产主义。\n\n毛泽东创建的毛泽东思想帮助中国加速这一进程，以中国特色方式进入社会主义社会。\n"
+ tp_constitutional_neutrality: "三民主义——宪政"
+ tp_constitutional_neutrality_desc: "中华民国的指导方针为三民主义。\n\n三民主义是孙中山的民主革命纲领，是其民主思想的精髓和高度概括，总理在《国民政府建国大纲》中指出“建立民国”需要§g军政§!、§O训政§!、§G宪政§!三个时期。\n\n§G宪政：§!召开国民大会，制定宪法，实行宪政，国民政府还政于民，经过全国大选，产生民选政府，从而建立独立的资产阶级共和国。\n"
+ POLITICS_CHIANG_KAI-SHEK_DESC: "蒋介石受孙中山赏识而崛起于民国政坛，在孙中山去世后长期领导中国国民党至此已有十年左右，于国民政府中居于军政核心，对中国凝聚具有一定贡献，但其政治手腕亦遭受批评。\n\n作为中华民国及中国国民党历史上的重要人物，他一定程度上影响中国近代史和东亚史发展。"
+ POLITICS_MAO_ZEDONG_DESC: "毛泽东在国共合作全面破裂后提出“枪杆子中出政权”，即以革命武装夺取政权的思想，并被选为中央政治局候补委员。\n\n遵义会议结束了王明“左”倾冒险主义在中共中央的统治，确立了以毛泽东为代表的新的中央的正确领导，使之成为了中国共产党和中央红军的主要领导人。"
+ 
+ 
+ ##############################################################
+ ####################政党名称##################################
+ ##############################################################
+ CHI_communism_party: "中国共产党"
+ CHI_communism_party_long: "中国共产党"
+ CHI_democratic_party: "中国民主同盟"
+ CHI_fascism_party:1 "中华蓝衣社"
+ CHI_fascism_party_long:1 "中华蓝衣社"
+ CHI_neutrality_party: "中国国民党"
+ CHI_neutrality_party_long: "中国国民党中央委员会"
+ XSM_neutrality_party: "马家军"
+ XSM_neutrality_party_long: "马家军"
+ SIK_communism_party: "盛世才集团"
+ SIK_communism_party_long: "盛世才集团"
+ TIB_neutrality_party: "西藏噶厦政府"
+ YUN_CLIQUE_neutrality_party: "龙云派"
+ YUN_CLIQUE_neutrality_party_long: "龙云派"
+ PRC_democratic_party: "中国国民党"
+ PRC_democratic_party_long: "中国国民党革命委员会"
+ PRC_communism_party: "中国共产党"
+ PRC_communism_party_long: "中国共产党"
+ PRC_fascism_party: "中华复兴社"
+ PRC_neutrality_party: "中国致公党"
+ SHX_neutrality_party: "阎锡山集团"
+ SHX_neutrality_party_long: "阎锡山集团"
+ GXC_neutrality_party: "第二桂系"
+ GXC_neutrality_party_long: "第二桂系"
+ 
+ #china.12148.t: "立法院首次普选"
+ #china.12148.d: "我们的国家现已从训政转向宪政时期，决定于今天进行首次人民普选，选出代表中国反帝反封建的中央政府。"
+ #china.12148.a: "保留以中国国民党为主，其余党派政治协商基础"
+ #china.12148.b: "中国国民党加入党派竞选当中，改组民主制度"
+ #china.12148.c: "选举以张澜为首的中国民主同盟"
+ 
+ 
+ ##################################################
+ ##############CHI选举#############################
+ ##################################################
+ chi_relax_democratic_modifier_idea: "中国民主修正"
+ CHI_kuomintang: "中国国民党"
+ CHI_kuomintang_party: "中国国民党中央委员会"
+ CHI_CDL: "中国民主同盟"
+ CHI_CDL_party: "中国民主同盟"
+ chielection.1.t: "第一次全国大选"
+ chielection.1.d: "自1911年代以来，中华民国的第一次自由选举终于到来了。数以百万计的中国人首次将参加民意调查，以投票选出他们偏爱的政党，虽然只是临时宪政政府的选举，但这将成为他们人生中的第一次，第一次行使自己民主的权利。无论结果如何，这将对国家及其人民产生良好的影响，为日后系统化的选举流程铺下良好道路。"
+ chielection.1.a: "中国国民党领导多党政治协商制度"
+ FIRST_ELECTION_NEUTRALITY_KUOMINTANG: "§O中国国民党§!成为£CRF_game_rule_flag_CHI §H中华民国§!的执政党。\n§O蒋介石§!成为£CRF_game_rule_flag_CHI §H中华民国§!的领导人。\n£CRF_game_rule_flag_CHI §H中华民国§!意识形态将奉行§g中立主义§!。\n正式大选将在一段时间后举行。"
+ chielection.1.b: "中国国民党在多党民主选举中胜出"
+ FIRST_ELECTION_DEMOCRATIC_KUOMINTANG: "§O中国国民党§!成为£CRF_game_rule_flag_CHI §H中华民国§!的执政党。\n§O蒋介石§!成为£CRF_game_rule_flag_CHI §H中华民国§!的领导人。\n£CRF_game_rule_flag_CHI §H中华民国§!意识形态将奉行§C民主主义§!。\n正式大选将在一段时间后举行。"
+ chielection.1.c: "中国民主同盟在多党民主选举胜出"
+ FIRST_ELECTION_DEMOCRATIC_CDL: "中国民主同盟成为£CRF_game_rule_flag_CHI §H中华民国§!的执政党。\n§O张澜§!成为£CRF_game_rule_flag_CHI §H中华民国§!的领导人。\n£CRF_game_rule_flag_CHI §H中华民国§!意识形态将奉行§C民主主义§!。\n正式大选将在一段时间后举行。"
+ chielection.2.t: "1938年大选"
+ chielection.4.t: "1942年大选"
+ chielection.5.t: "1946年大选"
+ chielection.6.t: "1950年大选"
+ chielection.7.t: "1954年大选"
+ chielection.8.t: "1958年大选"
+ chielection.2.d: "[Root.GetLeader]的任期已经结束，又到了中国人民投票选举的日子。由于中国各地公共教育和基础设施水平的改善，我们预计这次选举的投票率会比上次要高。我们迅速发展的民主政治正在吸引全世界的关注，因为我们证明了我们有能力担负起比他们预计水平更高的行政能力。中国人民可以自豪的参与这场在全球范围内前无古人的公正自由选举。"
+ chielection.2.a: "中国国民党领导多党政治协商制度"
+ 1938_ELECTION_NEUTRALITY_KUOMINTANG: "§O中国国民党§!成为£CRF_game_rule_flag_CHI §H中华民国§!的执政党。\n§O蒋介石§!成为£CRF_game_rule_flag_CHI §H中华民国§!的领导人。\n£CRF_game_rule_flag_CHI §H中华民国§!意识形态将奉行§g中立主义§!。"
+ chielection.2.b: "中国国民党在多党民主选举中胜出"
+ 1938_ELECTION_DEMOCRATIC_KUOMINTANG: "§O中国国民党§!成为£CRF_game_rule_flag_CHI §H中华民国§!的执政党。\n§O蒋介石§!成为£CRF_game_rule_flag_CHI §H中华民国§!的领导人。\n£CRF_game_rule_flag_CHI §H中华民国§!意识形态将奉行§C民主主义§!。"
+ chielection.2.c: "中国民主同盟在多党民主选举胜出"
+ ELECTION_DEMOCRATIC_CDL: "中国民主同盟成为£CRF_game_rule_flag_CHI §H中华民国§!的执政党。\n§O张澜§!成为£CRF_game_rule_flag_CHI §H中华民国§!的领导人。\n£CRF_game_rule_flag_CHI §H中华民国§!意识形态将奉行§C民主主义§!。"
+ chielection.3.t: "中国国民党主席选举"
+ chielection.3.d: "现任党主席任期已经结束，我们将选出下一届中国国民党中央委员会的组织架构成员与主席，让其作为中国国民党的候选人参与两年后的全国大选。"
+ chielection.3.a: "选举蒋介石为中国国民党主席"
+ chielection.3.b: "选举翁文灏为中国国民党主席"
+ WENG_ELECTION_NEUTRALITY_KUOMINTANG: "§O中国国民党§!成为£CRF_game_rule_flag_CHI §H中华民国§!的执政党。\n§O翁文灏§!成为£CRF_game_rule_flag_CHI §H中华民国§!的领导人。\n£CRF_game_rule_flag_CHI §H中华民国§!意识形态将奉行§g中立主义§!。"
+ CHIANG_ELECTION_NEUTRALITY_KUOMINTANG: "§O中国国民党§!成为£CRF_game_rule_flag_CHI §H中华民国§!的执政党。\n§O蒋介石§!成为£CRF_game_rule_flag_CHI §H中华民国§!的领导人。\n£CRF_game_rule_flag_CHI §H中华民国§!意识形态将奉行§g中立主义§!。"
+ WENG_ELECTION_DEMOCRATIC_KUOMINTANG: "§O中国国民党§!成为£CRF_game_rule_flag_CHI §H中华民国§!的执政党。\n§O翁文灏§!成为£CRF_game_rule_flag_CHI §H中华民国§!的领导人。\n£CRF_game_rule_flag_CHI §H中华民国§!意识形态将奉行§C民主主义§!。"
+ CHIANG_ELECTION_DEMOCRATIC_KUOMINTANG: "§O中国国民党§!成为£CRF_game_rule_flag_CHI §H中华民国§!的执政党。\n§O蒋介石§!成为£CRF_game_rule_flag_CHI §H中华民国§!的领导人。\n£CRF_game_rule_flag_CHI §H中华民国§!意识形态将奉行§C民主主义§!。"
+ 
+ 
+ ##################################################
+ ##############CHI国大#############################
+ ##################################################
+ chiconst.1.t: "制宪国民大会"
+ chiconst.1.d: "今日国民政府主席蒋中正颁布“国民大会召集令”，并率全体到会代表拜谒中山陵，并到灵谷寺国民革命军阵亡将士公墓祭奠抗战先烈，告慰他们的在天之灵。如今国大代表到会人数已达到3/4法定开会人数，除了原本在中国大陆各地各界选出的代表外，还增加了来自台湾的代表参与，大会正式召开。大会选举代表组成主席团，轮流主持会议，制定宪法。"
+ chiconst.1.a: "迈向宪政！"
+ chiconst.2.t: "行宪国民大会"
+ chiconst.2.d: "\n中国各省于本月举行的第一次中华民国国民大会代表选举，为中华民国建国以来首次举行的国会议员直接选举，并为之后的总统选举做好铺垫。\n\n本次直选和立法委员直选使得中国第一次出现4.61亿人民直接授权产生的代议机构，从而使得中国成为现时世界上规模最大的民主国家。\n\n至今日，各地大选顺利完成，经过情形良好，得到国内外的普遍赞誉。中国经此一开端，即正式步入民主大道，对于国家之民主建设，必当发生至佳之影响。"
+ chiconst.2.a: "中国的胜利。"

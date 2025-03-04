@@ -1,0 +1,56 @@
+CR_Superevent_Foundation_of_PRC = {
+	hidden_effect = {
+		every_country = {
+			limit = { is_ai = no }
+			set_country_flag = CM_SE_opened
+			play_song = "march_of_the_volunteers"
+			sound_effect = prc_founded
+		}
+		every_country = {
+			clear_array = CM_SE_event_id_array
+			add_to_array = { CM_SE_event_id_array = 1 }
+		}
+	}
+}
+
+CR_Superevent_First_Election_of_ROC = {
+	hidden_effect = {
+		every_country = {
+			limit = { is_ai = no }
+			set_country_flag = CM_SE_opened
+			play_song = "national_flag_anthem"
+		}
+		every_country = {
+			clear_array = CM_SE_event_id_array
+			add_to_array = { CM_SE_event_id_array = 2 }
+		}
+	}
+}
+
+CR_Superevent_MacoPolo_Bridge_Incident = {
+	hidden_effect = {
+		every_country = {
+			limit = { is_ai = no }
+			set_country_flag = CM_SE_opened
+			play_song = "soul_of_chinese_army"
+		}
+		every_country = {
+			clear_array = CM_SE_event_id_array
+			add_to_array = { CM_SE_event_id_array = 3 }
+		}
+	}
+}
+
+CR_Superevent_Surrender_of_Japan = {
+	hidden_effect = {
+		every_country = {
+			limit = { is_ai = no }
+			set_country_flag = CM_SE_opened
+			play_song = "the_sun_also_rises"
+		}
+		every_country = {
+			clear_array = CM_SE_event_id_array
+			add_to_array = { CM_SE_event_id_array = 4 }
+		}
+	}
+}

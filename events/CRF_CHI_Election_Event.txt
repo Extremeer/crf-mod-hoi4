@@ -1,0 +1,1260 @@
+add_namespace = chielection
+
+country_event = {#first election
+	id = chielection.1
+	title = chielection.1.t
+	desc = chielection.1.d
+	picture = GFX_chi_election
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	immediate = {
+		
+	}
+
+	option = {#Neutrality-Kuomintang
+		name = chielection.1.a
+		ai_chance = {
+			base = 100
+		}
+		add_political_power = 20
+		custom_effect_tooltip = FIRST_ELECTION_NEUTRALITY_KUOMINTANG
+		hidden_effect = {
+			CR_Superevent_First_Election_of_ROC = yes
+			add_popularity = {
+				ideology = neutrality
+				popularity = 1
+			}
+			if = {
+				limit = {
+					date < 1938.11.2
+				}
+				set_politics = {
+					ruling_party = neutrality
+					elections_allowed = yes
+					last_election = 1934.11.2
+					election_frequency = 48
+				}
+			}
+			if = {
+				limit = {
+					date > 1938.11.2
+					date < 1942.11.2
+				}
+				set_politics = {
+					ruling_party = neutrality
+					elections_allowed = yes
+					last_election = 1938.11.2
+					election_frequency = 48
+				}
+			}
+			if = {
+				limit = {
+					date > 1938.11.2
+					date < 1942.11.2
+				}
+				set_politics = {
+					ruling_party = neutrality
+					elections_allowed = yes
+					last_election = 1938.11.2
+					election_frequency = 48
+				}
+			}
+			if = {
+				limit = {
+					date > 1942.11.2
+					date < 1946.11.2
+				}
+				set_politics = {
+					ruling_party = neutrality
+					elections_allowed = yes
+					last_election = 1942.11.2
+					election_frequency = 48
+				}
+			}
+			if = {
+				limit = {
+					date > 1946.11.2
+					date < 1950.11.2
+				}
+				set_politics = {
+					ruling_party = neutrality
+					elections_allowed = yes
+					last_election = 1946.11.2
+					election_frequency = 48
+				}
+			}
+			if = {
+				limit = {
+					date > 1950.11.2
+					date < 1954.11.2
+				}
+				set_politics = {
+					ruling_party = neutrality
+					elections_allowed = yes
+					last_election = 1950.11.2
+					election_frequency = 48
+				}
+			}
+			if = {
+				limit = {
+					date > 1954.11.2
+					date < 1958.11.2
+				}
+				set_politics = {
+					ruling_party = neutrality
+					elections_allowed = yes
+					last_election = 1954.11.2
+					election_frequency = 48
+				}
+			}
+		}
+	}
+	option = {#democratic-Kuomintang
+		name = chielection.1.b
+		ai_chance = {
+			base = 0
+		}
+		add_political_power = 20
+		custom_effect_tooltip = FIRST_ELECTION_DEMOCRATIC_KUOMINTANG
+		hidden_effect = {
+			CR_Superevent_First_Election_of_ROC = yes
+			every_country = {
+				clear_array = CM_SE_event_id_array
+				add_to_array = { CM_SE_event_id_array = 2 }
+			}
+			add_popularity = {
+				ideology = democratic
+				popularity = 1
+			}
+			CRF_CHI_Relax_Democratic_Effect = yes
+			set_party_name = { ideology = democratic long_name = CHI_kuomintang_party name = CHI_kuomintang }
+			CRF_CHI_chiang_kaishek = {
+				promote_character = {
+					ideology = tp_constitutional
+				}
+			}
+			if = {
+				limit = {
+					date < 1938.11.2
+				}
+				set_politics = {
+					ruling_party = democratic
+					elections_allowed = yes
+					last_election = 1934.11.2
+					election_frequency = 48
+				}
+			}
+			if = {
+				limit = {
+					date > 1938.11.2
+					date < 1942.11.2
+				}
+				set_politics = {
+					ruling_party = democratic
+					elections_allowed = yes
+					last_election = 1938.11.2
+					election_frequency = 48
+				}
+			}
+			if = {
+				limit = {
+					date > 1938.11.2
+					date < 1942.11.2
+				}
+				set_politics = {
+					ruling_party = democratic
+					elections_allowed = yes
+					last_election = 1938.11.2
+					election_frequency = 48
+				}
+			}
+			if = {
+				limit = {
+					date > 1942.11.2
+					date < 1946.11.2
+				}
+				set_politics = {
+					ruling_party = democratic
+					elections_allowed = yes
+					last_election = 1942.11.2
+					election_frequency = 48
+				}
+			}
+			if = {
+				limit = {
+					date > 1946.11.2
+					date < 1950.11.2
+				}
+				set_politics = {
+					ruling_party = democratic
+					elections_allowed = yes
+					last_election = 1946.11.2
+					election_frequency = 48
+				}
+			}
+			if = {
+				limit = {
+					date > 1950.11.2
+					date < 1954.11.2
+				}
+				set_politics = {
+					ruling_party = democratic
+					elections_allowed = yes
+					last_election = 1950.11.2
+					election_frequency = 48
+				}
+			}
+			if = {
+				limit = {
+					date > 1954.11.2
+					date < 1958.11.2
+				}
+				set_politics = {
+					ruling_party = democratic
+					elections_allowed = yes
+					last_election = 1954.11.2
+					election_frequency = 48
+				}
+			}
+		}
+	}
+	option = {#democratic-cdl
+		name = chielection.1.c
+		ai_chance = {
+			base = 0
+		}
+		add_political_power = 20
+		custom_effect_tooltip = FIRST_ELECTION_DEMOCRATIC_CDL
+		hidden_effect = {
+			CR_Superevent_First_Election_of_ROC = yes
+			every_country = {
+				clear_array = CM_SE_event_id_array
+				add_to_array = { CM_SE_event_id_array = 2 }
+			}
+			add_popularity = {
+				ideology = democratic
+				popularity = 1
+			}
+			CRF_CHI_Relax_Democratic_Effect = yes
+			CHI_zhang_lan = {
+				promote_character = {
+					ideology = tp_constitutional
+				}
+			}
+			if = {
+				limit = {
+					date < 1938.11.2
+				}
+				set_politics = {
+					ruling_party = democratic
+					elections_allowed = yes
+					last_election = 1934.11.2
+					election_frequency = 48
+				}
+			}
+			if = {
+				limit = {
+					date > 1938.11.2
+					date < 1942.11.2
+				}
+				set_politics = {
+					ruling_party = democratic
+					elections_allowed = yes
+					last_election = 1938.11.2
+					election_frequency = 48
+				}
+			}
+			if = {
+				limit = {
+					date > 1938.11.2
+					date < 1942.11.2
+				}
+				set_politics = {
+					ruling_party = democratic
+					elections_allowed = yes
+					last_election = 1938.11.2
+					election_frequency = 48
+				}
+			}
+			if = {
+				limit = {
+					date > 1942.11.2
+					date < 1946.11.2
+				}
+				set_politics = {
+					ruling_party = democratic
+					elections_allowed = yes
+					last_election = 1942.11.2
+					election_frequency = 48
+				}
+			}
+			if = {
+				limit = {
+					date > 1946.11.2
+					date < 1950.11.2
+				}
+				set_politics = {
+					ruling_party = democratic
+					elections_allowed = yes
+					last_election = 1946.11.2
+					election_frequency = 48
+				}
+			}
+			if = {
+				limit = {
+					date > 1950.11.2
+					date < 1954.11.2
+				}
+				set_politics = {
+					ruling_party = democratic
+					elections_allowed = yes
+					last_election = 1950.11.2
+					election_frequency = 48
+				}
+			}
+			if = {
+				limit = {
+					date > 1954.11.2
+					date < 1958.11.2
+				}
+				set_politics = {
+					ruling_party = democratic
+					elections_allowed = yes
+					last_election = 1954.11.2
+					election_frequency = 48
+				}
+			}
+		}
+	}
+}
+
+# Election of 1938
+country_event = {
+	id = chielection.2
+	title = chielection.2.t
+	desc = chielection.2.d
+	picture = GFX_chi_election
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = CHI
+		date > 1938.11.1
+		date < 1938.12.1
+		has_country_flag = CHI_had_first_election
+		NOT = {
+			has_government = fascism
+		}
+		NOT = {
+			has_government = communism
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			country_event = { id = chielection.3 days = 730 } # midterms
+		}
+	}
+
+	option = { 	
+		name = chielection.2.a
+		ai_chance = {
+			factor = 100
+		}		
+		custom_effect_tooltip = 1938_ELECTION_NEUTRALITY_KUOMINTANG
+		hidden_effect = {
+			country_event = { id = chielection.9 days = 1 }
+			add_popularity = {
+				ideology = neutrality
+				popularity = 1
+			}
+			CRF_CHI_chiang_kaishek = {
+				promote_character = {
+					ideology = tp_constitutional_neutrality
+				}
+			}
+			set_politics = {
+				ruling_party = neutrality
+				elections_allowed = yes
+				last_election = 1938.11.2
+				election_frequency = 48
+			}
+		}
+	}
+
+	option = { 
+		name = chielection.2.b
+		ai_chance = {
+			factor = 0
+		}
+		custom_effect_tooltip = 1938_ELECTION_DEMOCRATIC_KUOMINTANG
+		hidden_effect = {
+			country_event = { id = chielection.9 days = 1 }
+			set_party_name = { ideology = democratic long_name = CHI_kuomintang_party name = CHI_kuomintang }
+			add_popularity = {
+				ideology = democratic
+				popularity = 1
+			}
+			CRF_CHI_chiang_kaishek = {
+				promote_character = {
+					ideology = tp_constitutional
+				}
+			}
+			set_politics = {
+				ruling_party = democratic
+				elections_allowed = yes
+				last_election = 1938.11.2
+				election_frequency = 48
+			}
+		}
+	}
+
+	option = { 
+		name = chielection.2.c
+		ai_chance = {
+			factor = 0
+		}
+		custom_effect_tooltip = ELECTION_DEMOCRATIC_CDL
+		hidden_effect = {
+			country_event = { id = chielection.9 days = 1 }
+			set_party_name = { ideology = democratic long_name = CHI_CDL_party name = CHI_CDL }
+			CRF_CHI_Relax_Democratic_Effect = yes
+			add_popularity = {
+				ideology = democratic
+				popularity = 1
+			}
+			CHI_zhang_lan = {
+				promote_character = {
+					ideology = tp_constitutional
+				}
+			}
+			set_politics = {
+				ruling_party = democratic
+				elections_allowed = yes
+				last_election = 1938.11.2
+				election_frequency = 48
+			}
+		}
+	}
+}
+
+# Midturm-election
+country_event = {
+	id = chielection.3
+	title = chielection.3.t
+	desc = chielection.3.d
+	picture = GFX_chi_election
+
+	is_triggered_only = yes
+
+	trigger = {
+		tag = CHI
+		NOT = {
+			has_government = fascism
+		}
+		NOT = {
+			has_government = communism
+		}
+		OR = {
+			CRF_CHI_chiang_kaishek = { is_country_leader = yes }
+			CHI_weng_wenhao = { is_country_leader = yes }
+		}
+	}
+
+	option = { 	
+		name = chielection.3.a
+		ai_chance = {
+			factor = 100
+		}		
+	}
+
+	option = { 
+		name = chielection.3.b
+		ai_chance = {
+			factor = 0
+		}
+		hidden_effect = {
+			set_country_flag = weng_win_midturm
+		}
+	}
+}
+
+# Election of 1942
+country_event = {
+	id = chielection.4
+	title = chielection.4.t
+	desc = chielection.2.d
+	picture = GFX_chi_election
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = CHI
+		date > 1942.11.1
+		date < 1942.12.1
+		has_country_flag = CHI_had_first_election
+		NOT = {
+			has_government = fascism
+		}
+		NOT = {
+			has_government = communism
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			country_event = { id = chielection.3 days = 730 } # midterms
+		}
+	}
+
+	option = { 	
+		name = chielection.2.a
+		ai_chance = {
+			factor = 100
+		}
+		if = {	
+			limit = {
+				has_country_flag = weng_win_midturm
+			}
+			custom_effect_tooltip = WENG_ELECTION_NEUTRALITY_KUOMINTANG
+			else = {
+				custom_effect_tooltip = CHIANG_ELECTION_NEUTRALITY_KUOMINTANG
+			}
+		}
+		hidden_effect = {
+			country_event = { id = chielection.9 days = 1 }
+			add_popularity = {
+				ideology = neutrality
+				popularity = 1
+			}
+			set_politics = {
+				ruling_party = neutrality
+				elections_allowed = yes
+				last_election = 1938.11.2
+				election_frequency = 48
+			}
+			if = {	
+				limit = {
+					has_country_flag = weng_win_midturm
+				}
+				CHI_weng_wenhao = {
+					promote_character = {
+						ideology = tp_constitutional_neutrality
+					}
+				}
+				clr_country_flag = weng_win_midturm
+				else = {
+					CRF_CHI_chiang_kaishek = {
+						promote_character = {
+							ideology = tp_constitutional_neutrality
+						}
+					}
+				}
+			}
+		}
+	}
+
+	option = { 
+		name = chielection.2.b
+		ai_chance = {
+			factor = 0
+		}
+		if = {	
+			limit = {
+				has_country_flag = weng_win_midturm
+			}
+			custom_effect_tooltip = WENG_ELECTION_DEMOCRATIC_KUOMINTANG
+			else = {
+				custom_effect_tooltip = CHIANG_ELECTION_DEMOCRATIC_KUOMINTANG
+			}
+		}
+		hidden_effect = {
+			country_event = { id = chielection.9 days = 1 }
+			set_party_name = { ideology = democratic long_name = CHI_kuomintang_party name = CHI_kuomintang }
+			CRF_CHI_Relax_Democratic_Effect = yes
+			add_popularity = {
+				ideology = democratic
+				popularity = 1
+			}
+			set_politics = {
+				ruling_party = democratic
+				elections_allowed = yes
+				last_election = 1938.11.2
+				election_frequency = 48
+			}
+			if = {	
+				limit = {
+					has_country_flag = weng_win_midturm
+				}
+				CHI_weng_wenhao = {
+					promote_character = {
+						ideology = tp_constitutional
+					}
+				}
+				clr_country_flag = weng_win_midturm
+				else = {
+					CRF_CHI_chiang_kaishek = {
+						promote_character = {
+							ideology = tp_constitutional
+						}
+					}
+				}
+			}
+		}
+	}
+
+	option = { 
+		name = chielection.2.c
+		ai_chance = {
+			factor = 0
+		}
+		custom_effect_tooltip = ELECTION_DEMOCRATIC_CDL
+		hidden_effect = {
+			country_event = { id = chielection.9 days = 1 }
+			set_party_name = { ideology = democratic long_name = CHI_CDL_party name = CHI_CDL }
+			CRF_CHI_Relax_Democratic_Effect = yes
+			add_popularity = {
+				ideology = democratic
+				popularity = 1
+			}
+			CHI_zhang_lan = {
+				promote_character = {
+					ideology = tp_constitutional
+				}
+			}
+			set_politics = {
+				ruling_party = democratic
+				elections_allowed = yes
+				last_election = 1938.11.2
+				election_frequency = 48
+			}
+		}
+	}
+}
+
+# Election of 1946
+country_event = {
+	id = chielection.5
+	title = chielection.5.t
+	desc = chielection.2.d
+	picture = GFX_chi_election
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = CHI
+		date > 1946.11.1
+		date < 1946.12.1
+		has_country_flag = CHI_had_first_election
+		NOT = {
+			has_government = fascism
+		}
+		NOT = {
+			has_government = communism
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			country_event = { id = chielection.3 days = 730 } # midterms
+		}
+	}
+
+	option = { 	
+		name = chielection.2.a
+		ai_chance = {
+			factor = 100
+		}
+		if = {	
+			limit = {
+				has_country_flag = weng_win_midturm
+			}
+			custom_effect_tooltip = WENG_ELECTION_NEUTRALITY_KUOMINTANG
+			else = {
+				custom_effect_tooltip = CHIANG_ELECTION_NEUTRALITY_KUOMINTANG
+			}
+		}
+		hidden_effect = {
+			country_event = { id = chielection.9 days = 1 }
+			add_popularity = {
+				ideology = neutrality
+				popularity = 1
+			}
+			set_politics = {
+				ruling_party = neutrality
+				elections_allowed = yes
+				last_election = 1938.11.2
+				election_frequency = 48
+			}
+			if = {	
+				limit = {
+					has_country_flag = weng_win_midturm
+				}
+				CHI_weng_wenhao = {
+					promote_character = {
+						ideology = tp_constitutional_neutrality
+					}
+				}
+				clr_country_flag = weng_win_midturm
+				else = {
+					CRF_CHI_chiang_kaishek = {
+						promote_character = {
+							ideology = tp_constitutional_neutrality
+						}
+					}
+				}
+			}
+		}
+	}
+
+	option = { 
+		name = chielection.2.b
+		ai_chance = {
+			factor = 0
+		}
+		if = {	
+			limit = {
+				has_country_flag = weng_win_midturm
+			}
+			custom_effect_tooltip = WENG_ELECTION_DEMOCRATIC_KUOMINTANG
+			else = {
+				custom_effect_tooltip = CHIANG_ELECTION_DEMOCRATIC_KUOMINTANG
+			}
+		}
+		hidden_effect = {
+			country_event = { id = chielection.9 days = 1 }
+			set_party_name = { ideology = democratic long_name = CHI_kuomintang_party name = CHI_kuomintang }
+			CRF_CHI_Relax_Democratic_Effect = yes
+			add_popularity = {
+				ideology = democratic
+				popularity = 1
+			}
+			set_politics = {
+				ruling_party = democratic
+				elections_allowed = yes
+				last_election = 1938.11.2
+				election_frequency = 48
+			}
+			if = {	
+				limit = {
+					has_country_flag = weng_win_midturm
+				}
+				CHI_weng_wenhao = {
+					promote_character = {
+						ideology = tp_constitutional
+					}
+				}
+				clr_country_flag = weng_win_midturm
+				else = {
+					CRF_CHI_chiang_kaishek = {
+						promote_character = {
+							ideology = tp_constitutional
+						}
+					}
+				}
+			}
+		}
+	}
+
+	option = { 
+		name = chielection.2.c
+		ai_chance = {
+			factor = 0
+		}
+		custom_effect_tooltip = ELECTION_DEMOCRATIC_CDL
+		hidden_effect = {
+			country_event = { id = chielection.9 days = 1 }
+			set_party_name = { ideology = democratic long_name = CHI_CDL_party name = CHI_CDL }
+			CRF_CHI_Relax_Democratic_Effect = yes
+			add_popularity = {
+				ideology = democratic
+				popularity = 1
+			}
+			CHI_zhang_lan = {
+				promote_character = {
+					ideology = tp_constitutional
+				}
+			}
+			set_politics = {
+				ruling_party = democratic
+				elections_allowed = yes
+				last_election = 1938.11.2
+				election_frequency = 48
+			}
+		}
+	}
+}
+
+# Election of 1950
+country_event = {
+	id = chielection.6
+	title = chielection.6.t
+	desc = chielection.2.d
+	picture = GFX_chi_election
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = CHI
+		date > 1950.11.1
+		date < 1950.12.1
+		has_country_flag = CHI_had_first_election
+		NOT = {
+			has_government = fascism
+		}
+		NOT = {
+			has_government = communism
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			country_event = { id = chielection.3 days = 730 } # midterms
+		}
+	}
+
+	option = { 	
+		name = chielection.2.a
+		ai_chance = {
+			factor = 100
+		}
+		if = {	
+			limit = {
+				has_country_flag = weng_win_midturm
+			}
+			custom_effect_tooltip = WENG_ELECTION_NEUTRALITY_KUOMINTANG
+			else = {
+				custom_effect_tooltip = CHIANG_ELECTION_NEUTRALITY_KUOMINTANG
+			}
+		}
+		hidden_effect = {
+			country_event = { id = chielection.9 days = 1 }
+			add_popularity = {
+				ideology = neutrality
+				popularity = 1
+			}
+			set_politics = {
+				ruling_party = neutrality
+				elections_allowed = yes
+				last_election = 1938.11.2
+				election_frequency = 48
+			}
+			if = {	
+				limit = {
+					has_country_flag = weng_win_midturm
+				}
+				CHI_weng_wenhao = {
+					promote_character = {
+						ideology = tp_constitutional_neutrality
+					}
+				}
+				clr_country_flag = weng_win_midturm
+				else = {
+					CRF_CHI_chiang_kaishek = {
+						promote_character = {
+							ideology = tp_constitutional_neutrality
+						}
+					}
+				}
+			}
+		}
+	}
+
+	option = { 
+		name = chielection.2.b
+		ai_chance = {
+			factor = 0
+		}
+		if = {	
+			limit = {
+				has_country_flag = weng_win_midturm
+			}
+			custom_effect_tooltip = WENG_ELECTION_DEMOCRATIC_KUOMINTANG
+			else = {
+				custom_effect_tooltip = CHIANG_ELECTION_DEMOCRATIC_KUOMINTANG
+			}
+		}
+		hidden_effect = {
+			country_event = { id = chielection.9 days = 1 }
+			set_party_name = { ideology = democratic long_name = CHI_kuomintang_party name = CHI_kuomintang }
+			CRF_CHI_Relax_Democratic_Effect = yes
+			add_popularity = {
+				ideology = democratic
+				popularity = 1
+			}
+			set_politics = {
+				ruling_party = democratic
+				elections_allowed = yes
+				last_election = 1938.11.2
+				election_frequency = 48
+			}
+			if = {	
+				limit = {
+					has_country_flag = weng_win_midturm
+				}
+				CHI_weng_wenhao = {
+					promote_character = {
+						ideology = tp_constitutional
+					}
+				}
+				clr_country_flag = weng_win_midturm
+				else = {
+					CRF_CHI_chiang_kaishek = {
+						promote_character = {
+							ideology = tp_constitutional
+						}
+					}
+				}
+			}
+		}
+	}
+
+	option = { 
+		name = chielection.2.c
+		ai_chance = {
+			factor = 0
+		}
+		custom_effect_tooltip = ELECTION_DEMOCRATIC_CDL
+		hidden_effect = {
+			country_event = { id = chielection.9 days = 1 }
+			set_party_name = { ideology = democratic long_name = CHI_CDL_party name = CHI_CDL }
+			CRF_CHI_Relax_Democratic_Effect = yes
+			add_popularity = {
+				ideology = democratic
+				popularity = 1
+			}
+			CHI_zhang_lan = {
+				promote_character = {
+					ideology = tp_constitutional
+				}
+			}
+			set_politics = {
+				ruling_party = democratic
+				elections_allowed = yes
+				last_election = 1938.11.2
+				election_frequency = 48
+			}
+		}
+	}
+}
+
+# Election of 1954
+country_event = {
+	id = chielection.7
+	title = chielection.7.t
+	desc = chielection.2.d
+	picture = GFX_chi_election
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = CHI
+		date > 1954.11.1
+		date < 1954.12.1
+		has_country_flag = CHI_had_first_election
+		NOT = {
+			has_government = fascism
+		}
+		NOT = {
+			has_government = communism
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			country_event = { id = chielection.3 days = 730 } # midterms
+		}
+	}
+
+	option = { 	
+		name = chielection.2.a
+		ai_chance = {
+			factor = 100
+		}
+		if = {	
+			limit = {
+				has_country_flag = weng_win_midturm
+			}
+			custom_effect_tooltip = WENG_ELECTION_NEUTRALITY_KUOMINTANG
+			else = {
+				custom_effect_tooltip = CHIANG_ELECTION_NEUTRALITY_KUOMINTANG
+			}
+		}
+		hidden_effect = {
+			country_event = { id = chielection.9 days = 1 }
+			add_popularity = {
+				ideology = neutrality
+				popularity = 1
+			}
+			set_politics = {
+				ruling_party = neutrality
+				elections_allowed = yes
+				last_election = 1938.11.2
+				election_frequency = 48
+			}
+			if = {	
+				limit = {
+					has_country_flag = weng_win_midturm
+				}
+				CHI_weng_wenhao = {
+					promote_character = {
+						ideology = tp_constitutional_neutrality
+					}
+				}
+				clr_country_flag = weng_win_midturm
+				else = {
+					CRF_CHI_chiang_kaishek = {
+						promote_character = {
+							ideology = tp_constitutional_neutrality
+						}
+					}
+				}
+			}
+		}
+	}
+
+	option = { 
+		name = chielection.2.b
+		ai_chance = {
+			factor = 0
+		}
+		if = {	
+			limit = {
+				has_country_flag = weng_win_midturm
+			}
+			custom_effect_tooltip = WENG_ELECTION_DEMOCRATIC_KUOMINTANG
+			else = {
+				custom_effect_tooltip = CHIANG_ELECTION_DEMOCRATIC_KUOMINTANG
+			}
+		}
+		hidden_effect = {
+			country_event = { id = chielection.9 days = 1 }
+			set_party_name = { ideology = democratic long_name = CHI_kuomintang_party name = CHI_kuomintang }
+			CRF_CHI_Relax_Democratic_Effect = yes
+			add_popularity = {
+				ideology = democratic
+				popularity = 1
+			}
+			set_politics = {
+				ruling_party = democratic
+				elections_allowed = yes
+				last_election = 1938.11.2
+				election_frequency = 48
+			}
+			if = {	
+				limit = {
+					has_country_flag = weng_win_midturm
+				}
+				CHI_weng_wenhao = {
+					promote_character = {
+						ideology = tp_constitutional
+					}
+				}
+				clr_country_flag = weng_win_midturm
+				else = {
+					CRF_CHI_chiang_kaishek = {
+						promote_character = {
+							ideology = tp_constitutional
+						}
+					}
+				}
+			}
+		}
+	}
+
+	option = { 
+		name = chielection.2.c
+		ai_chance = {
+			factor = 0
+		}
+		custom_effect_tooltip = ELECTION_DEMOCRATIC_CDL
+		hidden_effect = {
+			country_event = { id = chielection.9 days = 1 }
+			set_party_name = { ideology = democratic long_name = CHI_CDL_party name = CHI_CDL }
+			CRF_CHI_Relax_Democratic_Effect = yes
+			add_popularity = {
+				ideology = democratic
+				popularity = 1
+			}
+			CHI_zhang_lan = {
+				promote_character = {
+					ideology = tp_constitutional
+				}
+			}
+			set_politics = {
+				ruling_party = democratic
+				elections_allowed = yes
+				last_election = 1938.11.2
+				election_frequency = 48
+			}
+		}
+	}
+}
+
+# Election of 1958
+country_event = {
+	id = chielection.8
+	title = chielection.8.t
+	desc = chielection.2.d
+	picture = GFX_chi_election
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = CHI
+		date > 1958.11.1
+		date < 1958.12.1
+		has_country_flag = CHI_had_first_election
+		NOT = {
+			has_government = fascism
+		}
+		NOT = {
+			has_government = communism
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			#country_event = { id = chielection.3 days = 730 } # midterms
+		}
+	}
+
+	option = { 	
+		name = chielection.2.a
+		ai_chance = {
+			factor = 100
+		}
+		if = {	
+			limit = {
+				has_country_flag = weng_win_midturm
+			}
+			custom_effect_tooltip = WENG_ELECTION_NEUTRALITY_KUOMINTANG
+			else = {
+				custom_effect_tooltip = CHIANG_ELECTION_NEUTRALITY_KUOMINTANG
+			}
+		}
+		hidden_effect = {
+			country_event = { id = chielection.9 days = 1 }
+			add_popularity = {
+				ideology = neutrality
+				popularity = 1
+			}
+			set_politics = {
+				ruling_party = neutrality
+				elections_allowed = yes
+				last_election = 1938.11.2
+				election_frequency = 48
+			}
+			if = {	
+				limit = {
+					has_country_flag = weng_win_midturm
+				}
+				CHI_weng_wenhao = {
+					promote_character = {
+						ideology = tp_constitutional_neutrality
+					}
+				}
+				clr_country_flag = weng_win_midturm
+				else = {
+					CRF_CHI_chiang_kaishek = {
+						promote_character = {
+							ideology = tp_constitutional_neutrality
+						}
+					}
+				}
+			}
+		}
+	}
+
+	option = { 
+		name = chielection.2.b
+		ai_chance = {
+			factor = 0
+		}
+		if = {	
+			limit = {
+				has_country_flag = weng_win_midturm
+			}
+			custom_effect_tooltip = WENG_ELECTION_DEMOCRATIC_KUOMINTANG
+			else = {
+				custom_effect_tooltip = CHIANG_ELECTION_DEMOCRATIC_KUOMINTANG
+			}
+		}
+		hidden_effect = {
+			country_event = { id = chielection.9 days = 1 }
+			set_party_name = { ideology = democratic long_name = CHI_kuomintang_party name = CHI_kuomintang }
+			CRF_CHI_Relax_Democratic_Effect = yes
+			add_popularity = {
+				ideology = democratic
+				popularity = 1
+			}
+			set_politics = {
+				ruling_party = democratic
+				elections_allowed = yes
+				last_election = 1938.11.2
+				election_frequency = 48
+			}
+			if = {	
+				limit = {
+					has_country_flag = weng_win_midturm
+				}
+				CHI_weng_wenhao = {
+					promote_character = {
+						ideology = tp_constitutional
+					}
+				}
+				clr_country_flag = weng_win_midturm
+				else = {
+					CRF_CHI_chiang_kaishek = {
+						promote_character = {
+							ideology = tp_constitutional
+						}
+					}
+				}
+			}
+		}
+	}
+
+	option = { 
+		name = chielection.2.c
+		ai_chance = {
+			factor = 0
+		}
+		custom_effect_tooltip = ELECTION_DEMOCRATIC_CDL
+		hidden_effect = {
+			country_event = { id = chielection.9 days = 1 }
+			set_party_name = { ideology = democratic long_name = CHI_CDL_party name = CHI_CDL }
+			CRF_CHI_Relax_Democratic_Effect = yes
+			add_popularity = {
+				ideology = democratic
+				popularity = 1
+			}
+			CHI_zhang_lan = {
+				promote_character = {
+					ideology = tp_constitutional
+				}
+			}
+			set_politics = {
+				ruling_party = democratic
+				elections_allowed = yes
+				last_election = 1938.11.2
+				election_frequency = 48
+			}
+		}
+	}
+}

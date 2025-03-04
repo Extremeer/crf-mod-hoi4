@@ -1,0 +1,323 @@
+﻿
+
+add_namespace = cco
+
+country_event = { #KCW-OUT
+	id = cco.12
+	title = cco.12.t
+	desc = cco.12.d
+	picture = GFX_report_event_chinese_officers
+	
+	mean_time_to_happen = {
+		days = 0
+	}
+
+	trigger = {
+		tag = KCW
+		OR = {
+			has_cosmetic_tag = KCW_FRA
+		}
+			not = {
+				is_subject_of = FRA
+			}
+	}
+	
+	option = {
+		name = cco.12.a
+		drop_cosmetic_tag = yes
+	}
+}
+
+country_event = { #KCW-IN-FRA
+	id = cco.13
+	title = cco.13.t
+	desc = cco.13.d
+	picture = GFX_report_event_chinese_officers
+	
+
+	mean_time_to_happen = {
+		days = 0
+	}
+
+	trigger = {
+		NOT = {
+			has_cosmetic_tag = KCW_FRA
+		}
+		tag = KCW
+		is_subject_of = FRA
+	}
+	
+	option = {
+		name = cco.13.a
+		set_cosmetic_tag = KCW_FRA
+		#kill_country_leader = yes
+		create_country_leader = {
+			name = "Federal Governor"
+			desc = ""
+			picture = "Federal Governor.dds"
+			expire = "1953.3.1"
+			ideology = conservatism
+			traits = {
+				
+			}
+		}
+		create_country_leader = {
+			name = "Federal Governor"
+			desc = ""
+			picture = "Federal Governor.dds"
+			expire = "1953.3.1"
+			ideology = marxism
+			traits = {
+				
+			}
+		}
+		create_country_leader = {
+			name = "Federal Governor"
+			desc = ""
+			picture = "Federal Governor.dds"
+			expire = "1953.3.1"
+			ideology = rexism
+			traits = {
+				
+			}
+		}
+		create_country_leader = {
+			name = "Federal Governor"
+			desc = ""
+			picture = "Federal Governor.dds"
+			expire = "1953.3.1"
+			ideology = despotism
+			traits = {
+				
+			}
+		}
+	}
+}
+
+country_event = { #KCW-RECIEVED
+	id = cco.14
+	title = cco.14.t
+	desc = cco.14.d
+	picture = GFX_report_event_chinese_officers
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = cco.14.a
+		ai_chance = {
+			factor = 90
+			modifier = {
+				factor = 0.5
+				strength_ratio = { tag = FROM ratio < 1 }
+			}
+			modifier = {
+				factor = 0.2
+				strength_ratio = { tag = FROM ratio < 0.5 }
+			}
+			modifier = {
+				factor = 0
+				strength_ratio = { tag = FROM ratio < 0.2 }
+			}
+		}
+		drop_cosmetic_tag = yes
+		FROM = {
+				set_autonomy = { target = ROOT autonomy_state = sar_kc }
+				country_event = { days = 1 id = cco.15 }
+		}
+		hidden_effect = {
+			country_event = { days = 7 id = news.12139 }
+		}
+	}
+
+	option = {
+		name = cco.14.b
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}			
+		FROM = {
+			country_event = { days = 1 id = cco.16 }
+		}
+	}
+}
+
+country_event = { #KCW-YES-ROOT
+	id = cco.15
+	title = cco.15.t
+	desc = cco.15.d
+	picture = GFX_report_event_chinese_officers
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = cco.15.a
+		ai_chance = {
+			factor = 50
+		}
+			FROM = {
+				#kill_country_leader = yes
+				create_country_leader = {
+					name = "张澜"
+					desc = "POLITICS_ZHANG_LAN_DESC"
+					picture = "GFX_portrait_prc_zhang_lan"
+					expire = "1965.1.1"
+					ideology = tp_constitutional
+					traits = {
+						
+					}
+				}
+				create_country_leader = {
+					name = "张澜"
+					desc = "POLITICS_ZHANG_LAN_DESC"
+					picture = "GFX_portrait_prc_zhang_lan"
+					expire = "1965.1.1"
+					ideology = maoist
+					traits = {
+								
+					}
+				}
+				create_country_leader = {
+					name = "张澜"
+					desc = "POLITICS_ZHANG_LAN_DESC"
+					picture = "GFX_portrait_prc_zhang_lan"
+					expire = "1965.1.1"
+					ideology = rexism
+					traits = {
+						
+					}
+				}
+				create_country_leader = {
+					name = "张澜"
+					desc = "POLITICS_ZHANG_LAN_DESC"
+					picture = "GFX_portrait_prc_zhang_lan"
+					expire = "1965.1.1"
+					ideology = tp_tutelage
+					traits = {
+						
+					}
+				}
+			}	
+	}
+
+	option = {
+		name = cco.15.b
+		ai_chance = {
+			factor = 50
+		}
+			if = {
+				limit = { tag = CHI }
+				FROM = {
+					#kill_country_leader = yes
+					create_country_leader = {
+						name = "薛岳"
+						desc = "POLITICS_ZHANG_LAN_DESC"
+						picture = "GFX_portrait_chi_xue_yue"
+						expire = "1965.1.1"
+						ideology = tp_constitutional
+						traits = {
+							
+						}
+					}
+					create_country_leader = {
+						name = "薛岳"
+						desc = "POLITICS_ZHANG_LAN_DESC"
+						picture = "GFX_portrait_chi_xue_yue"
+						expire = "1965.1.1"
+						ideology = maoist
+						traits = {
+									
+						}
+					}
+					create_country_leader = {
+						name = "薛岳"
+						desc = "POLITICS_ZHANG_LAN_DESC"
+						picture = "GFX_portrait_chi_xue_yue"
+						expire = "1965.1.1"
+						ideology = rexism
+						traits = {
+							
+						}
+					}
+					create_country_leader = {
+						name = "薛岳"
+						desc = "POLITICS_ZHANG_LAN_DESC"
+						picture = "GFX_portrait_chi_xue_yue"
+						expire = "1965.1.1"
+						ideology = tp_tutelage
+						traits = {
+							
+						}
+					}
+				}
+			}
+			if = {
+				limit = { tag = PRC }
+				FROM = {
+					#kill_country_leader = yes
+					create_country_leader = {
+						name = "王明"
+						desc = "POLITICS_ZHANG_LAN_DESC"
+						picture = "GFX_portrait_prc_wang_ming"
+						expire = "1965.1.1"
+						ideology = tp_constitutional
+						traits = {
+							
+						}
+					}
+					create_country_leader = {
+						name = "王明"
+						desc = "POLITICS_ZHANG_LAN_DESC"
+						picture = "GFX_portrait_prc_wang_ming"
+						expire = "1965.1.1"
+						ideology = maoist
+						traits = {
+									
+						}
+					}
+					create_country_leader = {
+						name = "王明"
+						desc = "POLITICS_ZHANG_LAN_DESC"
+						picture = "GFX_portrait_prc_wang_ming"
+						expire = "1965.1.1"
+						ideology = rexism
+						traits = {
+							
+						}
+					}
+					create_country_leader = {
+						name = "王明"
+						desc = "POLITICS_ZHANG_LAN_DESC"
+						picture = "GFX_portrait_prc_wang_ming"
+						expire = "1965.1.1"
+						ideology = tp_tutelage
+						traits = {
+							
+						}
+					}
+				}
+			}
+	}
+}
+
+country_event = { #KCW-NO
+	id = cco.16
+	title = cco.16.t
+	desc = cco.16.d
+	picture = GFX_report_event_chinese_officers
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = cco.16.a
+		ROOT = {
+			create_wargoal = {
+			type = annex_everything
+			target = FROM				
+			expire = 0
+			}
+		}
+	}
+}

@@ -1,0 +1,43 @@
+ideas = {
+	country = {
+	
+		central_government_1 = {
+
+			picture = chi_whampoa_military_academy
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.05	
+
+			}
+		}
+
+		central_government_2 = {
+
+			picture = chi_whampoa_military_academy
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.1
+			}
+		}
+	}
+}

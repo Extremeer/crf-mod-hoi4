@@ -1,0 +1,37 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_CRF_game_rule_flag_PRC_Proclaim"
+		texturefile = "gfx/flags/small/PRC_proclaimed_communism.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_CRF_game_rule_flag_CHI"
+		texturefile = "gfx/flags/small/CHI.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_CRF_game_rule_flag_YUN"
+		texturefile = "gfx/flags/small/YUN.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_CRF_game_rule_flag_GXC"
+		texturefile = "gfx/flags/small/GXC.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_CRF_game_rule_flag_SHX"
+		texturefile = "gfx/flags/small/SHX.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_CRF_game_rule_flag_XSM"
+		texturefile = "gfx/flags/small/XSM.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_CRF_game_rule_flag_SIK"
+		texturefile = "gfx/flags/small/SIK.tga"
+		legacy_lazy_load = no
+	}
+}

@@ -1,0 +1,72 @@
+spriteTypes = {
+
+		spriteType = {
+                name = "GFX_idea_CHI_the_roc_airforce"
+                texturefile = "gfx/interface/ideas/CHI_the_roc_airforce.dds"
+        }
+		
+		spriteType = {
+                name = "GFX_idea_CHI_the_roc_navy_army"
+                texturefile = "gfx/interface/ideas/CHI_the_roc_navy_army.dds"
+        }
+		
+		spriteType = {
+                name = "GFX_idea_CHI_the_roc_land_army"
+                texturefile = "gfx/interface/ideas/CHI_the_roc_land_army.dds"
+        }
+		
+		spriteType = {
+                name = "GFX_idea_CHI_convention"
+                texturefile = "gfx/interface/ideas/CHI_convention.png"
+        }
+		
+		spriteType = {
+                name = "GFX_idea_CHI_constitutional"
+                texturefile = "gfx/interface/ideas/CHI_constitutional.dds"
+        }
+		
+		spriteType = {
+                name = "GFX_idea_CHI_control_yuan"
+                texturefile = "gfx/interface/ideas/CHI_control_yuan.dds"
+        }
+		
+		spriteType = {
+                name = "GFX_idea_CHI_examination_yuan"
+                texturefile = "gfx/interface/ideas/CHI_examination_yuan.dds"
+        }
+		
+		spriteType = {
+                name = "GFX_idea_CHI_judicial_yuan"
+                texturefile = "gfx/interface/ideas/CHI_judicial_yuan.dds"
+        }
+		
+		spriteType = {
+                name = "GFX_idea_CHI_legal_yuan"
+                texturefile = "gfx/interface/ideas/CHI_legal_yuan.dds"
+        }
+		
+		spriteType = {
+                name = "GFX_idea_CRF_CHI_executive_yuan"
+                texturefile = "gfx/interface/ideas/CRF_CHI_executive_yuan.dds"
+        }
+		
+		spriteType = {
+                name = "GFX_idea_CHI_juntong"
+                texturefile = "gfx/interface/ideas/CHI_juntong.dds"
+        }
+		
+		spriteType = {
+                name = "GFX_idea_CHI_national_security_bureau"
+                texturefile = "gfx/interface/ideas/CHI_national_security_bureau.dds"
+        }
+		
+		spriteType = {
+                name = "GFX_idea_KMT_modern_war"
+                texturefile = "gfx/interface/ideas/KMT_modern_war.dds"
+        }
+		
+		spriteType = {
+                name = "GFX_idea_CHI_operation_in_back"
+                texturefile = "gfx/interface/ideas/CHI_operation_in_back.dds"
+        }
+}

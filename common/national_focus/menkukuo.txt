@@ -1,0 +1,220 @@
+﻿### search_filters = {FOCUS_FILTER_POLITICAL}
+### search_filters = {FOCUS_FILTER_RESEARCH}
+### search_filters = {FOCUS_FILTER_INDUSTRY}
+### search_filters = {FOCUS_FILTER_STABILITY}
+### search_filters = {FOCUS_FILTER_WAR_SUPPORT}
+### search_filters = {FOCUS_FILTER_MANPOWER}
+### search_filters = {FOCUS_FILTER_ANNEXATION}
+
+focus_tree = {
+	id = men_focus
+	
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = MEN
+			has_dlc = "Waking the Tiger"
+		}
+	}
+	
+
+	default = no
+
+	continuous_focus_position = { x = 20 y = 1300 }
+
+#	focus = {
+#		id = MEN_
+#		icon = GFX_
+#		prerequisite = { focus = }
+#		mutually_exclusive = { focus =  }
+#		x = -3
+#		y = 0
+#		relative_position_id = 
+#
+#		cost = 10
+#
+#		ai_will_do = {
+#			factor = 1
+#		}
+#
+#		available = {
+#
+#		}
+#		
+#		bypass = {
+#
+#		}
+#
+#		cancel_if_invalid = yes
+#		continue_if_invalid = no
+#		available_if_capitulated = no
+#
+#		complete_tooltip = {
+#
+#		}
+#
+#		completion_reward = {
+#
+#		}
+#	}
+
+	#shared_focus = CHI_invite_foreign_investors
+
+	focus = {
+		id = MEN_keep_connecting_to_japan
+		icon = GFX_goal_generic_production
+		x = 0
+		y = 0
+
+		cost = 3.5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			event_target:WTT_current_china_leader = {
+				country_event = { id = men.1 }
+			}
+		}
+	}
+
+	focus = {
+		id = MEN_establish_men_military_department
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = MEN_keep_connecting_to_japan }
+		x = 0
+		y = 1
+		relative_position_id = MEN_keep_connecting_to_japan
+		
+		cost = 2.2
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			event_target:WTT_current_china_leader = {
+				country_event = { days = 11 id = men.2 }
+			}
+			country_event = { days = 11 id = men.2 }
+		}
+	}
+
+	focus = {
+		id = MEN_convert_men_meeting
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = MEN_establish_men_military_department }
+		x = 0
+		y = 1
+		relative_position_id = MEN_establish_men_military_department
+		
+		cost = 9.8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = MEN_establish_men_military_government
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = MEN_convert_men_meeting }
+		x = 0
+		y = 1
+		relative_position_id = MEN_convert_men_meeting
+		
+		cost = 3
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			set_cosmetic_tag = MEN_Military
+			JAP = {
+				set_autonomy = {
+					target = MEN
+					autonomous_state = autonomy_wtt_imperial_protectorate
+				}
+			}
+			hidden_effect = {
+				news_event = { id = men.3 }
+				set_popularities = {
+					fascism = 80
+					neutrality = 20
+				}
+			}
+			load_focus_tree = generic_focus
+		}
+	}
+}

@@ -1,0 +1,700 @@
+###############
+### Leaders ###
+###############
+
+defined_text = {
+	name = GetFactionAlignment
+
+
+#NO PUPPET
+	text = {
+		trigger = {
+			tag = CHI
+			NOT = { tag = event_target:WTT_current_china_leader }
+			is_puppet = no
+		}
+		localization_key = "国民政府"
+	}
+
+	text = {
+		trigger = {
+			tag = PRC
+			NOT = { tag = event_target:WTT_current_china_leader }
+			is_puppet = no
+		}
+		localization_key = "中国苏区"
+	}
+	text = {
+		trigger = {
+			tag = SHX
+			NOT = { tag = event_target:WTT_current_china_leader }
+			is_puppet = no
+		}
+		localization_key = "晋系军阀"
+	}
+	text = {
+		trigger = {
+			tag = XSM
+			NOT = { tag = event_target:WTT_current_china_leader }
+			is_puppet = no
+		}
+		localization_key = "西北军阀"
+	}
+	text = {
+		trigger = {
+			tag = YUN
+			NOT = { tag = event_target:WTT_current_china_leader }
+			is_puppet = no
+		}
+		localization_key = "滇系军阀"
+	}
+	text = {
+		trigger = {
+			tag = GXC
+			NOT = { tag = event_target:WTT_current_china_leader }
+			is_puppet = no
+		}
+		localization_key = "桂系军阀"
+	}
+	text = {
+		trigger = {
+			tag = TIB
+			TIB = { is_puppet = no }
+		}
+		localization_key = "西藏噶厦政府"
+	}
+	text = {
+		trigger = {
+			tag = SIK
+			NOT = { tag = event_target:WTT_current_china_leader }
+			is_puppet = no
+			OR = {
+				has_cosmetic_tag = XIN_CLIQUE
+				has_cosmetic_tag = XIN_SEV
+			}
+		}
+		localization_key = "新疆军阀"
+	}
+	text = {
+		trigger = {
+			tag = ETR
+			NOT = { tag = event_target:WTT_current_china_leader }
+			is_puppet = no
+			NOT = {
+				has_cosmetic_tag = ETR_IND
+				has_cosmetic_tag = ETR_DEMO
+				has_cosmetic_tag = ETR_UNI
+			}
+		}
+		localization_key = "三区政权"
+	}
+	text = {
+		trigger = {
+			OR = {
+				tag = ETR
+				tag = SIK
+			}
+			NOT = { tag = event_target:WTT_current_china_leader }
+			is_puppet = no
+			OR = {
+				has_cosmetic_tag = SINKIANG_PROVINCE
+				has_cosmetic_tag = ETR_UNI
+				has_cosmetic_tag = ETR_DEMO
+			}
+		}
+		localization_key = "新疆省府"
+	}
+	text = {
+		trigger = {
+			OR = {
+				tag = ETR
+				tag = SIK
+			}
+			NOT = { tag = event_target:WTT_current_china_leader }
+			is_puppet = no
+			has_cosmetic_tag = ETR_IND
+		}
+		localization_key = "独立"
+	}
+	text = {
+		trigger = {
+			tag = MON
+			MON = { is_puppet = no }
+			NOT = { is_in_faction_with = SOV }
+		}
+		localization_key = "独立"
+	}
+	text = {
+		trigger = {
+			tag = TAN
+			TAN = { is_puppet = no }
+			NOT = { is_in_faction_with = SOV }
+		}
+		localization_key = "独立"
+	}
+	text = {
+		trigger = {
+			tag = MAN
+			MAN = { is_puppet = no }
+		}
+		localization_key = "东北军阀"
+	}
+	text = {
+		trigger = {
+			tag = MEN
+			MEN = { is_puppet = no }
+		}
+		localization_key = "内蒙政会"
+	}
+	text = {
+		trigger = {
+			tag = KCW
+			KCW = { is_puppet = no }
+		}
+		localization_key = "半独立"
+	}
+	text = {
+		trigger = {
+			tag = HKG
+			HKG = { is_puppet = no }
+		}
+		localization_key = "半独立"
+	}
+	text = {
+		trigger = {
+			tag = MAU
+			MAU = { is_puppet = no }
+		}
+		localization_key = "半独立"
+	}
+
+
+
+
+#SATELLITE OR PUPPET SPECIAL(COLONY & JAPANESE)
+	text = {
+		trigger = {
+			tag = MON
+			OR = {
+				is_puppet_of = SOV
+				AND = {
+					is_in_faction_with = SOV
+					is_puppet = no
+				}
+			}
+		}
+		localization_key = "半独立苏联卫星国"
+	}
+	text = {
+		trigger = {
+			tag = TAN
+			OR = {
+				is_puppet_of = SOV
+				AND = {
+					is_in_faction_with = SOV
+					is_puppet = no
+				}
+			}
+		}
+		localization_key = "半独立苏联卫星国"
+	}
+	text = {
+		trigger = {
+			tag = MAN
+			is_puppet_of = JAP
+		}
+		localization_key = "日本傀儡伪政府"
+	}
+	text = {
+		trigger = {
+			tag = MEN
+			is_puppet_of = JAP
+		}
+		localization_key = "日本傀儡伪政府"
+	}
+	text = {
+		trigger = {
+			tag = HKG
+			NOT = { 
+				OR = { 
+					is_puppet_of = CHI
+					is_puppet_of = PRC
+					is_puppet_of = XSM
+					is_puppet_of = YUN
+					is_puppet_of = GXC
+					is_puppet_of = MAN
+					is_puppet_of = SIK
+					is_puppet_of = SHX
+				}
+			}
+			is_puppet = yes
+		}
+		localization_key = "租借地"
+	}
+	text = {
+		trigger = {
+			tag = MAU
+			NOT = { 
+				OR = { 
+					is_puppet_of = CHI
+					is_puppet_of = PRC
+					is_puppet_of = XSM
+					is_puppet_of = YUN
+					is_puppet_of = GXC
+					is_puppet_of = MAN
+					is_puppet_of = SIK
+					is_puppet_of = SHX
+				}
+			}
+			is_puppet = yes
+		}
+		localization_key = "租借地"
+	}
+	text = {
+		trigger = {
+			tag = KCW
+			NOT = { 
+				OR = { 
+					is_puppet_of = CHI
+					is_puppet_of = PRC
+					is_puppet_of = XSM
+					is_puppet_of = YUN
+					is_puppet_of = GXC
+					is_puppet_of = MAN
+					is_puppet_of = SIK
+					is_puppet_of = SHX
+				}
+			}
+			is_puppet = yes
+		}
+		localization_key = "租借地"
+	}
+
+
+
+
+#CENTRAL_GOV
+	text = {
+		trigger = {
+			tag = event_target:WTT_current_china_leader
+			is_puppet = no
+		}
+		localization_key = "中国中央政府"
+	}
+
+
+
+
+#S.A.R
+	text = {
+		trigger = {
+			tag = HKG
+			OR = { 
+				is_puppet_of = CHI
+				is_puppet_of = PRC
+				is_puppet_of = XSM
+				is_puppet_of = YUN
+				is_puppet_of = GXC
+				is_puppet_of = MAN
+				is_puppet_of = SIK
+				is_puppet_of = SHX
+			}
+		}
+		localization_key = "过渡特别行政区"
+	}
+	text = {
+		trigger = {
+			tag = MAU
+			OR = { 
+				is_puppet_of = CHI
+				is_puppet_of = PRC
+				is_puppet_of = XSM
+				is_puppet_of = YUN
+				is_puppet_of = GXC
+				is_puppet_of = MAN
+				is_puppet_of = SIK
+				is_puppet_of = SHX
+			}
+		}
+		localization_key = "过渡特别行政区"
+	}
+	text = {
+		trigger = {
+			tag = KCW
+			OR = { 
+				is_puppet_of = CHI
+				is_puppet_of = PRC
+				is_puppet_of = XSM
+				is_puppet_of = YUN
+				is_puppet_of = GXC
+				is_puppet_of = MAN
+				is_puppet_of = SIK
+				is_puppet_of = SHX
+			}
+		}
+		localization_key = "过渡特别行政区"
+	}
+
+
+
+#AUTONOMY
+	text = {
+		trigger = {
+			tag = CHI
+			OR = { 
+				is_puppet_of = CHI
+				is_puppet_of = PRC
+				is_puppet_of = XSM
+				is_puppet_of = YUN
+				is_puppet_of = GXC
+				is_puppet_of = MAN
+				is_puppet_of = SIK
+				is_puppet_of = SHX
+			}
+		}
+		localization_key = "过渡行政自治区"
+	}
+	text = {
+		trigger = {
+			tag = PRC
+			OR = { 
+				is_puppet_of = CHI
+				is_puppet_of = PRC
+				is_puppet_of = XSM
+				is_puppet_of = YUN
+				is_puppet_of = GXC
+				is_puppet_of = MAN
+				is_puppet_of = SIK
+				is_puppet_of = SHX
+			}
+		}
+		localization_key = "过渡行政自治区"
+	}
+	text = {
+		trigger = {
+			tag = XSM
+			OR = { 
+				is_puppet_of = CHI
+				is_puppet_of = PRC
+				is_puppet_of = XSM
+				is_puppet_of = YUN
+				is_puppet_of = GXC
+				is_puppet_of = MAN
+				is_puppet_of = SIK
+				is_puppet_of = SHX
+			}
+		}
+		localization_key = "过渡行政自治区"
+	}
+	text = {
+		trigger = {
+			tag = YUN
+			OR = { 
+				is_puppet_of = CHI
+				is_puppet_of = PRC
+				is_puppet_of = XSM
+				is_puppet_of = YUN
+				is_puppet_of = GXC
+				is_puppet_of = MAN
+				is_puppet_of = SIK
+				is_puppet_of = SHX
+			}
+		}
+		localization_key = "过渡行政自治区"
+	}
+	text = {
+		trigger = {
+			tag = GXC
+			OR = { 
+				is_puppet_of = CHI
+				is_puppet_of = PRC
+				is_puppet_of = XSM
+				is_puppet_of = YUN
+				is_puppet_of = GXC
+				is_puppet_of = MAN
+				is_puppet_of = SIK
+				is_puppet_of = SHX
+			}
+		}
+		localization_key = "过渡行政自治区"
+	}
+	text = {
+		trigger = {
+			tag = MAN
+			OR = { 
+				is_puppet_of = CHI
+				is_puppet_of = PRC
+				is_puppet_of = XSM
+				is_puppet_of = YUN
+				is_puppet_of = GXC
+				is_puppet_of = MAN
+				is_puppet_of = SIK
+				is_puppet_of = SHX
+			}
+		}
+		localization_key = "过渡行政自治区"
+	}
+	text = {
+		trigger = {
+			tag = SIK
+			OR = { 
+				is_puppet_of = CHI
+				is_puppet_of = PRC
+				is_puppet_of = XSM
+				is_puppet_of = YUN
+				is_puppet_of = GXC
+				is_puppet_of = MAN
+				is_puppet_of = SIK
+				is_puppet_of = SHX
+			}
+		}
+		localization_key = "过渡行政自治区"
+	}
+	text = {
+		trigger = {
+			tag = SHX
+			OR = { 
+				is_puppet_of = CHI
+				is_puppet_of = PRC
+				is_puppet_of = XSM
+				is_puppet_of = YUN
+				is_puppet_of = GXC
+				is_puppet_of = MAN
+				is_puppet_of = SIK
+				is_puppet_of = SHX
+			}
+		}
+		localization_key = "过渡行政自治区"
+	}
+	text = {
+		trigger = {
+			tag = TIB
+			OR = { 
+				is_puppet_of = CHI
+				is_puppet_of = PRC
+				is_puppet_of = XSM
+				is_puppet_of = YUN
+				is_puppet_of = GXC
+				is_puppet_of = MAN
+				is_puppet_of = SIK
+				is_puppet_of = SHX
+			}
+		}
+		localization_key = "过渡行政自治区"
+	}
+	text = {
+		trigger = {
+			tag = MEN
+			OR = { 
+				is_puppet_of = CHI
+				is_puppet_of = PRC
+				is_puppet_of = XSM
+				is_puppet_of = YUN
+				is_puppet_of = GXC
+				is_puppet_of = MAN
+				is_puppet_of = SIK
+				is_puppet_of = SHX
+			}
+		}
+		localization_key = "过渡行政自治区"
+	}
+	text = {
+		trigger = {
+			tag = MON
+			OR = { 
+				is_puppet_of = CHI
+				is_puppet_of = PRC
+				is_puppet_of = XSM
+				is_puppet_of = YUN
+				is_puppet_of = GXC
+				is_puppet_of = MAN
+				is_puppet_of = SIK
+				is_puppet_of = SHX
+			}
+		}
+		localization_key = "过渡行政自治区"
+	}
+	text = {
+		trigger = {
+			tag = TAN
+			OR = { 
+				is_puppet_of = CHI
+				is_puppet_of = PRC
+				is_puppet_of = XSM
+				is_puppet_of = YUN
+				is_puppet_of = GXC
+				is_puppet_of = MAN
+				is_puppet_of = SIK
+				is_puppet_of = SHX
+			}
+		}
+		localization_key = "过渡行政自治区"
+	}
+
+
+#PUPPET NORMAL
+	text = {
+		trigger = {
+			tag = CHI
+			NOT = { 
+				OR = { 
+					is_puppet_of = PRC
+					is_puppet_of = XSM
+					is_puppet_of = YUN
+					is_puppet_of = GXC
+					is_puppet_of = MAN
+					is_puppet_of = SIK
+					is_puppet_of = SHX
+				}
+			}
+			is_puppet = yes
+		}
+		localization_key = "殖民地"
+	}
+	text = {
+		trigger = {
+			tag = PRC
+			NOT = { 
+				OR = { 
+					is_puppet_of = CHI
+					is_puppet_of = XSM
+					is_puppet_of = YUN
+					is_puppet_of = GXC
+					is_puppet_of = MAN
+					is_puppet_of = SIK
+					is_puppet_of = SHX
+				}
+			}
+			is_puppet = yes
+		}
+		localization_key = "殖民地"
+	}
+	text = {
+		trigger = {
+			tag = XSM
+			NOT = { 
+				OR = { 
+					is_puppet_of = PRC
+					is_puppet_of = CHI
+					is_puppet_of = YUN
+					is_puppet_of = GXC
+					is_puppet_of = MAN
+					is_puppet_of = SIK
+					is_puppet_of = SHX
+				}
+			}
+			is_puppet = yes
+		}
+		localization_key = "殖民地"
+	}
+	text = {
+		trigger = {
+			tag = YUN
+			NOT = { 
+				OR = { 
+					is_puppet_of = PRC
+					is_puppet_of = XSM
+					is_puppet_of = CHI
+					is_puppet_of = GXC
+					is_puppet_of = MAN
+					is_puppet_of = SIK
+					is_puppet_of = SHX
+				}
+			}
+			is_puppet = yes
+		}
+		localization_key = "殖民地"
+	}
+	text = {
+		trigger = {
+			tag = GXC
+			NOT = { 
+				OR = { 
+					is_puppet_of = PRC
+					is_puppet_of = XSM
+					is_puppet_of = YUN
+					is_puppet_of = CHI
+					is_puppet_of = MAN
+					is_puppet_of = SIK
+					is_puppet_of = SHX
+				}
+			}
+			is_puppet = yes
+		}
+		localization_key = "殖民地"
+	}
+	text = {
+		trigger = {
+			tag = MAN
+			NOT = { 
+				OR = { 
+					is_puppet_of = PRC
+					is_puppet_of = XSM
+					is_puppet_of = YUN
+					is_puppet_of = GXC
+					is_puppet_of = CHI
+					is_puppet_of = SIK
+					is_puppet_of = SHX
+					is_puppet_of = JAP
+				}
+			}
+			is_puppet = yes
+		}
+		localization_key = "殖民地"
+	}
+	text = {
+		trigger = {
+			tag = SIK
+			NOT = { 
+				OR = { 
+					is_puppet_of = PRC
+					is_puppet_of = XSM
+					is_puppet_of = YUN
+					is_puppet_of = GXC
+					is_puppet_of = MAN
+					is_puppet_of = CHI
+					is_puppet_of = SHX
+				}
+			}
+			is_puppet = yes
+		}
+		localization_key = "殖民地"
+	}
+	text = {
+		trigger = {
+			tag = SHX
+			NOT = { 
+				OR = { 
+					is_puppet_of = PRC
+					is_puppet_of = XSM
+					is_puppet_of = YUN
+					is_puppet_of = GXC
+					is_puppet_of = MAN
+					is_puppet_of = SIK
+					is_puppet_of = CHI
+				}
+			}
+			is_puppet = yes
+		}
+		localization_key = "殖民地"
+	}
+	text = {
+		trigger = {
+			tag = MEN
+			NOT = { 
+				OR = { 
+					is_puppet_of = PRC
+					is_puppet_of = XSM
+					is_puppet_of = YUN
+					is_puppet_of = GXC
+					is_puppet_of = MAN
+					is_puppet_of = SIK
+					is_puppet_of = SHX
+					is_puppet_of = JAP
+				}
+			}
+			is_puppet = yes
+		}
+		localization_key = "殖民地"
+	}
+}

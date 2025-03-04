@@ -1,0 +1,55 @@
+economy_decisions = {
+	Manchuria_development = {
+
+		icon = jap_conquer_china
+
+		available = {
+			NOT = {
+				has_country_flag = manchuria_developed
+			}
+		}
+
+		visible = {
+			tag = MAN
+			NOT = {
+				has_country_flag = manchuria_developed
+			}
+		}
+
+		ai_will_do = {
+			factor = 500
+		}
+
+		days_remove = 360
+
+		fire_only_once = yes
+
+		remove_effect = {
+			set_country_flag = manchuria_developed
+			build_railway = {
+				path = { 3900 9905 3814 3881 11855 } #1840 12526 4770 4709
+			}
+			#Supply Hub in ReHe
+			610 = {
+				add_building_construction = {
+					type = supply_node
+					level = 1
+					province = 11855
+					instant_build = yes
+				}
+			}
+
+			build_railway = {
+				path = { 11855 3828 4514 3877 11903 12337 4561 } #1840 12526 4770 4709
+			}
+			715 = {
+				add_building_construction = {
+					type = supply_node
+					level = 1
+					province = 11903
+					instant_build = yes
+				}
+			}
+		}
+	}
+}

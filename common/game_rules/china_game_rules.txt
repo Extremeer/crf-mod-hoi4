@@ -1,0 +1,119 @@
+integrate_gxc_warlords_ai_behavior = {
+	name = "integrate_gxc_warlords_ai_behavior"
+	group = "RULE_GROUP_CR_INTEGRATE_CUSTOMISE_BEHAVIOR"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_DEFAULT"
+		desc = "RULE_OPTION_DEFAULT_AI_DESC"
+	}
+	option = {
+		name = WARLORD_GXC_ACCEPT_INTEGRATE
+		text = "WARLORD_GXC_ACCEPT_INTEGRATE"
+		desc = "WARLORD_ACCEPT_INTEGRATE_DESC"
+	}
+	option = {
+		name = WARLORD_GXC_REFUSE_INTEGRATE
+		text = "WARLORD_GXC_REFUSE_INTEGRATE"
+		desc = "WARLORD_REFUSE_INTEGRATE_DESC"
+	}
+}
+
+integrate_yun_warlords_ai_behavior = {
+	name = "integrate_yun_warlords_ai_behavior"
+	group = "RULE_GROUP_CR_INTEGRATE_CUSTOMISE_BEHAVIOR"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_DEFAULT"
+		desc = "RULE_OPTION_DEFAULT_AI_DESC"
+	}
+	option = {
+		name = WARLORD_YUN_ACCEPT_INTEGRATE
+		text = "WARLORD_YUN_ACCEPT_INTEGRATE"
+		desc = "WARLORD_ACCEPT_INTEGRATE_DESC"
+	}
+	option = {
+		name = WARLORD_YUN_REFUSE_INTEGRATE
+		text = "WARLORD_YUN_REFUSE_INTEGRATE"
+		desc = "WARLORD_REFUSE_INTEGRATE_DESC"
+	}
+}
+
+integrate_shx_warlords_ai_behavior = {
+	name = "integrate_shx_warlords_ai_behavior"
+	group = "RULE_GROUP_CR_INTEGRATE_CUSTOMISE_BEHAVIOR"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_DEFAULT"
+		desc = "RULE_OPTION_DEFAULT_AI_DESC"
+	}
+	option = {
+		name = WARLORD_SHX_ACCEPT_INTEGRATE
+		text = "WARLORD_SHX_ACCEPT_INTEGRATE"
+		desc = "WARLORD_ACCEPT_INTEGRATE_DESC"
+	}
+	option = {
+		name = WARLORD_SHX_REFUSE_INTEGRATE
+		text = "WARLORD_SHX_REFUSE_INTEGRATE"
+		desc = "WARLORD_REFUSE_INTEGRATE_DESC"
+	}
+}
+
+integrate_xsm_warlords_ai_behavior = {
+	name = "integrate_xsm_warlords_ai_behavior"
+	group = "RULE_GROUP_CR_INTEGRATE_CUSTOMISE_BEHAVIOR"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_DEFAULT"
+		desc = "RULE_OPTION_DEFAULT_AI_DESC"
+	}
+	option = {
+		name = WARLORD_XSM_ACCEPT_INTEGRATE
+		text = "WARLORD_XSM_ACCEPT_INTEGRATE"
+		desc = "WARLORD_ACCEPT_INTEGRATE_DESC"
+	}
+	option = {
+		name = WARLORD_XSM_REFUSE_INTEGRATE
+		text = "WARLORD_XSM_REFUSE_INTEGRATE"
+		desc = "WARLORD_REFUSE_INTEGRATE_DESC"
+	}
+}
+
+integrate_sik_warlords_ai_behavior = {
+	name = "integrate_sik_warlords_ai_behavior"
+	group = "RULE_GROUP_CR_INTEGRATE_CUSTOMISE_BEHAVIOR"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_DEFAULT"
+		desc = "RULE_OPTION_DEFAULT_AI_DESC"
+	}
+	option = {
+		name = WARLORD_SIK_ACCEPT_INTEGRATE
+		text = "WARLORD_SIK_ACCEPT_INTEGRATE"
+		desc = "WARLORD_ACCEPT_INTEGRATE_DESC"
+	}
+	option = {
+		name = WARLORD_SIK_REFUSE_INTEGRATE
+		text = "WARLORD_SIK_REFUSE_INTEGRATE"
+		desc = "WARLORD_REFUSE_INTEGRATE_DESC"
+	}
+}
+
+KMT_dominate_japan_ai_behavior = {
+	name = "KMT_dominate_japan_ai_behavior"
+	group = "RULE_GROUP_CR_KMT_DIPLOMACY_CUSTOMISE_BEHAVIOR"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_DEFAULT"
+		desc = "RULE_OPTION_DEFAULT_AI_DESC"
+	}
+	option = {
+		name = JAP_ACCEPT_KMTS_DOMINATE
+		text = "JAP_ACCEPT_KMTS_DOMINATE"
+		desc = "JAP_ACCEPT_KMTS_DOMINATE_DESC"
+	}
+	option = {
+		name = JAP_REFUSE_KMTS_DOMINATE
+		text = "JAP_REFUSE_KMTS_DOMINATE"
+		desc = "JAP_REFUSE_KMTS_DOMINATE_DESC"
+	}
+}

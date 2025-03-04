@@ -1,0 +1,9 @@
+﻿l_simp_chinese:
+ president_of_roc: "中华民国总统"
+ weiyuanzhang: "军事委员长"
+ chaser_of_sun_yat_sen_1: "孙文国父的追随者"
+ chaser_of_sun_yat_sen_2: "孙文国父的追随者"
+ chaser_of_sun_yat_sen_3: "孙文国父的追随者"
+ chaser_of_sun_yat_sen_4: "孙文国父的追随者"
+ chaser_of_sun_yat_sen_5: "孙文国父的追随者"
+ CHI_first_election_effects: "为§H胜选的领导人§!添加特质：\n§H中华民国总统§!：\n -每日顺从度增长：§G+0.05%§!\n -科研速度：§G+5.00%§!\n -党派支持度对稳定度修正：§G+15.00%§!"

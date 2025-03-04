@@ -1,0 +1,215 @@
+spriteTypes = {
+	corneredTileSpriteType = {
+		name = "GFX_tiled_plain_bg_red"
+		size= { x=192 y=192 }
+		textureFile = "gfx//interface//tiles//tiled_plain_bg_red.dds"
+		borderSize = { x=64 y=64 }
+		tilingCenter = yes
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
+	
+	spriteType = {
+		name = "GFX_CDL_flag"
+		texturefile = "gfx//texticons//CDL_flag.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_YCP_flag"
+		texturefile = "gfx//texticons//YCP_flag.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_CPC_flag"
+		texturefile = "gfx//texticons//CPC_flag.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_CDSP_flag"
+		texturefile = "gfx//texticons//CDSP_flag.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_KMT_flag"
+		texturefile = "gfx//texticons//KMT_flag.dds"
+		legacy_lazy_load = no
+	}
+
+
+	spriteType = {
+		name = "GFX_CHI_internal_situation"
+		texturefile = "gfx//texticons//CHI_internal_situation.dds"
+		legacy_lazy_load = no
+	}
+
+
+	spriteType = {
+		name = "GFX_KMT_texticon"
+		texturefile = "gfx//texticons//KMT_20x20.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_CDL_texticon"
+		texturefile = "gfx//texticons//CDL_20x20.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_YCP_texticon"
+		texturefile = "gfx//texticons//YCP_20x20.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_CDSP_texticon"
+		texturefile = "gfx//texticons//CDSP_20x20.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_CPC_texticon"
+		texturefile = "gfx//texticons//CPC_20x20.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_NIL_texticon"
+		texturefile = "gfx//texticons//NIL_20x20.dds"
+		legacy_lazy_load = no
+	}
+
+
+	spriteType = {
+		name = "GFX_YCP_emblem"
+		texturefile = "gfx//texticons//YCP_emblem.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_CDL_emblem"
+		texturefile = "gfx//texticons//CDL_emblem.dds"
+		legacy_lazy_load = no
+	}	
+	spriteType = {
+		name = "GFX_CDSP_emblem"
+		texturefile = "gfx//texticons//CDSP_emblem.dds"
+		legacy_lazy_load = no
+	}	
+	spriteType = {
+		name = "GFX_KMT_emblem"
+		texturefile = "gfx//texticons//KMT_emblem.dds"
+		legacy_lazy_load = no
+	}	
+	spriteType = {
+		name = "GFX_CPC_emblem"
+		texturefile = "gfx//texticons//CPC_emblem.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_NIL_emblem"
+		texturefile = "gfx//texticons//NIL_emblem.dds"
+		legacy_lazy_load = no
+	}
+
+
+	spriteType = {
+		name = "GFX_national_assembly_emblem"
+		texturefile = "gfx//texticons//national_assembly_emblem.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_national_assembly_emblem_ABOLISHED"
+		texturefile = "gfx//texticons//national_assembly_emblem_ABOLISHED.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_legislative_yuan_emblem"
+		texturefile = "gfx//texticons//legislative_yuan_emblem.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_control_yuan_emblem"
+		texturefile = "gfx//texticons//control_yuan_emblem.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_control_yuan_emblem_new"
+		texturefile = "gfx//texticons//control_yuan_emblem_new.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_control_yuan_emblem_DISSOLVED"
+		texturefile = "gfx//texticons//control_yuan_emblem_DISSOLVED.dds"
+		legacy_lazy_load = no
+	}
+
+
+	spriteType = {
+		name = "GFX_CHI_CDL_logo"
+		texturefile = "gfx/texticons/CHI_CDL_logo.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_CHI_KMT_logo"
+		texturefile = "gfx/texticons/CHI_KMT_logo.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_CHI_CDSP_logo"
+		texturefile = "gfx/texticons/CHI_CDSP_logo.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_CHI_YCP_logo"
+		texturefile = "gfx/texticons/CHI_YCP_logo.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_CHI_CPC_logo"
+		texturefile = "gfx/texticons/CHI_CPC_logo.dds"
+		legacy_lazy_load = no
+	}
+
+
+	spriteType = {
+		name = "GFX_CHI_normal_situation"
+		texturefile = "gfx/texticons/CHI_normal_situation.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_CHI_at_war_situation"
+		texturefile = "gfx/texticons/CHI_at_war_situation.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_CHI_riot_situation"
+		texturefile = "gfx/texticons/CHI_riot_situation.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_CHI_political_crisis_situation"
+		texturefile = "gfx/texticons/CHI_political_crisis_situation.dds"
+		legacy_lazy_load = no
+	}
+
+
+	spriteType = {
+		name = "GFX_CHI_parliament_party_icon"
+		texturefile = "gfx/texticons/CHI_parliament_party_icon.dds"
+		noOfFrames = 6 # number of parties you have in the gfx file
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_CHI_parliament_party_small_icon"
+		texturefile = "gfx/texticons/CHI_parliament_party_small_icon.dds"
+		noOfFrames = 6 # number of parties you have in the gfx file
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_CHI_government_30x30"
+		texturefile = "gfx/texticons/CHI_government_30x30.dds"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_Transparent"
+		texturefile = "gfx/texticons/CHI_Transparent.dds"
+		legacy_lazy_load = no
+	}
+}

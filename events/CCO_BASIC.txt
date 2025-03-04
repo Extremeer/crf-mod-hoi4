@@ -1,0 +1,162 @@
+
+add_namespace = cco
+
+country_event = { #autonomy_foreign
+	id = cco.17
+	title = cco.17.t
+	desc = cco.17.d
+	picture = GFX_report_event_chinese_officers
+	
+	mean_time_to_happen = {
+		days = 0
+	}
+
+	trigger = {
+		NOT = {
+			has_autonomy_state = colony_in_china
+		}
+		OR = {
+			tag = MAU
+			tag = HKG
+			tag = KCW
+		}
+		NOT = {
+			is_subject_of = CHI
+			is_subject_of = PRC
+			is_subject_of = MAN
+			is_subject_of = SHX
+			is_subject_of = SIK
+			is_subject_of = GXC
+			is_subject_of = YUN
+			is_subject_of = XSM
+		}	
+		is_puppet = yes	
+	}
+	
+	option = {
+		name = cco.17.a
+		OVERLORD = {
+			set_autonomy = {
+				target = ROOT
+				autonomy_state = colony_in_china
+			}
+		}
+	}
+}
+
+country_event = { #autonomy_hk_china
+	id = cco.18
+	title = cco.18.t
+	desc = cco.18.d
+	picture = GFX_report_event_chinese_officers
+	
+	mean_time_to_happen = {
+		days = 0
+	}
+
+	trigger = {
+		NOT = {
+			has_autonomy_state = sar_hk
+		}
+		tag = HKG
+		OR = {
+			is_subject_of = CHI
+			is_subject_of = PRC
+			is_subject_of = MAN
+			is_subject_of = SHX
+			is_subject_of = SIK
+			is_subject_of = GXC
+			is_subject_of = YUN
+			is_subject_of = XSM
+		}	
+		is_puppet = yes	
+	}
+	
+	option = {
+		name = cco.18.a
+		OVERLORD = {
+			set_autonomy = {
+				target = ROOT
+				autonomy_state = sar_hk
+			}
+		}
+	}
+}
+
+country_event = { #autonomy_mc_china
+	id = cco.19
+	title = cco.19.t
+	desc = cco.19.d
+	picture = GFX_report_event_chinese_officers
+	
+	mean_time_to_happen = {
+		days = 0
+	}
+
+	trigger = {
+		NOT = {
+			has_autonomy_state = sar_mc
+		}
+		tag = MAU
+		OR = {
+			is_subject_of = CHI
+			is_subject_of = PRC
+			is_subject_of = MAN
+			is_subject_of = SHX
+			is_subject_of = SIK
+			is_subject_of = GXC
+			is_subject_of = YUN
+			is_subject_of = XSM
+		}	
+		is_puppet = yes	
+	}
+	
+	option = {
+		name = cco.19.a
+		OVERLORD = {
+			set_autonomy = {
+				target = ROOT
+				autonomy_state = sar_mc
+			}
+		}
+	}
+}
+
+country_event = { #autonomy_kc_china
+	id = cco.20
+	title = cco.20.t
+	desc = cco.20.d
+	picture = GFX_report_event_chinese_officers
+	
+	mean_time_to_happen = {
+		days = 0
+	}
+
+	trigger = {
+		NOT = {
+			has_autonomy_state = sar_kc
+		}
+		tag = KCW
+		OR = {
+			is_subject_of = CHI
+			is_subject_of = PRC
+			is_subject_of = MAN
+			is_subject_of = SHX
+			is_subject_of = SIK
+			is_subject_of = GXC
+			is_subject_of = YUN
+			is_subject_of = XSM
+		}	
+		is_puppet = yes	
+	}
+	
+	option = {
+		name = cco.20.a
+		OVERLORD = {
+			set_autonomy = {
+				target = ROOT
+				autonomy_state = sar_kc
+			}
+		}
+	}
+}

@@ -1,0 +1,119 @@
+sicf_dec = {
+	SICF_FARMINE = {
+
+		icon = jap_conquer_china
+
+		allowed = {
+			tag = event_target:WTT_current_china_leader
+		}
+
+		available = {
+			has_global_flag = we_rain_win
+		}
+
+		activation = {
+			OR = {
+				has_idea = sicf_0
+				has_idea = sicf_1
+				has_idea = sicf_2
+				has_idea = sicf_3
+				has_idea = sicf_4
+				has_idea = sicf_5
+				has_idea = sicf_6
+				has_idea = sicf_7
+			}
+		}
+
+		fire_only_once = yes
+
+		is_good = no
+
+		days_mission_timeout = 400
+		
+		timeout_effect = {
+				add_stability = -0.05
+				add_war_support = -0.15
+		}
+	}
+	
+	SICF_HELP = {
+
+		icon = generic_political_discourse
+
+		days_remove = 10
+
+		cost = 10
+		
+		visible = {
+			tag = CHI
+			has_global_flag = foreign_help_me_sichuan
+			OR = {
+				has_idea = sicf_0
+				has_idea = sicf_1
+				has_idea = sicf_2
+				has_idea = sicf_3
+				has_idea = sicf_4
+				has_idea = sicf_5
+				has_idea = sicf_6
+				has_idea = sicf_7
+			}
+		}
+
+		available = {
+			NOT = { has_country_flag = SICF_HELPING }
+		}
+
+		target_trigger = {
+			FROM = {
+				exists = yes
+				OR = {
+					tag = USA
+					tag = SOV
+					tag = FRA
+					tag = ENG
+					tag = GER
+					tag = ITA
+					AND = {
+						is_ai = no
+						NOT = { 
+							tag = JAP
+							tag = PRC
+							tag = SIK
+							tag = YUN
+							tag = GXC
+							tag = MAN
+							tag = MEN
+							tag = SHX
+							tag = TIB
+							tag = CHI
+							tag = MON
+							tag = TAN
+							tag = XSM
+						}
+					}
+				}
+			}
+		}
+		
+		fire_only_once = yes
+
+		complete_effect = {
+			set_country_flag = SICF_HELPING
+		}
+		
+		remove_effect = {
+			hidden_effect = {
+				FROM = { country_event = { id = sicf.10 days = 1 } }
+			}
+			effect_tooltip = {
+				add_offsite_building = { type = industrial_complex level = 1 }
+			}
+			custom_effect_tooltip = we_win_if_they_accept_sichuan
+			clr_country_flag = SICF_HELPING
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+	}
+}

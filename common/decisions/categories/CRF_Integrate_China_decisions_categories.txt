@@ -1,0 +1,16 @@
+integrate_china = {
+	icon = GFX_kmt_logo
+	priority = 98
+	allowed = {
+			OR = {
+				tag = CHI
+				tag = PRC
+			}
+	}
+	visible = {
+			OR = {
+				tag = CHI
+				tag = PRC
+			}
+	}
+}

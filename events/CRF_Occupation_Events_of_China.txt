@@ -1,0 +1,1914 @@
+﻿
+add_namespace = chinaocc
+
+# The Fall of HsinKing (Other)
+news_event = {
+	id = chinaocc.1
+	title = chinaocc.1.t
+	desc = chinaocc.1.d
+	picture = GFX_manchukuo_palace
+	
+	major = yes
+	
+	trigger = {
+		OR = {
+			328 = { is_controlled_by = SOV }
+			328 = { is_controlled_by = USA }
+			328 = { is_controlled_by = ENG }
+			328 = { is_controlled_by = FRA }
+		}
+		328 = { is_owned_by = MAN }
+		OR = {
+			MAN = { has_war_with = SOV }
+			MAN = { has_war_with = USA }
+			MAN = { has_war_with = ENG }
+			MAN = { has_war_with = FRA }
+		}
+		NOT = { has_global_flag = fall_of_hsinking_other }
+	}
+	
+	immediate = {
+			set_global_flag = fall_of_hsinking_other
+	}
+	
+	mean_time_to_happen = {
+		days = 2
+	}
+	
+	option = {
+		name = chinaocc.1.a
+		trigger = {
+			NOT = {
+				tag = PRC
+				tag = MAN
+				tag = XSM
+				tag = SHX
+				tag = SIK
+				tag = GXC
+				tag = YUN
+				tag = JAP	
+				tag = CHI			
+			}
+		}
+	}
+	option = {
+		name = chinaocc.1.b
+		trigger = { 
+			OR = {
+				tag = PRC
+				tag = XSM
+				tag = SHX
+				tag = SIK
+				tag = GXC
+				tag = YUN
+				tag = CHI
+			}
+ 		}
+	}
+	option = {
+		name = chinaocc.1.c
+		trigger = { 			
+			OR = {
+				tag = MAN
+				tag = JAP
+			}
+		}
+	}
+}
+
+
+# The Fall of HsinKing (China)
+news_event = {
+	id = chinaocc.2
+	title = chinaocc.2.t
+	desc = chinaocc.2.d
+	picture = GFX_manchukuo_palace
+	
+	major = yes
+	
+	trigger = {
+		OR = {
+			328 = { is_controlled_by = PRC }
+			328 = { is_controlled_by = SIK }
+			328 = { is_controlled_by = YUN }
+			328 = { is_controlled_by = GXC }
+			328 = { is_controlled_by = SHX }
+			328 = { is_controlled_by = XSM }
+			328 = { is_controlled_by = CHI }
+		}
+		328 = { is_owned_by = MAN }
+		OR = {
+			MAN = { has_war_with = PRC }
+			MAN = { has_war_with = SIK }
+			MAN = { has_war_with = YUN }
+			MAN = { has_war_with = GXC }
+			MAN = { has_war_with = SHX }
+			MAN = { has_war_with = XSM }
+			MAN = { has_war_with = CHI }
+		}
+		NOT = { has_global_flag = fall_of_hsinking_chi }
+	}
+	
+	immediate = {
+			set_global_flag = fall_of_hsinking_chi
+	}
+	
+	mean_time_to_happen = {
+		days = 2
+	}
+	
+	option = {
+		name = chinaocc.2.a
+		trigger = {
+			NOT = {
+				tag = PRC
+				tag = MAN
+				tag = XSM
+				tag = SHX
+				tag = SIK
+				tag = GXC
+				tag = YUN
+				tag = JAP	
+				tag = CHI			
+			}
+		}
+	}
+	option = {
+		name = chinaocc.2.b
+		trigger = { 
+			OR = {
+				tag = PRC
+				tag = XSM
+				tag = SHX
+				tag = SIK
+				tag = GXC
+				tag = YUN
+				tag = CHI
+			}
+ 		}
+	}
+	option = {
+		name = chinaocc.2.c
+		trigger = { 			
+			OR = {
+				tag = MAN
+				tag = JAP
+			}
+		}
+	}
+}
+
+# The Fall of Fengtian (China)
+news_event = {
+	id = chinaocc.3
+	title = chinaocc.3.t
+	desc = chinaocc.3.d
+	picture = GFX_puyi_caught
+	
+	major = yes
+	
+	trigger = {
+		OR = {
+			716 = { is_controlled_by = PRC }
+			716 = { is_controlled_by = SIK }
+			716 = { is_controlled_by = YUN }
+			716 = { is_controlled_by = GXC }
+			716 = { is_controlled_by = SHX }
+			716 = { is_controlled_by = XSM }
+			716 = { is_controlled_by = CHI }
+		}
+		716 = { is_owned_by = MAN }
+		OR = {
+			MAN = { has_war_with = PRC }
+			MAN = { has_war_with = SIK }
+			MAN = { has_war_with = YUN }
+			MAN = { has_war_with = GXC }
+			MAN = { has_war_with = SHX }
+			MAN = { has_war_with = XSM }
+			MAN = { has_war_with = CHI }
+		}
+		NOT = { has_global_flag = fall_of_fengtian_chi }
+	}
+	
+	immediate = {
+			set_global_flag = fall_of_fengtian_chi
+	}
+	
+	mean_time_to_happen = {
+		days = 2
+	}
+	
+	option = {
+		name = chinaocc.3.a
+		trigger = {
+			NOT = {
+				tag = PRC
+				tag = MAN
+				tag = XSM
+				tag = SHX
+				tag = SIK
+				tag = GXC
+				tag = YUN
+				tag = JAP	
+				tag = CHI			
+			}
+		}
+	}
+	option = {
+		name = chinaocc.3.b
+		trigger = { 
+			OR = {
+				tag = PRC
+				tag = XSM
+				tag = SHX
+				tag = SIK
+				tag = GXC
+				tag = YUN
+				tag = CHI
+			}
+ 		}
+	}
+	option = {
+		name = chinaocc.3.c
+		trigger = { 			
+			OR = {
+				tag = MAN
+				tag = JAP
+			}
+		}
+	}
+}
+
+# The Fall of Tokyo (China)
+news_event = {
+	id = chinaocc.4
+	title = chinaocc.4.t
+	desc = chinaocc.4.d
+	picture = GFX_china_army
+	
+	major = yes
+	
+	trigger = {
+		OR = {
+			282 = { is_controlled_by = PRC }
+			282 = { is_controlled_by = SIK }
+			282 = { is_controlled_by = YUN }
+			282 = { is_controlled_by = GXC }
+			282 = { is_controlled_by = SHX }
+			282 = { is_controlled_by = XSM }
+			282 = { is_controlled_by = MAN }
+		}
+		282 = { is_owned_by = JAP }
+		OR = {
+			JAP = { has_war_with = PRC }
+			JAP = { has_war_with = SIK }
+			JAP = { has_war_with = YUN }
+			JAP = { has_war_with = GXC }
+			JAP = { has_war_with = SHX }
+			JAP = { has_war_with = XSM }
+			JAP = { has_war_with = MAN }
+		}
+		NOT = { has_global_flag = fall_of_tokyo_chi }
+	}
+	
+	immediate = {
+			set_global_flag = fall_of_tokyo_chi
+	}
+	
+	mean_time_to_happen = {
+		days = 2
+	}
+	
+	option = {
+		name = chinaocc.4.a
+		trigger = {
+			NOT = {
+				tag = PRC
+				tag = JAP
+				tag = XSM
+				tag = SHX
+				tag = SIK
+				tag = GXC
+				tag = YUN
+				tag = CHI
+			}
+		}
+	}
+	option = {
+		name = chinaocc.4.b
+		trigger = { 
+			OR = {
+				tag = PRC
+				tag = XSM
+				tag = SHX
+				tag = SIK
+				tag = GXC
+				tag = YUN
+				tag = CHI
+			}
+ 		}
+	}
+	option = {
+		name = chinaocc.4.c
+		trigger = { tag = JAP }
+	}
+}
+
+# The Fall of Paris (China)
+news_event = {
+	id = chinaocc.5
+	title = chinaocc.5.t
+	desc = chinaocc.5.d
+	picture = GFX_china_army_to_paris_news
+	
+	major = yes
+	
+	trigger = {
+		OR = {
+			16 = { is_controlled_by = CHI }
+			16 = { is_controlled_by = PRC }
+			16 = { is_controlled_by = SHX }
+			16 = { is_controlled_by = XSM }
+			16 = { is_controlled_by = YUN }
+			16 = { is_controlled_by = GXC }
+			16 = { is_controlled_by = SIK }
+		}
+		16 = { is_owned_by = FRA }
+		OR = {
+			FRA = { has_war_with = CHI }
+			FRA = { has_war_with = PRC }
+			FRA = { has_war_with = SHX }
+			FRA = { has_war_with = XSM }
+			FRA = { has_war_with = YUN }
+			FRA = { has_war_with = GXC }
+			FRA = { has_war_with = SIK }
+		}
+		NOT = { has_global_flag = fall_of_paris_chi }
+	}
+	
+	immediate = {
+		set_global_flag = fall_of_paris_chi
+	}
+	
+	mean_time_to_happen = {
+		days = 2
+	}
+	
+	option = {
+		name = chinaocc.5.a
+		trigger = {
+			NOT = {
+				TAG = CHI
+				TAG = PRC
+				TAG = XSM
+				TAG = YUN
+				TAG = GXC
+				TAG = SIK
+				TAG = SHX
+				TAG = FRA
+			}
+		}
+	}
+	option = {
+		name = chinaocc.5.b
+		trigger = { 
+			OR = {
+				tag = PRC
+				tag = XSM
+				tag = SHX
+				tag = SIK
+				tag = GXC
+				tag = YUN
+				tag = CHI
+			}
+		}
+	}
+	option = {
+		name = chinaocc.5.c
+		trigger = { TAG = FRA }
+	}
+}
+
+# The Fall of London (China)
+news_event = {
+	id = chinaocc.6
+	title = chinaocc.6.t
+	desc = chinaocc.6.d
+	picture = GFX_china_army_to_london_news
+	
+	major = yes
+	
+	trigger = {
+		OR = {
+			126 = { is_controlled_by = CHI }
+			126 = { is_controlled_by = PRC }
+			126 = { is_controlled_by = SHX }
+			126 = { is_controlled_by = XSM }
+			126 = { is_controlled_by = YUN }
+			126 = { is_controlled_by = GXC }
+			126 = { is_controlled_by = SIK }
+		}
+		126 = { is_owned_by = ENG }
+		OR = {
+			ENG = { has_war_with = CHI }
+			ENG = { has_war_with = PRC }
+			ENG = { has_war_with = SHX }
+			ENG = { has_war_with = XSM }
+			ENG = { has_war_with = YUN }
+			ENG = { has_war_with = GXC }
+			ENG = { has_war_with = SIK }
+		}
+		NOT = { has_global_flag = fall_of_london_chi }
+	}
+	
+	immediate = {
+		set_global_flag = fall_of_london_chi
+	}
+	
+	mean_time_to_happen = {
+		days = 2
+	}
+	
+	option = {
+		name = chinaocc.6.a
+		trigger = {
+			NOT = {
+				TAG = CHI
+				TAG = PRC
+				TAG = XSM
+				TAG = YUN
+				TAG = GXC
+				TAG = SIK
+				TAG = SHX
+				TAG = ENG
+			}
+		}
+	}
+	option = {
+		name = chinaocc.6.b
+		trigger = { 
+			OR = {
+				tag = PRC
+				tag = XSM
+				tag = SHX
+				tag = SIK
+				tag = GXC
+				tag = YUN
+				tag = CHI
+			}
+		}
+	}
+	option = {
+		name = chinaocc.6.c
+		trigger = { TAG = ENG }
+	}
+}
+
+# The Fall of Leningrad (China)
+news_event = {
+	id = chinaocc.7
+	title = chinaocc.7.t
+	desc = chinaocc.7.d
+	picture = GFX_china_army_to_wdc_news
+	
+	major = yes
+	
+	trigger = {
+		OR = {
+			195 = { is_controlled_by = CHI }
+			195 = { is_controlled_by = PRC }
+			195 = { is_controlled_by = SHX }
+			195 = { is_controlled_by = XSM }
+			195 = { is_controlled_by = YUN }
+			195 = { is_controlled_by = GXC }
+			195 = { is_controlled_by = SIK }
+		}
+		195 = { is_owned_by = SOV }
+		OR = {
+			SOV = { has_war_with = CHI }
+			SOV = { has_war_with = PRC }
+			SOV = { has_war_with = SHX }
+			SOV = { has_war_with = XSM }
+			SOV = { has_war_with = YUN }
+			SOV = { has_war_with = GXC }
+			SOV = { has_war_with = SIK }
+		}
+		NOT = { has_global_flag = fall_of_leningrad_chi }
+	}
+	
+	immediate = {
+		set_global_flag = fall_of_leningrad_chi
+	}
+	
+	mean_time_to_happen = {
+		days = 2
+	}
+	
+	option = {
+		name = chinaocc.7.a
+		trigger = {
+			NOT = {
+				TAG = CHI
+				TAG = PRC
+				TAG = XSM
+				TAG = YUN
+				TAG = GXC
+				TAG = SIK
+				TAG = SHX
+				TAG = SOV
+			}
+		}
+	}
+	option = {
+		name = chinaocc.7.b
+		trigger = { 
+			OR = {
+				tag = PRC
+				tag = XSM
+				tag = SHX
+				tag = SIK
+				tag = GXC
+				tag = YUN
+				tag = CHI
+			}
+		}
+	}
+	option = {
+		name = chinaocc.7.c
+		trigger = { TAG = SOV }
+	}
+}
+
+# The Fall of Kiev (China)
+news_event = {
+	id = chinaocc.8
+	title = chinaocc.8.t
+	desc = chinaocc.8.d
+	picture = GFX_china_china_army_to_kiev_news
+	
+	major = yes
+	
+	trigger = {
+		OR = {
+			202 = { is_controlled_by = CHI }
+			202 = { is_controlled_by = PRC }
+			202 = { is_controlled_by = SHX }
+			202 = { is_controlled_by = XSM }
+			202 = { is_controlled_by = YUN }
+			202 = { is_controlled_by = GXC }
+			202 = { is_controlled_by = SIK }
+		}
+		202 = { is_owned_by = SOV }
+		OR = {
+			SOV = { has_war_with = CHI }
+			SOV = { has_war_with = PRC }
+			SOV = { has_war_with = SHX }
+			SOV = { has_war_with = XSM }
+			SOV = { has_war_with = YUN }
+			SOV = { has_war_with = GXC }
+			SOV = { has_war_with = SIK }
+		}
+		NOT = { has_global_flag = fall_of_kiev_chi }
+	}
+	
+	immediate = {
+		set_global_flag = fall_of_kiev_chi
+	}
+	
+	mean_time_to_happen = {
+		days = 2
+	}
+	
+	option = {
+		name = chinaocc.8.a
+		trigger = {
+			NOT = {
+				TAG = CHI
+				TAG = PRC
+				TAG = XSM
+				TAG = YUN
+				TAG = GXC
+				TAG = SIK
+				TAG = SHX
+				TAG = SOV
+			}
+		}
+	}
+	option = {
+		name = chinaocc.8.b
+		trigger = { 
+			OR = {
+				tag = PRC
+				tag = XSM
+				tag = SHX
+				tag = SIK
+				tag = GXC
+				tag = YUN
+				tag = CHI
+			}
+		}
+	}
+	option = {
+		name = chinaocc.8.c
+		trigger = { TAG = SOV }
+	}
+}
+
+# The Fall of Stalingrad (China)
+news_event = {
+	id = chinaocc.9
+	title = chinaocc.9.t
+	desc = chinaocc.9.d
+	picture = GFX_china_army_to_wdc_news
+	
+	major = yes
+	
+	trigger = {
+		OR = {
+			217 = { is_controlled_by = CHI }
+			217 = { is_controlled_by = PRC }
+			217 = { is_controlled_by = SHX }
+			217 = { is_controlled_by = XSM }
+			217 = { is_controlled_by = YUN }
+			217 = { is_controlled_by = GXC }
+			217 = { is_controlled_by = SIK }
+		}
+		217 = { is_owned_by = SOV }
+		OR = {
+			SOV = { has_war_with = CHI }
+			SOV = { has_war_with = PRC }
+			SOV = { has_war_with = SHX }
+			SOV = { has_war_with = XSM }
+			SOV = { has_war_with = YUN }
+			SOV = { has_war_with = GXC }
+			SOV = { has_war_with = SIK }
+		}
+		NOT = { has_global_flag = fall_of_stalingrad_chi }
+	}
+	
+	immediate = {
+		set_global_flag = fall_of_stalingrad_chi
+	}
+	
+	mean_time_to_happen = {
+		days = 2
+	}
+	
+	option = {
+		name = chinaocc.9.a
+		trigger = {
+			NOT = {
+				TAG = CHI
+				TAG = PRC
+				TAG = XSM
+				TAG = YUN
+				TAG = GXC
+				TAG = SIK
+				TAG = SHX
+				TAG = SOV
+			}
+		}
+	}
+	option = {
+		name = chinaocc.9.b
+		trigger = { 
+			OR = {
+				tag = PRC
+				tag = XSM
+				tag = SHX
+				tag = SIK
+				tag = GXC
+				tag = YUN
+				tag = CHI
+			}
+		}
+	}
+	option = {
+		name = chinaocc.9.c
+		trigger = { TAG = SOV }
+	}
+}
+
+# The Fall of Moscow (China)
+news_event = {
+	id = chinaocc.10
+	title = chinaocc.10.t
+	desc = chinaocc.10.d
+	picture = GFX_china_army_to_moscow_news
+	
+	major = yes
+	
+	trigger = {
+		OR = {
+			219 = { is_controlled_by = CHI }
+			219 = { is_controlled_by = PRC }
+			219 = { is_controlled_by = SHX }
+			219 = { is_controlled_by = XSM }
+			219 = { is_controlled_by = YUN }
+			219 = { is_controlled_by = GXC }
+			219 = { is_controlled_by = SIK }
+		}
+		219 = { is_owned_by = SOV }
+		OR = {
+			SOV = { has_war_with = CHI }
+			SOV = { has_war_with = PRC }
+			SOV = { has_war_with = SHX }
+			SOV = { has_war_with = XSM }
+			SOV = { has_war_with = YUN }
+			SOV = { has_war_with = GXC }
+			SOV = { has_war_with = SIK }
+		}
+		NOT = { has_global_flag = fall_of_moscow_chi }
+	}
+	
+	immediate = {
+		set_global_flag = fall_of_moscow_chi
+	}
+	
+	mean_time_to_happen = {
+		days = 2
+	}
+	
+	option = {
+		name = chinaocc.10.a
+		trigger = {
+			NOT = {
+				TAG = CHI
+				TAG = PRC
+				TAG = XSM
+				TAG = YUN
+				TAG = GXC
+				TAG = SIK
+				TAG = SHX
+				TAG = SOV
+			}
+		}
+	}
+	option = {
+		name = chinaocc.10.b
+		trigger = { 
+			OR = {
+				tag = PRC
+				tag = XSM
+				tag = SHX
+				tag = SIK
+				tag = GXC
+				tag = YUN
+				tag = CHI
+			}
+		}
+	}
+	option = {
+		name = chinaocc.10.c
+		trigger = { TAG = SOV }
+	}
+}
+
+# The Fall of Sevastopol (China)
+news_event = {
+	id = chinaocc.11
+	title = chinaocc.11.t
+	desc = chinaocc.11.d
+	picture = GFX_china_army
+	
+	major = yes
+	
+	trigger = {
+		OR = {
+			137 = { is_controlled_by = CHI }
+			137 = { is_controlled_by = PRC }
+			137 = { is_controlled_by = SHX }
+			137 = { is_controlled_by = XSM }
+			137 = { is_controlled_by = YUN }
+			137 = { is_controlled_by = GXC }
+			137 = { is_controlled_by = SIK }
+		}
+		137 = { is_owned_by = SOV }
+		OR = {
+			SOV = { has_war_with = CHI }
+			SOV = { has_war_with = PRC }
+			SOV = { has_war_with = SHX }
+			SOV = { has_war_with = XSM }
+			SOV = { has_war_with = YUN }
+			SOV = { has_war_with = GXC }
+			SOV = { has_war_with = SIK }
+		}
+		NOT = { has_global_flag = fall_of_sevastopol_chi }
+	}
+	
+	immediate = {
+		set_global_flag = fall_of_sevastopol_chi
+	}
+	
+	mean_time_to_happen = {
+		days = 2
+	}
+	
+	option = {
+		name = chinaocc.11.a
+		trigger = {
+			NOT = {
+				TAG = CHI
+				TAG = PRC
+				TAG = XSM
+				TAG = YUN
+				TAG = GXC
+				TAG = SIK
+				TAG = SHX
+				TAG = SOV
+			}
+		}
+	}
+	option = {
+		name = chinaocc.11.b
+		trigger = { 
+			OR = {
+				tag = PRC
+				tag = XSM
+				tag = SHX
+				tag = SIK
+				tag = GXC
+				tag = YUN
+				tag = CHI
+			}
+		}
+	}
+	option = {
+		name = chinaocc.11.c
+		trigger = { TAG = SOV }
+	}
+}
+
+# The Fall of Baku (China)
+news_event = {
+	id = chinaocc.12
+	title = chinaocc.12.t
+	desc = chinaocc.12.d
+	picture = GFX_china_army_to_cairo_news
+	
+	major = yes
+	
+	trigger = {
+		OR = {
+			229 = { is_controlled_by = CHI }
+			229 = { is_controlled_by = PRC }
+			229 = { is_controlled_by = SHX }
+			229 = { is_controlled_by = XSM }
+			229 = { is_controlled_by = YUN }
+			229 = { is_controlled_by = GXC }
+			229 = { is_controlled_by = SIK }
+		}
+		229 = { is_owned_by = SOV }
+		OR = {
+			SOV = { has_war_with = CHI }
+			SOV = { has_war_with = PRC }
+			SOV = { has_war_with = SHX }
+			SOV = { has_war_with = XSM }
+			SOV = { has_war_with = YUN }
+			SOV = { has_war_with = GXC }
+			SOV = { has_war_with = SIK }
+		}
+		NOT = { has_global_flag = fall_of_baku_chi }
+	}
+	
+	immediate = {
+		set_global_flag = fall_of_baku_chi
+	}
+	
+	mean_time_to_happen = {
+		days = 2
+	}
+	
+	option = {
+		name = chinaocc.12.a
+		trigger = {
+			NOT = {
+				TAG = CHI
+				TAG = PRC
+				TAG = XSM
+				TAG = YUN
+				TAG = GXC
+				TAG = SIK
+				TAG = SHX
+				TAG = SOV
+			}
+		}
+	}
+	option = {
+		name = chinaocc.12.b
+		trigger = { 
+			OR = {
+				tag = PRC
+				tag = XSM
+				tag = SHX
+				tag = SIK
+				tag = GXC
+				tag = YUN
+				tag = CHI
+			}
+		}
+	}
+	option = {
+		name = chinaocc.12.c
+		trigger = { TAG = SOV }
+	}
+}
+
+# The Fall of Cairo (China)
+news_event = {
+	id = chinaocc.13
+	title = chinaocc.13.t
+	desc = chinaocc.13.d
+	picture = GFX_china_army_to_cairo_news
+	
+	major = yes
+	
+	trigger = {
+		OR = {
+			446 = { is_controlled_by = CHI }
+			446 = { is_controlled_by = PRC }
+			446 = { is_controlled_by = SHX }
+			446 = { is_controlled_by = XSM }
+			446 = { is_controlled_by = YUN }
+			446 = { is_controlled_by = GXC }
+			446 = { is_controlled_by = SIK }
+		}
+		446 = { is_owned_by = ENG }
+		OR = {
+			ENG = { has_war_with = CHI }
+			ENG = { has_war_with = PRC }
+			ENG = { has_war_with = SHX }
+			ENG = { has_war_with = XSM }
+			ENG = { has_war_with = YUN }
+			ENG = { has_war_with = GXC }
+			ENG = { has_war_with = SIK }
+		}
+		NOT = { has_global_flag = fall_of_cairo_chi }
+	}
+	
+	immediate = {
+		set_global_flag = fall_of_cairo_chi
+	}
+	
+	mean_time_to_happen = {
+		days = 2
+	}
+	
+	option = {
+		name = chinaocc.13.a
+		trigger = {
+			NOT = {
+				TAG = CHI
+				TAG = PRC
+				TAG = XSM
+				TAG = YUN
+				TAG = GXC
+				TAG = SIK
+				TAG = SHX
+				TAG = ENG
+			}
+		}
+	}
+	option = {
+		name = chinaocc.13.b
+		trigger = { 
+			OR = {
+				tag = PRC
+				tag = XSM
+				tag = SHX
+				tag = SIK
+				tag = GXC
+				tag = YUN
+				tag = CHI
+			}
+		}
+	}
+	option = {
+		name = chinaocc.13.c
+		trigger = { TAG = ENG }
+	}
+}
+
+# The Fall of Washington (China)
+news_event = {
+	id = chinaocc.14
+	title = chinaocc.14.t
+	desc = chinaocc.14.d
+	picture = GFX_china_army_to_wdc_news
+	
+	major = yes
+	
+	trigger = {
+		OR = {
+			361 = { is_controlled_by = CHI }
+			361 = { is_controlled_by = PRC }
+			361 = { is_controlled_by = SHX }
+			361 = { is_controlled_by = XSM }
+			361 = { is_controlled_by = YUN }
+			361 = { is_controlled_by = GXC }
+			361 = { is_controlled_by = SIK }
+		}
+		361 = { is_owned_by = USA }
+		OR = {
+			USA = { has_war_with = CHI }
+			USA = { has_war_with = PRC }
+			USA = { has_war_with = SHX }
+			USA = { has_war_with = XSM }
+			USA = { has_war_with = YUN }
+			USA = { has_war_with = GXC }
+			USA = { has_war_with = SIK }
+		}
+		NOT = { has_global_flag = fall_of_washington_chi }
+	}
+	
+	immediate = {
+		set_global_flag = fall_of_washington_chi
+	}
+	
+	mean_time_to_happen = {
+		days = 2
+	}
+	
+	option = {
+		name = chinaocc.14.a
+		trigger = {
+			NOT = {
+				TAG = CHI
+				TAG = PRC
+				TAG = XSM
+				TAG = YUN
+				TAG = GXC
+				TAG = SIK
+				TAG = SHX
+				TAG = USA
+			}
+		}
+	}
+	option = {
+		name = chinaocc.14.b
+		trigger = { 
+			OR = {
+				tag = PRC
+				tag = XSM
+				tag = SHX
+				tag = SIK
+				tag = GXC
+				tag = YUN
+				tag = CHI
+			}
+		}
+	}
+	option = {
+		name = chinaocc.14.c
+		trigger = { TAG = USA }
+	}
+}
+
+# The Fall of New York (China)
+news_event = {
+	id = chinaocc.15
+	title = chinaocc.15.t
+	desc = chinaocc.15.d
+	picture = GFX_china_army_to_newyork_news
+	
+	major = yes
+	
+	trigger = {
+		OR = {
+			358 = { is_controlled_by = CHI }
+			358 = { is_controlled_by = PRC }
+			358 = { is_controlled_by = SHX }
+			358 = { is_controlled_by = XSM }
+			358 = { is_controlled_by = YUN }
+			358 = { is_controlled_by = GXC }
+			358 = { is_controlled_by = SIK }
+		}
+		358 = { is_owned_by = USA }
+		OR = {
+			USA = { has_war_with = CHI }
+			USA = { has_war_with = PRC }
+			USA = { has_war_with = SHX }
+			USA = { has_war_with = XSM }
+			USA = { has_war_with = YUN }
+			USA = { has_war_with = GXC }
+			USA = { has_war_with = SIK }
+		}
+		NOT = { has_global_flag = fall_of_new_york_chi }
+	}
+	
+	immediate = {
+		set_global_flag = fall_of_new_york_chi
+	}
+	
+	mean_time_to_happen = {
+		days = 2
+	}
+	
+	option = {
+		name = chinaocc.15.a
+		trigger = {
+			NOT = {
+				TAG = CHI
+				TAG = PRC
+				TAG = XSM
+				TAG = YUN
+				TAG = GXC
+				TAG = SIK
+				TAG = SHX
+				TAG = USA
+			}
+		}
+	}
+	option = {
+		name = chinaocc.15.b
+		trigger = { 
+			OR = {
+				tag = PRC
+				tag = XSM
+				tag = SHX
+				tag = SIK
+				tag = GXC
+				tag = YUN
+				tag = CHI
+			}
+		}
+	}
+	option = {
+		name = chinaocc.15.c
+		trigger = { TAG = USA }
+	}
+}
+
+# The Fall of Siongapore (China)
+news_event = {
+	id = chinaocc.16
+	title = chinaocc.16.t
+	desc = chinaocc.16.d
+	picture = GFX_china_army_to_sinapore_news
+	
+	major = yes
+	
+	trigger = {
+		OR = {
+			336 = { is_controlled_by = CHI }
+			336 = { is_controlled_by = PRC }
+			336 = { is_controlled_by = SHX }
+			336 = { is_controlled_by = XSM }
+			336 = { is_controlled_by = YUN }
+			336 = { is_controlled_by = GXC }
+			336 = { is_controlled_by = SIK }
+		}
+		336 = { is_owned_by = ENG }
+		OR = {
+			ENG = { has_war_with = CHI }
+			ENG = { has_war_with = PRC }
+			ENG = { has_war_with = SHX }
+			ENG = { has_war_with = XSM }
+			ENG = { has_war_with = YUN }
+			ENG = { has_war_with = GXC }
+			ENG = { has_war_with = SIK }
+		}
+		NOT = { has_global_flag = fall_of_singapore_chi }
+	}
+	
+	immediate = {
+		set_global_flag = fall_of_singapore_chi
+	}
+	
+	mean_time_to_happen = {
+		days = 2
+	}
+	
+	option = {
+		name = chinaocc.16.a
+		trigger = {
+			NOT = {
+				TAG = CHI
+				TAG = PRC
+				TAG = XSM
+				TAG = YUN
+				TAG = GXC
+				TAG = SIK
+				TAG = SHX
+				TAG = ENG
+			}
+		}
+	}
+	option = {
+		name = chinaocc.16.b
+		trigger = { 
+			OR = {
+				tag = PRC
+				tag = XSM
+				tag = SHX
+				tag = SIK
+				tag = GXC
+				tag = YUN
+				tag = CHI
+			}
+		}
+	}
+	option = {
+		name = chinaocc.16.c
+		trigger = { TAG = ENG }
+	}
+}
+
+# The Fall of L.A (China)
+news_event = {
+	id = chinaocc.17
+	title = chinaocc.17.t
+	desc = chinaocc.17.d
+	picture = GFX_china_army_to_wdc_news
+	
+	major = yes
+	
+	trigger = {
+		OR = {
+			378 = { is_controlled_by = CHI }
+			378 = { is_controlled_by = PRC }
+			378 = { is_controlled_by = SHX }
+			378 = { is_controlled_by = XSM }
+			378 = { is_controlled_by = YUN }
+			378 = { is_controlled_by = GXC }
+			378 = { is_controlled_by = SIK }
+		}
+		378 = { is_owned_by = USA }
+		OR = {
+			USA = { has_war_with = CHI }
+			USA = { has_war_with = PRC }
+			USA = { has_war_with = SHX }
+			USA = { has_war_with = XSM }
+			USA = { has_war_with = YUN }
+			USA = { has_war_with = GXC }
+			USA = { has_war_with = SIK }
+		}
+		NOT = { has_global_flag = fall_of_la_chi }
+	}
+	
+	immediate = {
+		set_global_flag = fall_of_la_chi
+	}
+	
+	mean_time_to_happen = {
+		days = 2
+	}
+	
+	option = {
+		name = chinaocc.17.a
+		trigger = {
+			NOT = {
+				TAG = CHI
+				TAG = PRC
+				TAG = XSM
+				TAG = YUN
+				TAG = GXC
+				TAG = SIK
+				TAG = SHX
+				TAG = USA
+			}
+		}
+	}
+	option = {
+		name = chinaocc.17.b
+		trigger = { 
+			OR = {
+				tag = PRC
+				tag = XSM
+				tag = SHX
+				tag = SIK
+				tag = GXC
+				tag = YUN
+				tag = CHI
+			}
+		}
+	}
+	option = {
+		name = chinaocc.17.c
+		trigger = { TAG = USA }
+	}
+}
+
+# The Fall of Vladivostok (China)
+news_event = {
+	id = chinaocc.18
+	title = chinaocc.18.t
+	desc = chinaocc.18.d
+	picture = GFX_china_army_to_vladivostok_news
+	
+	major = yes
+	
+	trigger = {
+		OR = {
+			408 = { is_controlled_by = CHI }
+			408 = { is_controlled_by = PRC }
+			408 = { is_controlled_by = SHX }
+			408 = { is_controlled_by = XSM }
+			408 = { is_controlled_by = YUN }
+			408 = { is_controlled_by = GXC }
+			408 = { is_controlled_by = SIK }
+		}
+		408 = { is_owned_by = SOV }
+		OR = {
+			SOV = { has_war_with = CHI }
+			SOV = { has_war_with = PRC }
+			SOV = { has_war_with = SHX }
+			SOV = { has_war_with = XSM }
+			SOV = { has_war_with = YUN }
+			SOV = { has_war_with = GXC }
+			SOV = { has_war_with = SIK }
+		}
+		NOT = { has_global_flag = fall_of_vladivostok_chi }
+	}
+	
+	immediate = {
+		set_global_flag = fall_of_vladivostok_chi
+	}
+	
+	mean_time_to_happen = {
+		days = 2
+	}
+	
+	option = {
+		name = chinaocc.18.a
+		trigger = {
+			NOT = {
+				TAG = CHI
+				TAG = PRC
+				TAG = XSM
+				TAG = YUN
+				TAG = GXC
+				TAG = SIK
+				TAG = SHX
+				TAG = SOV
+			}
+		}
+	}
+	option = {
+		name = chinaocc.18.b
+		trigger = { 
+			OR = {
+				tag = PRC
+				tag = XSM
+				tag = SHX
+				tag = SIK
+				tag = GXC
+				tag = YUN
+				tag = CHI
+			}
+		}
+	}
+	option = {
+		name = chinaocc.18.c
+		trigger = { TAG = SOV }
+	}
+}
+
+# The Fall of Delhi (China)
+news_event = {
+	id = chinaocc.19
+	title = chinaocc.19.t
+	desc = chinaocc.19.d
+	picture = GFX_china_army
+	
+	major = yes
+	
+	trigger = {
+		OR = {
+			439 = { is_controlled_by = CHI }
+			439 = { is_controlled_by = PRC }
+			439 = { is_controlled_by = SHX }
+			439 = { is_controlled_by = XSM }
+			439 = { is_controlled_by = YUN }
+			439 = { is_controlled_by = GXC }
+			439 = { is_controlled_by = SIK }
+		}
+		439 = { is_owned_by = RAJ }
+		OR = {
+			RAJ = { has_war_with = CHI }
+			RAJ = { has_war_with = PRC }
+			RAJ = { has_war_with = SHX }
+			RAJ = { has_war_with = XSM }
+			RAJ = { has_war_with = YUN }
+			RAJ = { has_war_with = GXC }
+			RAJ = { has_war_with = SIK }
+		}
+		NOT = { has_global_flag = fall_of_delhi_chi }
+	}
+	
+	immediate = {
+		set_global_flag = fall_of_delhi_chi
+	}
+	
+	mean_time_to_happen = {
+		days = 2
+	}
+	
+	option = {
+		name = chinaocc.19.a
+		trigger = {
+			NOT = {
+				TAG = CHI
+				TAG = PRC
+				TAG = XSM
+				TAG = YUN
+				TAG = GXC
+				TAG = SIK
+				TAG = SHX
+				TAG = RAJ
+			}
+		}
+	}
+	option = {
+		name = chinaocc.19.b
+		trigger = { 
+			OR = {
+				tag = PRC
+				tag = XSM
+				tag = SHX
+				tag = SIK
+				tag = GXC
+				tag = YUN
+				tag = CHI
+			}
+		}
+	}
+	option = {
+		name = chinaocc.19.c
+		trigger = { TAG = RAJ }
+	}
+}
+
+# The Fall of Berlin (China)
+news_event = {
+	id = chinaocc.20
+	title = chinaocc.20.t
+	desc = chinaocc.20.d
+	picture = GFX_china_china_army_to_berlin_news
+	
+	major = yes
+	
+	trigger = {
+		OR = {
+			64 = { is_controlled_by = CHI }
+			64 = { is_controlled_by = PRC }
+			64 = { is_controlled_by = SHX }
+			64 = { is_controlled_by = XSM }
+			64 = { is_controlled_by = YUN }
+			64 = { is_controlled_by = GXC }
+			64 = { is_controlled_by = SIK }
+		}
+		64 = { is_owned_by = GER }
+		OR = {
+			GER = { has_war_with = CHI }
+			GER = { has_war_with = PRC }
+			GER = { has_war_with = SHX }
+			GER = { has_war_with = XSM }
+			GER = { has_war_with = YUN }
+			GER = { has_war_with = GXC }
+			GER = { has_war_with = SIK }
+		}
+		NOT = { has_global_flag = fall_of_berlin_chi }
+	}
+	
+	immediate = {
+		set_global_flag = fall_of_berlin_chi
+	}
+	
+	mean_time_to_happen = {
+		days = 2
+	}
+	
+	option = {
+		name = chinaocc.20.a
+		trigger = {
+			NOT = {
+				TAG = CHI
+				TAG = PRC
+				TAG = XSM
+				TAG = YUN
+				TAG = GXC
+				TAG = SIK
+				TAG = SHX
+				TAG = GER
+			}
+		}
+	}
+	option = {
+		name = chinaocc.20.b
+		trigger = { 
+			OR = {
+				tag = PRC
+				tag = XSM
+				tag = SHX
+				tag = SIK
+				tag = GXC
+				tag = YUN
+				tag = CHI
+			}
+		}
+	}
+	option = {
+		name = chinaocc.20.c
+		trigger = { TAG = GER }
+	}
+}
+
+# The Fall of Rome (China)
+news_event = {
+	id = chinaocc.21
+	title = chinaocc.21.t
+	desc = chinaocc.21.d
+	picture = GFX_china_china_army_to_rome_news
+	
+	major = yes
+	
+	trigger = {
+		OR = {
+			2 = { is_controlled_by = CHI }
+			2 = { is_controlled_by = PRC }
+			2 = { is_controlled_by = SHX }
+			2 = { is_controlled_by = XSM }
+			2 = { is_controlled_by = YUN }
+			2 = { is_controlled_by = GXC }
+			2 = { is_controlled_by = SIK }
+		}
+		2 = { is_owned_by = ITA }
+		OR = {
+			ITA = { has_war_with = CHI }
+			ITA = { has_war_with = PRC }
+			ITA = { has_war_with = SHX }
+			ITA = { has_war_with = XSM }
+			ITA = { has_war_with = YUN }
+			ITA = { has_war_with = GXC }
+			ITA = { has_war_with = SIK }
+		}
+		NOT = { has_global_flag = fall_of_rome_chi }
+	}
+	
+	immediate = {
+		set_global_flag = fall_of_rome_chi
+	}
+	
+	mean_time_to_happen = {
+		days = 2
+	}
+	
+	option = {
+		name = chinaocc.21.a
+		trigger = {
+			NOT = {
+				TAG = CHI
+				TAG = PRC
+				TAG = XSM
+				TAG = YUN
+				TAG = GXC
+				TAG = SIK
+				TAG = SHX
+				TAG = ITA
+			}
+		}
+	}
+	option = {
+		name = chinaocc.21.b
+		trigger = { 
+			OR = {
+				tag = PRC
+				tag = XSM
+				tag = SHX
+				tag = SIK
+				tag = GXC
+				tag = YUN
+				tag = CHI
+			}
+		}
+	}
+	option = {
+		name = chinaocc.21.c
+		trigger = { TAG = ITA }
+	}
+}
+
+# The Liberation of Nanjing (Allies)
+news_event = {
+	id = chinaocc.22
+	title = chinaocc.22.t
+	desc = chinaocc.22.d
+	picture = GFX_return_of_nanjing
+	
+	major = yes
+	
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { has_global_flag = liberation_of_nanjing }
+		has_global_flag = fall_of_nanjing
+	}
+	
+	immediate = {
+		set_global_flag = liberation_of_nanjing
+	}
+	
+	option = {
+		name = chinaocc.22.a
+		trigger = {
+			NOT = {
+				TAG = CHI
+				TAG = PRC
+				TAG = GXC
+				TAG = YUN
+				TAG = XSM
+				TAG = SIK
+				TAG = SHX
+				TAG = JAP
+				has_war_with = JAP
+				is_ally_with = JAP
+			}
+		}
+	}
+	option = {
+		name = chinaocc.22.b
+		trigger = { 
+			OR = {
+				TAG = CHI
+				TAG = PRC
+				TAG = GXC
+				TAG = YUN
+				TAG = XSM
+				TAG = SIK
+				TAG = SHX
+				has_war_with = JAP
+			}
+		}
+	}
+	option = {
+		name = chinaocc.22.c
+		trigger = {
+			OR = {
+				TAG = JAP
+				is_ally_with = JAP
+			}
+		}
+	}
+}
+
+# Nanjing Massacre - Event in Japan
+country_event = {
+	id = chinaocc.23
+	title = chinaocc.23.t
+	desc = chinaocc.23.d
+	picture = GFX_nanjing_massacre_event
+	
+	trigger = {
+		613 = { is_controlled_by = JAP }
+		613 = { is_owned_by = CHI }
+		JAP = { has_war_with = CHI }
+		NOT = { has_global_flag = nanjing_massacre }
+		tag = JAP
+		has_government = fascism
+	}
+	
+	immediate = {
+		set_global_flag = nanjing_massacre
+	}
+	
+	mean_time_to_happen = {
+		days = 7
+	}
+	
+	option = {
+		name = chinaocc.23.a
+		ai_chance = {
+			base = 100
+		}
+		613 = {
+			add_manpower = -300000
+		}
+		every_country = {
+			limit = {
+				OR = {
+					is_all_chinese_tag = yes
+					AND = {
+						NOT = {
+							tag = JAP
+							is_ally_with = JAP
+						}
+						is_major = yes
+					}
+				}
+				NOT = { has_government = fascism }
+			}
+			add_opinion_modifier = {
+				target = JAP
+				modifier = non_humanitarianism
+			}
+		}
+		news_event = { id = chinaocc.24 days = 7 }
+	}
+	option = {
+		name = chinaocc.23.b
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+
+# Nanjing Massacre - News in the World
+news_event = {
+	id = chinaocc.24
+	title = chinaocc.24.t
+	desc = chinaocc.24.d
+	picture = GFX_nanjing_massacre
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = chinaocc.24.a
+		trigger = {
+			NOT = {
+				TAG = CHI
+				TAG = PRC
+				TAG = GXC
+				TAG = YUN
+				TAG = XSM
+				TAG = SIK
+				TAG = SHX
+				TAG = JAP
+				has_war_with = JAP
+				is_ally_with = JAP
+			}
+		}
+	}
+	option = {
+		name = chinaocc.24.b
+		trigger = { 
+			OR = {
+				TAG = CHI
+				TAG = PRC
+				TAG = GXC
+				TAG = YUN
+				TAG = XSM
+				TAG = SIK
+				TAG = SHX
+				has_war_with = JAP
+			}
+		}
+	}
+	option = {
+		name = chinaocc.24.c
+		trigger = {
+			OR = {
+				TAG = JAP
+				is_ally_with = JAP
+			}
+		}
+	}
+}
+
+# The Fall of Peking
+news_event = {
+	id = chinaocc.25
+	title = chinaocc.25.t
+	desc = chinaocc.25.d
+	picture = GFX_lost_of_peking
+	
+	major = yes
+	
+	trigger = {
+		608 = { is_controlled_by = JAP }
+		OR = {
+			608 = { is_owned_by = CHI }
+			608 = { is_owned_by = PRC }
+			608 = { is_owned_by = SHX }
+			608 = { is_owned_by = XSM }
+			608 = { is_owned_by = YUN }
+			608 = { is_owned_by = GXC }
+			608 = { is_owned_by = SIK }
+		}
+		OR = {
+			JAP = { has_war_with = CHI }
+			JAP = { has_war_with = PRC }
+			JAP = { has_war_with = SHX }
+			JAP = { has_war_with = XSM }
+			JAP = { has_war_with = YUN }
+			JAP = { has_war_with = GXC }
+			JAP = { has_war_with = SIK }
+		}
+		NOT = { has_global_flag = fall_of_peking }
+	}
+	
+	immediate = {
+		set_global_flag = fall_of_peking
+	}
+	
+	mean_time_to_happen = {
+		days = 2
+	}
+	
+	option = {
+		name = chinaocc.25.a
+		trigger = {
+			NOT = {
+				TAG = CHI
+				TAG = PRC
+				TAG = GXC
+				TAG = YUN
+				TAG = XSM
+				TAG = SIK
+				TAG = SHX
+				TAG = JAP
+				has_war_with = JAP
+				is_ally_with = JAP
+			}
+		}
+	}
+	option = {
+		name = chinaocc.25.b
+		trigger = { 
+			OR = {
+				TAG = CHI
+				TAG = PRC
+				TAG = GXC
+				TAG = YUN
+				TAG = XSM
+				TAG = SIK
+				TAG = SHX
+				has_war_with = JAP
+			}
+		}
+	}
+	option = {
+		name = chinaocc.25.c
+		trigger = {
+			OR = {
+				TAG = JAP
+				is_ally_with = JAP
+			}
+		}
+	}
+}
+
+# The Liberation of Peking (Allies)
+news_event = {
+	id = chinaocc.26
+	title = chinaocc.26.t
+	desc = chinaocc.26.d
+	picture = GFX_return_of_peking
+	
+	major = yes
+	
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { has_global_flag = liberation_of_peking }
+		has_global_flag = fall_of_peking
+	}
+	
+	immediate = {
+		set_global_flag = liberation_of_peking
+	}
+	
+	option = {
+		name = chinaocc.26.a
+		trigger = {
+			NOT = {
+				TAG = CHI
+				TAG = PRC
+				TAG = GXC
+				TAG = YUN
+				TAG = XSM
+				TAG = SIK
+				TAG = SHX
+				TAG = JAP
+				has_war_with = JAP
+				is_ally_with = JAP
+			}
+		}
+	}
+	option = {
+		name = chinaocc.26.b
+		trigger = { 
+			OR = {
+				TAG = CHI
+				TAG = PRC
+				TAG = GXC
+				TAG = YUN
+				TAG = XSM
+				TAG = SIK
+				TAG = SHX
+				has_war_with = JAP
+			}
+		}
+	}
+	option = {
+		name = chinaocc.26.c
+		trigger = {
+			OR = {
+				TAG = JAP
+				is_ally_with = JAP
+			}
+		}
+	}
+}

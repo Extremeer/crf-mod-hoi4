@@ -1,0 +1,277 @@
+﻿
+add_namespace = crdof
+
+news_event = {
+	id = crdof.1
+	title = crdof.1.t
+	desc = crdof.1.d
+	picture = GFX_news_event_romanian_soldiers
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		NOT = {
+			has_global_flag = crdof_starting
+		}
+	}
+	
+	immediate = {
+		set_global_flag = crdof_starting
+	}
+	option = {
+		name = crdof.1.a
+	}
+}
+
+country_event = {
+	id = crdof.2
+	title = crdof.2.t
+	desc = crdof.2.d
+	picture = GFX_report_event_chinese_soldiers
+
+	is_triggered_only = yes
+	
+	option = {
+		name = crdof.2.a
+		ai_chance = {
+			factor = 100
+		}
+		news_event = { days = 3 id = crdof.1 }
+		if = {
+			limit = {
+				MAN = { 
+					is_subject_of = ROOT
+				}
+			}
+			FROM = {
+				annex_country = {
+					target = MAN
+					transfer_troops = no
+				}
+			}
+		}
+		if = {
+			limit = {
+				MEN = { 
+					is_subject_of = ROOT
+				}
+			}
+			FROM = {
+				annex_country = {
+					target = MEN
+					transfer_troops = no
+				}
+			}
+		}
+		if = {
+			limit = {
+				JAP = { 
+					is_subject_of = ROOT
+				}
+			}
+			JAP = {
+				if = {
+					limit = {
+						owns_state = 609
+					}
+					FROM = {
+						transfer_state = 609
+					}
+				}
+				if = {
+					limit = {
+						owns_state = 610
+					}
+					FROM = {
+						transfer_state = 610
+					}
+				}
+				if = {
+					limit = {
+						owns_state = 611
+					}
+					FROM = {
+						transfer_state = 611
+					}
+				}
+				if = {
+					limit = {
+						owns_state = 612
+					}
+					FROM = {
+						transfer_state = 612
+					}
+				}
+				if = {
+					limit = {
+						owns_state = 714
+					}
+					FROM = {
+						transfer_state = 714
+					}
+				}
+				if = {
+					limit = {
+						owns_state = 715
+					}
+					FROM = {
+						transfer_state = 715
+					}
+				}
+				if = {
+					limit = {
+						owns_state = 716
+					}
+					FROM = {
+						transfer_state = 716
+					}
+				}
+				if = {
+					limit = {
+						owns_state = 717
+					}
+					FROM = {
+						transfer_state = 717
+					}
+				}
+				if = {
+					limit = {
+						owns_state = 745
+					}
+					FROM = {
+						transfer_state = 745
+					}
+				}
+				if = {
+					limit = {
+						owns_state = 761
+					}
+					FROM = {
+						transfer_state = 761
+					}
+				}
+				if = {
+					limit = {
+						owns_state = 328
+					}
+					FROM = {
+						transfer_state = 328
+					}
+				}
+				if = {
+					limit = {
+						owns_state = 524
+					}
+					FROM = {
+						transfer_state = 524
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				owns_state = 609
+			}
+			FROM = {
+				transfer_state = 609
+			}
+		}
+		if = {
+			limit = {
+				owns_state = 610
+			}
+			FROM = {
+				transfer_state = 610
+			}
+		}
+		if = {
+			limit = {
+				owns_state = 611
+			}
+			FROM = {
+				transfer_state = 611
+			}
+		}
+		if = {
+			limit = {
+				owns_state = 612
+			}
+			FROM = {
+				transfer_state = 612
+			}
+		}
+		if = {
+			limit = {
+				owns_state = 714
+			}
+			FROM = {
+				transfer_state = 714
+			}
+		}
+		if = {
+			limit = {
+				owns_state = 715
+			}
+			FROM = {
+				transfer_state = 715
+			}
+		}
+		if = {
+			limit = {
+				owns_state = 716
+			}
+			FROM = {
+				transfer_state = 716
+			}
+		}
+		if = {
+			limit = {
+				owns_state = 717
+			}
+			FROM = {
+				transfer_state = 717
+			}
+		}
+		if = {
+			limit = {
+				owns_state = 745
+			}
+			FROM = {
+				transfer_state = 745
+			}
+		}
+		if = {
+			limit = {
+				owns_state = 761
+			}
+			FROM = {
+				transfer_state = 761
+			}
+		}
+		if = {
+			limit = {
+				owns_state = 328
+			}
+			FROM = {
+				transfer_state = 328
+			}
+		}
+		if = {
+			limit = {
+				owns_state = 524
+			}
+			FROM = {
+				transfer_state = 524
+			}
+		}
+	}
+
+	option = {
+		name = crdof.2.b
+		ai_chance = {
+			factor = 0
+		}
+	}
+}

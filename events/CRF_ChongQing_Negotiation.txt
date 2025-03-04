@@ -1,0 +1,398 @@
+add_namespace = crf_cq_negotiation
+# CPC - receives invitation to Chongqing negotiations
+country_event = {
+	id = crf_cq_negotiation.1
+	title = crf_cq_negotiation.1.t
+	desc = {
+		text = crf_cq_negotiation.1.desc_a
+	}
+	picture = GFX_report_event_china_politicians_captured
+	is_triggered_only = yes
+	option = {
+		name = crf_cq_negotiation.1.a		# yes, let's negotiate
+		ai_chance = {
+			base = 70
+		}
+		FROM = {
+			country_event = {
+				id = crf_cq_negotiation.2
+				days = 1
+			}
+		}
+	}
+	option = {
+		name = crf_cq_negotiation.1.b		# no, we will not negotiate
+		ai_chance = {
+			base = 30
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 0
+			}
+		}
+		FROM = {
+			country_event = {
+				id = crf_cq_negotiation.3
+				days = 1
+			}
+		}
+	}
+}
+
+# KMT - CPC agrees to negotiate, let's start
+country_event = {
+	id = crf_cq_negotiation.2
+	title = crf_cq_negotiation.2.t
+	desc = crf_cq_negotiation.2.desc
+	picture = GFX_report_event_chinese_officers
+	is_triggered_only = yes
+	option = {
+		name = crf_cq_negotiation.2.a
+		ROOT = {
+			country_event = {
+				id = crf_cq_negotiation.4
+				days = 3
+			}
+		}
+		hidden_effect = {
+			news_event = {
+				id = crf_cq_negotiation.8
+				days = 1
+			}
+		}
+	}
+}
+
+# KMT - CPC refuses to negotiate
+country_event = {
+	id = crf_cq_negotiation.3
+	title = crf_cq_negotiation.3.t
+	desc = crf_cq_negotiation.3.desc
+	picture = GFX_report_event_stalin_meeting
+	is_triggered_only = yes
+	option = {
+		name = crf_cq_negotiation.3.a
+		# Decision here to prepare war
+		hidden_effect = {
+			news_event = {
+				id = crf_cq_negotiation.9
+				days = 1
+			}
+		}
+	}
+}
+
+# KMT - Millitary question (or CPC not accept current solution)
+country_event = {
+	id = crf_cq_negotiation.4
+	title = crf_cq_negotiation.4.t
+	desc = {
+		text = crf_cq_negotiation.4.desc_a
+		trigger = {
+			NOT = {
+				has_country_flag = CPC_cq_millitary_refuse
+			}
+		}
+	}
+	desc = {
+		text = crf_cq_negotiation.4.desc_b
+		trigger = {
+			has_country_flag = CPC_cq_millitary_refuse
+		}
+	}
+	picture = GFX_report_event_china_chiang_mao
+	is_triggered_only = yes
+	option = {
+		name = crf_cq_negotiation.4.a		# full now
+		trigger = {
+			NOT = {
+				has_country_flag = CPC_cq_millitary_plan_a
+			}
+		}
+		ai_chance = {
+			base = 50
+		}
+		hidden_effect = {
+			set_country_flag = CPC_cq_millitary_plan_a
+		}
+	}
+	option = {
+		name = crf_cq_negotiation.4.b		# 1-6
+		trigger = {
+			NOT = {
+				has_country_flag = CPC_cq_millitary_plan_b
+			}
+		}
+		ai_chance = {
+			base = 10
+			modifier = {
+				CHI_is_on_historical_plan_trigger = yes
+				factor = 0
+			}
+		}
+		reverse_add_opinion_modifier = {
+			target = FROM
+			modifier = CHI_xian_refused
+		}
+		hidden_effect = {
+			set_country_flag = CPC_cq_millitary_plan_b
+		}
+	}
+	option = {
+		name = crf_cq_negotiation.4.c		# 1-5
+		trigger = {
+			NOT = {
+				has_country_flag = CPC_cq_millitary_plan_c
+			}
+		}
+		ai_chance = {
+			base = 10
+			modifier = {
+				CHI_is_on_historical_plan_trigger = yes
+				factor = 0
+			}
+		}
+		reverse_add_opinion_modifier = {
+			target = FROM
+			modifier = CHI_xian_refused
+		}
+		hidden_effect = {
+			set_country_flag = CPC_cq_millitary_plan_c
+		}
+	}
+	option = {
+		name = crf_cq_negotiation.4.d		# Give up
+		trigger = {
+			has_country_flag = CPC_cq_millitary_refuse
+		}
+		ai_chance = {
+			base = 10
+			modifier = {
+				CHI_is_on_historical_plan_trigger = yes
+				factor = 0
+			}
+		}
+		hidden_effect = {
+			news_event = {
+				id = wtt_news.32
+				days = 1
+			}
+		}
+	}
+}
+
+# CPC - Millitary Question Answer
+country_event = {
+	id = crf_cq_negotiation.5
+	title = crf_cq_negotiation.5.t
+	desc = crf_cq_negotiation.5.desc
+	picture = GFX_news_event_chinese_soldiers_march
+	is_triggered_only = yes
+	option = {
+		name = crf_cq_negotiation.5.a		# accept
+		trigger = {
+			original_tag = PRC
+		}
+	}
+	option = {
+		name = crf_cq_negotiation.5.b		# refuse
+		trigger = {
+			original_tag = CHI
+		}
+	}
+}
+
+# KMT - Local government question (Or CPC not accept current solution) (CPC accept Millitary Solution)
+country_event = {
+	id = crf_cq_negotiation.6
+	title = crf_cq_negotiation.6.t
+	desc = crf_cq_negotiation.6.desc
+	picture = GFX_report_event_china_chiang_mao
+	is_triggered_only = yes
+	option = {
+		name = crf_cq_negotiation.6.a		# Take all state
+		ai_chance = {
+			base = 50
+		}
+		hidden_effect = {
+			news_event = {
+				id = news.288
+				days = 1
+			}			# United Front forms
+		}
+	}
+	option = {
+		name = crf_cq_negotiation.6.b		# Current stay com local gov
+		ai_chance = {
+			base = 10
+			modifier = {
+				CHI_is_on_historical_plan_trigger = yes
+				factor = 0
+			}
+		}
+		reverse_add_opinion_modifier = {
+			target = FROM
+			modifier = CHI_xian_refused
+		}
+		hidden_effect = {
+			news_event = {
+				id = wtt_news.32
+				days = 1
+			}
+		}
+	}
+	option = {
+		name = crf_cq_negotiation.6.c		# Give up
+		ai_chance = {
+			base = 10
+			modifier = {
+				CHI_is_on_historical_plan_trigger = yes
+				factor = 0
+			}
+		}
+		reverse_add_opinion_modifier = {
+			target = FROM
+			modifier = CHI_xian_refused
+		}
+		hidden_effect = {
+			news_event = {
+				id = wtt_news.32
+				days = 1
+			}
+		}
+	}
+}
+
+# CPC - Local government Answer
+country_event = {
+	id = crf_cq_negotiation.7
+	title = crf_cq_negotiation.7.t
+	desc = crf_cq_negotiation.7.desc
+	picture = GFX_news_event_chinese_soldiers_march
+	is_triggered_only = yes
+	option = {
+		name = crf_cq_negotiation.7.a
+		trigger = {
+			original_tag = PRC
+		}
+	}
+	option = {
+		name = crf_cq_negotiation.7.b
+		trigger = {
+			original_tag = CHI
+		}
+	}
+	option = {
+		name = crf_cq_negotiation.7.c
+		trigger = {
+			OR = {
+				original_tag = JAP
+				original_tag = MAN
+			}
+		}
+	}
+	option = {
+		name = crf_cq_negotiation.7.d
+		trigger = {
+			original_tag = SOV
+		}
+	}
+	option = {
+		name = crf_cq_negotiation.7.e
+		trigger = {
+			NOT = {
+				original_tag = PRC
+				original_tag = CHI
+				original_tag = SOV
+				original_tag = JAP
+				original_tag = MAN
+			}
+		}
+	}
+}
+
+# News - Negotiation begin
+news_event = {
+	id = crf_cq_negotiation.8
+	title = crf_cq_negotiation.8.t
+	desc = crf_cq_negotiation.8.desc
+	picture = GFX_news_event_chinese_soldiers_march
+	is_triggered_only = yes
+	option = {
+		name = crf_cq_negotiation.8.a
+		trigger = {
+			original_tag = PRC
+		}
+	}
+	option = {
+		name = crf_cq_negotiation.8.b
+		trigger = {
+			original_tag = CHI
+		}
+	}
+}
+
+# News - No negotiation
+news_event = {
+	id = crf_cq_negotiation.9
+	title = crf_cq_negotiation.9.t
+	desc = crf_cq_negotiation.9.desc
+	picture = GFX_news_event_chinese_soldiers_march
+	is_triggered_only = yes
+	major = yes
+	option = {
+		name = crf_cq_negotiation.9.a
+		trigger = {
+			original_tag = PRC
+		}
+	}
+	option = {
+		name = crf_cq_negotiation.9.b
+		trigger = {
+			original_tag = CHI
+		}
+	}
+}
+
+# News - Negotiation Passed
+news_event = {
+	id = crf_cq_negotiation.10
+	title = crf_cq_negotiation.10.t
+	desc = crf_cq_negotiation.10.desc
+	picture = GFX_news_event_chinese_soldiers_march
+	is_triggered_only = yes
+	major = yes
+	option = {
+		name = crf_cq_negotiation.10.a
+		trigger = {
+			original_tag = PRC
+		}
+	}
+	option = {
+		name = crf_cq_negotiation.10.b
+		trigger = {
+			original_tag = CHI
+		}
+	}
+}
+
+# News - Negotiation Breaked
+news_event = {
+	id = crf_cq_negotiation.11
+	title = crf_cq_negotiation.11.t
+	desc = crf_cq_negotiation.11.desc
+	picture = GFX_news_event_chinese_soldiers_march
+	is_triggered_only = yes
+	major = yes
+	option = {
+		name = crf_cq_negotiation.11.a
+		trigger = {
+			original_tag = PRC
+		}
+	}
+	option = {
+		name = crf_cq_negotiation.11.b
+		trigger = {
+			original_tag = CHI
+		}
+	}
+}

@@ -1,0 +1,158 @@
+﻿
+add_namespace = chinacap
+
+# The End of Second Sino Japanese War - Japan Out Mainland
+news_event = {
+	id = chinacap.1
+	title = chinacap.1.t
+	desc = chinacap.1.d
+	picture = GFX_manchukuo_palace
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = chinacap.1.a
+		trigger = {
+			NOT = {
+				tag = PRC
+				tag = MAN
+				tag = XSM
+				tag = SHX
+				tag = SIK
+				tag = GXC
+				tag = YUN
+				tag = JAP
+				tag = CHI
+			}
+		}
+	}
+	option = {
+		name = chinacap.1.b
+		trigger = { 
+			OR = {
+				tag = PRC
+				tag = XSM
+				tag = SHX
+				tag = SIK
+				tag = GXC
+				tag = YUN
+				tag = CHI
+			}
+ 		}
+	}
+	option = {
+		name = chinacap.1.c
+		trigger = { 			
+			OR = {
+				tag = MAN
+				tag = JAP
+			}
+		}
+	}
+}
+
+# The End of Second Sino Japanese War - Japan Islands Fall
+news_event = {
+	id = chinacap.2
+	title = chinacap.2.t
+	desc = chinacap.2.d
+	picture = GFX_manchukuo_palace
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = chinacap.2.a
+		trigger = {
+			NOT = {
+				tag = PRC
+				tag = MAN
+				tag = XSM
+				tag = SHX
+				tag = SIK
+				tag = GXC
+				tag = YUN
+				tag = JAP
+				tag = CHI
+			}
+		}
+	}
+	option = {
+		name = chinacap.2.b
+		trigger = { 
+			OR = {
+				tag = PRC
+				tag = XSM
+				tag = SHX
+				tag = SIK
+				tag = GXC
+				tag = YUN
+				tag = CHI
+			}
+ 		}
+	}
+	option = {
+		name = chinacap.2.c
+		trigger = { 			
+			OR = {
+				tag = MAN
+				tag = JAP
+			}
+		}
+	}
+}
+
+# The End of Third Sino Japanese War
+news_event = {
+	id = chinacap.3
+	title = chinacap.3.t
+	desc = chinacap.3.d
+	picture = GFX_manchukuo_palace
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = chinacap.3.a
+		trigger = {
+			NOT = {
+				tag = PRC
+				tag = MAN
+				tag = XSM
+				tag = SHX
+				tag = SIK
+				tag = GXC
+				tag = YUN
+				tag = JAP
+				tag = CHI
+			}
+		}
+	}
+	option = {
+		name = chinacap.3.b
+		trigger = { 
+			OR = {
+				tag = PRC
+				tag = XSM
+				tag = SHX
+				tag = SIK
+				tag = GXC
+				tag = YUN
+				tag = CHI
+			}
+ 		}
+	}
+	option = {
+		name = chinacap.3.c
+		trigger = { 			
+			OR = {
+				tag = MAN
+				tag = JAP
+			}
+		}
+	}
+}

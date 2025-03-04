@@ -1,0 +1,18 @@
+category = {
+    name = "SUPERSOUND"
+    soundeffects = {
+	    prc_founded
+    }
+}
+
+sound = {
+	name = "prc_founded"
+	file = "prc/prc_founded.wav"
+}
+
+soundeffect = {
+    name = prc_founded
+    sounds = {
+        sound = prc_founded
+    }
+}

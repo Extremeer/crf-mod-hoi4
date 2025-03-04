@@ -1,0 +1,6 @@
+sicf_dec = {
+	allowed = {
+			tag = CHI
+	}
+	priority = 99
+}

@@ -1,0 +1,7 @@
+CRF_debug_decision_category = {
+	icon = GFX_decision_category_kuomintang_industry
+	picture = GFX_decision_cat_industry_KMT
+	priority = 100
+	allowed = { is_debug = yes }
+	visible_when_empty = yes
+}

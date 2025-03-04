@@ -1,0 +1,22 @@
+﻿l_simp_chinese:
+ #don't modify these 
+ CM_SE_title: "[CM_SE_title]"
+ CM_SE_desc: "[CM_SE_desc]"
+ CM_SE_btn: "[CM_SE_btn]"
+ CM_SE_title_missing: "fix ur stuffs!missing title"
+ CM_SE_desc_missing: "fix ur stuffs!missing desc.\n-CMCMC-"
+ CM_SE_btn_missing: "fix ur stuffs!no option text."
+ #custom stuffs below
+ CM_SE_title_1: "中华人民共和国成立"
+ CM_SE_desc_1: "占人类总数四分之一的中国人从此站立起来了。中国的历史从此开辟了一个新的时代。\n                                                  ——毛泽东"
+ CM_SE_btn_1: "伟大的一天"
+ 
+ CM_SE_title_2: "中华民国首次大选"
+ CM_SE_desc_2: "夫以四百兆苍生之众，数万里土地之饶，固可发奋为雄，无敌于天下。\n                                                  ——孙  文"
+ CM_SE_btn_2: "希望他们顺利"
+ CM_SE_title_3: "卢沟桥事变"
+ CM_SE_desc_3: "如果战端一开，那就是地无分南北，人无分老幼，无论何人，皆有守土抗战之责任，皆应抱定牺牲一切之决心。\n                                          ——蒋介石  庐山谈话"
+ CM_SE_btn_3: "不能再忍耐"
+ CM_SE_title_4: "日本向中国求和"
+ CM_SE_desc_4: "朕深鉴于世界大势及帝国之现状，欲采取非常之措施，以收拾时局，兹告尔等臣民，朕已饬令帝国政府通告愿接受其公告。\n                                        ——裕  仁  《终战诏书》"
+ CM_SE_btn_4: "终战之时也"

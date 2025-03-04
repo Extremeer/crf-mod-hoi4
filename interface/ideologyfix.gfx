@@ -1,0 +1,22 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_ideology_tp_tutelage"
+		texturefile = "gfx/interface/ideologies/tp_tutelage.dds"
+	}
+	spriteType = {
+		name = "GFX_ideology_tp_constitutional"
+		texturefile = "gfx/interface/ideologies/tp_constitutional.dds"
+	}
+	spriteType = {
+		name = "GFX_ideology_tp_constitutional_neutrality"
+		texturefile = "gfx/interface/ideologies/tp_constitutional_neutrality.dds"
+	}
+	spriteType = {
+		name = "GFX_ideology_maoist"
+		texturefile = "gfx/interface/ideologies/maoist.dds"
+	}
+	spriteType = {
+		name = "GFX_ideology_unionism"
+		texturefile = "gfx/interface/ideologies/unionism.tga"
+	}
+}

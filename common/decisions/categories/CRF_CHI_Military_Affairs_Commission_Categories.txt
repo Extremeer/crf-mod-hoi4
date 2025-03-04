@@ -1,0 +1,9 @@
+CRF_CHI_Military_Affairs_Commission_Categories = {
+	icon = army_reform
+	priority = 97
+	allowed = { 
+		OR = {
+			is_literally_china = yes
+		}
+	}
+}
