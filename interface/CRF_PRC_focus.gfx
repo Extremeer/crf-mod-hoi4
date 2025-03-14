@@ -1,0 +1,370 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_abolish_and_rent"
+		texturefile = "gfx/interface/goals/abolish_and_rent.tga"
+	}
+	spriteType = {
+		name = "GFX_chi_coalition_govenment"
+		texturefile = "gfx/interface/goals/CHI_coalition_govenment.tga"
+	}
+	spriteType = {
+		name = "GFX_secure_peninsula"
+		texturefile = "gfx/interface/goals/secure_peninsula.dds"
+	}
+	spriteType = {
+		name = "GFX_PRC_Central_CPC"
+		texturefile = "gfx/interface/goals/PRC_Central_CPC.tga"
+	}
+	spriteType = {
+		name = "GFX_Imperial_legacy"
+		texturefile = "gfx/interface/goals/Imperial_legacy.dds"
+	}
+	spriteType = {
+		name = "GFX_Maoist"
+		texturefile = "gfx/interface/goals/PRC_Maoist.tga"
+	}
+	spriteType = {
+		name = "GFX_Negotiate_Mongolia"
+		texturefile = "gfx/interface/goals/Negotiate_Mongolia.tga"
+	}
+	spriteType = {
+		name = "GFX_Negotiate_RAJ"
+		texturefile = "gfx/interface/goals/Negotiate_RAJ.tga"
+	}
+	spriteType = {
+		name = "GFX_PRC_Agraria_Socialism"
+		texturefile = "gfx/interface/goals/PRC_Agraria_Socialism.tga"
+	}
+	#spriteType = {
+	#	name = "GFX_PRC_Chinese_characteristic_socialism"
+	#	texturefile = "gfx/interface/goals/PRC_Chinese_characteristic_socialism.dds"
+	#}
+	spriteType = {
+		name = "GFX_PRC_deplomacy_at_our_own"
+		texturefile = "gfx/interface/goals/PRC_deplomacy_at_our_own.tga"
+	}
+	spriteType = {
+		name = "GFX_PRC_Internationalism"
+		texturefile = "gfx/interface/goals/PRC_Internationalism.tga"
+	}
+	spriteType = {
+		name = "GFX_PRC_Left_Kuomintang"
+		texturefile = "gfx/interface/goals/PRC_Left_Kuomintang.tga"
+	}
+	spriteType = {
+		name = "GFX_PRC_Market_Economy"
+		texturefile = "gfx/interface/goals/PRC_Market_Economy.tga"
+	}
+	spriteType = {
+		name = "GFX_PRC_New_Three_Priciple"
+		texturefile = "gfx/interface/goals/PRC_New_Three_Priciple.tga"
+	}
+	spriteType = {
+		name = "GFX_PRC_opium_ban"
+		texturefile = "gfx/interface/goals/PRC_opium_ban.tga"
+	}
+	spriteType = {
+		name = "GFX_PRC_opium_trade"
+		texturefile = "gfx/interface/goals/PRC_opium_trade.tga"
+	}
+	spriteType = {
+		name = "GFX_PRC_PLA"
+		texturefile = "gfx/interface/goals/PRC_PLA.dds"
+	}
+	spriteType = {
+		name = "GFX_PRC_Provoke_Japan"
+		texturefile = "gfx/interface/goals/PRC_Provoke_Japan.tga"
+	}
+	spriteType = {
+		name = "GFX_PRC_Rectification"
+		texturefile = "gfx/interface/goals/PRC_Rectification.tga"
+	}
+	spriteType = {
+		name = "GFX_PRC_Weak_Neighbours"
+		texturefile = "gfx/interface/goals/PRC_Weak_Neighbours.tga"
+	}
+	spriteType = {
+		name = "GFX_Reclaim_Tibet"
+		texturefile = "gfx/interface/goals/Reclaim_Tibet.tga"
+	}
+	spriteType = {
+		name = "GFX_Soviet_Economic_Aid"
+		texturefile = "gfx/interface/goals/Soviet_Economic_Aid.dds"
+	}
+	spriteType = {
+		name = "GFX_Soviet_leadership"
+		texturefile = "gfx/interface/goals/Soviet_leadership.dds"
+	}
+	spriteType = {
+		name = "GFX_PRC_Guidance"
+		texturefile = "gfx/interface/goals/PRC_Guidance.tga"
+	}
+	spriteType = {
+		name = "GFX_PRC_Overlordship_indochina"
+		texturefile = "gfx/interface/goals/PRC_Overlordship_indochina.tga"
+	}
+	spriteType = {
+		name = "GFX_PRC_Perninsula"
+		texturefile = "gfx/interface/goals/PRC_Perninsula.tga"
+	}
+	spriteType = {
+		name = "GFX_Reclaim_MON"
+		texturefile = "gfx/interface/goals/Reclaim_MON.tga"
+	}
+	spriteType = {
+		name = "GFX_Marxism"
+		texturefile = "gfx/interface/goals/marxism.dds"
+	}
+	spriteType = {
+		name = "GFX_PRC_Clean"
+		texturefile = "gfx/interface/goals/PRC_Clean.dds"
+	}
+	spriteType = {
+		name = "GFX_Medical_University"
+		texturefile = "gfx/interface/goals/Medical_University.tga"
+	}
+	spriteType = {
+		name = "GFX_Academy_sci"
+		texturefile = "gfx/interface/goals/Academy_sci.dds"
+	}
+	spriteType = {
+		name = "GFX_PRC_Mobile_Warfare"
+		texturefile = "gfx/interface/goals/PRC_Mobile_Warfare.tga"
+	}
+	spriteType = {
+		name = "GFX_PRC_Peoples_War"
+		texturefile = "gfx/interface/goals/PRC_Peoples_War.tga"
+	}
+	spriteType = {
+		name = "GFX_Central_Security"
+		texturefile = "gfx/interface/goals/Central_Security.dds"
+	}
+	spriteType = {
+		name = "GFX_PRC_Program"
+		texturefile = "gfx/interface/goals/PRC_Program.dds"
+	}
+	spriteType = {
+		name = "GFX_PRC_Protracted"
+		texturefile = "gfx/interface/goals/PRC_Protracted.dds"
+	}
+	spriteType = {
+		name = "GFX_PRC_Prepare_war_with_JAP"
+		texturefile = "gfx/interface/goals/PRC_Prepare_war_with_JAP.dds"
+	}
+	spriteType = {
+		name = "GFX_PRC_military_intelligence_department"
+		texturefile = "gfx/interface/goals/PRC_military_intelligence_department.dds"
+	}
+	spriteType = {
+		name = "GFX_Indian_Cooperate"
+		texturefile = "gfx/interface/goals/Indian_Cooperate.dds"
+	}
+	spriteType = {
+		name = "GFX_anti_imperialism"
+		texturefile = "gfx/interface/goals/anti_imperialism.dds"
+	}
+	spriteType = {
+		name = "GFX_Focus_In_China"
+		texturefile = "gfx/interface/goals/Focus_In_China.tga"
+	}
+	spriteType = {
+		name = "GFX_PRC_revolutionary_military_commission"
+		texturefile = "gfx/interface/goals/PRC_revolutionary_military_commission.dds"
+	}
+	spriteType = {
+		name = "GFX_CRF_PRC_establish_air_force"
+		texturefile = "gfx/interface/goals/PRC/CRF_PRC_establish_air_force.dds"
+	}
+	spriteType = {
+		name = "GFX_CRF_PRC_central_military_commission_aviation_school"
+		texturefile = "gfx/interface/goals/PRC/CRF_PRC_central_military_commission_aviation_school.dds"
+	}
+	spriteType = {
+		name = "GFX_CRF_PRC_northeast_democratic_federated_army_aviation_school"
+		texturefile = "gfx/interface/goals/PRC/CRF_PRC_northeast_democratic_federated_army_aviation_school.dds"
+	}
+	spriteType = {
+		name = "GFX_CRF_PRC_northwest_aviation_infrastructure_construction"
+		texturefile = "gfx/interface/goals/PRC/CRF_PRC_northwest_aviation_infrastructure_construction.dds"
+	}
+	spriteType = {
+		name = "GFX_CRF_PRC_china_soviet_air_force_cooperation"
+		texturefile = "gfx/interface/goals/PRC/CRF_PRC_china_soviet_air_force_cooperation.dds"
+	}
+	spriteType = {
+		name = "GFX_CRF_PRC_import_soviet_aircraft"
+		texturefile = "gfx/interface/goals/PRC/CRF_PRC_import_soviet_aircraft.dds"
+	}
+	spriteType = {
+		name = "GFX_CRF_PRC_soviet_air_squadron_in_aid_of_china"
+		texturefile = "gfx/interface/goals/PRC/CRF_PRC_soviet_air_squadron_in_aid_of_china.dds"
+	}
+	spriteType = {
+		name = "GFX_CRF_PRC_china_us_air_force_cooperation"
+		texturefile = "gfx/interface/goals/PRC/CRF_PRC_china_us_air_force_cooperation.dds"
+	}
+	spriteType = {
+		name = "GFX_CRF_PRC_us_air_squadron_in_aid_of_china"
+		texturefile = "gfx/interface/goals/PRC/CRF_PRC_us_air_squadron_in_aid_of_china.dds"
+	}
+	spriteType = {
+		name = "GFX_CRF_PRC_import_american_aircraft"
+		texturefile = "gfx/interface/goals/PRC/CRF_PRC_import_american_aircraft.dds"
+	}
+	spriteType = {
+		name = "GFX_CRF_PRC_establish_air_force_headquarters"
+		texturefile = "gfx/interface/goals/PRC/CRF_PRC_establish_air_force_headquarters.dds"
+	}
+	spriteType = {
+		name = "GFX_CRF_PRC_cultivate_aviation_talents"
+		texturefile = "gfx/interface/goals/PRC/CRF_PRC_cultivate_aviation_talents.dds"
+	}
+	spriteType = {
+		name = "GFX_CRF_PRC_construct_aviation_infrastructure"
+		texturefile = "gfx/interface/goals/PRC/CRF_PRC_construct_aviation_infrastructure.dds"
+	}
+	spriteType = {
+		name = "GFX_CRF_PRC_develop_aviation_industry"
+		texturefile = "gfx/interface/goals/PRC/CRF_PRC_develop_aviation_industry.dds"
+	}
+	spriteType = {
+		name = "GFX_CRF_PRC_take_over_and_integrate_kuomintang_legacy"
+		texturefile = "gfx/interface/goals/PRC/CRF_PRC_take_over_and_integrate_kuomintang_legacy.dds"
+	}
+	spriteType = {
+		name = "GFX_CRF_PRC_china_soviet_air_force_re_cooperation"
+		texturefile = "gfx/interface/goals/PRC/CRF_PRC_china_soviet_air_force_re_cooperation.dds"
+	}
+	spriteType = {
+		name = "GFX_CRF_PRC_indigenously_manufacture_aircraft"
+		texturefile = "gfx/interface/goals/PRC/CRF_PRC_indigenously_manufacture_aircraft.dds"
+	}
+	spriteType = {
+		name = "GFX_CRF_PRC_introduce_soviet_style_fighter_aircraft"
+		texturefile = "gfx/interface/goals/PRC/CRF_PRC_introduce_soviet_style_fighter_aircraft.dds"
+	}
+	spriteType = {
+		name = "GFX_CRF_PRC_national_air_defense_cooperation"
+		texturefile = "gfx/interface/goals/PRC/CRF_PRC_national_air_defense_cooperation.dds"
+	}
+	spriteType = {
+		name = "GFX_CRF_PRC_establish_navy"
+		texturefile = "gfx/interface/goals/PRC/CRF_PRC_establish_navy.dds"
+	}
+	spriteType = {
+		name = "GFX_CRF_PRC_recruit_and_integrate_kuomintang_navy"
+		texturefile = "gfx/interface/goals/PRC/CRF_PRC_recruit_and_integrate_kuomintang_navy.dds"
+	}
+	spriteType = {
+		name = "GFX_CRF_PRC_repair_kuomintang_navy_ships"
+		texturefile = "gfx/interface/goals/PRC/CRF_PRC_repair_kuomintang_navy_ships.dds"
+	}
+	spriteType = {
+		name = "GFX_CRF_PRC_repair_kuomintang_navy_bases"
+		texturefile = "gfx/interface/goals/PRC/CRF_PRC_repair_kuomintang_navy_bases.dds"
+	}
+	spriteType = {
+		name = "GFX_CRF_PRC_establish_navy_leadership"
+		texturefile = "gfx/interface/goals/PRC/CRF_PRC_establish_navy_leadership.dds"
+	}
+	spriteType = {
+		name = "GFX_CRF_PRC_form_three_fleets"
+		texturefile = "gfx/interface/goals/PRC/CRF_PRC_form_three_fleets.dds"
+	}
+	spriteType = {
+		name = "GFX_CRF_PRC_establish_navy_schools"
+		texturefile = "gfx/interface/goals/PRC/CRF_PRC_establish_navy_schools.dds"
+	}
+	spriteType = {
+		name = "GFX_CRF_PRC_conduct_navy_research_and_construction"
+		texturefile = "gfx/interface/goals/PRC/CRF_PRC_conduct_navy_research_and_construction.dds"
+	}
+	spriteType = {
+		name = "GFX_CRF_PRC_china_ship_science_research_center"
+		texturefile = "gfx/interface/goals/PRC/CRF_PRC_china_ship_science_research_center.dds"
+	}
+	spriteType = {
+		name = "GFX_CRF_PRC_china_soviet_navy_research_cooperation"
+		texturefile = "gfx/interface/goals/PRC/CRF_PRC_china_soviet_navy_research_cooperation.dds"
+	}
+	spriteType = {
+		name = "GFX_CRF_PRC_submarine_research"
+		texturefile = "gfx/interface/goals/PRC/CRF_PRC_submarine_research.dds"
+	}
+	spriteType = {
+		name = "GFX_CRF_PRC_navy_base_and_facility_construction"
+		texturefile = "gfx/interface/goals/PRC/CRF_PRC_navy_base_and_facility_construction.dds"
+	}
+	spriteType = {
+		name = "GFX_CRF_PRC_import_soviet_navy_ships"
+		texturefile = "gfx/interface/goals/PRC/CRF_PRC_import_soviet_navy_ships.dds"
+	}
+	spriteType = {
+		name = "GFX_CRF_PRC_enhance_land_forces"
+		texturefile = "gfx/interface/goals/PRC/CRF_PRC_enhance_land_forces.dds"
+	}
+	spriteType = {
+		name = "GFX_CRF_PRC_strengthen_arsenal_construction"
+		texturefile = "gfx/interface/goals/PRC/CRF_PRC_strengthen_arsenal_construction.dds"
+	}
+	spriteType = {
+		name = "GFX_CRF_PRC_renovate_old_weapon_equipment"
+		texturefile = "gfx/interface/goals/PRC/CRF_PRC_renovate_old_weapon_equipment.dds"
+	}
+	spriteType = {
+		name = "GFX_CRF_PRC_confiscate_enemy_equipment_and_supplies"
+		texturefile = "gfx/interface/goals/PRC/CRF_PRC_confiscate_enemy_equipment_and_supplies.dds"
+	}
+	spriteType = {
+		name = "GFX_CRF_PRC_weapon_research_cooperation_between_kuomintang_and_cpc"
+		texturefile = "gfx/interface/goals/PRC/CRF_PRC_weapon_research_cooperation_between_kuomintang_and_cpc.dds"
+	}
+	# spriteType = {
+	# 	name = "GFX_CRF_PRC_recruit_kuomintang_scientific_research_personnel"
+	# 	texturefile = "gfx/interface/goals/PRC/CRF_PRC_recruit_kuomintang_scientific_research_personnel.dds"
+	# }
+	spriteType = {
+		name = "GFX_CRF_PRC_seek_advanced_weapon_equipment"
+		texturefile = "gfx/interface/goals/PRC/CRF_PRC_seek_advanced_weapon_equipment.dds"
+	}
+	spriteType = {
+		name = "GFX_CRF_PRC_seek_international_aid"
+		texturefile = "gfx/interface/goals/PRC/CRF_PRC_seek_international_aid.dds"
+	}
+	spriteType = {
+		name = "GFX_CRF_PRC_learn_weapon_manufacturing_technology"
+		texturefile = "gfx/interface/goals/PRC/CRF_PRC_learn_weapon_manufacturing_technology.dds"
+	}
+	spriteType = {
+		name = "GFX_CRF_PRC_upgrade_the_PLA"
+		texturefile = "gfx/interface/goals/PRC/CRF_PRC_upgrade_the_PLA.dds"
+	}
+	spriteType = {
+		name = "GFX_CRF_PRC_establish_general_equipment_department"
+		texturefile = "gfx/interface/goals/PRC/CRF_PRC_establish_general_equipment_department.dds"
+	}
+	spriteType = {
+		name = "GFX_CRF_PRC_enhance_ground_force_scientific_research"
+		texturefile = "gfx/interface/goals/PRC/CRF_PRC_enhance_ground_force_scientific_research.dds"
+	}
+	spriteType = {
+		name = "GFX_CRF_PRC_organize_postwar_weaponry"
+		texturefile = "gfx/interface/goals/PRC/CRF_PRC_organize_postwar_weaponry.dds"
+	}
+	spriteType = {
+		name = "GFX_CRF_PRC_independent_formation_research"
+		texturefile = "gfx/interface/goals/PRC/CRF_PRC_independent_formation_research.dds"
+	}
+	spriteType = {
+		name = "GFX_CRF_PRC_imitate_soviet_artillery"
+		texturefile = "gfx/interface/goals/PRC/CRF_PRC_imitate_soviet_artillery.dds"
+	}
+	spriteType = {
+		name = "GFX_CRF_PRC_imitate_soviet_tanks"
+		texturefile = "gfx/interface/goals/PRC/CRF_PRC_imitate_soviet_tanks.dds"
+	}
+	spriteType = {
+		name = "GFX_CRF_PRC_imitate_soviet_tanks"
+		texturefile = "gfx/interface/goals/PRC/CRF_PRC_imitate_soviet_tanks.dds"
+	}
+}

@@ -1,0 +1,87 @@
+add_namespace = crf_prc_event
+
+# Focus ask help
+country_event = {
+	id = crf_prc_event.1
+	title = crf_prc_event.1.t
+	desc = crf_prc_event.1.desc
+	picture = GFX_SICF_11
+
+	is_triggered_only = yes
+	
+	option = {
+		name = crf_prc_event.1.a # yes!
+		ai_chance = {
+			base = 50
+			modifier = {
+				has_equipment = {
+					infantry_equipment > 4000
+				}
+				factor = 100
+			}
+			modifier = {
+				has_equipment = {
+					infantry_equipment < 2000
+				}
+				factor = 5
+			}
+		}
+		send_equipment = {
+			equipment = infantry_equipment
+			amount = 2000
+			target = PRC
+		}
+		hidden_effect = {
+			ROOT = { country_event = { id = crf_prc_event.1 months = 6 } }
+		}
+		FROM = { country_event = { id = crf_prc_event.2 days = 1 } }
+	}
+
+	option = {
+		name = crf_prc_event.1.b #no
+		ai_chance = {
+			base = 50
+			modifier = {
+				has_equipment = {
+					infantry_equipment > 4000
+				}
+				factor = 0
+			}
+			modifier = {
+				has_equipment = {
+					infantry_equipment < 2000
+				}
+				factor = 95
+			}
+		}
+		FROM = { country_event = { id = crf_prc_event.3 days = 1 } }
+	}
+}
+
+# Focus ask help - yes Answer
+country_event = {
+	id = crf_prc_event.2
+	title = crf_prc_event.2.t
+	desc = crf_prc_event.2.desc
+	picture = GFX_SICF_11
+
+	is_triggered_only = yes
+	
+	option = {
+		name = crf_prc_event.2.a # yes!
+	}
+}
+
+# Focus ask help - no Answer
+country_event = {
+	id = crf_prc_event.3
+	title = crf_prc_event.3.t
+	desc = crf_prc_event.3.desc
+	picture = GFX_SICF_11
+
+	is_triggered_only = yes
+	
+	option = {
+		name = crf_prc_event.3.a # yes!
+	}
+}

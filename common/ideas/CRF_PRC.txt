@@ -1,0 +1,61 @@
+ideas = {
+
+	country = {
+		PRC_army_1936_fake_ns = { #Fake National Spirit for showing off dynamic modifier at games start-up
+			name = PRC_army_modifier
+			picture = GFX_PRC_army 
+		
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = { #REMINDER to always update these if the dynamic modifier is altered!
+				
+			}
+		}
+		PRC_base_area_economy_1936_fake_ns = { #Fake National Spirit for showing off dynamic modifier at games start-up
+			name = PRC_base_area_economy_modifier
+			picture = GFX_PRC_base_area_economy 
+		
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = { #REMINDER to always update these if the dynamic modifier is altered!
+
+			}
+		}
+		PRC_navy_1936_fake_ns = { #Fake National Spirit for showing off dynamic modifier at games start-up
+			name = PRC_navy_modifier
+			picture = GFX_PRC_navy 
+		
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = { #REMINDER to always update these if the dynamic modifier is altered!
+
+			}
+		}
+		PRC_airforce_1936_fake_ns = { #Fake National Spirit for showing off dynamic modifier at games start-up
+			name = PRC_airforce_modifier
+			picture = GFX_PRC_airforce 
+		
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = { #REMINDER to always update these if the dynamic modifier is altered!
+
+			}
+		}
+	}
+}

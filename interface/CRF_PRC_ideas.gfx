@@ -1,0 +1,22 @@
+spriteTypes = {
+
+		spriteType = {
+                name = "GFX_idea_PRC_airforce"
+                texturefile = "gfx/interface/ideas/PRC/PRC_airforce.dds"
+        }
+		
+		spriteType = {
+                name = "GFX_idea_PRC_army"
+                texturefile = "gfx/interface/ideas/PRC/PRC_army.dds"
+        }
+		
+		spriteType = {
+                name = "GFX_idea_PRC_navy"
+                texturefile = "gfx/interface/ideas/PRC/PRC_navy.dds"
+        }
+		
+		spriteType = {
+                name = "GFX_idea_PRC_base_area_economy"
+                texturefile = "gfx/interface/ideas/PRC/PRC_base_area_economy.dds"
+        }
+}

@@ -7,6 +7,7 @@
  CRF_PRC_liu_bocheng: "刘伯承"  
  CRF_PRC_ye_ting: "叶挺"  
  CRF_PRC_deng_xiaoping: "邓小平"  
+ CRF_PRC_zhang_wentian: "张闻天"
  CRF_PRC_xu_xiangqian: "徐向前"  
  CRF_PRC_luo_ronghuan: "罗荣桓"  
  CRF_PRC_he_long: "贺龙"  
@@ -31,6 +32,20 @@
  CRF_PRC_luo_binghui: "罗炳辉"  
  CRF_PRC_cheng_zihua: "程子华"
  CRF_PRC_xun_huaizhou: "寻淮洲"
+ CRF_PRC_zhang_aiping: "张爱萍"
+ CRF_PRC_xiao_jingguang: "肖劲光"
+ CRF_PRC_su_zhenhua: "苏振华"
+ CRF_PRC_liu_daosheng: "刘道生"
+ CRF_PRC_wang_hongkun: "王宏坤"
+ CRF_PRC_fu_jize: "傅继泽"
+ CRF_PRC_grigory_kurishenko: "格里戈里·库里申科"
+ CRF_PRC_liu_huaqing: "刘华清"
+ CRF_PRC_fang_ziyi: "方子翼"
+ CRF_PRC_liu_yalou: "刘亚楼"
+ CRF_PRC_xiao_hua: "萧华"
+ CRF_PRC_xu_shunshou: "徐舜寿"
+ CRF_PRC_xu_shiyou: "许世友"
+
 
  CHI_zhang_lan: "张澜"
 

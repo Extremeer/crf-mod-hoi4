@@ -4,11 +4,11 @@ characters = {
 		portraits = {
 			army = {
 				large = "GFX_portrait_prc_mao_zedong"
-				small = GFX_portrait_PRC_mao_zedong_small
+				small = "GFX_portrait_PRC_mao_zedong_small"
 			}
 			civilian = {
 				large = "GFX_portrait_prc_mao_zedong"
-				small = GFX_portrait_PRC_mao_zedong_small
+				small = "GFX_portrait_PRC_mao_zedong_small"
 			}
 		}
 		field_marshal = {
@@ -72,12 +72,21 @@ characters = {
 			legacy_id = -1
 		}
 	}
+
+  ####     ####   #      # #      #    ###   ##    ## #####    ######## #####    
+ ##   ##  ##  ##  ##    ## ##    ##   ## ##  ###   ## ##   ##  ##       ##   ##  
+##       ##    ## ###  ### ###  ###  ##  ##  ####  ## ##    ## ##       ##   ##  
+##       ##    ## ######## ######## ##    ## ## ## ## ##    ## #####    #####    
+##       ##    ## ## #  ## ## #  ## ######## ##  #### ##    ## ##       ##  ##   
+ ##   ##  ##  ##  ##    ## ##    ## ##    ## ##   ### ##   ##  ##       ##   ##  
+  ####     ####   ##    ## ##    ## ##    ## ##    ## #####    ######## ##    ## 
+
 	CRF_PRC_peng_dehuai = {
 		name = CRF_PRC_peng_dehuai
 		portraits = {
 			army = {
 				large = "GFX_portrait_prc_peng_dehuai"
-				small = GFX_portrait_PRC_peng_dehuai_small
+				small = "GFX_portrait_PRC_peng_dehuai_small"
 			}
 		}
 		corps_commander = {
@@ -98,8 +107,8 @@ characters = {
 		name = CRF_PRC_lin_biao
 		portraits = {
 			army = {
-				large = GFX_portrait_PRC_lin_biao
-				small = GFX_portrait_PRC_lin_biao_small
+				large = "GFX_portrait_PRC_lin_biao"
+				small = "GFX_portrait_PRC_lin_biao_small"
 			}
 		}
 		corps_commander = {
@@ -121,15 +130,18 @@ characters = {
 		portraits = {
 			army = {
 				large = "GFX_portrait_prc_chen_yi"
-				small = GFX_portrait_PRC_chen_yi_small
+				small = "GFX_portrait_PRC_chen_yi_small"
 			}
 		}
 		advisor = {
 			slot = high_command
-			idea_token = PRC_chen_yi
+			idea_token = CRF_PRC_chen_yi
 			ledger = army
 			allowed = {
 				original_tag = PRC
+			}
+			available = {
+				has_completed_focus = PRC_upgrade_the_PLA
 			}
 			traits = {
 				army_armored_2
@@ -158,7 +170,7 @@ characters = {
 		portraits = {
 			army = {
 				large = "gfx/leaders/PRC/Portrait_PRC_liu_bocheng.dds"
-				small = "GFX_idea_generic_army_asia_1"
+				small = "gfx/interface/ideas/Advisors/PRC/CRF_PRC_liu_bocheng_small.dds"
 			}
 		}
 		corps_commander = {
@@ -177,7 +189,7 @@ characters = {
 		advisor = {
 			cost = 100
 			slot = theorist
-			idea_token = PRC_liu_bocheng
+			idea_token = CRF_PRC_liu_bocheng
 			ledger = army
 			allowed = {
 				original_tag = PRC
@@ -192,7 +204,7 @@ characters = {
 		portraits = {
 			army = {
 				large = "gfx/leaders/PRC/Portrait_PRC_ye_ting.dds"
-				small = "GFX_idea_generic_army_asia_1"
+				small = "gfx/interface/ideas/Advisors/PRC/CRF_PRC_ye_ting_small.dds"
 			}
 		}
 		corps_commander = {
@@ -208,13 +220,30 @@ characters = {
 			logistics_skill = 3
 			legacy_id = -1
 		}
+		advisor = {
+			slot = army_chief
+			idea_token = CRF_PRC_ye_ting
+			allowed = {
+				original_tag = PRC
+			}
+			available = {
+				has_completed_focus = PRC_enhance_land_forces
+			}
+			traits = {
+				army_chief_offensive_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1
+			}
+		}
 	}
 	CRF_PRC_deng_xiaoping = {
 		name = CRF_PRC_deng_xiaoping
 		portraits = {
 			army = {
 				large = "gfx/leaders/PRC/Portrait_PRC_deng_xiaoping.dds"
-				small = "GFX_idea_generic_army_asia_3"
+				small = "gfx/interface/ideas/Advisors/PRC/CRF_PRC_deng_xiaoping_small.dds"
 			}
 		}
 		corps_commander = {
@@ -236,7 +265,7 @@ characters = {
 		portraits = {
 			army = {
 				large = "gfx/leaders/PRC/Portrait_PRC_xu_xiangqian.dds"
-				small = "GFX_idea_generic_army_asia_3"
+				small = "gfx/interface/ideas/Advisors/PRC/CRF_PRC_xu_xiangqian_small.dds"
 			}
 		}
 		corps_commander = {
@@ -253,14 +282,17 @@ characters = {
 			legacy_id = -1
 		}
 		advisor = {
-			slot = high_command
-			idea_token = PRC_xu_xiangqian
+			slot = army_chief
+			idea_token = CRF_PRC_xu_xiangqian
 			ledger = army
 			allowed = {
 				original_tag = PRC
 			}
+			available = {
+				has_completed_focus = PRC_upgrade_the_PLA
+			}
 			traits = {
-				army_infantry_2
+				army_chief_defensive_2
 			}
 			cost = 100
 			ai_will_do = {
@@ -273,7 +305,7 @@ characters = {
 		portraits = {
 			army = {
 				large = "gfx/leaders/PRC/Portrait_PRC_luo_ronghuan.dds"
-				small = "GFX_idea_generic_army_asia_3"
+				small = "gfx/interface/ideas/Advisors/PRC/CRF_PRC_luo_ronghuan_small.dds"
 			}
 		}
 		corps_commander = {
@@ -289,13 +321,31 @@ characters = {
 			logistics_skill = 3
 			legacy_id = -1
 		}
+		advisor = {
+			slot = army_chief
+			idea_token = CRF_PRC_luo_ronghuan
+			ledger = army
+			allowed = {
+				original_tag = PRC
+			}
+			available = {
+				has_completed_focus = PRC_enhance_land_forces
+			}
+			traits = {
+				army_chief_drill_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1
+			}
+		}
 	}
 	CRF_PRC_he_long = {
 		name = CRF_PRC_he_long
 		portraits = {
 			army = {
 				large = "gfx/leaders/PRC/Portrait_PRC_he_long.dds"
-				small = "GFX_idea_generic_army_asia_3"
+				small = "gfx/interface/ideas/Advisors/PRC/CRF_PRC_he_long_small.dds"
 			}
 		}
 		corps_commander = {
@@ -317,7 +367,7 @@ characters = {
 		portraits = {
 			army = {
 				large = "gfx/leaders/PRC/Portrait_PRC_nie_rongzhen.dds"
-				small = "GFX_idea_generic_army_asia_1"
+				small = "gfx/interface/ideas/Advisors/PRC/CRF_PRC_nie_rongzhen_small.dds"
 			}
 		}
 		corps_commander = {
@@ -335,10 +385,13 @@ characters = {
 		}
 		advisor = {
 			slot = high_command
-			idea_token = PRC_nie_rongzhen
+			idea_token = CRF_PRC_nie_rongzhen
 			ledger = army
 			allowed = {
 				original_tag = PRC
+			}
+			available = {
+				has_completed_focus = PRC_enhance_land_forces
 			}
 			traits = {
 				army_regrouping_2
@@ -354,7 +407,7 @@ characters = {
 		portraits = {
 			army = {
 				large = "gfx/leaders/PRC/Portrait_PRC_ye_jianying.dds"
-				small = "GFX_idea_generic_army_asia_3"
+				small = "gfx/interface/ideas/Advisors/PRC/CRF_PRC_ye_jianying_small.dds"
 			}
 		}
 		corps_commander = {
@@ -372,10 +425,13 @@ characters = {
 		}
 		advisor = {
 			slot = high_command
-			idea_token = PRC_ye_jianying
+			idea_token = CRF_PRC_ye_jianying
 			ledger = army
 			allowed = {
 				original_tag = PRC
+			}
+			available = {
+				has_completed_focus = PRC_enhance_land_forces
 			}
 			traits = {
 				army_logistics_2
@@ -388,7 +444,7 @@ characters = {
 		portraits = {
 			army = {
 				large = "gfx/leaders/PRC/Portrait_PRC_su_yu.dds"
-				small = "GFX_idea_PRC_su_yu"
+				small = "gfx/interface/ideas/Advisors/PRC/CRF_PRC_su_yu_small.dds"
 			}
 		}
 		corps_commander = {
@@ -404,9 +460,12 @@ characters = {
 		}
 		advisor = {
 			slot = army_chief
-			idea_token = PRC_su_yu
+			idea_token = CRF_PRC_su_yu
 			allowed = {
 				original_tag = PRC
+			}
+			available = {
+				has_completed_focus = PRC_enhance_land_forces
 			}
 			traits = {
 				army_chief_reform_2
@@ -422,7 +481,7 @@ characters = {
 		portraits = {
 			army = {
 				large = "gfx/leaders/PRC/Portrait_PRC_chen_geng.dds"
-				small = "GFX_idea_PRC_chen_geng"
+				small = "gfx/interface/ideas/Advisors/PRC/CRF_PRC_chen_geng_small.dds"
 			}
 		}
 		corps_commander = {
@@ -437,14 +496,17 @@ characters = {
 			legacy_id = -1
 		}
 		advisor = {
-			slot = high_command
-			idea_token = PRC_chen_geng
+			slot = army_chief
+			idea_token = CRF_PRC_chen_geng
 			ledger = army
 			allowed = {
 				original_tag = PRC
 			}
+			available = {
+				has_completed_focus = PRC_upgrade_the_PLA
+			}
 			traits = {
-				army_entrenchment_2
+				army_chief_maneuver_2
 			}
 			cost = 100
 			ai_will_do = {
@@ -459,7 +521,7 @@ characters = {
 		portraits = {
 			army = {
 				large = "gfx/leaders/PRC/Portrait_PRC_xu_haidong.dds"
-				small = "GFX_idea_generic_army_asia_3"
+				small = "gfx/interface/ideas/Advisors/PRC/CRF_PRC_xu_haidong_small.dds"
 			}
 		}
 		corps_commander = {
@@ -480,7 +542,7 @@ characters = {
 		portraits = {
 			army = {
 				large = "gfx/leaders/PRC/Portrait_PRC_wang_shusheng.dds"
-				small = "GFX_idea_generic_army_asia_3"
+				small = "gfx/interface/ideas/Advisors/PRC/CRF_PRC_wang_shusheng_small.dds"
 			}
 		}
 		corps_commander = {
@@ -501,7 +563,7 @@ characters = {
 		portraits = {
 			army = {
 				large = "gfx/leaders/PRC/Portrait_PRC_huang_kecheng.dds"
-				small = "GFX_idea_generic_army_asia_3"
+				small = "gfx/interface/ideas/Advisors/PRC/CRF_PRC_huang_kecheng_small.dds"
 			}
 		}
 		corps_commander = {
@@ -522,7 +584,7 @@ characters = {
 		portraits = {
 			army = {
 				large = "gfx/leaders/PRC/Portrait_PRC_zhang_yunyi.dds"
-				small = "GFX_idea_generic_army_asia_3"
+				small = "gfx/interface/ideas/Advisors/PRC/CRF_PRC_zhang_yunyi_small.dds"
 			}
 		}
 		corps_commander = {
@@ -544,7 +606,7 @@ characters = {
 		portraits = {
 			army = {
 				large = "gfx/leaders/PRC/Portrait_PRC_tan_zheng.dds"
-				small = "GFX_idea_generic_army_asia_3"
+				small = "gfx/interface/ideas/Advisors/PRC/CRF_PRC_tan_zheng_small.dds"
 			}
 		}
 		corps_commander = {
@@ -565,7 +627,7 @@ characters = {
 		portraits = {
 			army = {
 				large = "gfx/leaders/PRC/Portrait_PRC_luo_ruiqing.dds"
-				small = "GFX_idea_generic_army_asia_3"
+				small = "gfx/interface/ideas/Advisors/PRC/CRF_PRC_luo_ruiqing_small.dds"
 			}
 		}
 		corps_commander = {
@@ -586,7 +648,7 @@ characters = {
 		portraits = {
 			army = {
 				large = "gfx/leaders/PRC/Portrait_PRC_xu_guangda.dds"
-				small = "GFX_idea_generic_army_asia_3"
+				small = "gfx/interface/ideas/Advisors/PRC/CRF_PRC_xu_guangda_small.dds"
 			}
 		}
 		corps_commander = {
@@ -606,7 +668,7 @@ characters = {
 		portraits = {
 			army = {
 				large = "gfx/leaders/PRC/Portrait_PRC_zuo_quan.dds"
-				small = "GFX_idea_generic_army_asia_3"
+				small = "gfx/interface/ideas/Advisors/PRC/CRF_PRC_zuo_quan_small.dds"
 			}
 		}
 		corps_commander = {
@@ -626,7 +688,7 @@ characters = {
 		portraits = {
 			army = {
 				large = "gfx/leaders/PRC/Portrait_PRC_zhu_rui.dds"
-				small = "GFX_idea_generic_army_asia_3"
+				small = "gfx/interface/ideas/Advisors/PRC/CRF_PRC_zhu_rui_small.dds"
 			}
 		}
 		corps_commander = {
@@ -646,7 +708,7 @@ characters = {
 		portraits = {
 			army = {
 				large = "gfx/leaders/PRC/Portrait_PRC_chen_guang.dds"
-				small = "GFX_idea_generic_army_asia_3"
+				small = "gfx/interface/ideas/Advisors/PRC/CRF_PRC_chen_guang_small.dds"
 			}
 		}
 		corps_commander = {
@@ -666,7 +728,7 @@ characters = {
 		portraits = {
 			army = {
 				large = "gfx/leaders/PRC/Portrait_PRC_peng_xuefeng.dds"
-				small = "GFX_idea_generic_army_asia_3"
+				small = "gfx/interface/ideas/Advisors/PRC/CRF_PRC_peng_xuefeng_small.dds"
 			}
 		}
 		corps_commander = {
@@ -688,7 +750,7 @@ characters = {
 		portraits = {
 			army = {
 				large = "gfx/leaders/PRC/Portrait_PRC_xun_huaizhou.dds"
-				small = "GFX_idea_generic_army_asia_3"
+				small = "gfx/interface/ideas/Advisors/PRC/CRF_PRC_xun_huaizhou_small.dds"
 			}
 		}
 		corps_commander = {
@@ -709,7 +771,7 @@ characters = {
 		portraits = {
 			army = {
 				large = "gfx/leaders/PRC/Portrait_PRC_zhao_shangzhi.dds"
-				small = "GFX_idea_generic_army_asia_3"
+				small = "gfx/interface/ideas/Advisors/PRC/CRF_PRC_zhao_shangzhi_small.dds"
 			}
 		}
 		corps_commander = {
@@ -731,7 +793,7 @@ characters = {
 		portraits = {
 			army = {
 				large = "gfx/leaders/PRC/Portrait_PRC_deng_zihui.dds"
-				small = "GFX_idea_generic_army_asia_3"
+				small = "gfx/interface/ideas/Advisors/PRC/CRF_PRC_deng_zihui_small.dds"
 			}
 		}
 		corps_commander = {
@@ -752,7 +814,7 @@ characters = {
 		portraits = {
 			army = {
 				large = "gfx/leaders/PRC/Portrait_PRC_luo_binghui.dds"
-				small = "GFX_idea_generic_army_asia_3"
+				small = "gfx/interface/ideas/Advisors/PRC/CRF_PRC_luo_binghui_small.dds"
 			}
 		}
 		corps_commander = {
@@ -773,7 +835,7 @@ characters = {
 		portraits = {
 			army = {
 				large = "gfx/leaders/PRC/Portrait_PRC_cheng_zihua.dds"
-				small = "GFX_idea_generic_army_asia_3"
+				small = "gfx/interface/ideas/Advisors/PRC/CRF_PRC_cheng_zihua_small.dds"
 			}
 		}
 		corps_commander = {
@@ -809,4 +871,437 @@ characters = {
 	# 		legacy_id = -1
 	# 	}
 	# }
-}
+	
+##    ##    ###   ##    ## ##    ##          ##       ########    ###   #####    #####    ########   ####   
+###   ##   ## ##  ##    ##  ##  ##           ##       ##         ## ##  ##   ##  ##   ##  ##        ##   ## 
+####  ##  ##  ##  ##    ##   ####            ##       ##        ##  ##  ##    ## ##   ##  ##       ##       
+## ## ## ##    ## ##    ##    ##             ##       #####    ##    ## ##    ## #####    #####      ####   
+##  #### ########  ##  ##     ##             ##       ##       ######## ##    ## ##  ##   ##            ##  
+##   ### ##    ##   ####      ##             ##       ##       ##    ## ##   ##  ##   ##  ##       ##    ## 
+##    ## ##    ##    ##       ##             ######## ######## ##    ## #####    ##    ## ########   ####   
+	
+	CRF_PRC_zhang_aiping={
+		name=CRF_PRC_zhang_aiping
+		portraits={
+			army={
+				large="gfx/leaders/PRC/GFX_portrait_CRF_PRC_zhang_aiping.dds"
+				small="gfx/interface/ideas/Advisors/PRC/CRF_PRC_zhang_aiping_small.dds"
+			}
+		}
+		navy_leader={
+			visible = { has_completed_focus = PRC_establish_navy }
+			traits={ navy_career_officer spotter }
+			skill=3
+			attack_skill=2
+			defense_skill=3
+			maneuvering_skill=3
+			coordination_skill=2
+			legacy_id=-1
+		}
+		advisor={	
+			slot = navy_chief
+			idea_token = CRF_PRC_zhang_aiping
+			allowed = {
+				original_tag = PRC
+			}
+			available = {
+				has_completed_focus = PRC_establish_navy_leadership
+			}
+			traits = {
+				navy_chief_decisive_battle_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	CRF_PRC_xiao_jingguang={
+		name=CRF_PRC_xiao_jingguang
+		portraits={
+			army={
+				large="gfx/leaders/PRC/GFX_portrait_CRF_PRC_xiao_jingguang.dds"
+				small="gfx/interface/ideas/Advisors/PRC/CRF_PRC_xiao_jingguang_small.dds"
+			}
+		}
+		navy_leader={
+			visible = { has_completed_focus = PRC_establish_navy }
+			traits={ bold green_water_expert }
+			skill=3
+			attack_skill=3
+			defense_skill=3
+			maneuvering_skill=2
+			coordination_skill=2
+			legacy_id=-1
+		}
+		advisor={
+			slot = navy_chief
+			idea_token = CRF_PRC_xiao_jingguang
+			allowed = {
+				original_tag = PRC
+			}
+			available = {
+				has_completed_focus = PRC_establish_navy_leadership
+			}
+			traits = {
+				navy_chief_maneuver_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	CRF_PRC_su_zhenhua={
+		name=CRF_PRC_su_zhenhua
+		portraits={
+			army={
+				large="gfx/leaders/PRC/GFX_portrait_CRF_PRC_su_zhenhua.dds"
+				small="gfx/interface/ideas/Advisors/PRC/CRF_PRC_su_zhenhua_small.dds"
+			}
+		}
+		navy_leader={
+			visible = { has_completed_focus = PRC_establish_navy_leadership }
+			traits={ inshore_fighter }
+			skill=2
+			attack_skill=1
+			defense_skill=2
+			maneuvering_skill=2
+			coordination_skill=2
+			legacy_id=-1
+		}
+	}
+
+	CRF_PRC_liu_daosheng={
+		name=CRF_PRC_liu_daosheng
+		portraits={
+			army={
+				large="gfx/leaders/PRC/GFX_portrait_CRF_PRC_liu_daosheng.dds"
+				small="gfx/interface/ideas/Advisors/PRC/CRF_PRC_liu_daosheng_small.dds"
+			}
+		}
+		navy_leader={
+			visible = { has_completed_focus = PRC_establish_navy_leadership }
+			traits={ air_controller }
+			skill=2
+			attack_skill=3
+			defense_skill=1
+			maneuvering_skill=1
+			coordination_skill=2
+			legacy_id=-1
+		}
+		advisor = {
+			slot = navy_chief
+			idea_token = CRF_PRC_liu_daosheng
+			allowed = {
+				original_tag = PRC
+			}
+			available = {
+				has_completed_focus = PRC_form_three_fleets
+			}
+			traits = {
+				navy_chief_reform_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 0.200
+			}
+		}	
+	}
+
+	CRF_PRC_wang_hongkun={
+		name=CRF_PRC_wang_hongkun
+		portraits={
+			army={
+				large="gfx/leaders/PRC/GFX_portrait_CRF_PRC_wang_hongkun.dds"
+				small="gfx/interface/ideas/Advisors/PRC/CRF_PRC_wang_hongkun_small.dds"
+			}
+		}
+		navy_leader={
+			visible = { has_completed_focus = PRC_establish_navy_leadership }
+			traits={ green_water_expert }
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			maneuvering_skill=1
+			coordination_skill=2
+			legacy_id=-1
+		}
+	}
+
+	CRF_PRC_fu_jize={
+		name=CRF_PRC_fu_jize
+		portraits={
+			army={
+				large="gfx/leaders/PRC/GFX_portrait_CRF_PRC_fu_jize.dds"
+				small="gfx/interface/ideas/Advisors/PRC/CRF_PRC_fu_jize_small.dds"
+			}
+		}
+		navy_leader={
+			visible = { has_completed_focus = PRC_submarine_research }
+			traits={ seawolf }
+			skill=2
+			attack_skill=2
+			defense_skill=1
+			maneuvering_skill=2
+			coordination_skill=2
+			legacy_id=-1
+		}
+		advisor = {
+			slot = high_command
+			idea_token = CRF_PRC_fu_jize
+			ledger = navy
+			allowed = {
+				original_tag = PRC
+			}
+			available = {
+				has_completed_focus = PRC_submarine_research
+			}
+			traits = {
+				navy_submarine_2
+			}
+			cost = 100
+		}
+	}
+
+
+
+######## ##    ## ########   ####   #####    ########   ####   ########   ####   
+   ##    ##    ## ##        ##  ##  ##   ##     ##     ##   ##    ##     ##   ## 
+   ##    ##    ## ##       ##    ## ##   ##     ##    ##          ##    ##       
+   ##    ######## #####    ##    ## #####       ##      ####      ##      ####   
+   ##    ##    ## ##       ##    ## ##  ##      ##         ##     ##         ##  
+   ##    ##    ## ##        ##  ##  ##   ##     ##    ##    ##    ##    ##    ## 
+   ##    ##    ## ########   ####   ##    ## ########   ####      ##      ####   
+
+   CRF_PRC_grigory_kurishenko={
+	    name=CRF_PRC_grigory_kurishenko
+	    portraits={
+	    	army={
+	    		small="gfx/interface/ideas/Advisors/PRC/CRF_PRC_grigory_kurishenko_small.dds"
+	    	}
+	    }
+	    advisor={
+	    	cost = 100
+	    	slot = theorist
+	    	idea_token = CRF_PRC_grigory_kurishenko
+	    	ledger = air
+	    	allowed = {
+	    		original_tag = PRC
+	    	}
+			available = {
+				has_completed_focus = PRC_soviet_air_squadron_in_aid_of_china
+			}
+	    	traits = {
+	    		air_warfare_theorist
+	    	}
+	    }
+	}
+
+    CRF_PRC_liu_huaqing={
+    	name=CRF_PRC_liu_huaqing
+    	portraits={
+    		army={
+    			small="gfx/interface/ideas/Advisors/PRC/CRF_PRC_liu_huaqing_small.dds"
+    		}
+    	}
+    	advisor={
+    		cost = 100
+    		slot = theorist
+    		idea_token = CRF_PRC_liu_huaqing
+    		ledger = navy
+    		allowed = {
+    			original_tag = PRC
+    		}
+    		available = {
+				has_completed_focus = PRC_establish_navy_schools
+			}
+    		traits = {
+    			naval_theorist
+    		}
+    	}
+    }
+
+
+   ###   ######## #####               ####   ##    ## ######## ######## ########   ####   
+  ## ##     ##    ##   ##            ##   ## ##    ##    ##    ##       ##        ##   ## 
+ ##  ##     ##    ##   ##           ##       ##    ##    ##    ##       ##       ##       
+##    ##    ##    #####             ##       ########    ##    #####    #####      ####   
+########    ##    ##  ##            ##       ##    ##    ##    ##       ##            ##  
+##    ##    ##    ##   ##            ##   ## ##    ##    ##    ##       ##       ##    ## 
+##    ## ######## ##    ##            ####   ##    ## ######## ######## ##         ####   
+
+    CRF_PRC_fang_ziyi={
+    	name=CRF_PRC_fang_ziyi
+    	portraits={
+    		army={
+    			small="gfx/interface/ideas/Advisors/PRC/CRF_PRC_fang_ziyi_small.dds"
+    		}
+    	}
+    	advisor={
+    		slot = air_chief
+    		idea_token = CRF_PRC_fang_ziyi
+    		allowed = {
+    			original_tag = PRC
+    		}
+			available = {
+				has_completed_focus = PRC_northeast_democratic_federated_army_aviation_school
+			}
+    		traits = {
+    			air_chief_ground_support_2
+    		}
+    		cost = 100
+    		ai_will_do = {
+    			factor = 1.000
+    		}
+    	}
+    }
+    
+    CRF_PRC_liu_yalou={
+    	name=CRF_PRC_liu_yalou
+    	portraits={
+    		army={
+    			small="gfx/interface/ideas/Advisors/PRC/CRF_PRC_liu_yalou_small.dds"
+    		}
+    	}
+    	advisor={
+    		slot = air_chief
+    		idea_token = CRF_PRC_liu_yalou
+    		allowed = {
+    			original_tag = PRC
+    		}
+			available = {
+				has_completed_focus = PRC_establish_air_force_headquarters
+			}
+    		traits = {
+    			air_chief_reform_2
+    		}
+    		cost = 100
+    		ai_will_do = {
+    			factor = 1.000
+    		}
+    	}
+    }
+    
+    CRF_PRC_xiao_hua={
+    	name=CRF_PRC_xiao_hua
+    	portraits={
+    		army={
+    			small="gfx/interface/ideas/Advisors/PRC/CRF_PRC_xiao_hua_small.dds"
+    		}
+    	}
+    	advisor={
+    		slot = air_chief
+    		idea_token = CRF_PRC_xiao_hua
+    		allowed = {
+    			original_tag = PRC
+    		}
+			available = {
+				has_completed_focus = PRC_establish_air_force_headquarters
+			}
+    		traits = {
+    			air_chief_safety_2
+    		}
+    		cost = 100
+    	}
+    }
+
+
+##    ## ########   ####   ##    ##            ####     ####   #      # #      #    ###   ##    ## #####    
+##    ##    ##     ##   ## ##    ##           ##   ##  ##  ##  ##    ## ##    ##   ## ##  ###   ## ##   ##  
+##    ##    ##    ##       ##    ##          ##       ##    ## ###  ### ###  ###  ##  ##  ####  ## ##    ## 
+########    ##    ##   ### ########          ##       ##    ## ######## ######## ##    ## ## ## ## ##    ## 
+##    ##    ##    ##    ## ##    ##          ##       ##    ## ## #  ## ## #  ## ######## ##  #### ##    ## 
+##    ##    ##     ##   ## ##    ##           ##   ##  ##  ##  ##    ## ##    ## ##    ## ##   ### ##   ##  
+##    ## ########   ####   ##    ##            ####     ####   ##    ## ##    ## ##    ## ##    ## #####    
+
+    CRF_PRC_xu_shunshou={
+    	name=CRF_PRC_xu_shunshou
+    	portraits={
+    		army={
+    			small="gfx/interface/ideas/Advisors/PRC/CRF_PRC_xu_shunshou_small.dds"
+    		}
+    	}
+    	advisor={	
+    		slot = high_command
+    		idea_token = CRF_PRC_xu_shunshou
+    		ledger = air
+    		allowed = {
+    			original_tag = PRC
+    		}
+			available = {
+				has_completed_focus = PRC_cultivate_aviation_talents
+			}
+    		traits = {
+    			air_air_combat_training_2
+    		}
+    		cost = 100
+    		ai_will_do = {
+    			factor = 1.000
+    		}
+    	}
+    }
+    
+    CRF_PRC_xu_shiyou={
+    	name=CRF_PRC_xu_shiyou
+    	portraits={
+    		army={
+    			small="gfx/interface/ideas/Advisors/PRC/CRF_PRC_xu_shiyou_small.dds"
+    		}
+    	}
+    	advisor={	
+    		slot = high_command
+    		idea_token = CRF_PRC_xu_shiyou
+    		ledger = army
+    		allowed = {
+    			original_tag = PRC
+    		}
+			available = {
+				has_completed_focus = PRC_form_three_fleets
+			}
+    		traits = {
+    			navy_amphibious_assault_2
+    		}
+    		cost = 100
+    		ai_will_do = {
+    			factor = 1.000
+    		}
+    	}
+    }
+
+######     ####   ##       ######## ######## ########   ####      ###   ##                
+##    ##  ##  ##  ##          ##       ##       ##     ##   ##   ## ##  ##                
+##    ## ##    ## ##          ##       ##       ##    ##        ##  ##  ##                
+######   ##    ## ##          ##       ##       ##    ##       ##    ## ##                
+##       ##    ## ##          ##       ##       ##    ##       ######## ##                
+##        ##  ##  ##          ##       ##       ##     ##   ## ##    ## ##                
+##         ####   ######## ########    ##    ########   ####   ##    ## ########          
+
+	CRF_PRC_zhang_wentian = {
+		name = CRF_PRC_zhang_wentian
+		portraits={
+			civilian={
+				small="gfx/interface/ideas/Advisors/PRC/CRF_PRC_zhang_wentian_small.dds"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = CRF_PRC_zhang_wentian
+			allowed = {
+				original_tag = PRC
+			}
+			traits = { communist_revolutionary }
+			available = {
+				
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+}  
+    
+    

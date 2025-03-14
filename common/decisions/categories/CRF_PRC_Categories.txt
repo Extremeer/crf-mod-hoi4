@@ -1,0 +1,8 @@
+PRC_seek_international_aid_decision_categories = {
+	icon = generic_prospect_for_resources
+	priority = 93
+	allowed = {
+		tag = PRC
+		is_subject = no
+	}
+}
