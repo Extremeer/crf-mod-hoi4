@@ -433,3 +433,8 @@ if = {
 		}
 	}
 }
+
+set_province_name = {
+    id = 9843
+    name = VICTORY_POINTS_9843_BEIPING
+}

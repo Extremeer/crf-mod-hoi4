@@ -288,31 +288,6 @@ set_variable = { PRC_military_modifier_unit_logistics_company_design_cost_factor
 set_variable = { PRC_military_modifier_unit_artillery_design_cost_factor = 0 }#火炮支援连单位编成花费
 add_dynamic_modifier = { modifier = PRC_army_modifier }
 
-#INDUSTRAY
-#REMINDER to always update the fake NS if these numbers are altered!
-set_variable = {PRC_industrial_consumer_goods_factor = 0.3} #生活消费品 
-set_variable = { PRC_industrial_production_speed_arms_factory_factor = 0 } # 军工建造速度
-set_variable = { PRC_industrial_production_speed_dockyard_factor = -0.1 } # 船坞建造速度
-set_variable = { PRC_industrial_industrial_capacity_factory = 0 }# 工厂产出 
-set_variable = { PRC_industrial_industrial_capacity_dockyard = -0.1 }# 海军船坞产出 
-set_variable = { PRC_industrial_production_lack_of_resource_penalty_factor = 0 }# 缺乏战略资源惩罚 
-set_variable = { PRC_industrial_conversion_cost_civ_to_mil_factor = 0 }# 民用转军用的转换 
-set_variable = { PRC_industrial_industry_air_damage_factor = 0 } # 工业因空袭造成的损害因子
-set_variable = { PRC_industrial_resource_trade_cost_bonus_per_factory = 0 } # 工业每个工厂的资源贸易成本加成
-set_variable = { PRC_industrial_production_speed_buildings_factor = 0 } # 工业建筑生产速度因子
-set_variable = { PRC_industrial_research_speed_factor = 0 } # 工业研究速度因子
-set_variable = { PRC_industrial_economy_cost_factor = 0 } # 工业经济成本因子
-set_variable = { PRC_industrial_trade_laws_cost_factor = 0 } # 工业贸易法案成本因子
-set_variable = { PRC_recovering_economy_modifier_local_resources_factor = 0 } # 经济复苏修正的本地资源因子
-set_variable = { PRC_industrial_production_factory_max_efficiency_factor = 0 } # 生产效率上限
-set_variable = { PRC_industrial_production_factory_efficiency_gain_factor = 0 } # 生产效率增长
-set_variable = { PRC_industrial_production_factory_start_efficiency_factor = 0 } # 基础生产效率
-set_variable = { PRC_industrial_line_change_production_efficiency_factor = 0 } # 工业生产线变更时的生产效率因子
-set_variable = { PRC_industrial_equipment_conversion_speed = 0 } # 工业装备转换速度
-set_variable = { PRC_industrial_consumer_goods_expected_value = 0 } # 工业生活消费品预期值
-set_variable = { PRC_industrial_repair_speed_factor = 0 }#船坞修理海军的速度
-add_dynamic_modifier = { modifier = PRC_base_area_economy }
-
 #NAVY
 #REMINDER to always update the fake NS if these numbers are altered!
 set_variable = { PRC_military_naval_heavy_gun_hit_chance_factor = 0 }#重机枪命中率
@@ -346,3 +321,28 @@ set_variable = { PRC_military_air_equipment_upgrade_xp_cost = 0.05 }#空军装�
 set_variable = { PRC_military_air_wing_xp_loss_when_killed_factor = 0 }#空军联队受损时失去的经验
 set_variable = { PRC_military_experience_gain_air_factor = -0.05} #空军经验
 add_dynamic_modifier = { modifier = PRC_airforce_modifier }
+
+#INDUSTRAY
+#REMINDER to always update the fake NS if these numbers are altered!
+set_variable = {PRC_industrial_consumer_goods_factor = 0.3} #生活消费品 
+set_variable = { PRC_industrial_production_speed_arms_factory_factor = 0 } # 军工建造速度
+set_variable = { PRC_industrial_production_speed_dockyard_factor = -0.1 } # 船坞建造速度
+set_variable = { PRC_industrial_industrial_capacity_factory = 0 }# 工厂产出 
+set_variable = { PRC_industrial_industrial_capacity_dockyard = -0.1 }# 海军船坞产出 
+set_variable = { PRC_industrial_production_lack_of_resource_penalty_factor = 0 }# 缺乏战略资源惩罚 
+set_variable = { PRC_industrial_conversion_cost_civ_to_mil_factor = 0 }# 民用转军用的转换 
+set_variable = { PRC_industrial_industry_air_damage_factor = 0 } # 工业因空袭造成的损害因子
+set_variable = { PRC_industrial_resource_trade_cost_bonus_per_factory = 0 } # 工业每个工厂的资源贸易成本加成
+set_variable = { PRC_industrial_production_speed_buildings_factor = 0 } # 工业建筑生产速度因子
+set_variable = { PRC_industrial_research_speed_factor = 0 } # 工业研究速度因子
+set_variable = { PRC_industrial_economy_cost_factor = 0 } # 工业经济成本因子
+set_variable = { PRC_industrial_trade_laws_cost_factor = 0 } # 工业贸易法案成本因子
+set_variable = { PRC_recovering_economy_modifier_local_resources_factor = 0 } # 经济复苏修正的本地资源因子
+set_variable = { PRC_industrial_production_factory_max_efficiency_factor = 0 } # 生产效率上限
+set_variable = { PRC_industrial_production_factory_efficiency_gain_factor = 0 } # 生产效率增长
+set_variable = { PRC_industrial_production_factory_start_efficiency_factor = 0 } # 基础生产效率
+set_variable = { PRC_industrial_line_change_production_efficiency_factor = 0 } # 工业生产线变更时的生产效率因子
+set_variable = { PRC_industrial_equipment_conversion_speed = 0 } # 工业装备转换速度
+set_variable = { PRC_industrial_consumer_goods_expected_value = 0 } # 工业生活消费品预期值
+set_variable = { PRC_industrial_repair_speed_factor = 0 }#船坞修理海军的速度
+add_dynamic_modifier = { modifier = PRC_base_area_economy }
