@@ -1,5 +1,5 @@
 # China Restoration Framework
-![Mod Version](https://img.shields.io/badge/Version-2025.3-blue)
+![Mod Version](https://img.shields.io/badge/Version-2025.3.23-blue)
 ![HOI4 Compatibility](https://img.shields.io/badge/HOI4-1.16-green)
 
 ## 🌟 Overview
